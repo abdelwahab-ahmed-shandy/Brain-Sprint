@@ -237,10 +237,10 @@ E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\staticwebassets\msbuild
 E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.BrainSprint.props
 E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.BrainSprint.props
 E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\staticwebassets.pack.json
+E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\BrainSpr.2937AC25.Up2Date
 E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\BrainSprint.dll
 E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\refint\BrainSprint.dll
 E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\BrainSprint.pdb
 E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\BrainSprint.genruntimeconfig.cache
 E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\ref\BrainSprint.dll
-E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

@@ -4,13 +4,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\BrainSprint.jsagy1v2uo.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Xe/kQODwLCKj0LhNDLCpwqEqWmz\u002BJfX0RdOCAMapqRI="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1129"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Xe/kQODwLCKj0LhNDLCpwqEqWmz\u002BJfX0RdOCAMapqRI=\u0022"},{"Name":"Last-Modified","Value":"Mon, 28 Apr 2025 17:13:09 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1129"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Xe/kQODwLCKj0LhNDLCpwqEqWmz\u002BJfX0RdOCAMapqRI=\u0022"},{"Name":"Last-Modified","Value":"Mon, 28 Apr 2025 17:23:36 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/BrainSprint/BrainSprint.jsagy1v2uo.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\BrainSprint.jsagy1v2uo.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jsagy1v2uo"},{"Name":"integrity","Value":"sha256-Xe/kQODwLCKj0LhNDLCpwqEqWmz\u002BJfX0RdOCAMapqRI="},{"Name":"label","Value":"_content/BrainSprint/BrainSprint.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1129"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Xe/kQODwLCKj0LhNDLCpwqEqWmz\u002BJfX0RdOCAMapqRI=\u0022"},{"Name":"Last-Modified","Value":"Mon, 28 Apr 2025 17:13:09 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1129"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Xe/kQODwLCKj0LhNDLCpwqEqWmz\u002BJfX0RdOCAMapqRI=\u0022"},{"Name":"Last-Modified","Value":"Mon, 28 Apr 2025 17:23:36 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/BrainSprint/css/site.b9sayid5wm.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
