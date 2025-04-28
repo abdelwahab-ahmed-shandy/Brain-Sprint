@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EPlwKT5bwmpxcAymqsQcLUpx/ZGxM3QSEZ4A8ZzJh9s=",
+  "Hash": "dOz+XdbTpRIOr/bq1eOH5VEFoeNgk7OGuQsFarXzsTU=",
   "Source": "BrainSprint",
   "BasePath": "_content/BrainSprint",
   "Mode": "Default",
@@ -80,12 +80,12 @@
       "OriginalItemSpec": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\1cqd7pe8yl-jsagy1v2uo.gz",
+      "Identity": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\1cqd7pe8yl-z0fvy0ip7r.gz",
       "SourceId": "BrainSprint",
       "SourceType": "Computed",
       "ContentRoot": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/BrainSprint",
-      "RelativePath": "BrainSprint#[.{fingerprint=jsagy1v2uo}]?.styles.css.gz",
+      "RelativePath": "BrainSprint#[.{fingerprint=z0fvy0ip7r}]?.styles.css.gz",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Alternative",
@@ -94,8 +94,8 @@
       "RelatedAsset": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\scopedcss\\bundle\\BrainSprint.styles.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "mvosjoyccy",
-      "Integrity": "DiDGHgVnsYCWKY6d9Uh847Lx+9pmnzi3k0xmnD2hnKo=",
+      "Fingerprint": "mzzz3qc2ic",
+      "Integrity": "8mtuy2zcuqB10sXLNt3KOyQB9q2gyebfq2fbqTXWcAY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\scopedcss\\bundle\\BrainSprint.styles.css"
@@ -542,12 +542,12 @@
       "OriginalItemSpec": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\d0d3b04a4f-61n19gt1b8.gz",
+      "Identity": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\d0d3b04a4f-t0y8bqv8pi.gz",
       "SourceId": "BrainSprint",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/BrainSprint",
-      "RelativePath": "favicon#[.{fingerprint=61n19gt1b8}]?.ico.gz",
+      "RelativePath": "favicon#[.{fingerprint=t0y8bqv8pi}]?.ico.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -556,8 +556,8 @@
       "RelatedAsset": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\favicon.ico",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "lir1p715ud",
-      "Integrity": "jcY0RXFOlcp4VNTCcYQtWVZZBlr+ZY+AOv6/0S5dnF8=",
+      "Fingerprint": "e7yvfg9ifa",
+      "Integrity": "FoK/ngrjy4H/Fwp39spQK6bh+xtseSTcCgRhQRaEPsQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\favicon.ico"
@@ -920,6 +920,27 @@
       "OriginalItemSpec": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
+      "Identity": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\nofq2m2y7t-xvgnezw2tl.gz",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "css/customer#[.{fingerprint=xvgnezw2tl}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\css\\customer.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "thdic6q5xq",
+      "Integrity": "L6fn/M3YTJuB3Z0KHU6kfQcC9AUCcsbWdS1IddbbJt8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\css\\customer.css"
+    },
+    {
       "Identity": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\oi8dfpq3s6-rzd6atqjts.gz",
       "SourceId": "BrainSprint",
       "SourceType": "Discovered",
@@ -983,12 +1004,33 @@
       "OriginalItemSpec": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\q0lfynpajj-jsagy1v2uo.gz",
+      "Identity": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\pc11id5sst-iri5fbdm2c.gz",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "js/search#[.{fingerprint=iri5fbdm2c}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\search.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "nqkgtp4msf",
+      "Integrity": "/8365L3b+75yAEuTc/k9Xt9qPed8uB3zsjZU7PTLe7Q=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\search.js"
+    },
+    {
+      "Identity": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\q0lfynpajj-z0fvy0ip7r.gz",
       "SourceId": "BrainSprint",
       "SourceType": "Computed",
       "ContentRoot": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/BrainSprint",
-      "RelativePath": "BrainSprint#[.{fingerprint=jsagy1v2uo}]!.bundle.scp.css.gz",
+      "RelativePath": "BrainSprint#[.{fingerprint=z0fvy0ip7r}]!.bundle.scp.css.gz",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Alternative",
@@ -997,8 +1039,8 @@
       "RelatedAsset": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\BrainSprint.bundle.scp.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "mvosjoyccy",
-      "Integrity": "DiDGHgVnsYCWKY6d9Uh847Lx+9pmnzi3k0xmnD2hnKo=",
+      "Fingerprint": "mzzz3qc2ic",
+      "Integrity": "8mtuy2zcuqB10sXLNt3KOyQB9q2gyebfq2fbqTXWcAY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\BrainSprint.bundle.scp.css"
@@ -1214,6 +1256,27 @@
       "OriginalItemSpec": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
+      "Identity": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\wlan6o8wrd-8d6ebtl8bo.gz",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "js/notifications#[.{fingerprint=8d6ebtl8bo}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\notifications.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "93btto578o",
+      "Integrity": "m3UtyYsxqN3HVZDCEbV1PO/WW4EcQ5C8cCKA/yUQ4h4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\notifications.js"
+    },
+    {
       "Identity": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\x6v00ucg8h-6pdc2jztkx.gz",
       "SourceId": "BrainSprint",
       "SourceType": "Discovered",
@@ -1319,12 +1382,12 @@
       "OriginalItemSpec": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\y0pet6gzlx-xtxxf3hu2r.gz",
+      "Identity": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\y0pet6gzlx-ampg4cb6sn.gz",
       "SourceId": "BrainSprint",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/BrainSprint",
-      "RelativePath": "js/site#[.{fingerprint=xtxxf3hu2r}]?.js.gz",
+      "RelativePath": "js/site#[.{fingerprint=ampg4cb6sn}]?.js.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1333,11 +1396,32 @@
       "RelatedAsset": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\site.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "fpxp8wntf7",
-      "Integrity": "465WqepNnI4ENLgQJFXrL2gtI20GCfeLK3JAtugOzpA=",
+      "Fingerprint": "6p4how1esj",
+      "Integrity": "9qWpxY3sVbGdkDP32rRt59onl18BQA7iW93ywKjiPw8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\y2bvf0alx3-2rdgz7o3xd.gz",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "js/theme#[.{fingerprint=2rdgz7o3xd}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\theme.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "ua5hh2djd6",
+      "Integrity": "Fr58SiN4yAkqpxwXOneG0QD/4QEwBNqPy0oWhO9wM38=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\theme.js"
     },
     {
       "Identity": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\ytrjj3bcz8-x0q3zqp4vz.gz",
@@ -1375,8 +1459,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "jsagy1v2uo",
-      "Integrity": "Xe/kQODwLCKj0LhNDLCpwqEqWmz+JfX0RdOCAMapqRI=",
+      "Fingerprint": "z0fvy0ip7r",
+      "Integrity": "LeBb3191PfzKza4tgyPsLDe3wqBONZH3hNSbNgJbdTY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\scopedcss\\bundle\\BrainSprint.styles.css"
@@ -1396,11 +1480,95 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "jsagy1v2uo",
-      "Integrity": "Xe/kQODwLCKj0LhNDLCpwqEqWmz+JfX0RdOCAMapqRI=",
+      "Fingerprint": "z0fvy0ip7r",
+      "Integrity": "LeBb3191PfzKza4tgyPsLDe3wqBONZH3hNSbNgJbdTY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\BrainSprint.bundle.scp.css"
+    },
+    {
+      "Identity": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Customer\\images\\app.png",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "Assets/Customer/images/app#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wwss4neoo6",
+      "Integrity": "oF4HsDJsjnLSyd/a1Gt61HEDmyc81Ni2sZ4adaSZjSA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\Customer\\images\\app.png"
+    },
+    {
+      "Identity": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Customer\\images\\appstore.png",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "Assets/Customer/images/appstore#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sd31ay5p3h",
+      "Integrity": "YGnRsCzLUNYR2rSWcG4WFeN0FZt8SSIJpIYnGRkp9+Q=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\Customer\\images\\appstore.png"
+    },
+    {
+      "Identity": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Customer\\images\\logo.png",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "Assets/Customer/images/logo#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "t0y8bqv8pi",
+      "Integrity": "wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\Customer\\images\\logo.png"
+    },
+    {
+      "Identity": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\css\\customer.css",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "css/customer#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xvgnezw2tl",
+      "Integrity": "PW97Izp/4gM2TM1rh0gKln7FnHKidAr3bnJbIkY7PQA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\customer.css"
     },
     {
       "Identity": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\css\\site.css",
@@ -1438,11 +1606,53 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "61n19gt1b8",
-      "Integrity": "Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=",
+      "Fingerprint": "t0y8bqv8pi",
+      "Integrity": "wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\notifications.js",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "js/notifications#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8d6ebtl8bo",
+      "Integrity": "vOaxgSnsyRNHJp+VrzuXMbYV72qNU5zHpxaEIczHb6s=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\notifications.js"
+    },
+    {
+      "Identity": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\search.js",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "js/search#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "iri5fbdm2c",
+      "Integrity": "PrnYL7Bt7cASDvw2Zg2v0Xr/duOu9G/FPOgWDP/U8HM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\search.js"
     },
     {
       "Identity": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\site.js",
@@ -1459,11 +1669,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "xtxxf3hu2r",
-      "Integrity": "hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo=",
+      "Fingerprint": "ampg4cb6sn",
+      "Integrity": "TrYKwme1riud6PcN9MmHv+ne1mJTHyU4zXmQ7cUtoSc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\theme.js",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "js/theme#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2rdgz7o3xd",
+      "Integrity": "nmhAqS39sQY3xlITkESYAMBZ2F0AQKlRiIG+kQOjBaE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\theme.js"
     },
     {
       "Identity": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
@@ -2728,13 +2959,259 @@
   ],
   "Endpoints": [
     {
+      "Route": "Assets/Customer/images/app.png",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Customer\\images\\app.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19280"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oF4HsDJsjnLSyd/a1Gt61HEDmyc81Ni2sZ4adaSZjSA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 17:25:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-oF4HsDJsjnLSyd/a1Gt61HEDmyc81Ni2sZ4adaSZjSA="
+        }
+      ]
+    },
+    {
+      "Route": "Assets/Customer/images/app.wwss4neoo6.png",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Customer\\images\\app.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19280"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oF4HsDJsjnLSyd/a1Gt61HEDmyc81Ni2sZ4adaSZjSA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 17:25:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wwss4neoo6"
+        },
+        {
+          "Name": "label",
+          "Value": "Assets/Customer/images/app.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-oF4HsDJsjnLSyd/a1Gt61HEDmyc81Ni2sZ4adaSZjSA="
+        }
+      ]
+    },
+    {
+      "Route": "Assets/Customer/images/appstore.png",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Customer\\images\\appstore.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "21309"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YGnRsCzLUNYR2rSWcG4WFeN0FZt8SSIJpIYnGRkp9+Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 17:23:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-YGnRsCzLUNYR2rSWcG4WFeN0FZt8SSIJpIYnGRkp9+Q="
+        }
+      ]
+    },
+    {
+      "Route": "Assets/Customer/images/appstore.sd31ay5p3h.png",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Customer\\images\\appstore.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "21309"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YGnRsCzLUNYR2rSWcG4WFeN0FZt8SSIJpIYnGRkp9+Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 17:23:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sd31ay5p3h"
+        },
+        {
+          "Name": "label",
+          "Value": "Assets/Customer/images/appstore.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-YGnRsCzLUNYR2rSWcG4WFeN0FZt8SSIJpIYnGRkp9+Q="
+        }
+      ]
+    },
+    {
+      "Route": "Assets/Customer/images/logo.png",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Customer\\images\\logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 17:34:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps="
+        }
+      ]
+    },
+    {
+      "Route": "Assets/Customer/images/logo.t0y8bqv8pi.png",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Customer\\images\\logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 17:34:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t0y8bqv8pi"
+        },
+        {
+          "Name": "label",
+          "Value": "Assets/Customer/images/logo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps="
+        }
+      ]
+    },
+    {
       "Route": "BrainSprint.bundle.scp.css",
-      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\q0lfynpajj-jsagy1v2uo.gz",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\q0lfynpajj-z0fvy0ip7r.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001848428835"
+          "Quality": "0.001600000000"
         }
       ],
       "ResponseHeaders": [
@@ -2744,15 +3221,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "540"
+          "Value": "624"
         },
         {
           "Name": "ETag",
-          "Value": "\"DiDGHgVnsYCWKY6d9Uh847Lx+9pmnzi3k0xmnD2hnKo=\""
+          "Value": "\"8mtuy2zcuqB10sXLNt3KOyQB9q2gyebfq2fbqTXWcAY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 17:23:36 GMT"
+          "Value": "Mon, 28 Apr 2025 18:29:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2772,13 +3249,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"Xe/kQODwLCKj0LhNDLCpwqEqWmz+JfX0RdOCAMapqRI=\""
+          "Value": "W/\"LeBb3191PfzKza4tgyPsLDe3wqBONZH3hNSbNgJbdTY=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Xe/kQODwLCKj0LhNDLCpwqEqWmz+JfX0RdOCAMapqRI="
+          "Value": "sha256-LeBb3191PfzKza4tgyPsLDe3wqBONZH3hNSbNgJbdTY="
         }
       ]
     },
@@ -2793,7 +3270,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1129"
+          "Value": "2273"
         },
         {
           "Name": "Content-Type",
@@ -2801,11 +3278,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Xe/kQODwLCKj0LhNDLCpwqEqWmz+JfX0RdOCAMapqRI=\""
+          "Value": "\"LeBb3191PfzKza4tgyPsLDe3wqBONZH3hNSbNgJbdTY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 17:23:36 GMT"
+          "Value": "Mon, 28 Apr 2025 18:29:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2815,13 +3292,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Xe/kQODwLCKj0LhNDLCpwqEqWmz+JfX0RdOCAMapqRI="
+          "Value": "sha256-LeBb3191PfzKza4tgyPsLDe3wqBONZH3hNSbNgJbdTY="
         }
       ]
     },
     {
       "Route": "BrainSprint.bundle.scp.css.gz",
-      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\q0lfynpajj-jsagy1v2uo.gz",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\q0lfynpajj-z0fvy0ip7r.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2830,7 +3307,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "540"
+          "Value": "624"
         },
         {
           "Name": "Content-Type",
@@ -2838,11 +3315,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"DiDGHgVnsYCWKY6d9Uh847Lx+9pmnzi3k0xmnD2hnKo=\""
+          "Value": "\"8mtuy2zcuqB10sXLNt3KOyQB9q2gyebfq2fbqTXWcAY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 17:23:36 GMT"
+          "Value": "Mon, 28 Apr 2025 18:29:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2860,18 +3337,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-DiDGHgVnsYCWKY6d9Uh847Lx+9pmnzi3k0xmnD2hnKo="
+          "Value": "sha256-8mtuy2zcuqB10sXLNt3KOyQB9q2gyebfq2fbqTXWcAY="
         }
       ]
     },
     {
-      "Route": "BrainSprint.jsagy1v2uo.bundle.scp.css",
-      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\q0lfynpajj-jsagy1v2uo.gz",
+      "Route": "BrainSprint.styles.css",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\1cqd7pe8yl-z0fvy0ip7r.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001848428835"
+          "Quality": "0.001600000000"
         }
       ],
       "ResponseHeaders": [
@@ -2881,15 +3358,152 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "540"
+          "Value": "624"
         },
         {
           "Name": "ETag",
-          "Value": "\"DiDGHgVnsYCWKY6d9Uh847Lx+9pmnzi3k0xmnD2hnKo=\""
+          "Value": "\"8mtuy2zcuqB10sXLNt3KOyQB9q2gyebfq2fbqTXWcAY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 17:23:36 GMT"
+          "Value": "Mon, 28 Apr 2025 18:29:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"LeBb3191PfzKza4tgyPsLDe3wqBONZH3hNSbNgJbdTY=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LeBb3191PfzKza4tgyPsLDe3wqBONZH3hNSbNgJbdTY="
+        }
+      ]
+    },
+    {
+      "Route": "BrainSprint.styles.css",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\scopedcss\\bundle\\BrainSprint.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2273"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LeBb3191PfzKza4tgyPsLDe3wqBONZH3hNSbNgJbdTY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 18:29:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LeBb3191PfzKza4tgyPsLDe3wqBONZH3hNSbNgJbdTY="
+        }
+      ]
+    },
+    {
+      "Route": "BrainSprint.styles.css.gz",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\1cqd7pe8yl-z0fvy0ip7r.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "624"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8mtuy2zcuqB10sXLNt3KOyQB9q2gyebfq2fbqTXWcAY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 18:29:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8mtuy2zcuqB10sXLNt3KOyQB9q2gyebfq2fbqTXWcAY="
+        }
+      ]
+    },
+    {
+      "Route": "BrainSprint.z0fvy0ip7r.bundle.scp.css",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\q0lfynpajj-z0fvy0ip7r.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001600000000"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "624"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8mtuy2zcuqB10sXLNt3KOyQB9q2gyebfq2fbqTXWcAY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 18:29:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2909,13 +3523,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"Xe/kQODwLCKj0LhNDLCpwqEqWmz+JfX0RdOCAMapqRI=\""
+          "Value": "W/\"LeBb3191PfzKza4tgyPsLDe3wqBONZH3hNSbNgJbdTY=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "jsagy1v2uo"
+          "Value": "z0fvy0ip7r"
         },
         {
           "Name": "label",
@@ -2923,12 +3537,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Xe/kQODwLCKj0LhNDLCpwqEqWmz+JfX0RdOCAMapqRI="
+          "Value": "sha256-LeBb3191PfzKza4tgyPsLDe3wqBONZH3hNSbNgJbdTY="
         }
       ]
     },
     {
-      "Route": "BrainSprint.jsagy1v2uo.bundle.scp.css",
+      "Route": "BrainSprint.z0fvy0ip7r.bundle.scp.css",
       "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\BrainSprint.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2938,7 +3552,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1129"
+          "Value": "2273"
         },
         {
           "Name": "Content-Type",
@@ -2946,11 +3560,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Xe/kQODwLCKj0LhNDLCpwqEqWmz+JfX0RdOCAMapqRI=\""
+          "Value": "\"LeBb3191PfzKza4tgyPsLDe3wqBONZH3hNSbNgJbdTY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 17:23:36 GMT"
+          "Value": "Mon, 28 Apr 2025 18:29:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2960,7 +3574,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "jsagy1v2uo"
+          "Value": "z0fvy0ip7r"
         },
         {
           "Name": "label",
@@ -2968,13 +3582,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Xe/kQODwLCKj0LhNDLCpwqEqWmz+JfX0RdOCAMapqRI="
+          "Value": "sha256-LeBb3191PfzKza4tgyPsLDe3wqBONZH3hNSbNgJbdTY="
         }
       ]
     },
     {
-      "Route": "BrainSprint.jsagy1v2uo.bundle.scp.css.gz",
-      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\q0lfynpajj-jsagy1v2uo.gz",
+      "Route": "BrainSprint.z0fvy0ip7r.bundle.scp.css.gz",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\q0lfynpajj-z0fvy0ip7r.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2983,7 +3597,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "540"
+          "Value": "624"
         },
         {
           "Name": "Content-Type",
@@ -2991,11 +3605,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"DiDGHgVnsYCWKY6d9Uh847Lx+9pmnzi3k0xmnD2hnKo=\""
+          "Value": "\"8mtuy2zcuqB10sXLNt3KOyQB9q2gyebfq2fbqTXWcAY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 17:23:36 GMT"
+          "Value": "Mon, 28 Apr 2025 18:29:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3013,7 +3627,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "jsagy1v2uo"
+          "Value": "z0fvy0ip7r"
         },
         {
           "Name": "label",
@@ -3021,18 +3635,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-DiDGHgVnsYCWKY6d9Uh847Lx+9pmnzi3k0xmnD2hnKo="
+          "Value": "sha256-8mtuy2zcuqB10sXLNt3KOyQB9q2gyebfq2fbqTXWcAY="
         }
       ]
     },
     {
-      "Route": "BrainSprint.jsagy1v2uo.styles.css",
-      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\1cqd7pe8yl-jsagy1v2uo.gz",
+      "Route": "BrainSprint.z0fvy0ip7r.styles.css",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\1cqd7pe8yl-z0fvy0ip7r.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001848428835"
+          "Quality": "0.001600000000"
         }
       ],
       "ResponseHeaders": [
@@ -3042,15 +3656,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "540"
+          "Value": "624"
         },
         {
           "Name": "ETag",
-          "Value": "\"DiDGHgVnsYCWKY6d9Uh847Lx+9pmnzi3k0xmnD2hnKo=\""
+          "Value": "\"8mtuy2zcuqB10sXLNt3KOyQB9q2gyebfq2fbqTXWcAY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 17:23:36 GMT"
+          "Value": "Mon, 28 Apr 2025 18:29:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3070,13 +3684,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"Xe/kQODwLCKj0LhNDLCpwqEqWmz+JfX0RdOCAMapqRI=\""
+          "Value": "W/\"LeBb3191PfzKza4tgyPsLDe3wqBONZH3hNSbNgJbdTY=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "jsagy1v2uo"
+          "Value": "z0fvy0ip7r"
         },
         {
           "Name": "label",
@@ -3084,12 +3698,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Xe/kQODwLCKj0LhNDLCpwqEqWmz+JfX0RdOCAMapqRI="
+          "Value": "sha256-LeBb3191PfzKza4tgyPsLDe3wqBONZH3hNSbNgJbdTY="
         }
       ]
     },
     {
-      "Route": "BrainSprint.jsagy1v2uo.styles.css",
+      "Route": "BrainSprint.z0fvy0ip7r.styles.css",
       "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\scopedcss\\bundle\\BrainSprint.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3099,7 +3713,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1129"
+          "Value": "2273"
         },
         {
           "Name": "Content-Type",
@@ -3107,11 +3721,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Xe/kQODwLCKj0LhNDLCpwqEqWmz+JfX0RdOCAMapqRI=\""
+          "Value": "\"LeBb3191PfzKza4tgyPsLDe3wqBONZH3hNSbNgJbdTY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 17:23:36 GMT"
+          "Value": "Mon, 28 Apr 2025 18:29:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3121,7 +3735,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "jsagy1v2uo"
+          "Value": "z0fvy0ip7r"
         },
         {
           "Name": "label",
@@ -3129,13 +3743,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Xe/kQODwLCKj0LhNDLCpwqEqWmz+JfX0RdOCAMapqRI="
+          "Value": "sha256-LeBb3191PfzKza4tgyPsLDe3wqBONZH3hNSbNgJbdTY="
         }
       ]
     },
     {
-      "Route": "BrainSprint.jsagy1v2uo.styles.css.gz",
-      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\1cqd7pe8yl-jsagy1v2uo.gz",
+      "Route": "BrainSprint.z0fvy0ip7r.styles.css.gz",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\1cqd7pe8yl-z0fvy0ip7r.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3144,7 +3758,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "540"
+          "Value": "624"
         },
         {
           "Name": "Content-Type",
@@ -3152,11 +3766,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"DiDGHgVnsYCWKY6d9Uh847Lx+9pmnzi3k0xmnD2hnKo=\""
+          "Value": "\"8mtuy2zcuqB10sXLNt3KOyQB9q2gyebfq2fbqTXWcAY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 17:23:36 GMT"
+          "Value": "Mon, 28 Apr 2025 18:29:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3174,7 +3788,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "jsagy1v2uo"
+          "Value": "z0fvy0ip7r"
         },
         {
           "Name": "label",
@@ -3182,18 +3796,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-DiDGHgVnsYCWKY6d9Uh847Lx+9pmnzi3k0xmnD2hnKo="
+          "Value": "sha256-8mtuy2zcuqB10sXLNt3KOyQB9q2gyebfq2fbqTXWcAY="
         }
       ]
     },
     {
-      "Route": "BrainSprint.styles.css",
-      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\1cqd7pe8yl-jsagy1v2uo.gz",
+      "Route": "css/customer.css",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\nofq2m2y7t-xvgnezw2tl.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001848428835"
+          "Quality": "0.001923076923"
         }
       ],
       "ResponseHeaders": [
@@ -3203,15 +3817,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "540"
+          "Value": "519"
         },
         {
           "Name": "ETag",
-          "Value": "\"DiDGHgVnsYCWKY6d9Uh847Lx+9pmnzi3k0xmnD2hnKo=\""
+          "Value": "\"L6fn/M3YTJuB3Z0KHU6kfQcC9AUCcsbWdS1IddbbJt8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 17:23:36 GMT"
+          "Value": "Mon, 28 Apr 2025 20:46:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3231,19 +3845,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"Xe/kQODwLCKj0LhNDLCpwqEqWmz+JfX0RdOCAMapqRI=\""
+          "Value": "W/\"PW97Izp/4gM2TM1rh0gKln7FnHKidAr3bnJbIkY7PQA=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Xe/kQODwLCKj0LhNDLCpwqEqWmz+JfX0RdOCAMapqRI="
+          "Value": "sha256-PW97Izp/4gM2TM1rh0gKln7FnHKidAr3bnJbIkY7PQA="
         }
       ]
     },
     {
-      "Route": "BrainSprint.styles.css",
-      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\scopedcss\\bundle\\BrainSprint.styles.css",
+      "Route": "css/customer.css",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\css\\customer.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3252,7 +3866,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1129"
+          "Value": "1183"
         },
         {
           "Name": "Content-Type",
@@ -3260,11 +3874,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Xe/kQODwLCKj0LhNDLCpwqEqWmz+JfX0RdOCAMapqRI=\""
+          "Value": "\"PW97Izp/4gM2TM1rh0gKln7FnHKidAr3bnJbIkY7PQA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 17:23:36 GMT"
+          "Value": "Mon, 28 Apr 2025 20:46:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3274,13 +3888,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Xe/kQODwLCKj0LhNDLCpwqEqWmz+JfX0RdOCAMapqRI="
+          "Value": "sha256-PW97Izp/4gM2TM1rh0gKln7FnHKidAr3bnJbIkY7PQA="
         }
       ]
     },
     {
-      "Route": "BrainSprint.styles.css.gz",
-      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\1cqd7pe8yl-jsagy1v2uo.gz",
+      "Route": "css/customer.css.gz",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\nofq2m2y7t-xvgnezw2tl.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3289,7 +3903,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "540"
+          "Value": "519"
         },
         {
           "Name": "Content-Type",
@@ -3297,11 +3911,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"DiDGHgVnsYCWKY6d9Uh847Lx+9pmnzi3k0xmnD2hnKo=\""
+          "Value": "\"L6fn/M3YTJuB3Z0KHU6kfQcC9AUCcsbWdS1IddbbJt8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 17:23:36 GMT"
+          "Value": "Mon, 28 Apr 2025 20:46:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3319,7 +3933,168 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-DiDGHgVnsYCWKY6d9Uh847Lx+9pmnzi3k0xmnD2hnKo="
+          "Value": "sha256-L6fn/M3YTJuB3Z0KHU6kfQcC9AUCcsbWdS1IddbbJt8="
+        }
+      ]
+    },
+    {
+      "Route": "css/customer.xvgnezw2tl.css",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\nofq2m2y7t-xvgnezw2tl.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001923076923"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "519"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"L6fn/M3YTJuB3Z0KHU6kfQcC9AUCcsbWdS1IddbbJt8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 20:46:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"PW97Izp/4gM2TM1rh0gKln7FnHKidAr3bnJbIkY7PQA=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xvgnezw2tl"
+        },
+        {
+          "Name": "label",
+          "Value": "css/customer.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PW97Izp/4gM2TM1rh0gKln7FnHKidAr3bnJbIkY7PQA="
+        }
+      ]
+    },
+    {
+      "Route": "css/customer.xvgnezw2tl.css",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\css\\customer.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1183"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PW97Izp/4gM2TM1rh0gKln7FnHKidAr3bnJbIkY7PQA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 20:46:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xvgnezw2tl"
+        },
+        {
+          "Name": "label",
+          "Value": "css/customer.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PW97Izp/4gM2TM1rh0gKln7FnHKidAr3bnJbIkY7PQA="
+        }
+      ]
+    },
+    {
+      "Route": "css/customer.xvgnezw2tl.css.gz",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\nofq2m2y7t-xvgnezw2tl.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "519"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"L6fn/M3YTJuB3Z0KHU6kfQcC9AUCcsbWdS1IddbbJt8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 20:46:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xvgnezw2tl"
+        },
+        {
+          "Name": "label",
+          "Value": "css/customer.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-L6fn/M3YTJuB3Z0KHU6kfQcC9AUCcsbWdS1IddbbJt8="
         }
       ]
     },
@@ -3622,174 +4397,13 @@
       ]
     },
     {
-      "Route": "favicon.61n19gt1b8.ico",
-      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\d0d3b04a4f-61n19gt1b8.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000411015208"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2432"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"jcY0RXFOlcp4VNTCcYQtWVZZBlr+ZY+AOv6/0S5dnF8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 14:35:29 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/x-icon"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "61n19gt1b8"
-        },
-        {
-          "Name": "label",
-          "Value": "favicon.ico"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
-        }
-      ]
-    },
-    {
-      "Route": "favicon.61n19gt1b8.ico",
-      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\favicon.ico",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5430"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/x-icon"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 14:35:29 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "61n19gt1b8"
-        },
-        {
-          "Name": "label",
-          "Value": "favicon.ico"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
-        }
-      ]
-    },
-    {
-      "Route": "favicon.61n19gt1b8.ico.gz",
-      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\d0d3b04a4f-61n19gt1b8.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2432"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/x-icon"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"jcY0RXFOlcp4VNTCcYQtWVZZBlr+ZY+AOv6/0S5dnF8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 14:35:29 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "61n19gt1b8"
-        },
-        {
-          "Name": "label",
-          "Value": "favicon.ico.gz"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-jcY0RXFOlcp4VNTCcYQtWVZZBlr+ZY+AOv6/0S5dnF8="
-        }
-      ]
-    },
-    {
       "Route": "favicon.ico",
-      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\d0d3b04a4f-61n19gt1b8.gz",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\d0d3b04a4f-t0y8bqv8pi.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000411015208"
+          "Quality": "0.000055236412"
         }
       ],
       "ResponseHeaders": [
@@ -3799,15 +4413,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2432"
+          "Value": "18103"
         },
         {
           "Name": "ETag",
-          "Value": "\"jcY0RXFOlcp4VNTCcYQtWVZZBlr+ZY+AOv6/0S5dnF8=\""
+          "Value": "\"FoK/ngrjy4H/Fwp39spQK6bh+xtseSTcCgRhQRaEPsQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 14:35:29 GMT"
+          "Value": "Mon, 28 Apr 2025 17:34:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3827,13 +4441,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\""
+          "Value": "W/\"wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+          "Value": "sha256-wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps="
         }
       ]
     },
@@ -3848,7 +4462,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5430"
+          "Value": "18575"
         },
         {
           "Name": "Content-Type",
@@ -3856,11 +4470,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\""
+          "Value": "\"wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 14:35:29 GMT"
+          "Value": "Mon, 28 Apr 2025 17:34:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3870,13 +4484,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+          "Value": "sha256-wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps="
         }
       ]
     },
     {
       "Route": "favicon.ico.gz",
-      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\d0d3b04a4f-61n19gt1b8.gz",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\d0d3b04a4f-t0y8bqv8pi.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3885,7 +4499,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2432"
+          "Value": "18103"
         },
         {
           "Name": "Content-Type",
@@ -3893,11 +4507,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jcY0RXFOlcp4VNTCcYQtWVZZBlr+ZY+AOv6/0S5dnF8=\""
+          "Value": "\"FoK/ngrjy4H/Fwp39spQK6bh+xtseSTcCgRhQRaEPsQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 14:35:29 GMT"
+          "Value": "Mon, 28 Apr 2025 17:34:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3915,18 +4529,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-jcY0RXFOlcp4VNTCcYQtWVZZBlr+ZY+AOv6/0S5dnF8="
+          "Value": "sha256-FoK/ngrjy4H/Fwp39spQK6bh+xtseSTcCgRhQRaEPsQ="
         }
       ]
     },
     {
-      "Route": "js/site.js",
-      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\y0pet6gzlx-xtxxf3hu2r.gz",
+      "Route": "favicon.t0y8bqv8pi.ico",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\d0d3b04a4f-t0y8bqv8pi.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.005235602094"
+          "Quality": "0.000055236412"
         }
       ],
       "ResponseHeaders": [
@@ -3936,15 +4550,337 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "190"
+          "Value": "18103"
         },
         {
           "Name": "ETag",
-          "Value": "\"465WqepNnI4ENLgQJFXrL2gtI20GCfeLK3JAtugOzpA=\""
+          "Value": "\"FoK/ngrjy4H/Fwp39spQK6bh+xtseSTcCgRhQRaEPsQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 14:35:29 GMT"
+          "Value": "Mon, 28 Apr 2025 17:34:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t0y8bqv8pi"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.t0y8bqv8pi.ico",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\favicon.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 17:34:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t0y8bqv8pi"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.t0y8bqv8pi.ico.gz",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\d0d3b04a4f-t0y8bqv8pi.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18103"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FoK/ngrjy4H/Fwp39spQK6bh+xtseSTcCgRhQRaEPsQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 17:34:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t0y8bqv8pi"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FoK/ngrjy4H/Fwp39spQK6bh+xtseSTcCgRhQRaEPsQ="
+        }
+      ]
+    },
+    {
+      "Route": "js/notifications.8d6ebtl8bo.js",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\wlan6o8wrd-8d6ebtl8bo.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000464900046"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2150"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m3UtyYsxqN3HVZDCEbV1PO/WW4EcQ5C8cCKA/yUQ4h4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 19:39:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"vOaxgSnsyRNHJp+VrzuXMbYV72qNU5zHpxaEIczHb6s=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8d6ebtl8bo"
+        },
+        {
+          "Name": "label",
+          "Value": "js/notifications.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vOaxgSnsyRNHJp+VrzuXMbYV72qNU5zHpxaEIczHb6s="
+        }
+      ]
+    },
+    {
+      "Route": "js/notifications.8d6ebtl8bo.js",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\notifications.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8377"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vOaxgSnsyRNHJp+VrzuXMbYV72qNU5zHpxaEIczHb6s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 19:39:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8d6ebtl8bo"
+        },
+        {
+          "Name": "label",
+          "Value": "js/notifications.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vOaxgSnsyRNHJp+VrzuXMbYV72qNU5zHpxaEIczHb6s="
+        }
+      ]
+    },
+    {
+      "Route": "js/notifications.8d6ebtl8bo.js.gz",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\wlan6o8wrd-8d6ebtl8bo.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2150"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m3UtyYsxqN3HVZDCEbV1PO/WW4EcQ5C8cCKA/yUQ4h4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 19:39:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8d6ebtl8bo"
+        },
+        {
+          "Name": "label",
+          "Value": "js/notifications.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-m3UtyYsxqN3HVZDCEbV1PO/WW4EcQ5C8cCKA/yUQ4h4="
+        }
+      ]
+    },
+    {
+      "Route": "js/notifications.js",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\wlan6o8wrd-8d6ebtl8bo.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000464900046"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2150"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m3UtyYsxqN3HVZDCEbV1PO/WW4EcQ5C8cCKA/yUQ4h4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 19:39:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3964,18 +4900,461 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo=\""
+          "Value": "W/\"vOaxgSnsyRNHJp+VrzuXMbYV72qNU5zHpxaEIczHb6s=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo="
+          "Value": "sha256-vOaxgSnsyRNHJp+VrzuXMbYV72qNU5zHpxaEIczHb6s="
         }
       ]
     },
     {
-      "Route": "js/site.js",
+      "Route": "js/notifications.js",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\notifications.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8377"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vOaxgSnsyRNHJp+VrzuXMbYV72qNU5zHpxaEIczHb6s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 19:39:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vOaxgSnsyRNHJp+VrzuXMbYV72qNU5zHpxaEIczHb6s="
+        }
+      ]
+    },
+    {
+      "Route": "js/notifications.js.gz",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\wlan6o8wrd-8d6ebtl8bo.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2150"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m3UtyYsxqN3HVZDCEbV1PO/WW4EcQ5C8cCKA/yUQ4h4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 19:39:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-m3UtyYsxqN3HVZDCEbV1PO/WW4EcQ5C8cCKA/yUQ4h4="
+        }
+      ]
+    },
+    {
+      "Route": "js/search.iri5fbdm2c.js",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\pc11id5sst-iri5fbdm2c.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000741839763"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1347"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/8365L3b+75yAEuTc/k9Xt9qPed8uB3zsjZU7PTLe7Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 19:33:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"PrnYL7Bt7cASDvw2Zg2v0Xr/duOu9G/FPOgWDP/U8HM=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "iri5fbdm2c"
+        },
+        {
+          "Name": "label",
+          "Value": "js/search.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PrnYL7Bt7cASDvw2Zg2v0Xr/duOu9G/FPOgWDP/U8HM="
+        }
+      ]
+    },
+    {
+      "Route": "js/search.iri5fbdm2c.js",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\search.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4371"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PrnYL7Bt7cASDvw2Zg2v0Xr/duOu9G/FPOgWDP/U8HM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 19:33:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "iri5fbdm2c"
+        },
+        {
+          "Name": "label",
+          "Value": "js/search.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PrnYL7Bt7cASDvw2Zg2v0Xr/duOu9G/FPOgWDP/U8HM="
+        }
+      ]
+    },
+    {
+      "Route": "js/search.iri5fbdm2c.js.gz",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\pc11id5sst-iri5fbdm2c.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1347"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/8365L3b+75yAEuTc/k9Xt9qPed8uB3zsjZU7PTLe7Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 19:33:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "iri5fbdm2c"
+        },
+        {
+          "Name": "label",
+          "Value": "js/search.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/8365L3b+75yAEuTc/k9Xt9qPed8uB3zsjZU7PTLe7Q="
+        }
+      ]
+    },
+    {
+      "Route": "js/search.js",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\pc11id5sst-iri5fbdm2c.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000741839763"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1347"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/8365L3b+75yAEuTc/k9Xt9qPed8uB3zsjZU7PTLe7Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 19:33:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"PrnYL7Bt7cASDvw2Zg2v0Xr/duOu9G/FPOgWDP/U8HM=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PrnYL7Bt7cASDvw2Zg2v0Xr/duOu9G/FPOgWDP/U8HM="
+        }
+      ]
+    },
+    {
+      "Route": "js/search.js",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\search.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4371"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PrnYL7Bt7cASDvw2Zg2v0Xr/duOu9G/FPOgWDP/U8HM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 19:33:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PrnYL7Bt7cASDvw2Zg2v0Xr/duOu9G/FPOgWDP/U8HM="
+        }
+      ]
+    },
+    {
+      "Route": "js/search.js.gz",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\pc11id5sst-iri5fbdm2c.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1347"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/8365L3b+75yAEuTc/k9Xt9qPed8uB3zsjZU7PTLe7Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 19:33:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/8365L3b+75yAEuTc/k9Xt9qPed8uB3zsjZU7PTLe7Q="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.ampg4cb6sn.js",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\y0pet6gzlx-ampg4cb6sn.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001302083333"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "767"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9qWpxY3sVbGdkDP32rRt59onl18BQA7iW93ywKjiPw8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 20:35:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"TrYKwme1riud6PcN9MmHv+ne1mJTHyU4zXmQ7cUtoSc=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ampg4cb6sn"
+        },
+        {
+          "Name": "label",
+          "Value": "js/site.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-TrYKwme1riud6PcN9MmHv+ne1mJTHyU4zXmQ7cUtoSc="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.ampg4cb6sn.js",
       "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\site.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3985,7 +5364,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "231"
+          "Value": "2054"
         },
         {
           "Name": "Content-Type",
@@ -3993,121 +5372,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo=\""
+          "Value": "\"TrYKwme1riud6PcN9MmHv+ne1mJTHyU4zXmQ7cUtoSc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 14:35:29 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo="
-        }
-      ]
-    },
-    {
-      "Route": "js/site.js.gz",
-      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\y0pet6gzlx-xtxxf3hu2r.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "190"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"465WqepNnI4ENLgQJFXrL2gtI20GCfeLK3JAtugOzpA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 14:35:29 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-465WqepNnI4ENLgQJFXrL2gtI20GCfeLK3JAtugOzpA="
-        }
-      ]
-    },
-    {
-      "Route": "js/site.xtxxf3hu2r.js",
-      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\y0pet6gzlx-xtxxf3hu2r.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.005235602094"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "190"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"465WqepNnI4ENLgQJFXrL2gtI20GCfeLK3JAtugOzpA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 14:35:29 GMT"
+          "Value": "Mon, 28 Apr 2025 20:35:04 GMT"
         },
         {
           "Name": "Cache-Control",
           "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xtxxf3hu2r"
+          "Value": "ampg4cb6sn"
         },
         {
           "Name": "label",
@@ -4115,13 +5394,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo="
+          "Value": "sha256-TrYKwme1riud6PcN9MmHv+ne1mJTHyU4zXmQ7cUtoSc="
         }
       ]
     },
     {
-      "Route": "js/site.xtxxf3hu2r.js",
-      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\site.js",
+      "Route": "js/site.ampg4cb6sn.js.gz",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\y0pet6gzlx-ampg4cb6sn.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4130,7 +5409,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "231"
+          "Value": "767"
         },
         {
           "Name": "Content-Type",
@@ -4138,56 +5417,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo=\""
+          "Value": "\"9qWpxY3sVbGdkDP32rRt59onl18BQA7iW93ywKjiPw8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 14:35:29 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "xtxxf3hu2r"
-        },
-        {
-          "Name": "label",
-          "Value": "js/site.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo="
-        }
-      ]
-    },
-    {
-      "Route": "js/site.xtxxf3hu2r.js.gz",
-      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\y0pet6gzlx-xtxxf3hu2r.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "190"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"465WqepNnI4ENLgQJFXrL2gtI20GCfeLK3JAtugOzpA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 14:35:29 GMT"
+          "Value": "Mon, 28 Apr 2025 20:35:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4205,7 +5439,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xtxxf3hu2r"
+          "Value": "ampg4cb6sn"
         },
         {
           "Name": "label",
@@ -4213,7 +5447,442 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-465WqepNnI4ENLgQJFXrL2gtI20GCfeLK3JAtugOzpA="
+          "Value": "sha256-9qWpxY3sVbGdkDP32rRt59onl18BQA7iW93ywKjiPw8="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.js",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\y0pet6gzlx-ampg4cb6sn.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001302083333"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "767"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9qWpxY3sVbGdkDP32rRt59onl18BQA7iW93ywKjiPw8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 20:35:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"TrYKwme1riud6PcN9MmHv+ne1mJTHyU4zXmQ7cUtoSc=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TrYKwme1riud6PcN9MmHv+ne1mJTHyU4zXmQ7cUtoSc="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.js",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2054"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TrYKwme1riud6PcN9MmHv+ne1mJTHyU4zXmQ7cUtoSc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 20:35:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TrYKwme1riud6PcN9MmHv+ne1mJTHyU4zXmQ7cUtoSc="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.js.gz",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\y0pet6gzlx-ampg4cb6sn.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "767"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9qWpxY3sVbGdkDP32rRt59onl18BQA7iW93ywKjiPw8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 20:35:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9qWpxY3sVbGdkDP32rRt59onl18BQA7iW93ywKjiPw8="
+        }
+      ]
+    },
+    {
+      "Route": "js/theme.2rdgz7o3xd.js",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\y2bvf0alx3-2rdgz7o3xd.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001470588235"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "679"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Fr58SiN4yAkqpxwXOneG0QD/4QEwBNqPy0oWhO9wM38=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 19:33:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"nmhAqS39sQY3xlITkESYAMBZ2F0AQKlRiIG+kQOjBaE=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2rdgz7o3xd"
+        },
+        {
+          "Name": "label",
+          "Value": "js/theme.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nmhAqS39sQY3xlITkESYAMBZ2F0AQKlRiIG+kQOjBaE="
+        }
+      ]
+    },
+    {
+      "Route": "js/theme.2rdgz7o3xd.js",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\theme.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1723"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nmhAqS39sQY3xlITkESYAMBZ2F0AQKlRiIG+kQOjBaE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 19:33:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2rdgz7o3xd"
+        },
+        {
+          "Name": "label",
+          "Value": "js/theme.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nmhAqS39sQY3xlITkESYAMBZ2F0AQKlRiIG+kQOjBaE="
+        }
+      ]
+    },
+    {
+      "Route": "js/theme.2rdgz7o3xd.js.gz",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\y2bvf0alx3-2rdgz7o3xd.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "679"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Fr58SiN4yAkqpxwXOneG0QD/4QEwBNqPy0oWhO9wM38=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 19:33:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2rdgz7o3xd"
+        },
+        {
+          "Name": "label",
+          "Value": "js/theme.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Fr58SiN4yAkqpxwXOneG0QD/4QEwBNqPy0oWhO9wM38="
+        }
+      ]
+    },
+    {
+      "Route": "js/theme.js",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\y2bvf0alx3-2rdgz7o3xd.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001470588235"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "679"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Fr58SiN4yAkqpxwXOneG0QD/4QEwBNqPy0oWhO9wM38=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 19:33:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"nmhAqS39sQY3xlITkESYAMBZ2F0AQKlRiIG+kQOjBaE=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nmhAqS39sQY3xlITkESYAMBZ2F0AQKlRiIG+kQOjBaE="
+        }
+      ]
+    },
+    {
+      "Route": "js/theme.js",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\theme.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1723"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nmhAqS39sQY3xlITkESYAMBZ2F0AQKlRiIG+kQOjBaE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 19:33:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nmhAqS39sQY3xlITkESYAMBZ2F0AQKlRiIG+kQOjBaE="
+        }
+      ]
+    },
+    {
+      "Route": "js/theme.js.gz",
+      "AssetFile": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\y2bvf0alx3-2rdgz7o3xd.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "679"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Fr58SiN4yAkqpxwXOneG0QD/4QEwBNqPy0oWhO9wM38=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 19:33:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Fr58SiN4yAkqpxwXOneG0QD/4QEwBNqPy0oWhO9wM38="
         }
       ]
     },

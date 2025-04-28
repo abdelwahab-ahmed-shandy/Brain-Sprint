@@ -9,6 +9,7 @@
 	<ItemGroup>
 		<ProjectReference Include="..\DataAccess\DataAccess.csproj" />
 		<ProjectReference Include="..\Models\Models.csproj" />
+		<ProjectReference Include="..\Services\Services.csproj" />
 		<ProjectReference Include="..\Utility\Utility.csproj" />
 	</ItemGroup>
 
@@ -21,6 +22,16 @@
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Areas\Identity\Views\" />
+	  <Folder Include="Areas\Instructor\Controllers\" />
+	  <Folder Include="Areas\Instructor\Views\" />
+	  <Folder Include="wwwroot\Assets\Customer\StudentImges\" />
+	  <Folder Include="wwwroot\Assets\Identity\" />
+	  <Folder Include="wwwroot\Assets\Instructor\InstructorImges\" />
 	</ItemGroup>
 
 </Project>

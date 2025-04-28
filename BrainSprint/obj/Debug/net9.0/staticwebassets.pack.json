@@ -2,7 +2,23 @@
   "Files": [
     {
       "Id": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\BrainSprint.bundle.scp.css",
-      "PackagePath": "staticwebassets\\BrainSprint.jsagy1v2uo.bundle.scp.css"
+      "PackagePath": "staticwebassets\\BrainSprint.z0fvy0ip7r.bundle.scp.css"
+    },
+    {
+      "Id": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Customer\\images\\app.png",
+      "PackagePath": "staticwebassets\\Assets\\Customer\\images\\app.png"
+    },
+    {
+      "Id": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Customer\\images\\appstore.png",
+      "PackagePath": "staticwebassets\\Assets\\Customer\\images\\appstore.png"
+    },
+    {
+      "Id": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Customer\\images\\logo.png",
+      "PackagePath": "staticwebassets\\Assets\\Customer\\images\\logo.png"
+    },
+    {
+      "Id": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\css\\customer.css",
+      "PackagePath": "staticwebassets\\css\\customer.css"
     },
     {
       "Id": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\css\\site.css",
@@ -13,8 +29,20 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\notifications.js",
+      "PackagePath": "staticwebassets\\js\\notifications.js"
+    },
+    {
+      "Id": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\search.js",
+      "PackagePath": "staticwebassets\\js\\search.js"
+    },
+    {
       "Id": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\theme.js",
+      "PackagePath": "staticwebassets\\js\\theme.js"
     },
     {
       "Id": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\lib\\bootstrap\\LICENSE",

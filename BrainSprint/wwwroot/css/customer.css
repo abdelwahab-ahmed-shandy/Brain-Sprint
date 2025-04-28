@@ -1,0 +1,69 @@
+﻿/* wwwroot/css/customer.css */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    margin-top: auto;
+}
+
+#secondaryNavbar {
+    transition: all 0.1s ease;
+}
+
+.animate__fadeInDown {
+    animation-duration: 0.3s;
+}
+
+.animate__fadeOutUp {
+    animation-duration: 0.3s;
+}
+
+.login-btn-custom {
+    color: white;
+    border-color: white;
+    background-color: transparent;
+    transition: all 0.2s ease;
+}
+
+
+    .login-btn-custom:hover {
+        color: white;
+        background-color: rgba(255, 255, 255, 0.1);
+        transform: translateY(-1px);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-btn-custom:active {
+        transform: translateY(0);
+        box-shadow: none;
+    }
+/*.customer-layout {
+    background-color: #f8f9fa;
+}
+
+.sidebar {
+    min-height: calc(100vh - 56px);
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.main-content {
+    padding-top: 20px;
+    background-color: white;
+}
+
+.user-profile {
+    border-bottom: 1px solid #eee;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: #0d6efd !important;
+}
+*/

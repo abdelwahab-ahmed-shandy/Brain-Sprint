@@ -1,8 +1,5 @@
-using DataAccess;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Models;
+using DataAccess.Repositories.IRepositories;
+using DataAccess.Repositories;
 
 namespace BrainSprint
 {
@@ -50,9 +47,10 @@ namespace BrainSprint
 
             #region Email Sender 
 
-            //builder.Services.AddTransient<IEmailSender, EmailSender>();
+            builder.Services.AddTransient<IEmailSender, EmailSender>();
 
             #endregion
+
 
             #region Configure Application Settings
             // Configure authentication services in the application
@@ -76,6 +74,15 @@ namespace BrainSprint
             //    // Set the client secret key for Google authentication from the application settings 
             //    googleOptions.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
             //});
+
+            #endregion
+
+
+            #region Register repository services with Dependency Injection (Scoped Lifetime) 
+            // This ensures that a new instance is created per request, improving efficiency 
+            // while maintaining consistency within a request's lifecycle.
+
+            builder.Services.AddScoped<IApplicationUserRepository, ApplicationUserRepository>();
 
             #endregion
 

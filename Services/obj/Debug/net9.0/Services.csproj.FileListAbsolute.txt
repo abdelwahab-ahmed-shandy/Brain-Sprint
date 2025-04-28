@@ -1,0 +1,12 @@
+E:\01-Projects\Brain-Sprint\Services\bin\Debug\net9.0\Services.deps.json
+E:\01-Projects\Brain-Sprint\Services\bin\Debug\net9.0\Services.dll
+E:\01-Projects\Brain-Sprint\Services\bin\Debug\net9.0\Services.pdb
+E:\01-Projects\Brain-Sprint\Services\obj\Debug\net9.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+E:\01-Projects\Brain-Sprint\Services\obj\Debug\net9.0\Services.AssemblyInfoInputs.cache
+E:\01-Projects\Brain-Sprint\Services\obj\Debug\net9.0\Services.AssemblyInfo.cs
+E:\01-Projects\Brain-Sprint\Services\obj\Debug\net9.0\Services.csproj.CoreCompileInputs.cache
+E:\01-Projects\Brain-Sprint\Services\obj\Debug\net9.0\Services.sourcelink.json
+E:\01-Projects\Brain-Sprint\Services\obj\Debug\net9.0\Services.dll
+E:\01-Projects\Brain-Sprint\Services\obj\Debug\net9.0\refint\Services.dll
+E:\01-Projects\Brain-Sprint\Services\obj\Debug\net9.0\Services.pdb
+E:\01-Projects\Brain-Sprint\Services\obj\Debug\net9.0\ref\Services.dll
