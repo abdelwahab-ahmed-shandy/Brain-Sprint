@@ -209,6 +209,134 @@ namespace BrainSprint.Areas.Identity.Controllers
 
 
 
+        #region Forget Password
+
+        // Display the "Forgot Password" page (GET)
+        [HttpGet]
+        public IActionResult ForgetPassword()
+        {
+            return View();
+        }
+
+        // Receive form from "Forgot Password" page (POST)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ForgetPassword(ForgetPasswordVM model)
+        {
+            // Check the validity of the entered data
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            // Find user using email
+            var user = await _userManager.FindByEmailAsync(model.Email);
+            if (user == null)
+            {
+                // Not disclosing that the mail is not registered for security reasons
+                TempData["notification"] = "If your email is registered, you'll receive a password reset link";
+                TempData["MessageType"] = "info";
+                return RedirectToAction("ForgetPasswordConfirmation");
+            }
+
+            // Generate password reset token
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+            // Create a password reset link
+            var callbackUrl = Url.Action("ResetPassword", "Account",
+                new { email = model.Email, token = token }, protocol: HttpContext.Request.Scheme);
+
+            // Send an email containing a password reset link
+            await _emailSender.SendEmailAsync(
+                model.Email,
+                "Reset your MovieMart password",
+                $"Please reset your password by <a href='{callbackUrl}'>clicking here</a>.");
+
+            // Notify the user that the link has been sent
+            TempData["notification"] = "Password reset link has been sent to your email";
+            TempData["MessageType"] = "success";
+            return RedirectToAction("ForgetPasswordConfirmation");
+        }
+
+
+        // Display the confirmation page for sending the reset link (GET)
+        [HttpGet]
+        public IActionResult ForgetPasswordConfirmation()
+        {
+            return View();
+        }
+
+        // Display the password reset form (GET) based on the sent link
+        [HttpGet]
+        public IActionResult ResetPassword(string token, string email)
+        {
+            // Check if the code and email are present
+            if (token == null || email == null)
+            {
+                ModelState.AddModelError("", "Invalid password reset token");
+            }
+
+            // Set up the form with the postal and code values
+            var forgetPassword = new ForgetPasswordVM
+            {
+                Email = email,
+                ResetToken = token
+            };
+
+            return View(forgetPassword);
+        }
+
+        // Receive password reset form (POST)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ResetPassword(ForgetPasswordVM model)
+        {
+            // Data validation
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            // Find user using email
+            var user = await _userManager.FindByEmailAsync(model.Email);
+
+            if (user == null)
+            {
+                // Do not detect that the user does not exist
+                TempData["notification"] = "Password has been reset successfully";
+                TempData["MessageType"] = "success";
+                return RedirectToAction("ResetPasswordConfirmation");
+            }
+
+            // Perform password reset operation using token
+            var result = await _userManager.ResetPasswordAsync(user, model.ResetToken, model.NewPassword);
+            if (result.Succeeded)
+            {
+                TempData["notification"] = "Password has been reset successfully";
+                TempData["MessageType"] = "success";
+                return RedirectToAction("ResetPasswordConfirmation");
+            }
+
+            // If there are errors, display them to the user.
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError(string.Empty, error.Description);
+            }
+
+            return View(model);
+        }
+
+        // Display the password reset success confirmation page (GET)
+        [HttpGet]
+        public IActionResult ResetPasswordConfirmation()
+        {
+            return View();
+        }
+
+        #endregion
+
+
+
 
 
         #region ConfirmEmail (Beginning of the email confirmation section )
