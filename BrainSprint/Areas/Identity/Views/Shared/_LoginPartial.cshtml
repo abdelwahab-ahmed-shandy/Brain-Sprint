@@ -1,0 +1,51 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<ul class="navbar-nav">
+	@if (SignInManager.IsSignedIn(User))
+	{
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				<i class="fas fa-user-circle me-1"></i>
+				@User.Identity?.Name
+				<span class="user-points animate__animated animate__pulse animate__infinite" style="animation-duration: 2s;">
+					<i class="fas fa-coins me-1"></i> 1250
+				</span>
+			</a>
+			<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+				<li>
+					<a class="dropdown-item" asp-area="Identity" asp-controller="Account" asp-action="Index" >
+						<i class="fas fa-user-cog me-2"></i>account
+					</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-controller="Profile" asp-action="Badges">
+						<div class="d-flex align-items-center">
+							<i class="fas fa-trophy me-2"></i>
+							<span>My badge</span>
+							<span class="badge bg-success ms-2">5</span>
+						</div>
+					</a>
+				</li>
+				<li><hr class="dropdown-divider"></li>
+				<li>
+					<form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "Customer" })">
+						<button type="submit" class="dropdown-item">
+							<i class="fas fa-sign-out-alt me-2"></i>Sign out
+						</button>
+					</form>
+				</li>
+			</ul>
+		</li>
+	}
+	else
+	{
+		<li class="nav-item">
+			<a class="nav-link btn btn-outline-primary me-2" asp-area="Identity" asp-controller="Account" asp-action="Register">New Registration</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link btn btn-primary" asp-area="Identity" asp-controller="Account" asp-action="Login" >Login</a>
+		</li>
+	}
+</ul>

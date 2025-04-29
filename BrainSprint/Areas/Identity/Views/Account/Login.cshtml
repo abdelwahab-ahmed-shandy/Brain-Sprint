@@ -1,0 +1,177 @@
+﻿@model Models.ViewModels.LoginVM
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="row justify-content-center">
+    <div class="col-lg-14">
+        <div class="auth-card shadow-lg">
+            <div class="auth-header text-center mb-4">
+                <img src="~/Assets/Customer/images/logo.png" alt="BrainSprint Logo" width="80" height="80" class="mb-3">
+                <h2 class="fw-bold text-white">Welcome Back</h2>
+                <p class="text-light">Continue your learning journey</p>
+            </div>
+
+            @if (TempData["Error"] != null)
+            {
+                <div class="alert alert-danger">@TempData["Error"]</div>
+            }
+
+            <form asp-action="Login" method="post" class="needs-validation" novalidate>
+                @Html.AntiForgeryToken()
+
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                <!-- Email -->
+                <div class="form-floating mb-3">
+                    <input asp-for="Email" type="email" class="form-control" placeholder=" " required />
+                    <label asp-for="Email">Email</label>
+                    <span asp-validation-for="Email" class="text-danger small"></span>
+                </div>
+
+                <!-- Password -->
+                <div class="form-floating mb-3 position-relative">
+                    <input asp-for="Password" type="password" class="form-control" placeholder=" " required />
+                    <label asp-for="Password">Password</label>
+                    <button class="btn btn-link position-absolute end-0 top-0 mt-3 me-2 password-toggle" type="button">
+                        <i class="bi bi-eye-fill"></i>
+                    </button>
+                    <span asp-validation-for="Password" class="text-danger small"></span>
+                </div>
+
+                <!-- Remember Me -->
+                <div class="form-check mb-4">
+                    <input class="form-check-input" asp-for="RememberMe" />
+                    <label class="form-check-label text-light" asp-for="RememberMe">
+                        Remember me
+                    </label>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="d-grid mb-3">
+                    <button type="submit" class="btn btn-accent btn-lg py-3">
+                        <span class="submit-text">Sign In</span>
+                        <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                        <i class="bi bi-box-arrow-in-right ms-2"></i>
+                    </button>
+                </div>
+
+                <!-- Additional Links -->
+                <div class="text-center">
+                    <p class="mb-1 text-light">
+                        <a asp-action="ForgotPassword" class="text-accent">Forgot password?</a>
+                    </p>
+                    <p class="mb-0 text-light">
+                        Don't have an account? <a asp-action="Register" class="text-accent fw-bold">Register</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <style>
+        .auth-card {
+            background: rgba(33, 37, 41, 0.92);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .auth-header {
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .form-control {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+            .form-control:focus {
+                background-color: rgba(255, 255, 255, 0.2);
+                border-color: var(--accent-color);
+                box-shadow: 0 0 0 0.25rem rgba(78, 115, 223, 0.25);
+                color: white;
+            }
+
+        .form-floating label {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .text-accent {
+            color: var(--accent-color);
+        }
+
+        .btn-accent {
+            background-color: var(--accent-color);
+            border: none;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+            .btn-accent:hover {
+                background-color: #17a673;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(28, 200, 138, 0.3);
+            }
+
+        @@media (max-width: 768px) {
+            .auth-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+}
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        $(document).ready(function () {
+            // Password toggle
+            $('.password-toggle').click(function() {
+                const input = $(this).siblings('input');
+                const icon = $(this).find('i');
+
+                if (input.attr('type') === 'password') {
+                    input.attr('type', 'text');
+                    icon.removeClass('bi-eye-fill').addClass('bi-eye-slash-fill');
+                } else {
+                    input.attr('type', 'password');
+                    icon.removeClass('bi-eye-slash-fill').addClass('bi-eye-fill');
+                }
+            });
+
+            // Form validation
+            (function() {
+                'use strict';
+
+                const form = document.querySelector('form');
+
+                form.addEventListener('submit', function(event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    } else {
+                        // Show loading state
+                        const submitBtn = form.querySelector('button[type="submit"]');
+                        submitBtn.querySelector('.submit-text').classList.add('d-none');
+                        submitBtn.querySelector('.spinner-border').classList.remove('d-none');
+                        submitBtn.disabled = true;
+                    }
+
+                    form.classList.add('was-validated');
+                }, false);
+            })();
+        });
+    </script>
+}

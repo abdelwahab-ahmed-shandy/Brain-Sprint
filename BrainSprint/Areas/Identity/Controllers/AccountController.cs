@@ -5,6 +5,7 @@ using Models.ViewModels;
 using System.Text.Encodings.Web;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
 
 
 namespace BrainSprint.Areas.Identity.Controllers
@@ -16,98 +17,246 @@ namespace BrainSprint.Areas.Identity.Controllers
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IEmailSender _emailSender;
+        private readonly IWebHostEnvironment _webHostEnvironment;
         public AccountController(UserManager<ApplicationUser> userManager,
                                     SignInManager<ApplicationUser> signInManager,
                                         RoleManager<IdentityRole> roleManager,
-                                            IEmailSender emailSender)
+                                            IEmailSender emailSender,
+                                                IWebHostEnvironment webHostEnvironment)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _roleManager = roleManager;
             _emailSender = emailSender;
+            _webHostEnvironment = webHostEnvironment;
         }
 
 
+        #region Register
 
-
-
-
-
-        #region Email Confirmation
-
-        /// <summary>
-        /// Asynchronous function to confirm user email
-        /// </summary>
-        /// <param name="userId">User ID</param>
-        /// <param name="code">Confirmation Code</param>
-        /// <returns>Result</returns>
-        public async Task<IActionResult> ConfirmEmail(string userId, string code)
+        [HttpGet]
+        public async Task<IActionResult> Register()
         {
-            // Input validation
-            if (string.IsNullOrWhiteSpace(userId) || string.IsNullOrWhiteSpace(code))
+            //  Check if roles do not exist, and create them if necessary
+            if (_roleManager.Roles.IsNullOrEmpty())
             {
-                return View("ConfirmationError", new ConfirmationVM
-                {
-                    Title = "Invalid Email Confirmation Request",
-                    Message = "Sorry, the confirmation link appears to be invalid or missing some information.",
-                    Icon = "fas fa-exclamation-circle text-danger",
-                    ButtonText = "Return to Home",
-                    ButtonUrl = Url.Action("Index", "Home")
-                });
+                await _roleManager.CreateAsync(role: new IdentityRole("SuperAdmin"));
+                await _roleManager.CreateAsync(role: new IdentityRole("Admin"));
+                await _roleManager.CreateAsync(role: new IdentityRole("Customer"));
+                await _roleManager.CreateAsync(role: new IdentityRole("Instructor"));
+
             }
 
-            // Find the user in the database
-            var user = await _userManager.FindByIdAsync(userId);
-
-            if (user == null)
+            if (User.Identity?.IsAuthenticated == true)
             {
-                return View("ConfirmationError", new ConfirmationVM
-                {
-                    Title = "User does not exist",
-                    // Here we use a real string interpolation with $ before the text
-                    Message = $"Sorry, we couldn't find an account associated with the ID '{userId}'.",
-                    Icon = "fas fa-user-times text-warning",
-                    ButtonText = "Attempting to log in",
-                    ButtonUrl = Url.Action("Login", "Account")
-                });
+                TempData["notifiction"] = "Your account has been created! Please check your email to confirm the account before logging in";
+                TempData["MessageType"] = "Information";
+
+                return RedirectToAction("Index", "Home", new { area = "Customer" });
             }
+            return View(new RegisterVM()); //  Display the registration page for the user
+        }
 
-            // Perform the email confirmation operation
-            var result = await _userManager.ConfirmEmailAsync(user, code);
-
-            if (result.Succeeded)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Register(RegisterVM registerVM)
+        {
+            if (ModelState.IsValid)
             {
-                // Automatic login after successful confirmation
-
-                await _signInManager.SignInAsync(user, isPersistent: false);
-
-                TempData["Notification"] = new NotificationVM
-
+                ApplicationUser applicationUser = new ApplicationUser
                 {
-                    Title = "Your email has been successfully confirmed!",
-                    Message = "Thank you for confirming your email. You have been automatically logged in.",
-                    Type = NotificationType.Success,
-                    Icon = "fas fa-check-circle",
-                    AutoDismiss = true,
-                    Delay = 5000
-
+                    FirstName = registerVM.FirstName,
+                    LastName = registerVM.LastName,
+                    Address = registerVM.Address,
+                    UserName = registerVM.UserName,
+                    Email = registerVM.Email,
+                    RegistrationDate = DateTime.UtcNow,
+                    IsActive = true,
+                    Level = 1,
+                    TotalPoints = 0,
+                    EmailConfirmed = false
                 };
 
-                return RedirectToAction("Profile", "Settings", new { area = "Identity" });
+                var newUser = await _userManager.CreateAsync(applicationUser, registerVM.Password);
+
+                if (newUser.Succeeded)
+                {
+                    var userId = applicationUser.Id;
+                    var code = await _userManager.GenerateEmailConfirmationTokenAsync(applicationUser);
+                    var returnUrl = Url.Content("~/");
+
+                    var callbackUrl = Url.Action(
+                    "ConfirmEmail",
+                    "Account",
+                    new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
+                    protocol: Request.Scheme
+                    );
+
+                    await _emailSender.SendEmailAsync(registerVM.Email, "Confirm your email",
+                    $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+
+
+                    TempData["notification"] = "Your account has been created! Please check your email to confirm the account before logging in";
+                    TempData["MessageType"] = "Success";
+
+                    await _userManager.AddToRoleAsync(applicationUser, "Customer");
+
+                    if (applicationUser.EmailConfirmed)
+                    {
+                        await _signInManager.SignInAsync(applicationUser, isPersistent: false);
+                        return RedirectToAction("Index", "Home", new { area = "Customer" });
+                    }
+
+                    return RedirectToAction("Login", "Account", new { area = "Identity" });
+                }
+                else
+                {
+                    foreach (var error in newUser.Errors)
+                    {
+                        ModelState.AddModelError("", error.Description);
+                    }
+                }
+
             }
 
-            // If confirmation fails
-            return View("ConfirmationError", new ConfirmationVM
-            {
-                Title = "Email confirmation failed",
-                Message = "Sorry, an error occurred while trying to confirm your email. Please confirm the link or request a new confirmation link.",
-                Icon = "fas fa-times-circle text-danger",
-                ButtonText = "Request a new confirmation link",
-                ButtonUrl = Url.Action("ResendConfirmationEmail", "Account")
-            });
+
+            return View(registerVM);
         }
 
         #endregion
 
+
+        #region LogOut
+
+        // Log the user out
+        public async Task<IActionResult> Logout()
+        {
+            // Perform the logout operation
+            await _signInManager.SignOutAsync();
+
+            // Redirect the user to the login page
+            return RedirectToAction("Login", "Account", new { area = "Identity" });
+        }
+
+        #endregion
+
+
+        #region Login
+
+        // Display the login page when requested via HTTP GET
+        [HttpGet]
+
+        public IActionResult Login()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Home", new { area = "Customer" });
+            }
+
+            // Display the login interface
+
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(LoginVM loginVM)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _userManager.FindByEmailAsync(loginVM.Email);
+
+                if (user == null)
+                {
+                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    return View(loginVM);
+                }
+
+                if (user.IsBlocked)
+                {
+                    ModelState.AddModelError(string.Empty, "Account blocked. Contact support.");
+                    return View(loginVM);
+                }
+
+                var result = await _signInManager.PasswordSignInAsync(
+                    user.UserName!,
+                    loginVM.Password,
+                    loginVM.RememberMe,
+                    lockoutOnFailure: false);
+
+                if (result.Succeeded)
+                {
+                    // Debugging: Log the roles
+                    var roles = await _userManager.GetRolesAsync(user);
+
+                    if (await _userManager.IsInRoleAsync(user, "Admin") ||
+                        await _userManager.IsInRoleAsync(user, "SuperAdmin"))
+                    {
+                        return RedirectToAction("Index", "Home", new { area = "Admin" });
+                    }
+                    else if (await _userManager.IsInRoleAsync(user, "Instructor"))
+                    {
+                        return RedirectToAction("Dashboard", "Home", new { area = "Instructor" });
+                    }
+                    return RedirectToAction("Dashboard", "Home", new { area = "Customer" });
+                }
+
+                ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+            }
+            return View(loginVM);
+        }
+        #endregion
+
+
+
+
+
+        #region ConfirmEmail (Beginning of the email confirmation section )
+
+        // An asynchronous (Async) function used to confirm a user's email
+        public async Task<IActionResult> ConfirmEmail(string userId, string code)
+        {
+            // Checks that the entered values ​​are correct (userId and code must not be empty)
+            if (userId == null || code == null)
+            {
+                return NotFound("Invalid email confirmation request."); // If the data is invalid, a 404 error is returned with a message explaining the problem
+            }
+
+            // Find the user in the database using their userId
+            var user = await _userManager.FindByIdAsync(userId);
+
+            // Checks if the user does not exist
+            if (user == null)
+            {
+                return NotFound($"Unable to load user with ID '{userId}'."); // Return a 404 error if the user is not found
+            }
+
+            // Perform the email confirmation process using code
+            var result = await _userManager.ConfirmEmailAsync(user, code);
+
+            // Check if the confirmation process was successful
+            if (result.Succeeded)
+            {
+                // Automatically log the user in after the email confirmation process is successful
+                await _signInManager.SignInAsync(user, isPersistent: false);
+
+                // Store a notification in TempData to display to the user in the interface
+                TempData["notification"] = "Your email has been successfully confirmed! You have been automatically logged in.";
+                TempData["MessageType"] = "Success"; // Specify the message type as success
+
+                // Redirect the user to the profile page within the "Identity" area
+                return RedirectToAction("Profile", "Settings", new { area = "Identity" });
+            }
+
+            // If the confirmation process fails, an error page is displayed.
+            return View("Error");
+        }
+        #endregion // End of the email confirmation section
+
+
     }
+
 }
+
+
+

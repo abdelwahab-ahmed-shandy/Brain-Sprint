@@ -121,13 +121,13 @@ namespace BrainSprint
             // Route for the "Instructor" area
             app.MapControllerRoute(
             name: "Instructor",
-            pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+            pattern: "{area:exists}/{controller=Home}/{action=Dashboard}/{id?}"
             );
 
             // Route for the "Admin" area
             app.MapControllerRoute(
             name: "Admin",
-            pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+            pattern: "{area:exists}/{controller=Home}/{action=Dashboard}/{id?}"
             );
 
             // Route for the "Customer" area

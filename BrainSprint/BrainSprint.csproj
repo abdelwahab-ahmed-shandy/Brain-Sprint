@@ -26,11 +26,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Areas\Identity\Views\" />
-	  <Folder Include="Areas\Instructor\Controllers\" />
-	  <Folder Include="Areas\Instructor\Views\" />
 	  <Folder Include="wwwroot\Assets\Customer\StudentImges\" />
-	  <Folder Include="wwwroot\Assets\Identity\" />
+	  <Folder Include="wwwroot\Assets\Identity\images\PhotoStudent\" />
 	  <Folder Include="wwwroot\Assets\Instructor\InstructorImges\" />
 	</ItemGroup>
 

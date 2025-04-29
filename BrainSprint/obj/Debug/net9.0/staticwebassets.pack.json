@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\BrainSprint.bundle.scp.css",
-      "PackagePath": "staticwebassets\\BrainSprint.z0fvy0ip7r.bundle.scp.css"
+      "PackagePath": "staticwebassets\\BrainSprint.ktyvl70i8h.bundle.scp.css"
     },
     {
       "Id": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Customer\\images\\app.png",
@@ -15,6 +15,46 @@
     {
       "Id": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Customer\\images\\logo.png",
       "PackagePath": "staticwebassets\\Assets\\Customer\\images\\logo.png"
+    },
+    {
+      "Id": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Identity\\css\\bootstrap\\_media.css",
+      "PackagePath": "staticwebassets\\Assets\\Identity\\css\\bootstrap\\_media.css"
+    },
+    {
+      "Id": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Identity\\css\\bootstrap\\mixins\\_border-radius.css",
+      "PackagePath": "staticwebassets\\Assets\\Identity\\css\\bootstrap\\mixins\\_border-radius.css"
+    },
+    {
+      "Id": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Identity\\css\\bootstrap\\mixins\\_reset-text.css",
+      "PackagePath": "staticwebassets\\Assets\\Identity\\css\\bootstrap\\mixins\\_reset-text.css"
+    },
+    {
+      "Id": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Identity\\css\\bootstrap\\mixins\\_screen-reader.css",
+      "PackagePath": "staticwebassets\\Assets\\Identity\\css\\bootstrap\\mixins\\_screen-reader.css"
+    },
+    {
+      "Id": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Identity\\css\\bootstrap\\mixins\\_text-hide.css",
+      "PackagePath": "staticwebassets\\Assets\\Identity\\css\\bootstrap\\mixins\\_text-hide.css"
+    },
+    {
+      "Id": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Identity\\css\\bootstrap\\mixins\\_visibility.css",
+      "PackagePath": "staticwebassets\\Assets\\Identity\\css\\bootstrap\\mixins\\_visibility.css"
+    },
+    {
+      "Id": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Identity\\css\\bootstrap\\utilities\\_stretched-link.css",
+      "PackagePath": "staticwebassets\\Assets\\Identity\\css\\bootstrap\\utilities\\_stretched-link.css"
+    },
+    {
+      "Id": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Identity\\css\\site.css",
+      "PackagePath": "staticwebassets\\Assets\\Identity\\css\\site.css"
+    },
+    {
+      "Id": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Identity\\images\\education-bg.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Identity\\images\\education-bg.jpg"
+    },
+    {
+      "Id": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Identity\\images\\image.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Identity\\images\\image.jpg"
     },
     {
       "Id": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\wwwroot\\css\\customer.css",
