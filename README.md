@@ -1,7 +1,7 @@
 # Brain-Sprint
 
  ==========================
-|	4-tier architecture   |
+|	tier architecture   |
  ==========================
 
 BrainSprint  
