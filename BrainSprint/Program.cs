@@ -1,5 +1,6 @@
 using DataAccess.Repositories.IRepositories;
 using DataAccess.Repositories;
+using Microsoft.AspNetCore.Authentication.Google;
 
 namespace BrainSprint
 {
@@ -86,6 +87,25 @@ namespace BrainSprint
 
             #endregion
 
+
+            #region External Login
+
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+
+                options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
+            })
+            .AddCookie()
+            .AddGoogle(googleOptions =>
+            {
+                googleOptions.ClientId = builder.Configuration["Authentication:Google:ClientId"]!;
+
+                googleOptions.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"]!;
+            });
+
+            #endregion
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -99,6 +119,8 @@ namespace BrainSprint
             // Force HTTPS on all requests
             app.UseHttpsRedirection();
 
+            app.UseRouting();
+
 
             #region Authentication & Authorization
             // Enable Authentication
@@ -111,6 +133,9 @@ namespace BrainSprint
             app.MapStaticAssets();
 
             #endregion
+
+
+            app.MapStaticAssets();
 
 
             #region Setting up top-level routes
@@ -145,6 +170,7 @@ namespace BrainSprint
             );
 
             #endregion
+
 
             app.Run();
         }

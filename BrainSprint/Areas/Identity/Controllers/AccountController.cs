@@ -6,6 +6,7 @@ using System.Text.Encodings.Web;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
+using System.Security.Claims;
 
 
 namespace BrainSprint.Areas.Identity.Controllers
@@ -177,6 +178,9 @@ namespace BrainSprint.Areas.Identity.Controllers
 
                 if (result.Succeeded)
                 {
+                    user.LastLogin = DateTime.UtcNow;
+                    await _userManager.UpdateAsync(user);
+
                     var roles = await _userManager.GetRolesAsync(user);
 
                     if (await _userManager.IsInRoleAsync(user, "Admin") ||
@@ -305,7 +309,125 @@ namespace BrainSprint.Areas.Identity.Controllers
         #endregion
 
 
+        #region External Login
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult ExternalLogin(string provider, string returnUrl = null)
+        {
+            var redirectUrl = Url.Action(nameof(ExternalLoginCallback), "Account", new { ReturnUrl = returnUrl });
+
+            var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
+
+            return Challenge(properties, provider);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> ExternalLoginCallback(string returnUrl = null, string remoteError = null)
+        {
+            returnUrl ??= Url.Content("~/");
+
+            if (!string.IsNullOrEmpty(remoteError))
+            {
+
+                TempData["notification"] = $"Service provider error: {remoteError}";
+                TempData["MessageType"] = "error";
+                return RedirectToAction(nameof(Login));
+            }
+
+            var info = await _signInManager.GetExternalLoginInfoAsync();
+            if (info == null)
+            {
+
+                TempData["notification"] = "Failed to retrieve login information from Google.";
+                TempData["MessageType"] = "error";
+                return RedirectToAction(nameof(Login));
+            }
+
+            var signInResult = await _signInManager.ExternalLoginSignInAsync(
+            info.LoginProvider,
+            info.ProviderKey,
+            isPersistent: false,
+            bypassTwoFactor: true
+            );
+
+            // If the login process was successful
+            if (signInResult.Succeeded)
+            {
+                TempData["notification"] = "Successfully logged in with Google.";
+                TempData["MessageType"] = "success";
+                return LocalRedirect(returnUrl);
+            }
+
+            var email = info.Principal.FindFirstValue(ClaimTypes.Email);
+
+            if (email == null)
+            {
+                TempData["notification"] = "Email not retrieved from Google account.";
+                TempData["MessageType"] = "error";
+                return RedirectToAction(nameof(Login));
+            }
+
+            var user = await _userManager.FindByEmailAsync(email);
+
+            if (user != null)
+            {
+                var addLoginResult = await _userManager.AddLoginAsync(user, info);
+                if (addLoginResult.Succeeded)
+                {
+                    await _signInManager.SignInAsync(user, isPersistent: false);
+                    TempData["notification"] = "Google account linked and login successful.";
+                    TempData["MessageType"] = "success";
+                    return LocalRedirect(returnUrl);
+                }
+
+                foreach (var error in addLoginResult.Errors)
+                    ModelState.AddModelError(string.Empty, error.Description);
+
+                TempData["notification"] = "An error occurred while linking the Google account.";
+                TempData["MessageType"] = "error";
+                return RedirectToAction(nameof(Login));
+            }
+
+            user = new ApplicationUser
+            {
+                UserName = email,
+                Email = email,
+                EmailConfirmed = true,
+                FirstName = info.Principal.FindFirstValue(ClaimTypes.GivenName),
+                LastName = info.Principal.FindFirstValue(ClaimTypes.Surname),
+                Address = info.Principal.FindFirstValue(ClaimTypes.StreetAddress),
+                IsBlocked = false
+
+            };
+
+            var createResult = await _userManager.CreateAsync(user);
+            if (createResult.Succeeded)
+            {
+                var addLoginResult = await _userManager.AddLoginAsync(user, info);
+                if (addLoginResult.Succeeded)
+                {
+                    await _signInManager.SignInAsync(user, isPersistent: false);
+                    TempData["notification"] = "Account created and successful sign-in via Google.";
+                    TempData["MessageType"] = "success";
+                    return LocalRedirect(returnUrl);
+                }
+
+                TempData["notification"] = "Account created, but Google account linking failed.";
+                TempData["MessageType"] = "error";
+            }
+            else
+            {
+                TempData["notification"] = "Account creation failed.";
+                TempData["MessageType"] = "error";
+                foreach (var error in createResult.Errors)
+                    ModelState.AddModelError(string.Empty, error.Description);
+            }
+
+            return RedirectToAction(nameof(Login));
+        }
+
+        #endregion
 
 
         #region ConfirmEmail (Beginning of the email confirmation section )

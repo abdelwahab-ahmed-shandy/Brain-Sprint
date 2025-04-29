@@ -11,6 +11,7 @@ E:\01-Projects\Brain-Sprint\BrainSprint\bin\Debug\net9.0\Azure.Core.dll
 E:\01-Projects\Brain-Sprint\BrainSprint\bin\Debug\net9.0\Azure.Identity.dll
 E:\01-Projects\Brain-Sprint\BrainSprint\bin\Debug\net9.0\Castle.Core.dll
 E:\01-Projects\Brain-Sprint\BrainSprint\bin\Debug\net9.0\Humanizer.dll
+E:\01-Projects\Brain-Sprint\BrainSprint\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.Google.dll
 E:\01-Projects\Brain-Sprint\BrainSprint\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 E:\01-Projects\Brain-Sprint\BrainSprint\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 E:\01-Projects\Brain-Sprint\BrainSprint\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
@@ -271,8 +272,10 @@ E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\BrainSprint.MvcApplicat
 E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\BrainSprint.RazorAssemblyInfo.cache
 E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\BrainSprint.RazorAssemblyInfo.cs
 E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\BrainSprint.sourcelink.json
+E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\scopedcss\Areas\Admin\Views\Shared\_Layout.cshtml.rz.scp.css
 E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\scopedcss\Areas\Customer\Views\Shared\_Layout.cshtml.rz.scp.css
 E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\scopedcss\Areas\Identity\Views\Shared\_Layout.cshtml.rz.scp.css
+E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\scopedcss\Areas\Instructor\Views\Shared\_Layout.cshtml.rz.scp.css
 E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\scopedcss\bundle\BrainSprint.styles.css
 E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\scopedcss\projectbundle\BrainSprint.bundle.scp.css
@@ -350,6 +353,8 @@ E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\sg7v3oss33-2
 E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\3lji2oxwsm-muycvpuwrr.gz
 E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\g6bodlcvxq-87fc7y1x7t.gz
 E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\hs9f672u14-mlv21k5csn.gz
+E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\1cqd7pe8yl-ktyvl70i8h.gz
+E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\q0lfynpajj-ktyvl70i8h.gz
 E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\staticwebassets.build.json
 E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\staticwebassets.development.json
 E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\staticwebassets.build.endpoints.json
@@ -366,7 +371,3 @@ E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\refint\BrainSprint.dll
 E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\BrainSprint.pdb
 E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\BrainSprint.genruntimeconfig.cache
 E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\ref\BrainSprint.dll
-E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\scopedcss\Areas\Admin\Views\Shared\_Layout.cshtml.rz.scp.css
-E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\scopedcss\Areas\Instructor\Views\Shared\_Layout.cshtml.rz.scp.css
-E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\1cqd7pe8yl-ktyvl70i8h.gz
-E:\01-Projects\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\q0lfynpajj-ktyvl70i8h.gz
