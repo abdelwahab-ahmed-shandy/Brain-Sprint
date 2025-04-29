@@ -35,36 +35,10 @@
               "RelativeDocumentMoniker": "Areas\\Identity\\Controllers\\SettingsController.cs",
               "ToolTip": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\Areas\\Identity\\Controllers\\SettingsController.cs",
               "RelativeToolTip": "Areas\\Identity\\Controllers\\SettingsController.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAzwFUAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAAwEUAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-29T16:18:10.236Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\Areas\\Customer\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Customer\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\Areas\\Customer\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Areas\\Customer\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAIkAAAAAAAAAAAAtwJ4AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-29T18:03:06.722Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SettingsVM.cs",
-              "DocumentMoniker": "E:\\01-Projects\\Brain-Sprint\\Models\\ViewModels\\SettingsVM.cs",
-              "RelativeDocumentMoniker": "..\\Models\\ViewModels\\SettingsVM.cs",
-              "ToolTip": "E:\\01-Projects\\Brain-Sprint\\Models\\ViewModels\\SettingsVM.cs",
-              "RelativeToolTip": "..\\Models\\ViewModels\\SettingsVM.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAzwDsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T17:15:16.855Z",
               "EditorCaption": ""
             },
             {
@@ -77,6 +51,30 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\Areas\\Customer\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Customer\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\Areas\\Customer\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Areas\\Customer\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAtwJ4AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-29T18:03:06.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SettingsVM.cs",
+              "DocumentMoniker": "E:\\01-Projects\\Brain-Sprint\\Models\\ViewModels\\SettingsVM.cs",
+              "RelativeDocumentMoniker": "..\\Models\\ViewModels\\SettingsVM.cs",
+              "ToolTip": "E:\\01-Projects\\Brain-Sprint\\Models\\ViewModels\\SettingsVM.cs",
+              "RelativeToolTip": "..\\Models\\ViewModels\\SettingsVM.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAzwDsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T17:15:16.855Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Manage.cshtml",
               "DocumentMoniker": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\Areas\\Identity\\Views\\Settings\\Manage.cshtml",
@@ -85,8 +83,7 @@
               "RelativeToolTip": "Areas\\Identity\\Views\\Settings\\Manage.cshtml",
               "ViewState": "AgIAAHUAAAAAAAAAAAAjwIQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-29T17:11:41.911Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T17:11:41.911Z"
             }
           ]
         }

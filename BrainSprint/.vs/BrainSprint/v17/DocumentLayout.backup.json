@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|e:\\01-projects\\brain-sprint\\brainsprint\\areas\\identity\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|solutionrelative:areas\\identity\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|e:\\01-projects\\brain-sprint\\brainsprint\\areas\\identity\\controllers\\settingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|solutionrelative:areas\\identity\\controllers\\settingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -29,59 +25,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1416,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "SettingsController.cs",
               "DocumentMoniker": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\Areas\\Identity\\Controllers\\SettingsController.cs",
               "RelativeDocumentMoniker": "Areas\\Identity\\Controllers\\SettingsController.cs",
               "ToolTip": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\Areas\\Identity\\Controllers\\SettingsController.cs",
               "RelativeToolTip": "Areas\\Identity\\Controllers\\SettingsController.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAIwDkAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA4wEUAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-29T16:18:10.236Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\Areas\\Identity\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Controllers\\AccountController.cs",
-              "ToolTip": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\Areas\\Identity\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Areas\\Identity\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAKUAAAAAAAAAAAAAALUAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T18:21:09.215Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\Areas\\Customer\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Customer\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\Areas\\Customer\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Areas\\Customer\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAIkAAAAAAAAAAAAtwJ4AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-29T18:03:06.722Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SettingsVM.cs",
-              "DocumentMoniker": "E:\\01-Projects\\Brain-Sprint\\Models\\ViewModels\\SettingsVM.cs",
-              "RelativeDocumentMoniker": "..\\Models\\ViewModels\\SettingsVM.cs",
-              "ToolTip": "E:\\01-Projects\\Brain-Sprint\\Models\\ViewModels\\SettingsVM.cs",
-              "RelativeToolTip": "..\\Models\\ViewModels\\SettingsVM.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAzwDsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T17:15:16.855Z",
               "EditorCaption": ""
             },
             {
@@ -95,6 +52,30 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\Areas\\Customer\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Customer\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\Areas\\Customer\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Areas\\Customer\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAtwJ4AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-29T18:03:06.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SettingsVM.cs",
+              "DocumentMoniker": "E:\\01-Projects\\Brain-Sprint\\Models\\ViewModels\\SettingsVM.cs",
+              "RelativeDocumentMoniker": "..\\Models\\ViewModels\\SettingsVM.cs",
+              "ToolTip": "E:\\01-Projects\\Brain-Sprint\\Models\\ViewModels\\SettingsVM.cs",
+              "RelativeToolTip": "..\\Models\\ViewModels\\SettingsVM.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAzwDsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T17:15:16.855Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Manage.cshtml",
               "DocumentMoniker": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\Areas\\Identity\\Views\\Settings\\Manage.cshtml",
               "RelativeDocumentMoniker": "Areas\\Identity\\Views\\Settings\\Manage.cshtml",
@@ -102,8 +83,7 @@
               "RelativeToolTip": "Areas\\Identity\\Views\\Settings\\Manage.cshtml",
               "ViewState": "AgIAAHUAAAAAAAAAAAAjwIQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-29T17:11:41.911Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T17:11:41.911Z"
             }
           ]
         }

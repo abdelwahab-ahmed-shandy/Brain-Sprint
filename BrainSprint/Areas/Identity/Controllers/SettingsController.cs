@@ -67,26 +67,38 @@ namespace BrainSprint.Areas.Identity.Controllers
         #endregion
 
 
-        //#region Update Profile
+        #region Update Profile
 
         //[HttpPost]
         //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> UpdateProfile (SettingsVM settingsVM)
+        //public async Task<IActionResult> UpdateProfile(SettingsVM settingsVM)
         //{
         //    if (!ModelState.IsValid)
         //    {
         //        return View("Manage", settingsVM);
         //    }
 
-        //    var user = await _userManager.GetUserAsync (User);
+        //    var user = await _userManager.GetUserAsync(User);
 
-        //    if (user == null) { return NotFound();
+        //    if (user == null)
+        //    {
+        //        return NotFound();
+        //    }
 
+        //    user.FirstName = settingsVM.Profile.FirstName;
+        //    user.LastName = settingsVM.Profile.LastName;
+        //    user.Bio = settingsVM.Profile.Bio;
+        //    user.PhoneNumber = settingsVM.Profile.PhoneNumber;
+
+        //    if(settingsVM.Profile.ImageFile != null && settingsVM.Profile.ImageFile.Length > 0)
+        //    {
+        //        var allowedExtensions = new[] { ".jpg", ".jpeg", ".png" };
+        //    }
 
         //}
 
-        //#endregion
 
+        #endregion
 
 
 
