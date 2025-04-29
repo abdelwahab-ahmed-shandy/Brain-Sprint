@@ -4,15 +4,15 @@
 |	4-tier architecture   |
  ==========================
 
-BrainSprint  => Presentation Layer 
+BrainSprint  
 
-DataAccess => Data Layer
+DataAccess
 
-Models  =>  Entity/Model Layer
+Models  
 
-Utility =>  Utilities/Helper Classes
+Utility  
 
-Services =>  Business Logic Layer
+Services 
 
 //____________________________________________________________//
 
