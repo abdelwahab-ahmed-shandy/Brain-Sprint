@@ -37,7 +37,6 @@ namespace BrainSprint.Areas.Identity.Controllers
         [HttpGet]
         public async Task<IActionResult> Register()
         {
-            //  Check if roles do not exist, and create them if necessary
             if (_roleManager.Roles.IsNullOrEmpty())
             {
                 await _roleManager.CreateAsync(role: new IdentityRole("SuperAdmin"));
@@ -49,12 +48,12 @@ namespace BrainSprint.Areas.Identity.Controllers
 
             if (User.Identity?.IsAuthenticated == true)
             {
-                TempData["notifiction"] = "Your account has been created! Please check your email to confirm the account before logging in";
+                TempData["notification"] = "Your account has been created! Please check your email to confirm the account before logging in";
                 TempData["MessageType"] = "Information";
 
                 return RedirectToAction("Index", "Home", new { area = "Customer" });
             }
-            return View(new RegisterVM()); //  Display the registration page for the user
+            return View(new RegisterVM());
         }
 
         [HttpPost]
@@ -128,13 +127,10 @@ namespace BrainSprint.Areas.Identity.Controllers
 
         #region LogOut
 
-        // Log the user out
         public async Task<IActionResult> Logout()
         {
-            // Perform the logout operation
             await _signInManager.SignOutAsync();
 
-            // Redirect the user to the login page
             return RedirectToAction("Login", "Account", new { area = "Identity" });
         }
 
@@ -143,18 +139,13 @@ namespace BrainSprint.Areas.Identity.Controllers
 
         #region Login
 
-        // Display the login page when requested via HTTP GET
         [HttpGet]
-
         public IActionResult Login()
         {
             if (User.Identity.IsAuthenticated)
             {
                 return RedirectToAction("Index", "Home", new { area = "Customer" });
             }
-
-            // Display the login interface
-
             return View();
         }
 
@@ -186,7 +177,6 @@ namespace BrainSprint.Areas.Identity.Controllers
 
                 if (result.Succeeded)
                 {
-                    // Debugging: Log the roles
                     var roles = await _userManager.GetRolesAsync(user);
 
                     if (await _userManager.IsInRoleAsync(user, "Admin") ||
@@ -208,75 +198,61 @@ namespace BrainSprint.Areas.Identity.Controllers
         #endregion
 
 
-
         #region Forget Password
 
-        // Display the "Forgot Password" page (GET)
         [HttpGet]
         public IActionResult ForgetPassword()
         {
             return View();
         }
 
-        // Receive form from "Forgot Password" page (POST)
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ForgetPassword(ForgetPasswordVM model)
         {
-            // Check the validity of the entered data
             if (!ModelState.IsValid)
             {
                 return View(model);
             }
 
-            // Find user using email
             var user = await _userManager.FindByEmailAsync(model.Email);
             if (user == null)
             {
-                // Not disclosing that the mail is not registered for security reasons
                 TempData["notification"] = "If your email is registered, you'll receive a password reset link";
                 TempData["MessageType"] = "info";
                 return RedirectToAction("ForgetPasswordConfirmation");
             }
 
-            // Generate password reset token
             var token = await _userManager.GeneratePasswordResetTokenAsync(user);
 
-            // Create a password reset link
             var callbackUrl = Url.Action("ResetPassword", "Account",
                 new { email = model.Email, token = token }, protocol: HttpContext.Request.Scheme);
 
-            // Send an email containing a password reset link
             await _emailSender.SendEmailAsync(
                 model.Email,
                 "Reset your MovieMart password",
                 $"Please reset your password by <a href='{callbackUrl}'>clicking here</a>.");
 
-            // Notify the user that the link has been sent
             TempData["notification"] = "Password reset link has been sent to your email";
             TempData["MessageType"] = "success";
             return RedirectToAction("ForgetPasswordConfirmation");
         }
 
 
-        // Display the confirmation page for sending the reset link (GET)
         [HttpGet]
         public IActionResult ForgetPasswordConfirmation()
         {
             return View();
         }
 
-        // Display the password reset form (GET) based on the sent link
         [HttpGet]
         public IActionResult ResetPassword(string token, string email)
         {
-            // Check if the code and email are present
             if (token == null || email == null)
             {
                 ModelState.AddModelError("", "Invalid password reset token");
             }
 
-            // Set up the form with the postal and code values
             var forgetPassword = new ForgetPasswordVM
             {
                 Email = email,
@@ -286,29 +262,24 @@ namespace BrainSprint.Areas.Identity.Controllers
             return View(forgetPassword);
         }
 
-        // Receive password reset form (POST)
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ResetPassword(ForgetPasswordVM model)
         {
-            // Data validation
             if (!ModelState.IsValid)
             {
                 return View(model);
             }
 
-            // Find user using email
             var user = await _userManager.FindByEmailAsync(model.Email);
 
             if (user == null)
             {
-                // Do not detect that the user does not exist
                 TempData["notification"] = "Password has been reset successfully";
                 TempData["MessageType"] = "success";
                 return RedirectToAction("ResetPasswordConfirmation");
             }
 
-            // Perform password reset operation using token
             var result = await _userManager.ResetPasswordAsync(user, model.ResetToken, model.NewPassword);
             if (result.Succeeded)
             {
@@ -317,7 +288,6 @@ namespace BrainSprint.Areas.Identity.Controllers
                 return RedirectToAction("ResetPasswordConfirmation");
             }
 
-            // If there are errors, display them to the user.
             foreach (var error in result.Errors)
             {
                 ModelState.AddModelError(string.Empty, error.Description);
@@ -326,7 +296,6 @@ namespace BrainSprint.Areas.Identity.Controllers
             return View(model);
         }
 
-        // Display the password reset success confirmation page (GET)
         [HttpGet]
         public IActionResult ResetPasswordConfirmation()
         {
@@ -341,45 +310,35 @@ namespace BrainSprint.Areas.Identity.Controllers
 
         #region ConfirmEmail (Beginning of the email confirmation section )
 
-        // An asynchronous (Async) function used to confirm a user's email
         public async Task<IActionResult> ConfirmEmail(string userId, string code)
         {
-            // Checks that the entered values ​​are correct (userId and code must not be empty)
             if (userId == null || code == null)
             {
-                return NotFound("Invalid email confirmation request."); // If the data is invalid, a 404 error is returned with a message explaining the problem
+                return NotFound("Invalid email confirmation request.");
             }
 
-            // Find the user in the database using their userId
             var user = await _userManager.FindByIdAsync(userId);
 
-            // Checks if the user does not exist
             if (user == null)
             {
-                return NotFound($"Unable to load user with ID '{userId}'."); // Return a 404 error if the user is not found
+                return NotFound($"Unable to load user with ID '{userId}'.");
             }
 
-            // Perform the email confirmation process using code
             var result = await _userManager.ConfirmEmailAsync(user, code);
 
-            // Check if the confirmation process was successful
             if (result.Succeeded)
             {
-                // Automatically log the user in after the email confirmation process is successful
                 await _signInManager.SignInAsync(user, isPersistent: false);
 
-                // Store a notification in TempData to display to the user in the interface
                 TempData["notification"] = "Your email has been successfully confirmed! You have been automatically logged in.";
-                TempData["MessageType"] = "Success"; // Specify the message type as success
+                TempData["MessageType"] = "Success";
 
-                // Redirect the user to the profile page within the "Identity" area
                 return RedirectToAction("Profile", "Settings", new { area = "Identity" });
             }
 
-            // If the confirmation process fails, an error page is displayed.
             return View("Error");
         }
-        #endregion // End of the email confirmation section
+        #endregion 
 
 
     }

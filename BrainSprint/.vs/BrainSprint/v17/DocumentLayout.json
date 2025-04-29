@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|e:\\01-projects\\brain-sprint\\brainsprint\\areas\\identity\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|solutionrelative:areas\\identity\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|e:\\01-projects\\brain-sprint\\brainsprint\\areas\\identity\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|solutionrelative:areas\\identity\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -18,20 +14,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1416,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "AccountController.cs",
               "DocumentMoniker": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\Areas\\Identity\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Areas\\Identity\\Controllers\\AccountController.cs",
               "ToolTip": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\Areas\\Identity\\Controllers\\AccountController.cs",
               "RelativeToolTip": "Areas\\Identity\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAArwNcAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAmwDMBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-28T20:57:26.413Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -40,19 +37,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\Areas\\Identity\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Views\\Account\\Login.cshtml",
-              "ToolTip": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\Areas\\Identity\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "Areas\\Identity\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAhwDcAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-29T06:28:27.06Z",
-              "EditorCaption": ""
             }
           ]
         }
