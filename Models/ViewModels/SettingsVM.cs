@@ -108,11 +108,12 @@ namespace Models.ViewModels
         {
             [Required]
             [DataType(DataType.Password)]
-            [Display(Name = "Password")]
             public string Password { get; set; } = string.Empty;
 
-            [Display(Name = "I understand that this action cannot be undone")]
             public bool ConfirmDelete { get; set; } = false;
+
+            [Required]
+            public string DeleteConfirmation { get; set; } = string.Empty;
         }
 
         public class ExternalLogin

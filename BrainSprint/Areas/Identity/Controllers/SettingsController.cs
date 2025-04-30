@@ -183,67 +183,61 @@ namespace BrainSprint.Areas.Identity.Controllers
 
         #region Delete Account
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> DeleteAccount(SettingsVM model)
-        //{
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return View("Manage", model);
-        //    }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteAccount(SettingsVM model)
+        {
+            //if (!ModelState.IsValid)
+            //{
+            //    return View("Manage", model);
+            //}
 
-        //    // تأكد من أن نص التأكيد مطابق
-        //    if (model.DeleteAccount?.ConfirmDelete?.ToUpper() != "DELETE MY ACCOUNT")
-        //    {
-        //        ModelState.AddModelError("DeleteAccount.DeleteConfirmation", "Please type the exact phrase to confirm");
-        //        return View("Manage", model);
-        //    }
+            if (model.DeleteAccount?.DeleteConfirmation?.ToUpper() != "DELETE MY ACCOUNT")
+            {
+                ModelState.AddModelError("DeleteAccount.DeleteConfirmation", "Please type the exact phrase to confirm");
+                return View("Manage", model);
+            }
 
-        //    var user = await _userManager.GetUserAsync(User);
-        //    if (user == null)
-        //    {
-        //        TempData["notification"] = "User not found.";
-        //        TempData["MessageType"] = "Error";
-        //        return RedirectToAction("Index", "Home");
-        //    }
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return NotFound("User not found.");
+            }
 
-        //    var isPasswordValid = await _userManager.CheckPasswordAsync(user, model.DeleteAccount.Password);
-        //    if (!isPasswordValid)
-        //    {
-        //        TempData["Error"] = "The password you entered is incorrect.";
-        //        return RedirectToAction("Manage");
-        //    }
+            if (!await _userManager.CheckPasswordAsync(user, model.DeleteAccount.Password))
+            {
+                ModelState.AddModelError("DeleteAccount.Password", "The password you entered is incorrect.");
+                return View("Manage", model);
+            }
 
-        //    if (await _userManager.IsInRoleAsync(user, "Admin") || await _userManager.IsInRoleAsync(user, "SuperAdmin"))
-        //    {
-        //        TempData["notification"] = "Admins and SuperAdmins cannot delete their own accounts.";
-        //        TempData["MessageType"] = "Error";
-        //        return RedirectToAction("Profile");
-        //    }
+            if (await _userManager.IsInRoleAsync(user, "Admin") || await _userManager.IsInRoleAsync(user, "SuperAdmin") || await _userManager.IsInRoleAsync(user, "Instructor"))
+            {
+                ModelState.AddModelError("", "Admins cannot delete their accounts.");
+                return View("Manage", model);
+            }
 
-        //    await _userManager.UpdateSecurityStampAsync(user);
+            // await DeleteUserRelatedData(user.Id);
 
-        //    var result = await _userManager.DeleteAsync(user);
-        //    if (!result.Succeeded)
-        //    {
-        //        TempData["notification"] = "An error occurred while deleting the account.";
-        //        TempData["MessageType"] = "Error";
-        //        return RedirectToAction("Profile");
-        //    }
+            await _userManager.UpdateSecurityStampAsync(user);
+            var result = await _userManager.DeleteAsync(user);
 
-        //    await _signInManager.SignOutAsync();
-        //    TempData["notification"] = "Your account has been successfully deleted.";
-        //    TempData["MessageType"] = "Warning";
+            if (!result.Succeeded)
+            {
+                ModelState.AddModelError("", "Failed to delete account. Please try again.");
+                return View("Manage", model);
+            }
 
-        //    return RedirectToAction("Login", "Account", new { area = "Identity" });
-        //}
+            await _signInManager.SignOutAsync();
+            TempData["Notification"] = "Your account has been deleted successfully.";
+            return RedirectToAction("Login", "Identity", new { area = "Identity" });
+        }
 
         #endregion
 
-
+        // todo : Two-Factor Authentication
         #region Two-Factor Authentication
 
-        [HttpPost]
+        /*[HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ToggleTwoFactor(bool enable)
         {
@@ -296,43 +290,42 @@ namespace BrainSprint.Areas.Identity.Controllers
             }
 
             return RedirectToAction(nameof(Manage));
-        }
+        }*/
         #endregion
 
 
         //todo : Active Sessions
+        /*#region Active Sessions
+        [HttpGet]
+        public async Task<IActionResult> GetActiveSessions()
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return NotFound();
+            }
 
-        //#region Active Sessions
-        //[HttpGet]
-        //public async Task<IActionResult> GetActiveSessions()
-        //{
-        //    var user = await _userManager.GetUserAsync(User);
-        //    if (user == null)
-        //    {
-        //        return NotFound();
-        //    }
+            // var sessions = await _userService.GetActiveSessionsAsync(user.Id);
+            // return PartialView("_ActiveSessionsPartial", sessions);
+        }
 
-        //   // var sessions = await _userService.GetActiveSessionsAsync(user.Id);
-        //   // return PartialView("_ActiveSessionsPartial", sessions);
-        //}
+        [HttpPost]
+        public async Task<IActionResult> TerminateOtherSessions()
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return NotFound();
+            }
 
-        //[HttpPost]
-        //public async Task<IActionResult> TerminateOtherSessions()
-        //{
-        //    var user = await _userManager.GetUserAsync(User);
-        //    if (user == null)
-        //    {
-        //        return NotFound();
-        //    }
+            await _signInManager.SignOutAsync();
+            await _signInManager.SignInAsync(user, isPersistent: true);
 
-        //    await _signInManager.SignOutAsync();
-        //    await _signInManager.SignInAsync(user, isPersistent: true);
+            TempData["Success"] = "All other sessions have been terminated successfully!";
+            return RedirectToAction("Manage");
+        }
 
-        //    TempData["Success"] = "All other sessions have been terminated successfully!";
-        //    return RedirectToAction("Manage");
-        //}
-
-        //#endregion
+        #endregion */
 
 
     }

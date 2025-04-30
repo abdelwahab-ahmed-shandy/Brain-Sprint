@@ -206,166 +206,170 @@
                     </form>
                 </div>
 
-                <!-- Security Tab -->
-                <div class="tab-pane fade" id="security" role="tabpanel" aria-labelledby="security-tab">
-                    <div class="accordion" id="securityAccordion">
-                        <!-- Password Change Section -->
-                        <div class="accordion-item border-0 mb-3">
-                            <h2 class="accordion-header" id="passwordHeading">
-                                <button class="accordion-button bg-dark text-white collapsed" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#passwordCollapse"
-                                        aria-expanded="false" aria-controls="passwordCollapse">
-                                    <i class="bi bi-key me-2"></i>Change Password
-                                </button>
-                            </h2>
-                            <div id="passwordCollapse" class="accordion-collapse collapse"
-                                 aria-labelledby="passwordHeading" data-bs-parent="#securityAccordion">
-                                <div class="accordion-body bg-dark">
-                                    <form asp-action="ChangePassword" method="post" class="needs-validation" novalidate>
-                                        @Html.AntiForgeryToken()
+                    <!-- Security Tab -->
+                    <div class="tab-pane fade" id="security" role="tabpanel" aria-labelledby="security-tab">
+                        <div class="accordion" id="securityAccordion">
 
-                                        <div class="form-floating mb-3 position-relative">
-                                            <input asp-for="Manage.CurrentPassword" type="password" class="form-control" placeholder=" " required />
-                                            <label asp-for="Manage.CurrentPassword">Current Password</label>
-                                            <button class="btn btn-link position-absolute end-0 top-0 mt-3 me-2 password-toggle" type="button">
-                                                <i class="bi bi-eye-fill"></i>
-                                            </button>
-                                            <span asp-validation-for="Manage.CurrentPassword" class="text-danger small"></span>
-                                        </div>
+                            <!-- Password Change Section -->
+                            <div class="accordion-item border-0 mb-3">
+                                <h2 class="accordion-header" id="passwordHeading">
+                                    <button class="accordion-button bg-dark text-white collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#passwordCollapse"
+                                            aria-expanded="false" aria-controls="passwordCollapse">
+                                        <i class="bi bi-key me-2"></i>Change Password
+                                    </button>
+                                </h2>
+                                <div id="passwordCollapse" class="accordion-collapse collapse"
+                                     aria-labelledby="passwordHeading" data-bs-parent="#securityAccordion">
+                                    <div class="accordion-body bg-dark">
+                                        <form asp-action="ChangePassword" method="post" class="needs-validation" novalidate>
+                                            @Html.AntiForgeryToken()
 
-                                        <div class="form-floating mb-3 position-relative">
-                                            <input asp-for="Manage.NewPassword" type="password" class="form-control" placeholder=" " required />
-                                            <label asp-for="Manage.NewPassword">New Password</label>
-                                            <button class="btn btn-link position-absolute end-0 top-0 mt-3 me-2 password-toggle" type="button">
-                                                <i class="bi bi-eye-fill"></i>
-                                            </button>
-                                            <span asp-validation-for="Manage.NewPassword" class="text-danger small"></span>
-                                        </div>
-
-                                        <div class="form-floating mb-4 position-relative">
-                                            <input asp-for="Manage.ConfirmPassword" type="password" class="form-control" placeholder=" " required />
-                                            <label asp-for="Manage.ConfirmPassword">Confirm Password</label>
-                                            <button class="btn btn-link position-absolute end-0 top-0 mt-3 me-2 password-toggle" type="button">
-                                                <i class="bi bi-eye-fill"></i>
-                                            </button>
-                                            <span asp-validation-for="Manage.ConfirmPassword" class="text-danger small"></span>
-                                        </div>
-
-                                        <div class="d-grid">
-                                            <button type="submit" class="btn btn-accent">
-                                                <span class="submit-text">Update Password</span>
-                                                <span class="spinner-border spinner-border-sm d-none" role="status"></span>
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Two-Factor Authentication Section -->
-                            <div class="card mb-4">
-                                <div class="card-header bg-dark text-white">
-                                    <h5 class="mb-0">2-Step Verification</h5>
-                                </div>
-                                <div class="card-body">
-                                    <form asp-action="ToggleTwoFactor" method="post">
-                                        @Html.AntiForgeryToken()
-
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" id="twoFactorSwitch"
-                                            @(Model.Profile.TwoFactorEnabled ? "checked" : "")
-                                                   onchange="this.form.submit()">
-                                            <label class="form-check-label" for="twoFactorSwitch">
-                                                Activate two-step verification
-                                            </label>
-                                        </div>
-
-                                        @if (Model.Profile.TwoFactorEnabled)
-                                        {
-                                            <div class="alert alert-success mt-3">
-                                                <i class="bi bi-shield-check"></i>
-                                                Two-step verification is currently enabled for your account.
+                                            <div class="form-floating mb-3 position-relative">
+                                                <input asp-for="Manage.CurrentPassword" type="password" class="form-control" placeholder=" " required />
+                                                <label asp-for="Manage.CurrentPassword">Current Password</label>
+                                                <button class="btn btn-link position-absolute end-0 top-0 mt-3 me-2 password-toggle" type="button">
+                                                    <i class="bi bi-eye-fill"></i>
+                                                </button>
+                                                <span asp-validation-for="Manage.CurrentPassword" class="text-danger small"></span>
                                             </div>
-                                        }
-                                        else
-                                        {
-                                            <div class="alert alert-warning mt-3">
-                                                <i class="bi bi-shield-exclamation"></i>
-                                                Two-step verification is disabled. We recommend enabling it for added security.
+
+                                            <div class="form-floating mb-3 position-relative">
+                                                <input asp-for="Manage.NewPassword" type="password" class="form-control" placeholder=" " required />
+                                                <label asp-for="Manage.NewPassword">New Password</label>
+                                                <button class="btn btn-link position-absolute end-0 top-0 mt-3 me-2 password-toggle" type="button">
+                                                    <i class="bi bi-eye-fill"></i>
+                                                </button>
+                                                <span asp-validation-for="Manage.NewPassword" class="text-danger small"></span>
                                             </div>
-                                        }
 
-                                    </form>
-
-                                    @if (!Model.Profile.EmailVerified || !Model.Profile.PhoneNumberConfirmed)
-                                    {
-                                        <div class="alert alert-danger mt-3">
-                                            <h6>Activation Requirements:</h6>
-                                            <ul>
-                                                @if (!Model.Profile.EmailVerified)
-                                                {
-                                                    <li>Email address must be confirmed first</li>
-                                                }
-                                                @if (!Model.Profile.PhoneNumberConfirmed)
-                                                {
-                                                    <li>Phone number must be confirmed first</li>
-                                                }
-
-                                            </ul>
-
-                                        </div>
-                                    }
-                                </div>
-                            </div>
-                        <!-- Session Management -->
-                        <div class="accordion-item border-0">
-                            <h2 class="accordion-header" id="sessionsHeading">
-                                <button class="accordion-button bg-dark text-white collapsed" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#sessionsCollapse"
-                                        aria-expanded="false" aria-controls="sessionsCollapse">
-                                    <i class="bi bi-laptop me-2"></i>Active Sessions
-                                </button>
-                            </h2>
-                            <div id="sessionsCollapse" class="accordion-collapse collapse"
-                                 aria-labelledby="sessionsHeading" data-bs-parent="#securityAccordion">
-                                <div class="accordion-body bg-dark">
-                                    <div class="session-item active p-3 rounded mb-3">
-                                        <div class="d-flex justify-content-between align-items-center mb-2">
-                                            <div class="d-flex align-items-center">
-                                                <i class="bi bi-laptop text-primary me-3 fs-4"></i>
-                                                <div>
-                                                    <h6 class="mb-0">Current Session</h6>
-                                                    <small class="text-muted">@DateTime.Now.ToString("MMMM dd, yyyy - hh:mm tt")</small>
-                                                </div>
+                                            <div class="form-floating mb-4 position-relative">
+                                                <input asp-for="Manage.ConfirmPassword" type="password" class="form-control" placeholder=" " required />
+                                                <label asp-for="Manage.ConfirmPassword">Confirm Password</label>
+                                                <button class="btn btn-link position-absolute end-0 top-0 mt-3 me-2 password-toggle" type="button">
+                                                    <i class="bi bi-eye-fill"></i>
+                                                </button>
+                                                <span asp-validation-for="Manage.ConfirmPassword" class="text-danger small"></span>
                                             </div>
-                                            <span class="badge bg-success">Active</span>
-                                        </div>
-                                        <div class="session-details ps-5 ms-2">
-                                            <p class="small text-muted mb-1">
-                                                <i class="bi bi-geo-alt me-2"></i>
-                                                @(Context.Connection.RemoteIpAddress?.ToString() ?? "Unknown location")
-                                            </p>
-                                            <p class="small text-muted">
-                                                <i class="bi bi-browser-edge me-2"></i>
-                                                @Context.Request.Headers["User-Agent"]
-                                            </p>
-                                        </div>
+
+                                            <div class="d-grid">
+                                                <button type="submit" class="btn btn-accent">
+                                                    <span class="submit-text">Update Password</span>
+                                                    <span class="spinner-border spinner-border-sm d-none" role="status"></span>
+                                                </button>
+                                            </div>
+                                        </form>
                                     </div>
+                                </div>
+                            </div>
 
-                                    <!-- Other sessions would be listed here -->
-                                    <div class="text-center mt-3">
-                                        <button class="btn btn-outline-danger btn-sm">
-                                            <i class="bi bi-box-arrow-right me-2"></i>Sign out all other devices
-                                        </button>
+                            <!-- Two-Factor Authentication Section -->
+                            <div class="accordion-item border-0 mb-3">
+                                <h2 class="accordion-header" id="twoFactorHeading">
+                                    <button class="accordion-button bg-dark text-white collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#twoFactorCollapse"
+                                            aria-expanded="false" aria-controls="twoFactorCollapse">
+                                        <i class="bi bi-shield-lock me-2"></i>Two-Factor Authentication
+                                    </button>
+                                </h2>
+                                <div id="twoFactorCollapse" class="accordion-collapse collapse"
+                                     aria-labelledby="twoFactorHeading" data-bs-parent="#securityAccordion">
+                                    <div class="accordion-body bg-dark">
+                                        <form asp-action="ToggleTwoFactor" method="post">
+                                            @Html.AntiForgeryToken()
+
+                                            <div class="form-check form-switch mb-3">
+                                                <input class="form-check-input" type="checkbox" id="twoFactorSwitch"
+                                                @(Model.Profile.TwoFactorEnabled ? "checked" : "")
+                                                       onchange="this.form.submit()">
+                                                <label class="form-check-label" for="twoFactorSwitch">
+                                                    Enable Two-Factor Authentication
+                                                </label>
+                                            </div>
+
+                                            @if (Model.Profile.TwoFactorEnabled)
+                                            {
+                                                <div class="alert alert-success mt-3">
+                                                    <i class="bi bi-shield-check me-2"></i>
+                                                    Two-factor authentication is currently enabled for your account.
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <div class="alert alert-warning mt-3">
+                                                    <i class="bi bi-shield-exclamation me-2"></i>
+                                                    Two-factor authentication is disabled. We recommend enabling it for added security.
+                                                </div>
+                                            }
+
+                                            @if (!Model.Profile.EmailVerified || !Model.Profile.PhoneNumberConfirmed)
+                                            {
+                                                <div class="alert alert-danger mt-3">
+                                                    <h6><i class="bi bi-exclamation-triangle me-2"></i>Activation Requirements:</h6>
+                                                    <ul class="mb-0">
+                                                        @if (!Model.Profile.EmailVerified)
+                                                        {
+                                                            <li>Email address must be confirmed</li>
+                                                        }
+                                                        @if (!Model.Profile.PhoneNumberConfirmed)
+                                                        {
+                                                            <li>Phone number must be verified</li>
+                                                        }
+                                                    </ul>
+                                                </div>
+                                            }
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Session Management -->
+                            <div class="accordion-item border-0">
+                                <h2 class="accordion-header" id="sessionsHeading">
+                                    <button class="accordion-button bg-dark text-white collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#sessionsCollapse"
+                                            aria-expanded="false" aria-controls="sessionsCollapse">
+                                        <i class="bi bi-laptop me-2"></i>Active Sessions
+                                    </button>
+                                </h2>
+                                <div id="sessionsCollapse" class="accordion-collapse collapse"
+                                     aria-labelledby="sessionsHeading" data-bs-parent="#securityAccordion">
+                                    <div class="accordion-body bg-dark">
+                                        <div class="session-item active p-3 rounded mb-3">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <div class="d-flex align-items-center">
+                                                    <i class="bi bi-laptop text-primary me-3 fs-4"></i>
+                                                    <div>
+                                                        <h6 class="mb-0">Current Session</h6>
+                                                        <small class="text-muted">@DateTime.Now.ToString("MMMM dd, yyyy - hh:mm tt")</small>
+                                                    </div>
+                                                </div>
+                                                <span class="badge bg-success">Active</span>
+                                            </div>
+                                            <div class="session-details ps-5 ms-2">
+                                                <p class="small text-muted mb-1">
+                                                    <i class="bi bi-geo-alt me-2"></i>
+                                                    @(Context.Connection.RemoteIpAddress?.ToString() ?? "Unknown location")
+                                                </p>
+                                                <p class="small text-muted">
+                                                    <i class="bi bi-browser-edge me-2"></i>
+                                                    @Context.Request.Headers["User-Agent"]
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="text-center mt-3">
+                                            <button class="btn btn-outline-danger btn-sm">
+                                                <i class="bi bi-box-arrow-right me-2"></i>Sign out all other devices
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Delete Account Tab -->
-
+               
+                    <!-- Delete Account Tab -->
                 <div class="tab-pane fade" id="delete" role="tabpanel" aria-labelledby="delete-tab">
                     <div class="alert alert-danger">
                         <div class="d-flex align-items-start">
@@ -388,36 +392,37 @@
                         @Html.AntiForgeryToken()
 
                         <div class="mb-4 p-4 border border-danger rounded">
-                            <!-- Password Confirmation -->
-                            <div class="form-floating mb-3 position-relative">
-                                <input asp-for="DeleteAccount.Password" type="password" class="form-control" placeholder=" " required />
-                                <label asp-for="DeleteAccount.Password">Current Password</label>
-                                <button class="btn btn-link position-absolute end-0 top-0 mt-3 me-2 password-toggle" type="button">
-                                    <i class="bi bi-eye-fill"></i>
-                                </button>
-                                <span asp-validation-for="DeleteAccount.Password" class="text-danger small"></span>
-                            </div>
+                                <!-- Password Field -->
+                                <div class="form-floating mb-3 position-relative">
+                                    <input type="password" class="form-control" asp-for="DeleteAccount.Password" required>
+                                    <label asp-for="DeleteAccount.Password">Current Password</label>
+                                    <button class="btn btn-link position-absolute end-0 top-0 mt-3 me-2 password-toggle" type="button">
+                                        <i class="bi bi-eye-fill"></i>
+                                    </button>
+                                    <span asp-validation-for="DeleteAccount.Password" class="text-danger small"></span>
+                                </div>
 
-                            <!-- Confirmation Checkbox -->
-                            <div class="form-check mb-3">
-                                <input class="form-check-input" type="checkbox" asp-for="DeleteAccount.ConfirmDelete" id="confirmDelete" required />
-                                <label class="form-check-label text-light" for="confirmDelete">
-                                    I understand that all my data will be permanently deleted
-                                </label>
-                            </div>
+                                <!-- Confirmation Checkbox -->
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" asp-for="DeleteAccount.ConfirmDelete" id="confirmDelete" required />
+                                    <label class="form-check-label text-light" for="confirmDelete">
+                                        I understand that all my data will be permanently deleted
+                                    </label>
+                                </div>
 
-                            <!-- Additional Confirmation -->
+
+                                <!-- Confirmation Phrase Textbox -->
                                 <div class="form-group mb-3">
                                     <label class="text-light mb-2">Type "DELETE MY ACCOUNT" to confirm:</label>
-                                    <input type="text" class="form-control" asp-for="DeleteAccount.ConfirmDelete" required>
-                                    <span asp-validation-for="DeleteAccount.ConfirmDelete" class="text-danger small"></span>
+                                    <input type="text" class="form-control" asp-for="DeleteAccount.DeleteConfirmation" required>
+                                    <span asp-validation-for="DeleteAccount.DeleteConfirmation" class="text-danger small"></span>
                                 </div>
-                        </div>
+
 
                         <!-- Submit Button -->
                         <div class="d-grid">
-                            <button type="submit" class="btn btn-danger btn-lg py-3" id="deleteAccountBtn" disabled>
-                                <span class="submit-text">
+                                    <button type="submit" class="btn btn-danger btn-lg py-3" id="deleteAccountBtn" disabled>
+                                        <span class="submit-text">
                                     <i class="bi bi-trash-fill me-2"></i>Permanently Delete My Account
                                 </span>
                                 <span class="spinner-border spinner-border-sm d-none" role="status"></span>
@@ -765,5 +770,22 @@
             }
             });
             });
+
+                        document.addEventListener("DOMContentLoaded", function () {
+                const checkbox = document.getElementById("confirmDelete");
+                const textInput = document.querySelector("input[name='DeleteAccount.DeleteConfirmation']");
+                const deleteButton = document.getElementById("deleteAccountBtn");
+
+                function toggleButton() {
+                    const isChecked = checkbox.checked;
+                    const textConfirmed = textInput.value.trim().toUpperCase() === "DELETE MY ACCOUNT";
+
+                    deleteButton.disabled = !(isChecked && textConfirmed);
+                }
+
+                checkbox.addEventListener("change", toggleButton);
+                textInput.addEventListener("input", toggleButton);
+            });
+
         </script>
     }
