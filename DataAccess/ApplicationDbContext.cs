@@ -10,6 +10,7 @@
         #region Entities definition :
 
         DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<UserSession> UserSessions { get; set; }
 
         #endregion
 

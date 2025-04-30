@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\01-Projects\\Brain-Sprint\\Utility\\Utility.csproj",
+      "projectUniqueName": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Utility\\Utility.csproj",
       "projectName": "Utility",
-      "projectPath": "E:\\01-Projects\\Brain-Sprint\\Utility\\Utility.csproj",
+      "projectPath": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Utility\\Utility.csproj",
       "packagesPath": "C:\\Users\\FM\\.nuget\\packages\\",
-      "outputPath": "E:\\01-Projects\\Brain-Sprint\\Utility\\obj\\",
+      "outputPath": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Utility\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\BrainSprint.csproj": {}
+    "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\BrainSprint.csproj": {}
   },
   "projects": {
-    "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\BrainSprint.csproj": {
+    "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\BrainSprint.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\BrainSprint.csproj",
+        "projectUniqueName": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\BrainSprint.csproj",
         "projectName": "BrainSprint",
-        "projectPath": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\BrainSprint.csproj",
+        "projectPath": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\BrainSprint.csproj",
         "packagesPath": "C:\\Users\\FM\\.nuget\\packages\\",
-        "outputPath": "E:\\01-Projects\\Brain-Sprint\\BrainSprint\\obj\\",
+        "outputPath": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,17 +32,17 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "E:\\01-Projects\\Brain-Sprint\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "E:\\01-Projects\\Brain-Sprint\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\DataAccess.csproj"
               },
-              "E:\\01-Projects\\Brain-Sprint\\Models\\Models.csproj": {
-                "projectPath": "E:\\01-Projects\\Brain-Sprint\\Models\\Models.csproj"
+              "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Models.csproj"
               },
-              "E:\\01-Projects\\Brain-Sprint\\Services\\Services.csproj": {
-                "projectPath": "E:\\01-Projects\\Brain-Sprint\\Services\\Services.csproj"
+              "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Services\\Services.csproj": {
+                "projectPath": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Services\\Services.csproj"
               },
-              "E:\\01-Projects\\Brain-Sprint\\Utility\\Utility.csproj": {
-                "projectPath": "E:\\01-Projects\\Brain-Sprint\\Utility\\Utility.csproj"
+              "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Utility\\Utility.csproj": {
+                "projectPath": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Utility\\Utility.csproj"
               }
             }
           }
@@ -117,14 +117,14 @@
         }
       }
     },
-    "E:\\01-Projects\\Brain-Sprint\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\01-Projects\\Brain-Sprint\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "E:\\01-Projects\\Brain-Sprint\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\FM\\.nuget\\packages\\",
-        "outputPath": "E:\\01-Projects\\Brain-Sprint\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -145,8 +145,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "E:\\01-Projects\\Brain-Sprint\\Models\\Models.csproj": {
-                "projectPath": "E:\\01-Projects\\Brain-Sprint\\Models\\Models.csproj"
+              "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Models.csproj"
               }
             }
           }
@@ -206,14 +206,14 @@
         }
       }
     },
-    "E:\\01-Projects\\Brain-Sprint\\Models\\Models.csproj": {
+    "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\01-Projects\\Brain-Sprint\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "E:\\01-Projects\\Brain-Sprint\\Models\\Models.csproj",
+        "projectPath": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Models.csproj",
         "packagesPath": "C:\\Users\\FM\\.nuget\\packages\\",
-        "outputPath": "E:\\01-Projects\\Brain-Sprint\\Models\\obj\\",
+        "outputPath": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -252,6 +252,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.4, )"
@@ -277,14 +281,14 @@
         }
       }
     },
-    "E:\\01-Projects\\Brain-Sprint\\Services\\Services.csproj": {
+    "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\01-Projects\\Brain-Sprint\\Services\\Services.csproj",
+        "projectUniqueName": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "E:\\01-Projects\\Brain-Sprint\\Services\\Services.csproj",
+        "projectPath": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Services\\Services.csproj",
         "packagesPath": "C:\\Users\\FM\\.nuget\\packages\\",
-        "outputPath": "E:\\01-Projects\\Brain-Sprint\\Services\\obj\\",
+        "outputPath": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -322,6 +326,12 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -342,14 +352,14 @@
         }
       }
     },
-    "E:\\01-Projects\\Brain-Sprint\\Utility\\Utility.csproj": {
+    "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Utility\\Utility.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\01-Projects\\Brain-Sprint\\Utility\\Utility.csproj",
+        "projectUniqueName": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Utility\\Utility.csproj",
         "projectName": "Utility",
-        "projectPath": "E:\\01-Projects\\Brain-Sprint\\Utility\\Utility.csproj",
+        "projectPath": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Utility\\Utility.csproj",
         "packagesPath": "C:\\Users\\FM\\.nuget\\packages\\",
-        "outputPath": "E:\\01-Projects\\Brain-Sprint\\Utility\\obj\\",
+        "outputPath": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Utility\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

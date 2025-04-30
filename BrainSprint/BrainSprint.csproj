@@ -28,7 +28,6 @@
 
 	<ItemGroup>
 	  <Folder Include="wwwroot\Assets\Customer\StudentImges\" />
-	  <Folder Include="wwwroot\Assets\Identity\images\PhotoStudent\" />
 	  <Folder Include="wwwroot\Assets\Instructor\InstructorImges\" />
 	</ItemGroup>
 

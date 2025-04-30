@@ -1,6 +1,7 @@
 using DataAccess.Repositories.IRepositories;
 using DataAccess.Repositories;
 using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.Extensions.Options;
 
 namespace BrainSprint
 {
@@ -27,6 +28,10 @@ namespace BrainSprint
             {
                 // Login settings:
                 option.SignIn.RequireConfirmedEmail = true;
+                option.SignIn.RequireConfirmedAccount = false;
+                option.SignIn.RequireConfirmedPhoneNumber = false;
+                option.Tokens.ChangePhoneNumberTokenProvider = "Phone";
+                option.Tokens.AuthenticatorTokenProvider = TokenOptions.DefaultAuthenticatorProvider;
 
                 // Password requirements:
                 option.Password.RequireUppercase = true;
@@ -35,7 +40,6 @@ namespace BrainSprint
 
                 // User requirements:
                 option.User.RequireUniqueEmail = true;
-
             }
             )
             // Bind the identity to the database using Entity Framework
@@ -50,31 +54,8 @@ namespace BrainSprint
 
             builder.Services.AddTransient<IEmailSender, EmailSender>();
 
-            #endregion
+            builder.Services.AddTransient<ICustomEmailSender, CustomEmailSender>();
 
-
-            #region Configure Application Settings
-            // Configure authentication services in the application
-
-            //builder.Services.AddAuthentication(options =>
-            //{
-            //    // Specify the default authentication system using cookies
-            //    options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-
-            //    // Specify Google as the authentication method when attempting to log in (when attempting to log in)
-            //    options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
-            //})
-            //// Add authentication using cookies to store session data after login
-            //.AddCookie()
-            //// Add authentication via Google OAuth
-            //.AddGoogle(googleOptions =>
-            //{
-            //    // Set the client ID for Google authentication from the application settings
-            //    googleOptions.ClientId = builder.Configuration["Authentication:Google:ClientId"];
-
-            //    // Set the client secret key for Google authentication from the application settings 
-            //    googleOptions.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
-            //});
 
             #endregion
 
@@ -84,6 +65,9 @@ namespace BrainSprint
             // while maintaining consistency within a request's lifecycle.
 
             builder.Services.AddScoped<IApplicationUserRepository, ApplicationUserRepository>();
+            //builder.Services.AddScoped<IUserSessionService, UserSessionService>();
+
+            builder.Services.AddHttpContextAccessor();
 
             #endregion
 

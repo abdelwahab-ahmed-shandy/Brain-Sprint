@@ -92,7 +92,7 @@ namespace BrainSprint.Areas.Identity.Controllers
                     protocol: Request.Scheme
                     );
 
-                    await _emailSender.SendEmailAsync(registerVM.Email, "Confirm your email",
+                    await _emailSender.SendEmailAsync(registerVM.Email, "BrainSprint : Confirm your email",
                     $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
 
 
@@ -234,7 +234,7 @@ namespace BrainSprint.Areas.Identity.Controllers
 
             await _emailSender.SendEmailAsync(
                 model.Email,
-                "Reset your MovieMart password",
+                "Reset your BrainSprint password",
                 $"Please reset your password by <a href='{callbackUrl}'>clicking here</a>.");
 
             TempData["notification"] = "Password reset link has been sent to your email";

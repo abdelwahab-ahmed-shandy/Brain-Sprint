@@ -10,15 +10,15 @@
             <!-- Header Section with User Profile -->
             <div class="auth-header text-center mb-4">
                 <div class="profile-header-image mx-auto position-relative">
-                    <img src="@(Model.Profile.ProfileImage ?? "/Assets/default-profile.png")"
+                    <img src="@(Model.Profile.ProfileImage ?? "/Assets/Identity/images/UserPhoto/logo.png")"
                          alt="User Profile"
                          class="rounded-circle profile-main-image"
                          width="120" height="120">
-                    <button class="btn btn-sm btn-accent rounded-circle position-absolute bottom-0 end-0 p-1"
-                            data-bs-toggle="tooltip" data-bs-title="Change profile picture"
-                            onclick="document.getElementById('profileImageInput').click()">
-                        <i class="bi bi-camera-fill"></i>
-                    </button>
+                    @* <button class="btn btn-sm btn-accent rounded-circle position-absolute bottom-0 end-0 p-1" *@
+                    @*         data-bs-toggle="tooltip" data-bs-title="Change profile picture" *@
+                    @*         onclick="document.getElementById('profileImageInput').click()"> *@
+                    @*     <i class="bi bi-camera-fill"></i> *@
+                    @* </button> *@
                 </div>
                 <h2 class="fw-bold text-white mt-3 mb-1">@Model.Profile.FullName</h2>
                 <div class="d-flex justify-content-center align-items-center gap-2">
@@ -140,7 +140,7 @@
                     </div>
 
                     <div class="d-flex justify-content-end">
-                        <button class="btn btn-outline-accent" data-bs-toggle="tab" data-bs-target="#manage" type="button">
+                            <button class="btn btn-outline-accent" id="settingsTabs" role="tablist" data-bs-toggle="tab" data-bs-target="#manage" type="button">
                             <i class="bi bi-pencil-square me-2"></i>Edit Profile
                         </button>
                     </div>
@@ -148,13 +148,13 @@
 
                 <!-- Settings Tab -->
                 <div class="tab-pane fade" id="manage" role="tabpanel" aria-labelledby="manage-tab">
-                    <form asp-action="UpdateProfile" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+                        <form asp-controller="Settings" asp-action="UpdateProfile" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
                         @Html.AntiForgeryToken()
 
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="mb-4 text-center">
-                                    <img src="@(Model.Profile.ProfileImage ?? "/Assets/default-profile.png")"
+                                        <img src="@(Model.Profile.ProfileImage ?? "/Assets/Identity/images/UserPhoto/logo.png")"
                                          id="profileImagePreview"
                                          class="rounded-circle mb-3 shadow"
                                          width="150" height="150">
@@ -263,52 +263,60 @@
                         </div>
 
                         <!-- Two-Factor Authentication Section -->
-                        <div class="accordion-item border-0 mb-3">
-                            <h2 class="accordion-header" id="twoFactorHeading">
-                                <button class="accordion-button bg-dark text-white collapsed" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#twoFactorCollapse"
-                                        aria-expanded="false" aria-controls="twoFactorCollapse">
-                                    <i class="bi bi-shield-lock me-2"></i>Two-Factor Authentication
-                                </button>
-                            </h2>
-                            <div id="twoFactorCollapse" class="accordion-collapse collapse"
-                                 aria-labelledby="twoFactorHeading" data-bs-parent="#securityAccordion">
-                                <div class="accordion-body bg-dark">
+                            <div class="card mb-4">
+                                <div class="card-header bg-dark text-white">
+                                    <h5 class="mb-0">2-Step Verification</h5>
+                                </div>
+                                <div class="card-body">
                                     <form asp-action="ToggleTwoFactor" method="post">
                                         @Html.AntiForgeryToken()
 
-                                        <div class="d-flex align-items-center justify-content-between mb-4">
-                                            <div>
-                                                <h5 class="text-white mb-1">Two-Factor Authentication</h5>
-                                                <p class="text-muted small mb-0">
-                                                    Add an extra layer of security to your account
-                                                </p>
-                                            </div>
-                                            <div class="form-check form-switch">
-                                                <input class="form-check-input" type="checkbox" asp-for="Profile.TwoFactorEnabled"
-                                                       onchange="this.form.submit()" style="width: 3em; height: 1.5em;">
-                                            </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="twoFactorSwitch"
+                                            @(Model.Profile.TwoFactorEnabled ? "checked" : "")
+                                                   onchange="this.form.submit()">
+                                            <label class="form-check-label" for="twoFactorSwitch">
+                                                Activate two-step verification
+                                            </label>
                                         </div>
 
                                         @if (Model.Profile.TwoFactorEnabled)
                                         {
-                                            <div class="alert alert-success">
-                                                <i class="bi bi-check-circle-fill me-2"></i>
-                                                Two-factor authentication is currently <strong>enabled</strong> on your account.
+                                            <div class="alert alert-success mt-3">
+                                                <i class="bi bi-shield-check"></i>
+                                                Two-step verification is currently enabled for your account.
                                             </div>
                                         }
                                         else
                                         {
-                                            <div class="alert alert-warning">
-                                                <i class="bi bi-exclamation-triangle-fill me-2"></i>
-                                                Two-factor authentication is currently <strong>disabled</strong> on your account.
+                                            <div class="alert alert-warning mt-3">
+                                                <i class="bi bi-shield-exclamation"></i>
+                                                Two-step verification is disabled. We recommend enabling it for added security.
                                             </div>
                                         }
+
                                     </form>
+
+                                    @if (!Model.Profile.EmailVerified || !Model.Profile.PhoneNumberConfirmed)
+                                    {
+                                        <div class="alert alert-danger mt-3">
+                                            <h6>Activation Requirements:</h6>
+                                            <ul>
+                                                @if (!Model.Profile.EmailVerified)
+                                                {
+                                                    <li>Email address must be confirmed first</li>
+                                                }
+                                                @if (!Model.Profile.PhoneNumberConfirmed)
+                                                {
+                                                    <li>Phone number must be confirmed first</li>
+                                                }
+
+                                            </ul>
+
+                                        </div>
+                                    }
                                 </div>
                             </div>
-                        </div>
-
                         <!-- Session Management -->
                         <div class="accordion-item border-0">
                             <h2 class="accordion-header" id="sessionsHeading">
@@ -357,6 +365,7 @@
                 </div>
 
                 <!-- Delete Account Tab -->
+
                 <div class="tab-pane fade" id="delete" role="tabpanel" aria-labelledby="delete-tab">
                     <div class="alert alert-danger">
                         <div class="d-flex align-items-start">
@@ -398,12 +407,11 @@
                             </div>
 
                             <!-- Additional Confirmation -->
-                            <div class="form-group mb-3">
-                                <label class="text-light mb-2">Type "DELETE MY ACCOUNT" to confirm:</label>
-                                <input type="text" class="form-control" id="deleteConfirmation" required
-                                       pattern="DELETE MY ACCOUNT" data-error="Please type the exact phrase to confirm">
-                                <div class="invalid-feedback">Please type "DELETE MY ACCOUNT" to confirm account deletion</div>
-                            </div>
+                                <div class="form-group mb-3">
+                                    <label class="text-light mb-2">Type "DELETE MY ACCOUNT" to confirm:</label>
+                                    <input type="text" class="form-control" asp-for="DeleteAccount.ConfirmDelete" required>
+                                    <span asp-validation-for="DeleteAccount.ConfirmDelete" class="text-danger small"></span>
+                                </div>
                         </div>
 
                         <!-- Submit Button -->
@@ -417,6 +425,7 @@
                         </div>
                     </form>
                 </div>
+            
             </div>
         </div>
     </div>
@@ -665,80 +674,96 @@
     </style>
 }
 
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
 
-    <script>
-        $(document).ready(function() {
-            // Initialize tooltips
-            const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-            tooltipTriggerList.map(function (tooltipTriggerEl) {
-                return new bootstrap.Tooltip(tooltipTriggerEl);
-            });
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
 
-            // Preview profile image when selected
-            $('#profileImageInput').change(function(e) {
-                const file = e.target.files[0];
-                if (file) {
-                    if (file.size > 2 * 1024 * 1024) {
-                        alert('File size should be less than 2MB');
-                        return;
+        <script>
+            $(document).ready(function() {
+                // Initialize tooltips
+                const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+                tooltipTriggerList.map(function (tooltipTriggerEl) {
+                    return new bootstrap.Tooltip(tooltipTriggerEl);
+                });
+
+                // Preview profile image when selected
+                $('#profileImageInput').change(function(e) {
+                    const file = e.target.files[0];
+                    if (file) {
+                        if (file.size > 2 * 1024 * 1024) {
+                            alert('File size should be less than 2MB');
+                            return;
+                        }
+
+                        const reader = new FileReader();
+                        reader.onload = function(event) {
+                            $('#profileImagePreview').attr('src', event.target.result);
+                        };
+                        reader.readAsDataURL(file);
                     }
+                });
 
-                    const reader = new FileReader();
-                    reader.onload = function(event) {
-                        $('#profileImagePreview').attr('src', event.target.result);
-                    };
-                    reader.readAsDataURL(file);
+                // Toggle password visibility
+                $('.password-toggle').click(function() {
+                    const input = $(this).closest('.position-relative').find('input');
+                    const icon = $(this).find('i');
+
+                    if (input.attr('type') === 'password') {
+                        input.attr('type', 'text');
+                        icon.removeClass('bi-eye-fill').addClass('bi-eye-slash-fill');
+                    } else {
+                        input.attr('type', 'password');
+                        icon.removeClass('bi-eye-slash-fill').addClass('bi-eye-fill');
+                    }
+                });
+
+                // Enable/disable delete button based on confirmation
+                function validateDelete() {
+                    const isConfirmed = $('#confirmDelete').is(':checked');
+                    const isTextConfirmed = $('#deleteConfirmation').val() === 'DELETE MY ACCOUNT';
+                    $('#deleteAccountBtn').prop('disabled', !(isConfirmed && isTextConfirmed));
                 }
-            });
 
-            // Toggle password visibility
-            $('.password-toggle').click(function() {
-                const input = $(this).closest('.position-relative').find('input');
-                const icon = $(this).find('i');
+                $('#confirmDelete, #deleteConfirmation').on('change keyup', validateDelete);
 
-                if (input.attr('type') === 'password') {
-                    input.attr('type', 'text');
-                    icon.removeClass('bi-eye-fill').addClass('bi-eye-slash-fill');
-                } else {
-                    input.attr('type', 'password');
-                    icon.removeClass('bi-eye-slash-fill').addClass('bi-eye-fill');
+                // Initialize delete button state
+                validateDelete();
+
+                // Form submission loading states
+                $('form').submit(function() {
+                    const submitBtn = $(this).find('button[type="submit"]');
+                    submitBtn.prop('disabled', true);
+                    submitBtn.find('.submit-text').addClass('d-none');
+                    submitBtn.find('.spinner-border').removeClass('d-none');
+                });
+
+                // Tab persistence
+                $('button[data-bs-toggle="tab"]').on('click', function(e) {
+                    localStorage.setItem('activeTab', $(e.target).attr('data-bs-target'));
+                });
+
+                // Restore active tab on page load
+                const activeTab = localStorage.getItem('activeTab');
+                if (activeTab) {
+                    $('.nav-tabs button[data-bs-target="' + activeTab + '"]').tab('show');
                 }
-            });
 
-            // Enable/disable delete button based on confirmation
-            $('#confirmDelete, #deleteConfirmation').on('change keyup', function() {
-                const isConfirmed = $('#confirmDelete').is(':checked');
-                const isTextConfirmed = $('#deleteConfirmation').val() === 'DELETE MY ACCOUNT';
-                $('#deleteAccountBtn').prop('disabled', !(isConfirmed && isTextConfirmed));
-            });
+                // Auto-focus on first invalid input
+                if ($('.is-invalid').length > 0) {
+                    $('.is-invalid').first().focus();
+                }
 
-            // Form submission loading states
+            // Two-factor form handling
             $('form').submit(function() {
-                const submitBtn = $(this).find('button[type="submit"]');
-                submitBtn.prop('disabled', true);
-                submitBtn.find('.submit-text').addClass('d-none');
-                submitBtn.find('.spinner-border').removeClass('d-none');
-            });
-
-            // Tab persistence
-            $('button[data-bs-toggle="tab"]').on('click', function(e) {
-                localStorage.setItem('activeTab', $(e.target).attr('data-bs-target'));
-            });
-
-            // Restore active tab on page load
-            const activeTab = localStorage.getItem('activeTab');
-            if (activeTab) {
-                $('.nav-tabs button[data-bs-target="' + activeTab + '"]').tab('show');
+            const form = $(this);
+            if (form.attr('id') === 'toggleTwoFactorForm') {
+            const switchBtn = form. find('.form-check-input');
+            switchBtn.prop('disabled', true);
+            form.find('.btn-submit').html('<span class="spinner-border spinner-border-sm" role="status"></span> Loading...');
             }
-
-            // Auto-focus on first invalid input
-            if ($('.is-invalid').length > 0) {
-                $('.is-invalid').first().focus();
-            }
-        });
-    </script>
-}
+            });
+            });
+        </script>
+    }

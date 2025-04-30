@@ -4,6 +4,8 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+
 
 namespace Models.ViewModels
 {
@@ -40,7 +42,7 @@ namespace Models.ViewModels
 
             [Display(Name = "Upload New Image")]
             [DataType(DataType.Upload)]
-            public string ImageFile { get; set; } = String.Empty;
+            public IFormFile? ImageFile { get; set; }
 
             [Display(Name = "Biography")]
             [MaxLength(1000, ErrorMessage = "Bio cannot exceed 1000 characters.")]
@@ -97,6 +99,9 @@ namespace Models.ViewModels
 
             [Display(Name = "Push Notifications")]
             public bool PushNotifications { get; set; } = true;
+
+            public bool IsTwoFactorEnabled { get; set; } = false;
+
         }
 
         public class DeleteAccountSettings

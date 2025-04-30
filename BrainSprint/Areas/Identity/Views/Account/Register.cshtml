@@ -15,11 +15,11 @@
 
             <!-- Google Sign In Button -->
             <div class="d-grid mb-4">
-                <form asp-action="ExternalLogin" asp-controller="Account" method="post">
+                <form asp-area="Identity" asp-action="ExternalLogin" asp-controller="Account" method="post">
                     <input type="hidden" name="provider" value="Google" />
                     <input type="hidden" name="returnUrl" value="@Context.Request.Path" />
                     <button type="submit" class="btn btn-outline-light btn-lg py-3 w-100">
-                        <i class="bi bi-google me-2"></i> Sign up with Google
+                        <i class="bi bi-google me-2"></i> Register with Google
                     </button>
                 </form>
             </div>
