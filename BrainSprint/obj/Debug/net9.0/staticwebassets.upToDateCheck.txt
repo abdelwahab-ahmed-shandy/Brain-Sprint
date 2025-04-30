@@ -50,6 +50,7 @@ C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\bootstrap\dist\css\boot
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\js\search.js
+C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\css\Instructor.css
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\jquery\dist\jquery.slim.js
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\Assets\Identity\css\bootstrap\mixins\_visibility.css
@@ -86,9 +87,11 @@ wwwroot\Assets\Identity\css\site.css
 wwwroot\Assets\Identity\images\education-bg.jpg
 wwwroot\Assets\Identity\images\UserPhoto\558c9bcf-08a6-46a0-9026-ca3425a11333_20250430142615_36f82258-aad4-433f-b381-16586902b155.jpg
 wwwroot\Assets\Identity\images\UserPhoto\a563afd4-1368-4ef7-9f07-64a09eced37f_20250430021750_1fdfbb26-0924-4631-a718-9bcd6927b331.png
+wwwroot\Assets\Identity\images\UserPhoto\aaf734bf-4dc7-4f77-86b6-12f9d55ac4f2_20250430200554_d8973d5d-19d9-4b79-a2e9-463543bf252b.jpg
 wwwroot\Assets\Identity\images\UserPhoto\cd256c21-7b98-4374-a8cc-74f1b29c32c5_20250430011840_55ae3015-ccf9-44de-9edc-b3fbc5a55e52.png
 wwwroot\Assets\Identity\images\UserPhoto\logo.png
 wwwroot\css\customer.css
+wwwroot\css\Instructor.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\js\notifications.js

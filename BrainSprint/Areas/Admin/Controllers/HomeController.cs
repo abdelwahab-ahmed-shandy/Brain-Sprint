@@ -7,7 +7,7 @@ namespace BrainSprint.Areas.Admin.Controllers
     [Authorize(Roles = "Admin,SuperAdmin")]
     public class HomeController : Controller
     {
-        public IActionResult Dashboard()
+        public IActionResult Index()
         {
             return View();
         }

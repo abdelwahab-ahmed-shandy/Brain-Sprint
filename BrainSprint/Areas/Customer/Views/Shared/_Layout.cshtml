@@ -171,6 +171,14 @@
                                             </a>
                                         </li>
                                     }
+                                    @if (User.IsInRole("Instructor"))
+                                    {
+                                        <li>
+                                            <a class="dropdown-item" asp-area="Instructor" asp-controller="Home" asp-action="Index">
+                                                <i class="fas fa-chalkboard-teacher me-2 text-primary"></i> Instructor
+                                            </a>
+                                        </li>
+                                    }
                                     <li>
                                         <form id="logoutForm" method="post" asp-area="Identity" asp-controller="Account" asp-action="Logout" >
                                             <button type="submit" class="dropdown-item">

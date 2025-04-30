@@ -1,0 +1,258 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Gamified Learning Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <div class="bg-indigo-800 text-white w-64 space-y-6 py-7 px-2 fixed h-full">
+            <div class="flex items-center space-x-2 px-4">
+                <i class="fas fa-gamepad text-2xl"></i>
+                <span class="text-2xl font-extrabold">EduPlay</span>
+            </div>
+            <nav>
+                <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-indigo-700 bg-indigo-700">
+                    <i class="fas fa-tachometer-alt mr-2"></i> Dashboard
+                </a>
+                <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-indigo-700">
+                    <i class="fas fa-book mr-2"></i> Courses
+                </a>
+                <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-indigo-700">
+                    <i class="fas fa-users mr-2"></i> Students
+                </a>
+                <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-indigo-700">
+                    <i class="fas fa-trophy mr-2"></i> Badges & Achievements
+                </a>
+                <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-indigo-700">
+                    <i class="fas fa-chart-line mr-2"></i> Analytics
+                </a>
+                <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-indigo-700">
+                    <i class="fas fa-cog mr-2"></i> Settings
+                </a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 ml-64">
+            <!-- Top Navigation -->
+            <header class="bg-white shadow-sm py-4 px-6 flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <h1 class="text-2xl font-bold text-gray-800">Admin Dashboard</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <i class="fas fa-bell text-gray-500 hover:text-indigo-600 cursor-pointer"></i>
+                        <span class="absolute top-0 right-0 h-2 w-2 rounded-full bg-red-500"></span>
+                    </div>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Admin" class="h-8 w-8 rounded-full">
+                        <span class="ml-2 font-medium">Admin</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <main class="p-6">
+                <!-- Stats Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-500">Total Students</p>
+                                <h3 class="text-2xl font-bold">1,248</h3>
+                                <p class="text-green-500 text-sm">+12% from last month</p>
+                            </div>
+                            <div class="bg-indigo-100 p-3 rounded-full">
+                                <i class="fas fa-users text-indigo-600"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-500">Active Courses</p>
+                                <h3 class="text-2xl font-bold">56</h3>
+                                <p class="text-green-500 text-sm">+5 new courses</p>
+                            </div>
+                            <div class="bg-green-100 p-3 rounded-full">
+                                <i class="fas fa-book text-green-600"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-500">Badges Awarded</p>
+                                <h3 class="text-2xl font-bold">3,742</h3>
+                                <p class="text-green-500 text-sm">+324 this week</p>
+                            </div>
+                            <div class="bg-yellow-100 p-3 rounded-full">
+                                <i class="fas fa-trophy text-yellow-600"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-500">Completion Rate</p>
+                                <h3 class="text-2xl font-bold">78%</h3>
+                                <p class="text-green-500 text-sm">+8% improvement</p>
+                            </div>
+                            <div class="bg-blue-100 p-3 rounded-full">
+                                <i class="fas fa-chart-line text-blue-600"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity and Top Students -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <!-- Recent Activity -->
+                    <div class="lg:col-span-2 bg-white rounded-lg shadow p-6">
+                        <h2 class="text-xl font-bold mb-4">Recent Activity</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-indigo-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-trophy text-indigo-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Sarah Johnson earned the "Python Master" badge</p>
+                                    <p class="text-gray-500 text-sm">Completed Advanced Python Course with 95% score</p>
+                                    <p class="text-gray-400 text-xs">2 hours ago</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-green-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-book text-green-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">New course published: "Game Development with Unity"</p>
+                                    <p class="text-gray-500 text-sm">By instructor Mark Williams</p>
+                                    <p class="text-gray-400 text-xs">5 hours ago</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-yellow-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-users text-yellow-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">25 new students enrolled today</p>
+                                    <p class="text-gray-500 text-sm">Most popular course: "Web Development Bootcamp"</p>
+                                    <p class="text-gray-400 text-xs">1 day ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Top Students -->
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h2 class="text-xl font-bold mb-4">Top Students</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Student" class="h-10 w-10 rounded-full mr-3">
+                                <div>
+                                    <p class="font-medium">Emily Chen</p>
+                                    <p class="text-gray-500 text-sm">1,450 points • 12 badges</p>
+                                </div>
+                                <div class="ml-auto bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-bold">#1</div>
+                            </div>
+                            <div class="flex items-center">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Student" class="h-10 w-10 rounded-full mr-3">
+                                <div>
+                                    <p class="font-medium">Michael Rodriguez</p>
+                                    <p class="text-gray-500 text-sm">1,320 points • 10 badges</p>
+                                </div>
+                                <div class="ml-auto bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-bold">#2</div>
+                            </div>
+                            <div class="flex items-center">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Student" class="h-10 w-10 rounded-full mr-3">
+                                <div>
+                                    <p class="font-medium">Jessica Kim</p>
+                                    <p class="text-gray-500 text-sm">1,280 points • 9 badges</p>
+                                </div>
+                                <div class="ml-auto bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-bold">#3</div>
+                            </div>
+                            <div class="flex items-center">
+                                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Student" class="h-10 w-10 rounded-full mr-3">
+                                <div>
+                                    <p class="font-medium">David Wilson</p>
+                                    <p class="text-gray-500 text-sm">1,150 points • 8 badges</p>
+                                </div>
+                                <div class="ml-auto bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-bold">#4</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Badge Management -->
+                <div class="mt-6 bg-white rounded-lg shadow p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-bold">Badge Management</h2>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition">
+                            <i class="fas fa-plus mr-2"></i> Create New Badge
+                        </button>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                        <!-- Badge Item -->
+                        <div class="border rounded-lg p-4 text-center">
+                            <div class="bg-yellow-100 text-yellow-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <i class="fas fa-star text-2xl"></i>
+                            </div>
+                            <h3 class="font-bold">Fast Learner</h3>
+                            <p class="text-gray-500 text-sm">Complete 5 lessons in one day</p>
+                        </div>
+                        <!-- Badge Item -->
+                        <div class="border rounded-lg p-4 text-center">
+                            <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <i class="fas fa-check-circle text-2xl"></i>
+                            </div>
+                            <h3 class="font-bold">Perfect Score</h3>
+                            <p class="text-gray-500 text-sm">Score 100% on any quiz</p>
+                        </div>
+                        <!-- Badge Item -->
+                        <div class="border rounded-lg p-4 text-center">
+                            <div class="bg-green-100 text-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <i class="fas fa-trophy text-2xl"></i>
+                            </div>
+                            <h3 class="font-bold">Course Master</h3>
+                            <p class="text-gray-500 text-sm">Complete all lessons in a course</p>
+                        </div>
+                        <!-- Badge Item -->
+                        <div class="border rounded-lg p-4 text-center">
+                            <div class="bg-red-100 text-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <i class="fas fa-bolt text-2xl"></i>
+                            </div>
+                            <h3 class="font-bold">Quick Thinker</h3>
+                            <p class="text-gray-500 text-sm">Finish quiz in half the time</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main role="main" class="flex-shrink-0">
+        <!-- Toast Notifications Container -->
+        <div aria-live="polite" aria-atomic="true" class="position-relative">
+            <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1100">
+                <!-- Toast messages will be inserted here -->
+            </div>
+        </div>
+
+        @RenderBody()
+    </main>
+
+    @await Html.PartialAsync("_NotificationAdmin")
+
+    @await RenderSectionAsync("Styles", required: false)
+    @await RenderSectionAsync("Scripts", required: false)
+
+
+</body>
+</html>

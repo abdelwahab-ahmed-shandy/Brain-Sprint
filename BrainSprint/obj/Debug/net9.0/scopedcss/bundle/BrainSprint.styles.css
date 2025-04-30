@@ -1,46 +1,46 @@
-/* _content/BrainSprint/Areas/Admin/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* _content/BrainSprint/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml.rz.scp.css */
 /* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-a.navbar-brand[b-fs6lz2f0zt] {
+a.navbar-brand[b-oe3zdfrxkz] {
   white-space: normal;
   text-align: center;
   word-break: break-all;
 }
 
-a[b-fs6lz2f0zt] {
+a[b-oe3zdfrxkz] {
   color: #0077cc;
 }
 
-.btn-primary[b-fs6lz2f0zt] {
+.btn-primary[b-oe3zdfrxkz] {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
 
-.nav-pills .nav-link.active[b-fs6lz2f0zt], .nav-pills .show > .nav-link[b-fs6lz2f0zt] {
+.nav-pills .nav-link.active[b-oe3zdfrxkz], .nav-pills .show > .nav-link[b-oe3zdfrxkz] {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
 
-.border-top[b-fs6lz2f0zt] {
+.border-top[b-oe3zdfrxkz] {
   border-top: 1px solid #e5e5e5;
 }
-.border-bottom[b-fs6lz2f0zt] {
+.border-bottom[b-oe3zdfrxkz] {
   border-bottom: 1px solid #e5e5e5;
 }
 
-.box-shadow[b-fs6lz2f0zt] {
+.box-shadow[b-oe3zdfrxkz] {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
-button.accept-policy[b-fs6lz2f0zt] {
+button.accept-policy[b-oe3zdfrxkz] {
   font-size: 1rem;
   line-height: inherit;
 }
 
-.footer[b-fs6lz2f0zt] {
+.footer[b-oe3zdfrxkz] {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -145,49 +145,49 @@ button.accept-policy[b-0uptanht0j] {
   white-space: nowrap;
   line-height: 60px;
 }
-/* _content/BrainSprint/Areas/Instructor/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* _content/BrainSprint/Areas/Instructor/Views/Shared/_LayoutInstructor.cshtml.rz.scp.css */
 /* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-a.navbar-brand[b-bdotpglg1g] {
+a.navbar-brand[b-y4oc980h5r] {
   white-space: normal;
   text-align: center;
   word-break: break-all;
 }
 
-a[b-bdotpglg1g] {
+a[b-y4oc980h5r] {
   color: #0077cc;
 }
 
-.btn-primary[b-bdotpglg1g] {
+.btn-primary[b-y4oc980h5r] {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
 
-.nav-pills .nav-link.active[b-bdotpglg1g], .nav-pills .show > .nav-link[b-bdotpglg1g] {
+.nav-pills .nav-link.active[b-y4oc980h5r], .nav-pills .show > .nav-link[b-y4oc980h5r] {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
 
-.border-top[b-bdotpglg1g] {
+.border-top[b-y4oc980h5r] {
   border-top: 1px solid #e5e5e5;
 }
-.border-bottom[b-bdotpglg1g] {
+.border-bottom[b-y4oc980h5r] {
   border-bottom: 1px solid #e5e5e5;
 }
 
-.box-shadow[b-bdotpglg1g] {
+.box-shadow[b-y4oc980h5r] {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
-button.accept-policy[b-bdotpglg1g] {
+button.accept-policy[b-y4oc980h5r] {
   font-size: 1rem;
   line-height: inherit;
 }
 
-.footer[b-bdotpglg1g] {
+.footer[b-y4oc980h5r] {
   position: absolute;
   bottom: 0;
   width: 100%;

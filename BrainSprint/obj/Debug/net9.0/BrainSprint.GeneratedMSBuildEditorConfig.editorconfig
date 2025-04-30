@@ -28,16 +28,16 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/FM/Desktop/Brain-Sprint/BrainSprint/Areas/Admin/Views/Home/Dashboard.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxEYXNoYm9hcmQuY3NodG1s
+[C:/Users/FM/Desktop/Brain-Sprint/BrainSprint/Areas/Admin/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/FM/Desktop/Brain-Sprint/BrainSprint/Areas/Admin/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FM/Desktop/Brain-Sprint/BrainSprint/Areas/Admin/Views/Shared/_Notification.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb24uY3NodG1s
+[C:/Users/FM/Desktop/Brain-Sprint/BrainSprint/Areas/Admin/Views/Shared/_NotificationAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb25BZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/FM/Desktop/Brain-Sprint/BrainSprint/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
@@ -128,16 +128,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FM/Desktop/Brain-Sprint/BrainSprint/Areas/Instructor/Views/Home/Dashboard.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSW5zdHJ1Y3RvclxWaWV3c1xIb21lXERhc2hib2FyZC5jc2h0bWw=
+[C:/Users/FM/Desktop/Brain-Sprint/BrainSprint/Areas/Instructor/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSW5zdHJ1Y3RvclxWaWV3c1xIb21lXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/FM/Desktop/Brain-Sprint/BrainSprint/Areas/Instructor/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSW5zdHJ1Y3RvclxWaWV3c1xTaGFyZWRcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FM/Desktop/Brain-Sprint/BrainSprint/Areas/Instructor/Views/Shared/_Notification.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSW5zdHJ1Y3RvclxWaWV3c1xTaGFyZWRcX05vdGlmaWNhdGlvbi5jc2h0bWw=
+[C:/Users/FM/Desktop/Brain-Sprint/BrainSprint/Areas/Instructor/Views/Shared/_NotificationInstructor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSW5zdHJ1Y3RvclxWaWV3c1xTaGFyZWRcX05vdGlmaWNhdGlvbkluc3RydWN0b3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/FM/Desktop/Brain-Sprint/BrainSprint/Areas/Instructor/Views/Shared/_ValidationScriptsPartial.cshtml]
@@ -168,9 +168,9 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FM/Desktop/Brain-Sprint/BrainSprint/Areas/Admin/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-fs6lz2f0zt
+[C:/Users/FM/Desktop/Brain-Sprint/BrainSprint/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-oe3zdfrxkz
 
 [C:/Users/FM/Desktop/Brain-Sprint/BrainSprint/Areas/Customer/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
@@ -180,9 +180,9 @@ build_metadata.AdditionalFiles.CssScope = b-iwy323qt1e
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-0uptanht0j
 
-[C:/Users/FM/Desktop/Brain-Sprint/BrainSprint/Areas/Instructor/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSW5zdHJ1Y3RvclxWaWV3c1xTaGFyZWRcX0xheW91dC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = b-bdotpglg1g
+[C:/Users/FM/Desktop/Brain-Sprint/BrainSprint/Areas/Instructor/Views/Shared/_LayoutInstructor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSW5zdHJ1Y3RvclxWaWV3c1xTaGFyZWRcX0xheW91dEluc3RydWN0b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-y4oc980h5r
 
 [C:/Users/FM/Desktop/Brain-Sprint/BrainSprint/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s

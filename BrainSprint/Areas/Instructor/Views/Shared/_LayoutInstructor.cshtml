@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="~/css/Instructor.css" />
+    <title>Instructor - @ViewData["Title"] </title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+
+            <div class="sidebar-header">
+                <div class="brand-container d-flex align-items-center">
+                    <a class="navbar-brand d-flex align-items-center fw-bold" asp-area="Customer" asp-controller="Home" asp-action="Index">
+                        <img src="~/Assets/Customer/images/logo.png"
+                             alt="BrainSprint Logo"
+                             class="logo-img me-2 animate__animated animate__pulse"
+                             width="40"
+                             height="40">
+                        <span class="text-gradient brand-name">
+                            BrainSprint
+                        </span>
+                    </a>
+                </div>
+                <p class="dashboard-title mt-2">Instructor Dashboard</p>
+            </div>
+
+            <div class="sidebar-menu">
+                <a href="/Instructor/Index" class="menu-item active">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="courses.html" class="menu-item">
+                    <i class="fas fa-book"></i>
+                    <span>Courses</span>
+                </a>
+                <a href="tests.html" class="menu-item">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Tests</span>
+                </a>
+                <a href="analytics.html" class="menu-item">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Analytics</span>
+                </a>
+                <a href="students.html" class="menu-item">
+                    <i class="fas fa-users"></i>
+                    <span>Students</span>
+                </a>
+                <a href="learning-paths.html" class="menu-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Learning Paths</span>
+                </a>
+                <a href="settings.html" class="menu-item">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- Main Content -->
+        <main role="main" class="flex-shrink-0">
+            <!-- Toast Notifications Container -->
+            <div aria-live="polite" aria-atomic="true" class="position-relative">
+                <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1100">
+                    <!-- Toast messages will be inserted here -->
+                </div>
+            </div>
+
+            @RenderBody()
+
+        </main>
+
+
+        </div>
+    </div>
+
+    <script>
+              // Simple animation for chart bars
+              function toggleDropdown(element) {
+          element.classList.toggle("show");
+        }
+
+        window.onclick = function(event) {
+          if (!event.target.closest('.dropdown')) {
+            document.querySelectorAll('.dropdown').forEach(function(drop) {
+              drop.classList.remove('show');
+            });
+          }
+        }
+
+
+              document.addEventListener('DOMContentLoaded', function() {
+                  const bars = document.querySelectorAll('.bar-fill');
+                  bars.forEach(bar => {
+                      const targetHeight = bar.style.height;
+                      bar.style.height = '0%';
+                      setTimeout(() => {
+                          bar.style.height = targetHeight;
+                      }, 100);
+                  });
+              });
+    </script>
+
+    @await Html.PartialAsync("_NotificationInstructor")
+
+    @await RenderSectionAsync("Styles", required: false)
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

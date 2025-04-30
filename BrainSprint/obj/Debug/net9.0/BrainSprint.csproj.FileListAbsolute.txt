@@ -645,10 +645,8 @@ C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\BrainSprint.MvcApp
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\BrainSprint.RazorAssemblyInfo.cache
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\BrainSprint.RazorAssemblyInfo.cs
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\BrainSprint.sourcelink.json
-C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\scopedcss\Areas\Admin\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\scopedcss\Areas\Customer\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\scopedcss\Areas\Identity\Views\Shared\_Layout.cshtml.rz.scp.css
-C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\scopedcss\Areas\Instructor\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\scopedcss\bundle\BrainSprint.styles.css
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\scopedcss\projectbundle\BrainSprint.bundle.scp.css
@@ -726,8 +724,6 @@ C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\sg7v3os
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\3lji2oxwsm-9vr69e8ynj.gz
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\g6bodlcvxq-87fc7y1x7t.gz
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\hs9f672u14-mlv21k5csn.gz
-C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\1cqd7pe8yl-ktyvl70i8h.gz
-C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\q0lfynpajj-ktyvl70i8h.gz
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\staticwebassets.build.endpoints.json
@@ -744,3 +740,8 @@ C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\refint\BrainSprint
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\BrainSprint.pdb
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\BrainSprint.genruntimeconfig.cache
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\ref\BrainSprint.dll
+C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\scopedcss\Areas\Admin\Views\Shared\_LayoutAdmin.cshtml.rz.scp.css
+C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\scopedcss\Areas\Instructor\Views\Shared\_LayoutInstructor.cshtml.rz.scp.css
+C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\1cqd7pe8yl-sp53c8ikm6.gz
+C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\q0lfynpajj-sp53c8ikm6.gz
+C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\q2whsf7sis-gqmkox2hsi.gz

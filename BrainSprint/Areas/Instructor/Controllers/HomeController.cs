@@ -8,7 +8,7 @@ namespace BrainSprint.Areas.Instructor.Controllers
 
     public class HomeController : Controller
     {
-        public IActionResult Dashboard()
+        public IActionResult Index()
         {
             return View();
         }
