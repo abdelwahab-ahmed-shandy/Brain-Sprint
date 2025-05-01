@@ -207,12 +207,20 @@ namespace BrainSprint.Areas.Identity.Controllers
             if (!await _userManager.CheckPasswordAsync(user, model.DeleteAccount.Password))
             {
                 ModelState.AddModelError("DeleteAccount.Password", "The password you entered is incorrect.");
+
+                TempData["notification"] = "The password you entered is incorrect ?!";
+                TempData["MessageType"] = "Error";
+
                 return View("Manage", model);
             }
 
             if (await _userManager.IsInRoleAsync(user, "Admin") || await _userManager.IsInRoleAsync(user, "SuperAdmin") || await _userManager.IsInRoleAsync(user, "Instructor"))
             {
                 ModelState.AddModelError("", "Admins cannot delete their accounts.");
+
+                TempData["notification"] = "Admins And Instructor cannot delete their accounts";
+                TempData["MessageType"] = "Error";
+
                 return View("Manage", model);
             }
 
@@ -228,7 +236,9 @@ namespace BrainSprint.Areas.Identity.Controllers
             }
 
             await _signInManager.SignOutAsync();
-            TempData["Notification"] = "Your account has been deleted successfully.";
+            TempData["notification"] = "Your account has been deleted successfully.";
+            TempData["MessageType"] = "Success";
+
             return RedirectToAction("Login", "Identity", new { area = "Identity" });
         }
 

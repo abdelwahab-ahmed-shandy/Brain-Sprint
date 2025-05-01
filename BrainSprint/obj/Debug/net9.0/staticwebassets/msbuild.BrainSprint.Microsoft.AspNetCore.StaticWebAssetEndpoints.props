@@ -216,6 +216,18 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"sp53c8ikm6"},{"Name":"integrity","Value":"sha256-sAsF2Nre/3J9StVT1a31Ez3FJy78U5Egx2q7hiCJUX4="},{"Name":"label","Value":"_content/BrainSprint/BrainSprint.bundle.scp.css"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5719"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022sAsF2Nre/3J9StVT1a31Ez3FJy78U5Egx2q7hiCJUX4=\u0022"},{"Name":"Last-Modified","Value":"Wed, 30 Apr 2025 20:37:12 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BrainSprint/css/Admin.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\Admin.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-4UHAkJhtLh/1JohJIZCdVZ2qlzrOoP/ww4DTQpvQ5ng="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"378"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00224UHAkJhtLh/1JohJIZCdVZ2qlzrOoP/ww4DTQpvQ5ng=\u0022"},{"Name":"Last-Modified","Value":"Wed, 30 Apr 2025 21:06:24 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BrainSprint/css/Admin.jvvrg9x4wq.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\Admin.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jvvrg9x4wq"},{"Name":"integrity","Value":"sha256-4UHAkJhtLh/1JohJIZCdVZ2qlzrOoP/ww4DTQpvQ5ng="},{"Name":"label","Value":"_content/BrainSprint/css/Admin.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"378"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00224UHAkJhtLh/1JohJIZCdVZ2qlzrOoP/ww4DTQpvQ5ng=\u0022"},{"Name":"Last-Modified","Value":"Wed, 30 Apr 2025 21:06:24 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/BrainSprint/css/customer.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\customer.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

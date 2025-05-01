@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|c:\\users\\fm\\desktop\\brain-sprint\\brainsprint\\areas\\admin\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|solutionrelative:areas\\admin\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +14,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1416,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_LayoutAdmin.cshtml",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ViewState": "AgIAAGkBAAAAAAAAAAAqwHkBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-30T23:52:02.742Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"

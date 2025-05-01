@@ -73,6 +73,10 @@
       "PackagePath": "staticwebassets\\Assets\\Identity\\images\\education-bg.jpg"
     },
     {
+      "Id": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\css\\Admin.css",
+      "PackagePath": "staticwebassets\\css\\Admin.css"
+    },
+    {
       "Id": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\css\\Instructor.css",
       "PackagePath": "staticwebassets\\css\\Instructor.css"
     },

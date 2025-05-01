@@ -56,6 +56,7 @@ C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\jquery\dist\jquery.slim
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\Assets\Identity\css\bootstrap\mixins\_visibility.css
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\jquery-validation\dist\jquery.validate.js
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\css\Admin.css
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\Assets\Identity\css\bootstrap\mixins\_reset-text.css
@@ -90,6 +91,7 @@ wwwroot\Assets\Identity\images\UserPhoto\a563afd4-1368-4ef7-9f07-64a09eced37f_20
 wwwroot\Assets\Identity\images\UserPhoto\aaf734bf-4dc7-4f77-86b6-12f9d55ac4f2_20250430200554_d8973d5d-19d9-4b79-a2e9-463543bf252b.jpg
 wwwroot\Assets\Identity\images\UserPhoto\cd256c21-7b98-4374-a8cc-74f1b29c32c5_20250430011840_55ae3015-ccf9-44de-9edc-b3fbc5a55e52.png
 wwwroot\Assets\Identity\images\UserPhoto\logo.png
+wwwroot\css\Admin.css
 wwwroot\css\customer.css
 wwwroot\css\Instructor.css
 wwwroot\css\site.css

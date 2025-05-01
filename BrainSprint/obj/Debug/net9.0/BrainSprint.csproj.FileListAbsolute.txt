@@ -745,3 +745,4 @@ C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\scopedcss\Areas\In
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\1cqd7pe8yl-sp53c8ikm6.gz
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\q0lfynpajj-sp53c8ikm6.gz
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\q2whsf7sis-gqmkox2hsi.gz
+C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\t23hu5vkki-jvvrg9x4wq.gz
