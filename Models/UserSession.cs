@@ -29,3 +29,16 @@ namespace Models
         public bool IsCurrent { get; set; }
     }
 }
+
+/*
+ 
+ SessionId => معرف الجلسة
+ UserId => معرف المستخدم
+ LoginTime => وقت تسجيل الدخول
+ LogoutTime => وقت تسجيل الخروج
+ IpAddress => عنوان IP
+ DeviceInfo => معلومات الجهاز
+ IsActive => حالة الجلسة (نشطة أو غير نشطة)
+ Carts => Represents the shopping carts of users
+
+ */

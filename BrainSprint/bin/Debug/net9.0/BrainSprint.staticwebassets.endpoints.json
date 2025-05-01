@@ -2961,6 +2961,88 @@
       ]
     },
     {
+      "Route": "Assets/Identity/images/UserPhoto/cd256c21-7b98-4374-a8cc-74f1b29c32c5_20250501084047_29399200-a894-4703-8eb5-97483f074344.0xldg7cftv.jpg",
+      "AssetFile": "Assets/Identity/images/UserPhoto/cd256c21-7b98-4374-a8cc-74f1b29c32c5_20250501084047_29399200-a894-4703-8eb5-97483f074344.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2013491"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NLxxFDLtf/oKldPRMCzwiL8dva+feZiHWHW4jEQ/gDc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 08:40:47 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0xldg7cftv"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NLxxFDLtf/oKldPRMCzwiL8dva+feZiHWHW4jEQ/gDc="
+        },
+        {
+          "Name": "label",
+          "Value": "Assets/Identity/images/UserPhoto/cd256c21-7b98-4374-a8cc-74f1b29c32c5_20250501084047_29399200-a894-4703-8eb5-97483f074344.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "Assets/Identity/images/UserPhoto/cd256c21-7b98-4374-a8cc-74f1b29c32c5_20250501084047_29399200-a894-4703-8eb5-97483f074344.jpg",
+      "AssetFile": "Assets/Identity/images/UserPhoto/cd256c21-7b98-4374-a8cc-74f1b29c32c5_20250501084047_29399200-a894-4703-8eb5-97483f074344.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2013491"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NLxxFDLtf/oKldPRMCzwiL8dva+feZiHWHW4jEQ/gDc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 08:40:47 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NLxxFDLtf/oKldPRMCzwiL8dva+feZiHWHW4jEQ/gDc="
+        }
+      ]
+    },
+    {
       "Route": "Assets/Identity/images/UserPhoto/logo.png",
       "AssetFile": "Assets/Identity/images/UserPhoto/logo.png",
       "Selectors": [],
@@ -3165,7 +3247,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 01 May 2025 08:16:37 GMT"
+          "Value": "Thu, 01 May 2025 13:56:30 GMT"
         },
         {
           "Name": "Vary",
@@ -3214,7 +3296,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 01 May 2025 08:16:37 GMT"
+          "Value": "Thu, 01 May 2025 13:56:30 GMT"
         }
       ],
       "EndpointProperties": [
@@ -3263,7 +3345,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 01 May 2025 08:16:37 GMT"
+          "Value": "Thu, 01 May 2025 13:56:30 GMT"
         },
         {
           "Name": "Vary",
@@ -3326,7 +3408,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 01 May 2025 08:16:37 GMT"
+          "Value": "Thu, 01 May 2025 13:56:30 GMT"
         },
         {
           "Name": "Vary",
@@ -3367,7 +3449,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 01 May 2025 08:16:37 GMT"
+          "Value": "Thu, 01 May 2025 13:56:30 GMT"
         }
       ],
       "EndpointProperties": [
@@ -3408,7 +3490,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 01 May 2025 08:16:37 GMT"
+          "Value": "Thu, 01 May 2025 13:56:30 GMT"
         },
         {
           "Name": "Vary",

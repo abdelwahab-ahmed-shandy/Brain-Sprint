@@ -33,7 +33,7 @@
         /// <summary>
         /// Modify an existing record in the database asynchronously 
         /// </summary>
-        Task EditAsync(T entity);
+        Task<T> EditAsync(T entity, CancellationToken cancellationToken = default);
 
         #endregion
 
@@ -44,13 +44,13 @@
         /// <summary>
         /// Delete a specific record from the database asynchronously
         /// </summary>
-        Task DeleteAsync(T entity);
+        Task<T> DeleteAsync(T entity, CancellationToken cancellationToken = default);
 
 
         /// <summary>
         /// Delete a set of records from the database asynchronously
         /// </summary>
-        Task DeleteAllAsync(IEnumerable<T> entities);
+        Task DeleteAllAsync(IEnumerable<T> entities, CancellationToken cancellationToken = default);
 
         #endregion
 

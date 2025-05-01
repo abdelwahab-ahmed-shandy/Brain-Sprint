@@ -1,4 +1,6 @@
-﻿namespace DataAccess.Repositories
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace DataAccess.Repositories
 {
 
     /// <summary>
@@ -23,6 +25,7 @@
             _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
             DbSet = _dbContext.Set<T>();
         }
+
 
         #region Async CRUD Operations
 
@@ -56,11 +59,14 @@
         /// Update an existing record in a DbSet
         /// Note: Updating does not require a direct save until SaveDBAsync() is called
         /// </summary>
-        public Task EditAsync(T entity)
+        public async Task<T> EditAsync(T entity, CancellationToken cancellationToken = default)
         {
             if (entity == null) throw new ArgumentNullException(nameof(entity));
             DbSet.Update(entity);
-            return Task.CompletedTask;
+
+            await _dbContext.SaveChangesAsync(cancellationToken);
+
+            return entity;
         }
 
         #endregion
@@ -72,22 +78,26 @@
         /// <summary>
         /// Delete a specific record from the DbSet
         /// </summary>
-        public Task DeleteAsync(T entity)
+        public async Task<T> DeleteAsync(T entity, CancellationToken cancellationToken = default)
         {
             if (entity == null) throw new ArgumentNullException(nameof(entity));
             DbSet.Remove(entity);
-            return Task.CompletedTask;
+            await _dbContext.SaveChangesAsync(cancellationToken);
+
+            return entity;
         }
 
 
         /// <summary>
         /// Delete a recordset in bulk from a DbSet
         /// </summary>
-        public Task DeleteAllAsync(IEnumerable<T> entities)
+        public async Task DeleteAllAsync(IEnumerable<T> entities, CancellationToken cancellationToken = default)
         {
             if (entities == null) throw new ArgumentNullException(nameof(entities));
             DbSet.RemoveRange(entities);
-            return Task.CompletedTask;
+
+            await _dbContext.SaveChangesAsync(cancellationToken);
+
         }
 
         #endregion

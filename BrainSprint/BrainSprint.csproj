@@ -7,6 +7,13 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="wwwroot\Assets\Instructor\**" />
+	  <Content Remove="wwwroot\Assets\Instructor\**" />
+	  <EmbeddedResource Remove="wwwroot\Assets\Instructor\**" />
+	  <None Remove="wwwroot\Assets\Instructor\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<ProjectReference Include="..\DataAccess\DataAccess.csproj" />
 		<ProjectReference Include="..\Models\Models.csproj" />
 		<ProjectReference Include="..\Services\Services.csproj" />
@@ -28,7 +35,7 @@
 
 	<ItemGroup>
 	  <Folder Include="wwwroot\Assets\Customer\StudentImges\" />
-	  <Folder Include="wwwroot\Assets\Instructor\InstructorImges\" />
+	  <Folder Include="wwwroot\Assets\Instructors\" />
 	</ItemGroup>
 
 </Project>

@@ -288,6 +288,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Assets\Identity\images\UserPhoto\cd256c21-7b98-4374-a8cc-74f1b29c32c5_20250430011840_55ae3015-ccf9-44de-9edc-b3fbc5a55e52.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Assets\Identity\images\UserPhoto\cd256c21-7b98-4374-a8cc-74f1b29c32c5_20250501084047_29399200-a894-4703-8eb5-97483f074344.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>BrainSprint</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/BrainSprint</BasePath>
+      <RelativePath>Assets/Identity/images/UserPhoto/cd256c21-7b98-4374-a8cc-74f1b29c32c5_20250501084047_29399200-a894-4703-8eb5-97483f074344.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>0xldg7cftv</Fingerprint>
+      <Integrity>NLxxFDLtf/oKldPRMCzwiL8dva+feZiHWHW4jEQ/gDc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Assets\Identity\images\UserPhoto\cd256c21-7b98-4374-a8cc-74f1b29c32c5_20250501084047_29399200-a894-4703-8eb5-97483f074344.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Assets\Identity\images\UserPhoto\logo.png'))">
       <SourceType>Package</SourceType>
       <SourceId>BrainSprint</SourceId>

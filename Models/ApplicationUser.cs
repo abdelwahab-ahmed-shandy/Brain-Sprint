@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Models.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -40,5 +41,26 @@ namespace Models
 
         [MaxLength(1000, ErrorMessage = "Block reason cannot exceed 1000 characters.")]
         public string? BlockReason { get; set; }
+
+
+        public AccountStateType AccountState { get; set; } = AccountStateType.PendingActivation;
+        public Guid CreatedBy { get; set; }
+        public DateTime CreatedDateUtc { get; set; }
+        public Guid? UpdatedBy { get; set; }
+        public DateTime? UpdatedDateUtc { get; set; }
+
+
+        public int? StudentId { get; set; }
+        public Student? Student { get; set; }
+
+        public int? InstructorId { get; set; }
+        public Instructor? Instructor { get; set; }
+
+        public int? AdminId { get; set; }
+        public Admin? Admin { get; set; }
+
+        public IEnumerable<Ticket>? Tickets { get; set; }
+
+
     }
 }
