@@ -9,22 +9,19 @@ namespace Models
 {
     public class Instructor : BaseModel
     {
-        public string? Bio { get; set; }
         public string? Certifications { get; set; }
         public string? ExperienceYears { get; set; }
         public int? Rating { get; set; }
         public bool IsVerified { get; set; }
 
-        [Required]
-        public string ApplicationUserId { get; set; }
+        public string? ApplicationUserId { get; set; }
         public ApplicationUser ApplicationUser { get; set; }
 
-        public List<Course> Courses { get; set; }
+        public List<Course> Courses { get; set; } = new List<Course>();
     }
 }
 
 /*
-    Bio                   => السيرة الذاتية للمدرب (اختياري)
 
     Certifications        => الشهادات التي حصل عليها المدرب (اختياري)
 

@@ -25,7 +25,7 @@ namespace Models
         public List<CourseLearningPath> CourseLearningPaths { get; set; }
         public List<CourseReview> CourseReviews { get; set; }
         public List<EnrollmentCourse> EnrollmentCourses { get; set; }
-        public List<Module> Modules { get; set; }
+        public List<CourseModule> CourseModules { get; set; }
         public List<OrderItem> OrderItems { get; set; }
     }
 }

@@ -11,13 +11,10 @@ namespace Models
 {
     public class ApplicationUser : IdentityUser
     {
-        [MaxLength(100, ErrorMessage = "First name cannot exceed 100 characters.")]
         public string? FirstName { get; set; }
 
-        [MaxLength(100, ErrorMessage = "Last name cannot exceed 100 characters.")]
         public string? LastName { get; set; }
 
-        [MaxLength(500, ErrorMessage = "Address cannot exceed 500 characters.")]
         public string? Address { get; set; }
 
         [Required]
@@ -50,17 +47,11 @@ namespace Models
         public DateTime? UpdatedDateUtc { get; set; }
 
 
-        public int? StudentId { get; set; }
         public Student? Student { get; set; }
-
-        public int? InstructorId { get; set; }
         public Instructor? Instructor { get; set; }
-
-        public int? AdminId { get; set; }
         public Admin? Admin { get; set; }
 
-        public IEnumerable<Ticket>? Tickets { get; set; }
-
+        public IEnumerable<Ticket>? Tickets { get; set; } = new List<Ticket>();
 
     }
 }

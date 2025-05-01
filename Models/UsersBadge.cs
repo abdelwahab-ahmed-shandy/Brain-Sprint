@@ -14,7 +14,7 @@ namespace Models
 
         public Student Student { get; set; } = null!;
 
-        public string BadgeId { get; set; } = string.Empty;
+        public int BadgeId { get; set; }
 
         public Badge Badge { get; set; } = null!;
     }

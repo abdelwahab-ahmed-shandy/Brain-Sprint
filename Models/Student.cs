@@ -12,9 +12,8 @@ namespace Models
     {
         public LevelType? Level { get; set; }
 
-        [Required]
-        public string ApplicationUserId { get; set; } = string.Empty;
-        public ApplicationUser? User { get; set; }
+        public string? ApplicationUserId { get; set; }
+        public ApplicationUser ApplicationUser { get; set; }
 
 
         public List<Cart> Carts { get; set; }

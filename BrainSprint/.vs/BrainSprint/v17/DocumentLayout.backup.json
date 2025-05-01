@@ -3,19 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CE4FD232-847D-4620-8F9A-16BDF37770D5}|..\\Models\\Models.csproj|c:\\users\\fm\\desktop\\brain-sprint\\models\\coursemodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE4FD232-847D-4620-8F9A-16BDF37770D5}|..\\Models\\Models.csproj|c:\\users\\fm\\desktop\\brain-sprint\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE4FD232-847D-4620-8F9A-16BDF37770D5}|..\\Models\\Models.csproj|c:\\users\\fm\\desktop\\brain-sprint\\models\\exam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE4FD232-847D-4620-8F9A-16BDF37770D5}|..\\Models\\Models.csproj|c:\\users\\fm\\desktop\\brain-sprint\\models\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE4FD232-847D-4620-8F9A-16BDF37770D5}|..\\Models\\Models.csproj|c:\\users\\fm\\desktop\\brain-sprint\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE4FD232-847D-4620-8F9A-16BDF37770D5}|..\\Models\\Models.csproj|c:\\users\\fm\\desktop\\brain-sprint\\models\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE4FD232-847D-4620-8F9A-16BDF37770D5}|..\\Models\\Models.csproj|c:\\users\\fm\\desktop\\brain-sprint\\models\\badge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE4FD232-847D-4620-8F9A-16BDF37770D5}|..\\Models\\Models.csproj|c:\\users\\fm\\desktop\\brain-sprint\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,71 +25,72 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1416,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "..\\Models\\ApplicationUser.cs",
-              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\ApplicationUser.cs",
-              "RelativeToolTip": "..\\Models\\ApplicationUser.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T14:04:28.829Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Badge.cs",
-              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Badge.cs",
-              "RelativeDocumentMoniker": "..\\Models\\Badge.cs",
-              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Badge.cs",
-              "RelativeToolTip": "..\\Models\\Badge.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T14:04:28.069Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "..\\DataAccess\\ApplicationDbContext.cs",
               "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\ApplicationDbContext.cs",
               "RelativeToolTip": "..\\DataAccess\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAqwH4AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T14:00:34.852Z",
+              "WhenOpened": "2025-05-01T21:21:29.28Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Node.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Node.cs",
+              "RelativeDocumentMoniker": "..\\Models\\Node.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Node.cs",
+              "RelativeToolTip": "..\\Models\\Node.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwCgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T21:45:02.13Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Admin.cs",
-              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Admin.cs",
-              "RelativeDocumentMoniker": "..\\Models\\Admin.cs",
-              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Admin.cs",
-              "RelativeToolTip": "..\\Models\\Admin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Title": "Exam.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Exam.cs",
+              "RelativeDocumentMoniker": "..\\Models\\Exam.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Exam.cs",
+              "RelativeToolTip": "..\\Models\\Exam.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA7wB8AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T13:58:39.946Z",
+              "WhenOpened": "2025-05-01T21:44:55.25Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Student.cs",
-              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Student.cs",
-              "RelativeDocumentMoniker": "..\\Models\\Student.cs",
-              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Student.cs",
-              "RelativeToolTip": "..\\Models\\Student.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAQwBkAAAA5AAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Course.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Course.cs",
+              "RelativeDocumentMoniker": "..\\Models\\Course.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Course.cs",
+              "RelativeToolTip": "..\\Models\\Course.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAiwBsAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T13:57:28.417Z",
+              "WhenOpened": "2025-05-01T21:41:19.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CourseModule.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\CourseModule.cs",
+              "RelativeDocumentMoniker": "..\\Models\\CourseModule.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\CourseModule.cs",
+              "RelativeToolTip": "..\\Models\\CourseModule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T21:38:08.844Z",
               "EditorCaption": ""
             },
             {
