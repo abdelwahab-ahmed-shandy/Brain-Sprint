@@ -19,12 +19,6 @@ namespace DataAccess
         {
             base.OnModelCreating(modelBuilder);
 
-
-            // BaseModel Configuration
-            modelBuilder.Entity<BaseModel>()
-                .Property(b => b.CreatedDateUtc)
-                .HasDefaultValueSql("GETUTCDATE()");
-
             // ApplicationUser
             modelBuilder.Entity<ApplicationUser>(entity =>
             {
