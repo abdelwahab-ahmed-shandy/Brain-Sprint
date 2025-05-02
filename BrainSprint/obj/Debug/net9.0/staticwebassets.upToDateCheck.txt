@@ -87,6 +87,7 @@ wwwroot\Assets\Identity\css\bootstrap\utilities\_stretched-link.css
 wwwroot\Assets\Identity\css\site.css
 wwwroot\Assets\Identity\images\education-bg.jpg
 wwwroot\Assets\Identity\images\UserPhoto\558c9bcf-08a6-46a0-9026-ca3425a11333_20250430142615_36f82258-aad4-433f-b381-16586902b155.jpg
+wwwroot\Assets\Identity\images\UserPhoto\64458eae-0ce6-4db0-9c2e-abb1666ac352_20250502144204_7c45f42f-a860-4000-8a59-0d4c0eb551e0.png
 wwwroot\Assets\Identity\images\UserPhoto\a563afd4-1368-4ef7-9f07-64a09eced37f_20250430021750_1fdfbb26-0924-4631-a718-9bcd6927b331.png
 wwwroot\Assets\Identity\images\UserPhoto\aaf734bf-4dc7-4f77-86b6-12f9d55ac4f2_20250430200554_d8973d5d-19d9-4b79-a2e9-463543bf252b.jpg
 wwwroot\Assets\Identity\images\UserPhoto\cd256c21-7b98-4374-a8cc-74f1b29c32c5_20250430011840_55ae3015-ccf9-44de-9edc-b3fbc5a55e52.png

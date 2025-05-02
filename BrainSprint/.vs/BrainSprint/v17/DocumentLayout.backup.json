@@ -1,7 +1,98 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\videonoderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\cartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\certificaterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\choicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\courselearningpathrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\coursemodulerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\courserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\coursereviewrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\enrollmentcourserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\examrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\instructorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\learningpathrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\nodeattachmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\noderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\orderitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\questionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\textnoderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\ticketresponserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\useranswerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\userexamattemprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\usersbadgerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\usersessionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\userswatchednoderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\irepositories\\iuserswatchednoderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\ticketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\irepositories\\icourselearningpathrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\applicationuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E09DD6-A797-4303-AF92-4278CEB9C9CD}|..\\DataAccess\\DataAccess.csproj|c:\\users\\fm\\desktop\\brain-sprint\\dataaccess\\repositories\\badgerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +100,399 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1416,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ApplicationUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\ApplicationUserRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\ApplicationUserRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\ApplicationUserRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\ApplicationUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T17:42:20.675Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VideoNodeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\VideoNodeRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\VideoNodeRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\VideoNodeRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\VideoNodeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:55:12.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IUsersWatchedNodeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\IRepositories\\IUsersWatchedNodeRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\IRepositories\\IUsersWatchedNodeRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\IRepositories\\IUsersWatchedNodeRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\IRepositories\\IUsersWatchedNodeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:54:26.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "UsersWatchedNodeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\UsersWatchedNodeRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\UsersWatchedNodeRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\UsersWatchedNodeRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\UsersWatchedNodeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:53:43.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UserSessionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\UserSessionRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\UserSessionRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\UserSessionRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\UserSessionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:53:19.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UsersBadgeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\UsersBadgeRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\UsersBadgeRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\UsersBadgeRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\UsersBadgeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:52:43.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UserExamAttempRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\UserExamAttempRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\UserExamAttempRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\UserExamAttempRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\UserExamAttempRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:51:55.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UserAnswerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\UserAnswerRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\UserAnswerRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\UserAnswerRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\UserAnswerRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:51:29.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "TicketResponseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\TicketResponseRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\TicketResponseRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\TicketResponseRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\TicketResponseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:51:02.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "TicketRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\TicketRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\TicketRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\TicketRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\TicketRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:50:05.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "TextNodeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\TextNodeRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\TextNodeRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\TextNodeRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\TextNodeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:49:36.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "StudentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\StudentRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\StudentRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\StudentRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\StudentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:49:09.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "QuestionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\QuestionRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\QuestionRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\QuestionRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\QuestionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:48:45.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\OrderRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\OrderRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\OrderRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:48:18.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "OrderItemRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\OrderItemRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\OrderItemRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\OrderItemRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\OrderItemRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:47:52.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "NodeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\NodeRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\NodeRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\NodeRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\NodeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:47:26.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "NodeAttachmentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\NodeAttachmentRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\NodeAttachmentRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\NodeAttachmentRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\NodeAttachmentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:46:40.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LearningPathRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\LearningPathRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\LearningPathRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\LearningPathRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\LearningPathRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:46:12.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "InstructorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\InstructorRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\InstructorRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\InstructorRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\InstructorRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:45:19.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ExamRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\ExamRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\ExamRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\ExamRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\ExamRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:44:33.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EnrollmentCourseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\EnrollmentCourseRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\EnrollmentCourseRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\EnrollmentCourseRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\EnrollmentCourseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:44:01.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CourseReviewRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\CourseReviewRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\CourseReviewRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\CourseReviewRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\CourseReviewRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:43:19.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CourseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\CourseRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\CourseRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\CourseRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\CourseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:42:49.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CourseModuleRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\CourseModuleRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\CourseModuleRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\CourseModuleRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\CourseModuleRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:42:11.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ICourseLearningPathRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\IRepositories\\ICourseLearningPathRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\IRepositories\\ICourseLearningPathRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\IRepositories\\ICourseLearningPathRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\IRepositories\\ICourseLearningPathRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:40:00.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CourseLearningPathRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\CourseLearningPathRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\CourseLearningPathRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\CourseLearningPathRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\CourseLearningPathRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:38:01.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ChoiceRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\ChoiceRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\ChoiceRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\ChoiceRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\ChoiceRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:37:26.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CertificateRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\CertificateRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\CertificateRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\CertificateRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\CertificateRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:36:54.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CartRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\CartRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\CartRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\CartRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\CartRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:36:19.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "BadgeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\BadgeRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Repositories\\BadgeRepository.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\Repositories\\BadgeRepository.cs",
+              "RelativeToolTip": "..\\DataAccess\\Repositories\\BadgeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:36:06.216Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"

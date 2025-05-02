@@ -234,6 +234,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Assets\Identity\images\UserPhoto\558c9bcf-08a6-46a0-9026-ca3425a11333_20250430142615_36f82258-aad4-433f-b381-16586902b155.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Assets\Identity\images\UserPhoto\64458eae-0ce6-4db0-9c2e-abb1666ac352_20250502144204_7c45f42f-a860-4000-8a59-0d4c0eb551e0.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>BrainSprint</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/BrainSprint</BasePath>
+      <RelativePath>Assets/Identity/images/UserPhoto/64458eae-0ce6-4db0-9c2e-abb1666ac352_20250502144204_7c45f42f-a860-4000-8a59-0d4c0eb551e0.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>aam3xz8how</Fingerprint>
+      <Integrity>bn+YfhfjlVvSosc2OT4r+Cprgb7FDl2nWayv6YPwcXU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Assets\Identity\images\UserPhoto\64458eae-0ce6-4db0-9c2e-abb1666ac352_20250502144204_7c45f42f-a860-4000-8a59-0d4c0eb551e0.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Assets\Identity\images\UserPhoto\a563afd4-1368-4ef7-9f07-64a09eced37f_20250430021750_1fdfbb26-0924-4631-a718-9bcd6927b331.png'))">
       <SourceType>Package</SourceType>
       <SourceId>BrainSprint</SourceId>

@@ -278,6 +278,7 @@ namespace DataAccess
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
+
             #region Relations :
 
             base.OnModelCreating(modelBuilder);
@@ -327,6 +328,8 @@ namespace DataAccess
             });
 
             #endregion
+
+
 
             /*
             // ApplicationUser

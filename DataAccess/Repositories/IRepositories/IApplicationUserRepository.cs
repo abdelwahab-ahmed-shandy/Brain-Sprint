@@ -6,8 +6,5 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Repositories.IRepositories
 {
-    public interface IApplicationUserRepository : IRepository<ApplicationUser>
-    {
-
-    }
+    public interface IApplicationUserRepository : IRepository<ApplicationUser> { }
 }
