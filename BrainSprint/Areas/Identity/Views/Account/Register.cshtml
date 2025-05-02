@@ -13,117 +13,186 @@
                 <p class="text-light">Start your learning adventure today</p>
             </div>
 
-            <!-- Google Sign In Button -->
-            <div class="d-grid mb-4">
-                <form asp-area="Identity" asp-action="ExternalLogin" asp-controller="Account" method="post">
-                    <input type="hidden" name="provider" value="Google" />
-                    <input type="hidden" name="returnUrl" value="@Context.Request.Path" />
-                    <button type="submit" class="btn btn-outline-light btn-lg py-3 w-100">
-                        <i class="bi bi-google me-2"></i> Register with Google
-                    </button>
-                </form>
-            </div>
+            <!-- Step 1: Role Selection (Visible by default) -->
+            <div id="roleSelection">
+                <div class="d-flex align-items-center my-4">
+                    <hr class="flex-grow-1 bg-light">
+                    <hr class="flex-grow-1 bg-light">
+                </div>
 
-
-            <!-- Divider -->
-            <div class="d-flex align-items-center my-4">
-                <hr class="flex-grow-1 bg-light">
-                <span class="mx-3 text-light">OR</span>
-                <hr class="flex-grow-1 bg-light">
-            </div>
-
-            <form id="registerForm" asp-action="Register" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
-                <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
-
-                <!-- Name Section -->
-                <div class="row g-3 mb-3">
+                <h4 class="text-light text-center mb-4">I want to join as:</h4>
+                <div class="row g-4 mb-4">
                     <div class="col-md-6">
-                        <div class="form-floating">
-                            <input asp-for="FirstName" class="form-control" placeholder=" " required />
-                            <label asp-for="FirstName" class="text-dark">First Name</label>
-                            <span asp-validation-for="FirstName" class="text-danger small"></span>
+                        <div class="role-card bg-dark p-4 rounded-3 cursor-pointer text-center" data-role="Student">
+                            <i class="bi bi-mortarboard-fill text-accent display-5 mb-3"></i>
+                            <h5 class="text-white">Student</h5>
+                            <p class="text-light small">Join to learn from the best educators</p>
+                            <button class="btn btn-accent mt-2 select-role" data-role="Student">Select</button>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="form-floating">
-                            <input asp-for="LastName" class="form-control" placeholder=" " required />
-                            <label asp-for="LastName" class="text-dark">Last Name</label>
-                            <span asp-validation-for="LastName" class="text-danger small"></span>
+                        <div class="role-card bg-dark p-4 rounded-3 cursor-pointer text-center" data-role="Instructor">
+                            <i class="bi bi-easel-fill text-accent display-5 mb-3"></i>
+                            <h5 class="text-white">Instructor</h5>
+                            <p class="text-light small">Share your knowledge with students</p>
+                            <button class="btn btn-accent mt-2 select-role" data-role="Instructor">Select</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- باقي حقول النموذج كما هي بدون تغيير -->
-                <!-- Username -->
-                <div class="form-floating mb-3">
-                    <div class="input-group">
-                        <span class="input-group-text bg-dark text-white">@@</span>
-                        <input asp-for="UserName" class="form-control" placeholder=" " required />
-                        <label asp-for="UserName" class="ms-4 text-dark">Username</label>
-                    </div>
-                    <span asp-validation-for="UserName" class="text-danger small"></span>
-                    <small class="form-text text-light">3-30 characters (letters, numbers, underscores)</small>
-                </div>
-
-                <!-- Email -->
-                <div class="form-floating mb-3">
-                    <input asp-for="Email" type="email" class="form-control" placeholder=" " required />
-                    <label asp-for="Email" class="text-dark">Email</label>
-                    <span asp-validation-for="Email" class="text-danger small"></span>
-                </div>
-
-                <!-- Address -->
-                <div class="form-floating mb-3">
-                    <input asp-for="Address" class="form-control" placeholder=" " />
-                    <label asp-for="Address" class="text-dark">Address (Optional)</label>
-                    <span asp-validation-for="Address" class="text-danger small"></span>
-                </div>
-
-                <!-- Password -->
-                <div class="form-floating mb-3 position-relative">
-                    <input asp-for="Password" type="password" class="form-control" id="passwordField" placeholder=" " required />
-                    <label asp-for="Password" class="text-dark">Password</label>
-                    <button class="btn btn-link position-absolute end-0 top-0 mt-3 me-2 password-toggle" type="button">
-                        <i class="bi bi-eye-fill text-dark"></i>
-                    </button>
-                    <span asp-validation-for="Password" class="text-danger small"></span>
-                    <div class="password-strength mt-2">
-                        <div class="progress" style="height: 4px;">
-                            <div id="passwordStrength" class="progress-bar" role="progressbar"></div>
-                        </div>
-                        <small id="passwordHelp" class="form-text"></small>
-                    </div>
-                </div>
-
-                <!-- Confirm Password -->
-                <div class="form-floating mb-3">
-                    <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder=" " required />
-                    <label asp-for="ConfirmPassword" class="text-dark">Confirm Password</label>
-                    <span asp-validation-for="ConfirmPassword" class="text-danger small"></span>
-                </div>
-
-                <!-- Terms Checkbox -->
-                <div class="form-check mb-4">
-                    <input class="form-check-input" type="checkbox" id="termsCheck" required />
-                    <label class="form-check-label text-light" for="termsCheck">
-                        I agree to the <a href="#" class="text-accent">Terms</a> and <a href="#" class="text-accent">Privacy Policy</a>
-                    </label>
-                </div>
-
-                <!-- Submit Button -->
-                <div class="d-grid mb-3">
-                    <button type="submit" class="btn btn-accent btn-lg py-3">
-                        <span class="submit-text">Create Account</span>
-                        <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
-                        <i class="bi bi-person-plus ms-2"></i>
-                    </button>
-                </div>
-
-                <!-- Login Link -->
                 <div class="text-center">
                     <p class="mb-0 text-light">Already have an account? <a asp-action="Login" class="text-accent fw-bold">Sign in</a></p>
                 </div>
-            </form>
+            </div>
+
+            <!-- Step 2: Registration Form (Hidden initially) -->
+            <div id="registrationForm" style="display: none;">
+                <div class="d-flex align-items-center mb-4">
+                    <button id="backToRoleSelection" class="btn btn-sm btn-outline-light me-3">
+                        <i class="bi bi-arrow-left"></i> Back
+                    </button>
+                    <h4 class="text-light mb-0" id="roleTitle"></h4>
+                </div>
+
+                <form id="registerForm" asp-action="Register" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+                    <input type="hidden" asp-for="UserType" id="userTypeInput" />
+
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                    <!-- Name Section -->
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input asp-for="FirstName" class="form-control" placeholder=" " required />
+                                <label asp-for="FirstName" class="text-dark">First Name</label>
+                                <span asp-validation-for="FirstName" class="text-danger small"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input asp-for="LastName" class="form-control" placeholder=" " required />
+                                <label asp-for="LastName" class="text-dark">Last Name</label>
+                                <span asp-validation-for="LastName" class="text-danger small"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Username -->
+                    <div class="form-floating mb-3">
+                        <div class="input-group">
+                            <span class="input-group-text bg-dark text-white">@@</span>
+                            <input asp-for="UserName" class="form-control" placeholder=" " required />
+                            <label asp-for="UserName" class="ms-4 text-dark">Username</label>
+                        </div>
+                        <span asp-validation-for="UserName" class="text-danger small"></span>
+                        <small class="form-text text-light">3-30 characters (letters, numbers, underscores)</small>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-floating mb-3">
+                        <input asp-for="Email" type="email" class="form-control" placeholder=" " required />
+                        <label asp-for="Email" class="text-dark">Email</label>
+                        <span asp-validation-for="Email" class="text-danger small"></span>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="form-floating mb-3">
+                        <input asp-for="Address" class="form-control" placeholder=" " />
+                        <label asp-for="Address" class="text-dark">Address (Optional)</label>
+                        <span asp-validation-for="Address" class="text-danger small"></span>
+                    </div>
+
+                    <!-- Instructor Specific Fields -->
+                    <div id="instructorSpecificFields" style="display: none;">
+                        <div class="form-floating mb-3">
+                            <input asp-for="Certifications" class="form-control" placeholder=" " required />
+                            <label asp-for="Certifications" class="text-dark">Certifications</label>
+                            <span asp-validation-for="Certifications" class="text-danger small"></span>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input asp-for="ExperienceYears" class="form-control" placeholder=" " required />
+                            <label asp-for="ExperienceYears" class="text-dark">Years of Experience</label>
+                            <span asp-validation-for="ExperienceYears" class="text-danger small"></span>
+                        </div>
+                    </div>
+
+                    <!-- Student Specific Fields -->
+                    <div id="studentSpecificFields" style="display: none;">
+                        <div class="form-floating mb-3">
+                            <select asp-for="Level" class="form-control" required>
+                                <option value="">-- Select Education Level --</option>
+                                <option value="Primary">Primary School</option>
+                                <option value="Secondary">Secondary School</option>
+                                <option value="HighSchool">High School</option>
+                                <option value="Undergraduate">Undergraduate</option>
+                                <option value="Graduate">Graduate</option>
+                                <option value="Professional">Professional</option>
+                            </select>
+                            <label asp-for="Level" class="text-dark">Education Level</label>
+                            <span asp-validation-for="Level" class="text-danger small"></span>
+                        </div>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="form-floating mb-3 position-relative">
+                        <input asp-for="Password" type="password" class="form-control" id="passwordField" placeholder=" " required />
+                        <label asp-for="Password" class="text-dark">Password</label>
+                        <button class="btn btn-link position-absolute end-0 top-0 mt-3 me-2 password-toggle" type="button">
+                            <i class="bi bi-eye-fill text-dark"></i>
+                        </button>
+                        <span asp-validation-for="Password" class="text-danger small"></span>
+                        <div class="password-strength mt-2">
+                            <div class="progress" style="height: 4px;">
+                                <div id="passwordStrength" class="progress-bar" role="progressbar"></div>
+                            </div>
+                            <small id="passwordHelp" class="form-text"></small>
+                        </div>
+                    </div>
+
+                    <!-- Confirm Password -->
+                    <div class="form-floating mb-3">
+                        <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder=" " required />
+                        <label asp-for="ConfirmPassword" class="text-dark">Confirm Password</label>
+                        <span asp-validation-for="ConfirmPassword" class="text-danger small"></span>
+                    </div>
+
+                    <!-- Terms Checkbox -->
+                    <div class="form-check mb-4">
+                        <input class="form-check-input" type="checkbox" id="termsCheck" required />
+                        <label class="form-check-label text-light" for="termsCheck">
+                            I agree to the <a href="#" class="text-accent">Terms</a> and <a href="#" class="text-accent">Privacy Policy</a>
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="d-grid mb-3">
+                        <button type="submit" class="btn btn-accent btn-lg py-3">
+                            <span class="submit-text">Create Account</span>
+                            <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                            <i class="bi bi-person-plus ms-2"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Divider -->
+                <div class="d-flex align-items-center my-4">
+                    <hr class="flex-grow-1 bg-light">
+                    <span class="mx-3 text-light">OR</span>
+                    <hr class="flex-grow-1 bg-light">
+                </div>
+
+                <!-- Google Sign In Button -->
+                <div class="d-grid mb-4">
+                    <form asp-area="Identity" asp-action="ExternalLogin" asp-controller="Account" method="post">
+                        <input type="hidden" name="provider" value="Google" />
+                        <input type="hidden" name="returnUrl" value="@Context.Request.Path" />
+                        <input type="hidden" name="userType" id="externalUserType" value="" />
+                        <button type="submit" class="btn btn-outline-light btn-lg py-3 w-100">
+                            <i class="bi bi-google me-2"></i> Register with Google
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -187,6 +256,27 @@
                 box-shadow: 0 4px 12px rgba(28, 200, 138, 0.3);
             }
 
+        .role-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            height: 100%;
+        }
+
+            .role-card:hover {
+                transform: translateY(-5px);
+                border-color: var(--accent-color);
+                box-shadow: 0 5px 15px rgba(28, 200, 138, 0.3);
+            }
+
+            .role-card.selected {
+                background-color: rgba(28, 200, 138, 0.1) !important;
+                border-color: var(--accent-color);
+            }
+
+        .cursor-pointer {
+            cursor: pointer;
+        }
+
         .progress-bar-weak {
             background-color: #dc3545;
         }
@@ -218,6 +308,40 @@
 
     <script>
         $(document).ready(function () {
+            // Role selection
+            $('.select-role').click(function(e) {
+                e.preventDefault();
+                const role = $(this).data('role');
+                $('#userTypeInput').val(role);
+                $('#externalUserType').val(role);
+                $('#roleTitle').text(role === 'Student' ? 'Student Registration' : 'Instructor Registration');
+
+                // Show/hide specific fields
+                if (role === 'Instructor') {
+                    $('#instructorSpecificFields').show();
+                    $('#studentSpecificFields').hide();
+                } else {
+                    $('#instructorSpecificFields').hide();
+                    $('#studentSpecificFields').show();
+                }
+
+                // Visual feedback
+                $('.role-card').removeClass('selected');
+                $(this).closest('.role-card').addClass('selected');
+
+                // Switch to form view
+                $('#roleSelection').hide();
+                $('#registrationForm').show();
+            });
+
+            // Back button
+            $('#backToRoleSelection').click(function(e) {
+                e.preventDefault();
+                $('#registrationForm').hide();
+                $('#roleSelection').show();
+                $('.role-card').removeClass('selected');
+            });
+
             // Password toggle
             $('.password-toggle').click(function() {
                 const input = $(this).siblings('input');

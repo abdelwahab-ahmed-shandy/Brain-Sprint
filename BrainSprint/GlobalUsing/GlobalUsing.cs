@@ -1,7 +1,20 @@
-﻿global using Models;
-global using DataAccess;
-global using Microsoft.AspNetCore.Authentication.Cookies;
+﻿global using System.Text.Encodings.Web;
+global using System.Security.Claims;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.Extensions.Options;
 global using Microsoft.AspNetCore.Identity;
+global using Microsoft.AspNetCore.Mvc.Rendering;
+global using Microsoft.AspNetCore.Authorization;
+global using Microsoft.AspNetCore.Authentication.Google;
+global using Microsoft.AspNetCore.Authentication.Cookies;
 global using Microsoft.EntityFrameworkCore;
-global using Services.Implementations;
+global using Microsoft.IdentityModel.Tokens;
+
+global using Models;
+global using Models.Enums;
+global using Models.ViewModels;
+global using DataAccess;
+global using DataAccess.Repositories;
+global using DataAccess.Repositories.IRepositories;
 global using Services.Interfaces;
+global using Services.Implementations;

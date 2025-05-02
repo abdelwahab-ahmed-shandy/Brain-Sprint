@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using Models.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -9,6 +11,7 @@ namespace Models.ViewModels
 {
     public class RegisterVM
     {
+        // Basic Info
         [Required(ErrorMessage = "First name is required")]
         [MaxLength(50, ErrorMessage = "First name cannot exceed 50 characters")]
         public string FirstName { get; set; } = string.Empty;
@@ -40,5 +43,51 @@ namespace Models.ViewModels
         [Compare(nameof(Password), ErrorMessage = "Passwords do not match")]
         public string ConfirmPassword { get; set; } = string.Empty;
 
+        // User Type
+        [Required(ErrorMessage = "Please select user type")]
+        public UserType UserType { get; set; }
+
+        // Instructor Specific Fields
+        [RequiredIf("UserType", UserType.Instructor, ErrorMessage = "Certifications are required for instructors")]
+        public string? Certifications { get; set; }
+
+        [RequiredIf("UserType", UserType.Instructor, ErrorMessage = "Experience is required for instructors")]
+        public string? ExperienceYears { get; set; }
+
+        // Student Specific Fields
+        [RequiredIf("UserType", UserType.Student, ErrorMessage = "Level is required for students")]
+        public LevelType? Level { get; set; }
+
+        // Common File Upload
+        public IFormFile? ProfileImage { get; set; }
+    }
+
+
+
+    // Custom validation attribute for conditional requirements
+    public class RequiredIfAttribute : ValidationAttribute
+    {
+        private string PropertyName { get; set; }
+        private object DesiredValue { get; set; }
+
+        public RequiredIfAttribute(string propertyName, object desiredValue, string errorMessage = "")
+        {
+            PropertyName = propertyName;
+            DesiredValue = desiredValue;
+            ErrorMessage = errorMessage;
+        }
+
+        protected override ValidationResult? IsValid(object? value, ValidationContext context)
+        {
+            var instance = context.ObjectInstance;
+            var type = instance.GetType();
+            var propertyValue = type.GetProperty(PropertyName)?.GetValue(instance, null);
+
+            if (propertyValue?.ToString() == DesiredValue.ToString() && value == null)
+            {
+                return new ValidationResult(ErrorMessage);
+            }
+            return ValidationResult.Success;
+        }
     }
 }

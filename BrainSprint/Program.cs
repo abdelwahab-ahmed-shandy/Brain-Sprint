@@ -1,8 +1,3 @@
-using DataAccess.Repositories.IRepositories;
-using DataAccess.Repositories;
-using Microsoft.AspNetCore.Authentication.Google;
-using Microsoft.Extensions.Options;
-
 namespace BrainSprint
 {
     public static class Program
@@ -63,11 +58,45 @@ namespace BrainSprint
             #region Register repository services with Dependency Injection (Scoped Lifetime) 
             // This ensures that a new instance is created per request, improving efficiency 
             // while maintaining consistency within a request's lifecycle.
+            builder.Services.AddHttpContextAccessor();
 
             builder.Services.AddScoped<IApplicationUserRepository, ApplicationUserRepository>();
+            builder.Services.AddScoped<IAdminRepository, IAdminRepository>();
+            builder.Services.AddScoped<IInstructorRepository, InstructorRepository>();
+            builder.Services.AddScoped<IStudentRepository, StudentRepository>();
             //builder.Services.AddScoped<IUserSessionService, UserSessionService>();
 
-            builder.Services.AddHttpContextAccessor();
+
+
+            builder.Services.AddScoped<IBadgeRepository, BadgeRepository>();
+            builder.Services.AddScoped<ICartItemRepository, CartItemRepository>();
+            builder.Services.AddScoped<ICartRepository, CartRepository>();
+            builder.Services.AddScoped<ICertificateRepository, CertificateRepository>();
+            builder.Services.AddScoped<IChoiceRepository, ChoiceRepository>();
+            builder.Services.AddScoped<ICourseLearningPathRepository, CourseLearningPathRepository>();
+            builder.Services.AddScoped<ICourseModuleRepository, CourseModuleRepository>();
+            builder.Services.AddScoped<ICourseRepository, CourseRepository>();
+            builder.Services.AddScoped<ICourseReviewRepository, CourseReviewRepository>();
+            builder.Services.AddScoped<IEnrollmentCourseRepository, EnrollmentCourseRepository>();
+            builder.Services.AddScoped<IExamRepository, ExamRepository>();
+            builder.Services.AddScoped<ILearningPathRepository, LearningPathRepository>();
+            builder.Services.AddScoped<INodeAttachmentRepository, NodeAttachmentRepository>();
+            builder.Services.AddScoped<INodeRepository, NodeRepository>();
+            builder.Services.AddScoped<IOrderItemRepository, OrderItemRepository>();
+            builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+            builder.Services.AddScoped<IQuestionRepository, QuestionRepository>();
+            builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+            builder.Services.AddScoped<ITextNodeRepository, TextNodeRepository>();
+            builder.Services.AddScoped<ITicketRepository, TicketRepository>();
+            builder.Services.AddScoped<ITicketResponseRepository, TicketResponseRepository>();
+            builder.Services.AddScoped<IUserAnswerRepository, UserAnswerRepository>();
+            builder.Services.AddScoped<IUsersBadgeRepository, UsersBadgeRepository>();
+            builder.Services.AddScoped<IUserSessionRepository, UserSessionRepository>();
+            builder.Services.AddScoped<IUsersWatchedNodeRepository, UsersWatchedNodeRepository>();
+            builder.Services.AddScoped<IVideoNodeRepository, VideoNodeRepository>();
+            builder.Services.AddScoped<IUserExamAttempRepository, UserExamAttempRepository>();
+
+
 
             #endregion
 
