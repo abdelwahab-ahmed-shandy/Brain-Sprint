@@ -13,6 +13,7 @@ E:\01-Projects\Brain-Sprint\Services\obj\Debug\net9.0\ref\Services.dll
 C:\Users\FM\Desktop\Brain-Sprint\Services\bin\Debug\net9.0\Services.deps.json
 C:\Users\FM\Desktop\Brain-Sprint\Services\bin\Debug\net9.0\Services.dll
 C:\Users\FM\Desktop\Brain-Sprint\Services\bin\Debug\net9.0\Services.pdb
+C:\Users\FM\Desktop\Brain-Sprint\Services\obj\Debug\net9.0\Services.csproj.AssemblyReference.cache
 C:\Users\FM\Desktop\Brain-Sprint\Services\obj\Debug\net9.0\Services.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\FM\Desktop\Brain-Sprint\Services\obj\Debug\net9.0\Services.AssemblyInfoInputs.cache
 C:\Users\FM\Desktop\Brain-Sprint\Services\obj\Debug\net9.0\Services.AssemblyInfo.cs
@@ -22,4 +23,3 @@ C:\Users\FM\Desktop\Brain-Sprint\Services\obj\Debug\net9.0\Services.dll
 C:\Users\FM\Desktop\Brain-Sprint\Services\obj\Debug\net9.0\refint\Services.dll
 C:\Users\FM\Desktop\Brain-Sprint\Services\obj\Debug\net9.0\Services.pdb
 C:\Users\FM\Desktop\Brain-Sprint\Services\obj\Debug\net9.0\ref\Services.dll
-C:\Users\FM\Desktop\Brain-Sprint\Services\obj\Debug\net9.0\Services.csproj.AssemblyReference.cache

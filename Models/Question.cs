@@ -16,7 +16,7 @@ namespace Models
         public int ExamId { get; set; }
 
         [ForeignKey("ExamId")]
-        public Exam Exam { get; set; } = null!; // تغيير من new() إلى null!
+        public Exam Exam { get; set; } = null!;
 
         public List<Choice> Choices { get; set; } = new List<Choice>();
         public List<UserAnswer> UserAnswers { get; set; } = new List<UserAnswer>();

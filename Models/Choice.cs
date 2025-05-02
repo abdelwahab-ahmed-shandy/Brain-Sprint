@@ -14,7 +14,7 @@ namespace Models
         public int QuestionId { get; set; }
 
         [ForeignKey("QuestionId")]
-        public Question Question { get; set; } = null!; // تغيير من new() إلى null!
+        public Question Question { get; set; } = null!;
 
         public List<UserAnswer> UserAnswers { get; set; } = new List<UserAnswer>();
     }

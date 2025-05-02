@@ -12,17 +12,17 @@ namespace Models
         public int UserExamAttempId { get; set; }
 
         [ForeignKey("UserExamAttempId")]
-        public UserExamAttemp UserExamAttemp { get; set; } = null!; // تغيير من new() إلى null!
+        public UserExamAttemp UserExamAttemp { get; set; } = null!;
 
         public int QuestionId { get; set; }
 
         [ForeignKey("QuestionId")]
-        public Question Question { get; set; } = null!; // تغيير من new() إلى null!
+        public Question Question { get; set; } = null!;
 
         public int ChoiceId { get; set; }
 
         [ForeignKey("ChoiceId")]
-        public Choice Choice { get; set; } = null!; // تغيير من new() إلى null!
+        public Choice Choice { get; set; } = null!;
     }
 }
 
