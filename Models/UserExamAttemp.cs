@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,12 +15,14 @@ namespace Models
         public DateTime FinishedAt { get; set; }
 
         public int StudentId { get; set; }
-        public Student Student { get; set; }
+        [ForeignKey("StudentId")]
+        public Student Student { get; set; } = new Student();
 
         public int ExamId { get; set; }
-        public Exam Exam { get; set; }
+        [ForeignKey("ExamId")]
+        public Exam Exam { get; set; } = new Exam();
 
-        public List<UserAnswer> UserAnswers { get; set; }
+        public List<UserAnswer> UserAnswers { get; set; } = new List<UserAnswer>();
     }
 }
 

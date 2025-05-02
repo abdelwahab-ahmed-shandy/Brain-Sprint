@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,10 +12,12 @@ namespace Models
         public int Price { get; set; }
 
         public int OrderId { get; set; }
-        public Order Order { get; set; }
+        [ForeignKey("OrderId")]
+        public Order Order { get; set; } = new Order();
 
         public int CourseId { get; set; }
-        public Course Course { get; set; }
+        [ForeignKey("CourseId")]
+        public Course Course { get; set; } = new Course();
     }
 }
 

@@ -9,16 +9,17 @@ namespace Models
 {
     public class Ticket : BaseModel
     {
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public TicketStatusType Status { get; set; }
+        public string Title { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+        public TicketStatusType? Status { get; set; }
         public DateTime CreateAt { get; set; }
         public DateTime? ColsedAt { get; set; }
 
-        public string ApplicationUserId { get; set; }
-        public ApplicationUser User { get; set; }
+        public string ApplicationUserId { get; set; } = string.Empty;
 
-        public List<TicketResponse> TicketResponses { get; set; }
+        public ApplicationUser ApplicationUser { get; set; } = new ApplicationUser();
+
+        public List<TicketResponse> TicketResponses { get; set; } = new List<TicketResponse>();
     }
 }
 

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Models;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,13 +15,14 @@ namespace Models
         public int Index { get; set; }
 
         public int CourseId { get; set; }
+        [ForeignKey("CourseId")]
         public Course? Course { get; set; }
-
-        public Exam? Exam { get; set; }
-
+        public ICollection<Exam> Exams { get; set; } = new List<Exam>();
         public List<Node> Nodes { get; set; } = new List<Node>();
+
     }
 }
+
 
 /*
     Title       => عنوان الوحدة الدراسية

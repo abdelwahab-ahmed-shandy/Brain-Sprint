@@ -40,12 +40,11 @@ namespace Models
         public string? BlockReason { get; set; }
 
 
-        public AccountStateType AccountState { get; set; } = AccountStateType.PendingActivation;
-        public Guid CreatedBy { get; set; }
+        public AccountStateType? AccountState { get; set; }
+        public int CreatedBy { get; set; }
         public DateTime CreatedDateUtc { get; set; }
         public Guid? UpdatedBy { get; set; }
         public DateTime? UpdatedDateUtc { get; set; }
-
 
         public Student? Student { get; set; }
         public Instructor? Instructor { get; set; }

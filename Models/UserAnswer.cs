@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,13 +10,19 @@ namespace Models
     public class UserAnswer : BaseModel
     {
         public int UserExamAttempId { get; set; }
-        public UserExamAttemp UserExamAttemp { get; set; }
+
+        [ForeignKey("UserExamAttempId")]
+        public UserExamAttemp UserExamAttemp { get; set; } = null!; // تغيير من new() إلى null!
 
         public int QuestionId { get; set; }
-        public Question Question { get; set; }
+
+        [ForeignKey("QuestionId")]
+        public Question Question { get; set; } = null!; // تغيير من new() إلى null!
 
         public int ChoiceId { get; set; }
-        public Choice Choice { get; set; }
+
+        [ForeignKey("ChoiceId")]
+        public Choice Choice { get; set; } = null!; // تغيير من new() إلى null!
     }
 }
 

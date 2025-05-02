@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,10 +12,12 @@ namespace Models
         public DateTime EnrollmentDate { get; set; }
 
         public int StudentId { get; set; }
-        public Student Student { get; set; }
+        [ForeignKey("StudentId")]
+        public Student Student { get; set; } = new Student();
 
         public int CourseId { get; set; }
-        public Course Course { get; set; }
+        [ForeignKey("CourseId")]
+        public Course Course { get; set; } = new Course();
 
         public int? CertificateId { get; set; }
         public Certificate? Certificate { get; set; }

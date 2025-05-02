@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,16 +9,19 @@ namespace Models
 {
     public class Question : BaseModel
     {
-        public string QuestionText { get; set; }
+        public string QuestionText { get; set; } = string.Empty;
         public bool IsCorrect { get; set; }
         public int Score { get; set; }
 
         public int ExamId { get; set; }
-        public Exam Exam { get; set; }
 
-        public List<Choice> Choices { get; set; }
-        public List<UserAnswer> UserAnswers { get; set; }
+        [ForeignKey("ExamId")]
+        public Exam Exam { get; set; } = null!; // تغيير من new() إلى null!
+
+        public List<Choice> Choices { get; set; } = new List<Choice>();
+        public List<UserAnswer> UserAnswers { get; set; } = new List<UserAnswer>();
     }
+
 }
 
 /*

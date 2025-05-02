@@ -19,6 +19,54 @@ namespace DataAccess
         {
             base.OnModelCreating(modelBuilder);
 
+
+
+            modelBuilder.Entity<Exam>(entity =>
+            {
+                entity.HasOne(e => e.CourseModule)
+                        .WithMany(cm => cm.Exams)
+                        .HasForeignKey(e => e.CourseModuleId)
+                        .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            modelBuilder.Entity<Question>(entity =>
+            {
+                entity.HasOne(q => q.Exam)
+                    .WithMany(e => e.Questions)
+                    .HasForeignKey(q => q.ExamId)
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            modelBuilder.Entity<Choice>(entity =>
+            {
+                entity.HasOne(c => c.Question)
+                    .WithMany(q => q.Choices)
+                    .HasForeignKey(c => c.QuestionId)
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            modelBuilder.Entity<UserAnswer>(entity =>
+            {
+                entity.HasOne(ua => ua.UserExamAttemp)
+                    .WithMany(ue => ue.UserAnswers)
+                    .HasForeignKey(ua => ua.UserExamAttempId)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(ua => ua.Question)
+                    .WithMany(q => q.UserAnswers)
+                    .HasForeignKey(ua => ua.QuestionId)
+                    .OnDelete(DeleteBehavior.Restrict);
+
+                entity.HasOne(ua => ua.Choice)
+                    .WithMany(c => c.UserAnswers)
+                    .HasForeignKey(ua => ua.ChoiceId)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+
+
+
+
+            /*
             // ApplicationUser
             modelBuilder.Entity<ApplicationUser>(entity =>
             {
@@ -352,7 +400,7 @@ namespace DataAccess
                 entity.Property(t => t.Status)
                     .HasDefaultValue(TicketStatusType.InProgress);
 
-                entity.HasOne(t => t.User)
+                entity.HasOne(t => t.ApplicationUser)
                     .WithMany(u => u.Tickets)
                     .HasForeignKey(t => t.ApplicationUserId)
                     .OnDelete(DeleteBehavior.Cascade);
@@ -480,9 +528,10 @@ namespace DataAccess
                     .HasForeignKey<VideoNode>(vn => vn.NodeId)
                     .OnDelete(DeleteBehavior.Cascade);
             });
+            */
+
+
         }
-
-
 
 
 

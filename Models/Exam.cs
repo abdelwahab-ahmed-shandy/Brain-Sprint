@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Models;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -9,17 +11,20 @@ namespace Models
 {
     public class Exam : BaseModel
     {
-        public string Title { get; set; }
+        public string Title { get; set; } = string.Empty;
         public int Score { get; set; }
         public TimeSpan? MaximumTime { get; set; }
 
         public int CourseModuleId { get; set; }
-        public CourseModule CourseModule { get; set; }
 
-        public List<Question> Questions { get; set; }
-        public List<UserExamAttemp> UserExamAttemps { get; set; }
+        [ForeignKey("CourseModuleId")]
+        public CourseModule CourseModule { get; set; } = null!;
+
+        public List<Question> Questions { get; set; } = new List<Question>();
+        public List<UserExamAttemp> UserExamAttemps { get; set; } = new List<UserExamAttemp>();
     }
 }
+
 
 /*
     Title                => عنوان الامتحان

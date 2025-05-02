@@ -12,7 +12,7 @@ namespace Models
         public IEnumerable<TicketResponse> TicketResponses { get; set; } = new List<TicketResponse>();
 
         public string? ApplicationUserId { get; set; }
-        public ApplicationUser ApplicationUser { get; set; }
+        public ApplicationUser ApplicationUser { get; set; } = new ApplicationUser();
     }
 }
 

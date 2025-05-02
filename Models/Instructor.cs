@@ -15,7 +15,7 @@ namespace Models
         public bool IsVerified { get; set; }
 
         public string? ApplicationUserId { get; set; }
-        public ApplicationUser ApplicationUser { get; set; }
+        public ApplicationUser ApplicationUser { get; set; } = new ApplicationUser();
 
         public List<Course> Courses { get; set; } = new List<Course>();
     }

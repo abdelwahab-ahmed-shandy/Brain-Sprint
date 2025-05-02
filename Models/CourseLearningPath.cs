@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,10 +10,12 @@ namespace Models
     public class CourseLearningPath : BaseModel
     {
         public int CourseId { get; set; }
-        public Course Course { get; set; }
+        [ForeignKey("CourseId")]
+        public Course Course { get; set; } = new Course();
 
         public int LearningPathId { get; set; }
-        public LearningPath LearningPath { get; set; }
+        [ForeignKey("LearningPathId")]
+        public LearningPath LearningPath { get; set; } = new LearningPath();
     }
 }
 

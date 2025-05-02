@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,14 +9,15 @@ namespace Models
 {
     public class TicketResponse : BaseModel
     {
-        public string Message { get; set; }
+        public string Message { get; set; } = string.Empty;
         public DateTime CreatedAt { get; set; }
 
-        public string ResponderUserId { get; set; }
-        public ApplicationUser ResponderUser { get; set; }
+        public string? ResponderUserId { get; set; }
+        public ApplicationUser ResponderUser { get; set; } = new ApplicationUser();
 
         public int TicketId { get; set; }
-        public Ticket Ticket { get; set; }
+        [ForeignKey("TicketId")]
+        public Ticket Ticket { get; set; } = new Ticket();
     }
 }
 

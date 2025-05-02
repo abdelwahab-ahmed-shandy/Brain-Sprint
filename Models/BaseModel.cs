@@ -13,7 +13,7 @@ namespace Models
         [Key]
         public int Id { get; set; }
 
-        public CurrentState CurrentState { get; set; } = CurrentState.Active;
+        public CurrentState? CurrentState { get; set; }
 
         public string CreatedBy { get; set; } = string.Empty;
 
