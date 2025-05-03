@@ -1,69 +1,327 @@
-﻿/* wwwroot/css/customer.css */
+﻿
+:root {
+    --primary: #6c5ce7; /* لون بنفسجي جذاب */
+    --secondary: #a29bfe; /* لون بنفسجي فاتح */
+    --accent: #fd79a8; /* لون وردي مميز */
+    --dark: #2d3436; /* لون نص داكن */
+    --light: #f5f6fa; /* لون خلفية فاتح */
+    --success: #00b894; /* لون نجاح أخضر */
+    --warning: #fdcb6e; /* لون تحذير أصفر */
+    --danger: #d63031; /* لون خطأ أحمر */
+    --info: #0984e3; /* لون معلومات أزرق */
+    --text-muted: #636e72; /* لون نص ثانوي */
+    --card-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+
+
+/* التصميم العام */
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark);
+    background-color: var(--light);
+    line-height: 1.7;
 }
 
-main {
-    flex: 1;
-}
 
-footer {
-    margin-top: auto;
-}
 
-#secondaryNavbar {
-    transition: all 0.1s ease;
-}
-
-.animate__fadeInDown {
-    animation-duration: 0.3s;
-}
-
-.animate__fadeOutUp {
-    animation-duration: 0.3s;
-}
-
-.login-btn-custom {
+/* قسم البطل (Hero) */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: white;
-    border-color: white;
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    margin-bottom: 2.5rem;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background-color: white;
+    color: var(--primary);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+}
+
+.btn-outline-light {
+    border: 2px solid rgba(255,255,255,0.5);
     background-color: transparent;
-    transition: all 0.2s ease;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: var(--transition);
 }
 
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
 
-    .login-btn-custom:hover {
-        color: white;
-        background-color: rgba(255, 255, 255, 0.1);
-        transform: translateY(-1px);
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.btn-outline-light:hover {
+    background-color: rgba(255,255,255,0.1);
+    border-color: white;
+}
+
+/* أنماط البطاقات */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
     }
 
-    .login-btn-custom:active {
-        transform: translateY(0);
-        box-shadow: none;
-    }
-/*.customer-layout {
-    background-color: #f8f9fa;
+.card-img-top {
+    height: 180px;
+    object-fit: cover;
 }
 
-.sidebar {
-    min-height: calc(100vh - 56px);
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+.badge-card {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: var(--accent);
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 
-.main-content {
-    padding-top: 20px;
+/* قسم الميزات */
+.features-section {
+    padding: 5rem 0;
     background-color: white;
 }
 
-.user-profile {
-    border-bottom: 1px solid #eee;
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
-.nav-link.active {
-    font-weight: bold;
-    color: #0d6efd !important;
+    .section-title h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        position: relative;
+        display: inline-block;
+    }
+
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            border-radius: 2px;
+        }
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: rgba(108, 92, 231, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--primary);
 }
-*/
+
+/* قسم الكورسات */
+.courses-section {
+    padding: 5rem 0;
+    background-color: var(--light);
+}
+
+.course-card {
+    margin-bottom: 2rem;
+}
+
+.course-meta {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.course-price {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* Achievements Section Styles */
+.badge-item {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+    .badge-item:hover {
+        transform: translateY(-5px);
+    }
+
+.badge-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+}
+
+    /* Badge Colors */
+    .badge-icon.gold {
+        background: linear-gradient(135deg, #FFD700, #FFA500);
+    }
+
+    .badge-icon.purple {
+        background: linear-gradient(135deg, #9B59B6, #8E44AD);
+    }
+
+    .badge-icon.blue {
+        background: linear-gradient(135deg, #3498DB, #2980B9);
+    }
+
+    .badge-icon.red {
+        background: linear-gradient(135deg, #E74C3C, #C0392B);
+    }
+
+    .badge-icon.pink {
+        background: linear-gradient(135deg, #FF9FF3, #F368E0);
+    }
+
+    .badge-icon.diamond {
+        background: linear-gradient(135deg, #00D2D3, #01A3A4);
+    }
+
+    .badge-icon.green {
+        background: linear-gradient(135deg, #2ECC71, #27AE60);
+    }
+
+    .badge-icon.bronze {
+        background: linear-gradient(135deg, #CD7F32, #A67C52);
+    }
+
+.progress-container {
+    background: #f0f0f0;
+    border-radius: 10px;
+    height: 8px;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+    border-radius: 10px;
+    height: 100%;
+}
+
+.badge-item h4 {
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.badge-item p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.badge-item small {
+    color: #888;
+    font-size: 12px;
+}
+
+/* قسم الاختبارات */
+.quiz-section {
+    padding: 5rem 0;
+    background-color: var(--light);
+}
+
+.quiz-card {
+    padding: 2rem;
+    text-align: center;
+}
+
+.quiz-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background-color: var(--info);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+}
+
+/* التصميم المتجاوب */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+        .cta-buttons .btn {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+}

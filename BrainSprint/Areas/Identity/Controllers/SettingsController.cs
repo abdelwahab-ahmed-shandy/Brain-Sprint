@@ -150,6 +150,9 @@ namespace BrainSprint.Areas.Identity.Controllers
                 user.LastName = settingsVM.Profile.LastName;
                 user.Bio = settingsVM.Profile.Bio;
                 user.PhoneNumber = settingsVM.Profile.PhoneNumber;
+                //user.Instructor.Certifications = settingsVM.Profile.Certifications;
+                //user.Instructor.ExperienceYears = settingsVM.Profile.ExperienceYears;
+                //user.Level = settingsVM.Profile.Level;
 
                 if (settingsVM.Profile.ImageFile != null && settingsVM.Profile.ImageFile.Length > 0)
                 {
