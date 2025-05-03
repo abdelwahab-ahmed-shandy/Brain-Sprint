@@ -607,7 +607,6 @@ th {
     opacity: 0.9;
 }
 
-/* إذا فشلت الصورة في التحميل */
 .user-avatar-image[src*="default-avatar.jpg"] + .avatar-fallback,
 .user-avatar-image:not([src]) + .avatar-fallback {
     z-index: 2;

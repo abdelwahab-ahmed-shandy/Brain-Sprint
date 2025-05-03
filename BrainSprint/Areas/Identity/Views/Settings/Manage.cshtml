@@ -14,11 +14,6 @@
                          alt="User Profile"
                          class="rounded-circle profile-main-image"
                          width="120" height="120">
-                    @* <button class="btn btn-sm btn-accent rounded-circle position-absolute bottom-0 end-0 p-1" *@
-                    @*         data-bs-toggle="tooltip" data-bs-title="Change profile picture" *@
-                    @*         onclick="document.getElementById('profileImageInput').click()"> *@
-                    @*     <i class="bi bi-camera-fill"></i> *@
-                    @* </button> *@
                 </div>
                 <h2 class="fw-bold text-white mt-3 mb-1">@Model.Profile.FullName</h2>
                 <div class="d-flex justify-content-center align-items-center gap-2">
@@ -30,181 +25,312 @@
                     </span>
                 </div>
 
-            <!-- Notification Messages -->
-            <div class="notifications-container">
-                @if (TempData["Success"] != null)
-                {
-                    <div class="alert alert-success alert-dismissible fade show">
-                        <i class="bi bi-check-circle-fill me-2"></i> @TempData["Success"]
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                }
-                @if (TempData["Error"] != null)
-                {
-                    <div class="alert alert-danger alert-dismissible fade show">
-                        <i class="bi bi-exclamation-triangle-fill me-2"></i> @TempData["Error"]
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                }
-            </div>
-
-            <!-- Main Navigation Tabs -->
-            <ul class="nav nav-tabs nav-justified mb-4" id="settingsTabs" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab">
-                        <i class="bi bi-person-circle me-2"></i>Profile
-                    </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="manage-tab" data-bs-toggle="tab" data-bs-target="#manage" type="button" role="tab">
-                        <i class="bi bi-gear me-2"></i>Settings
-                    </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="security-tab" data-bs-toggle="tab" data-bs-target="#security" type="button" role="tab">
-                        <i class="bi bi-shield-lock me-2"></i>Security
-                    </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="delete-tab" data-bs-toggle="tab" data-bs-target="#delete" type="button" role="tab">
-                        <i class="bi bi-trash me-2"></i>Delete
-                    </button>
-                </li>
-            </ul>
-
-            <!-- Tab Content -->
-            <div class="tab-content" id="settingsTabsContent">
-                <!-- Profile Tab -->
-                <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    <div class="profile-info-container bg-dark rounded p-4 mb-4">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="info-item mb-3">
-                                    <h6 class="text-muted"><i class="bi bi-person me-2"></i>First Name</h6>
-                                    <p class="text-white">@Model.Profile.FirstName</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="info-item mb-3">
-                                    <h6 class="text-muted"><i class="bi bi-person me-2"></i>Last Name</h6>
-                                    <p class="text-white">@Model.Profile.LastName</p>
-                                </div>
-                            </div>
+                <!-- Notification Messages -->
+                <div class="notifications-container">
+                    @if (TempData["Success"] != null)
+                    {
+                        <div class="alert alert-success alert-dismissible fade show">
+                            <i class="bi bi-check-circle-fill me-2"></i> @TempData["Success"]
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
-
-                        <div class="info-item mb-3">
-                            <h6 class="text-muted"><i class="bi bi-envelope me-2"></i>Email</h6>
-                            <p class="text-white">
-                                @Model.Profile.Email
-                                @if (Model.Profile.EmailVerified)
-                                {
-                                    <span class="badge bg-success ms-2"><i class="bi bi-check-circle me-1"></i>Verified</span>
-                                }
-                                else
-                                {
-                                    <span class="badge bg-warning ms-2"><i class="bi bi-exclamation-triangle me-1"></i>Not Verified</span>
-                                }
-                            </p>
+                    }
+                    @if (TempData["Error"] != null)
+                    {
+                        <div class="alert alert-danger alert-dismissible fade show">
+                            <i class="bi bi-exclamation-triangle-fill me-2"></i> @TempData["Error"]
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
+                    }
+                </div>
 
-                        <div class="info-item mb-3">
-                            <h6 class="text-muted"><i class="bi bi-telephone me-2"></i>Phone Number</h6>
-                            <p class="text-white">
-                                @(Model.Profile.PhoneNumber ?? "Not provided")
-                                @if (Model.Profile.PhoneNumberConfirmed)
-                                {
-                                    <span class="badge bg-success ms-2"><i class="bi bi-check-circle me-1"></i>Verified</span>
-                                }
-                            </p>
-                        </div>
-
-                        <div class="info-item mb-3">
-                            <h6 class="text-muted"><i class="bi bi-info-circle me-2"></i>Bio</h6>
-                            <p class="text-white">@(Model.Profile.Bio ?? "No bio yet")</p>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="info-item mb-3">
-                                    <h6 class="text-muted"><i class="bi bi-calendar-plus me-2"></i>Registration Date</h6>
-                                    <p class="text-white">@Model.Profile.RegistrationDate.ToString("dd MMMM yyyy")</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="info-item mb-3">
-                                    <h6 class="text-muted"><i class="bi bi-clock-history me-2"></i>Last Login</h6>
-                                    <p class="text-white">@(Model.Profile.LastLogin?.ToString("dd MMMM yyyy HH:mm") ?? "Never")</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="d-flex justify-content-end">
-                            <button class="btn btn-outline-accent" id="settingsTabs" role="tablist" data-bs-toggle="tab" data-bs-target="#manage" type="button">
-                            <i class="bi bi-pencil-square me-2"></i>Edit Profile
+                <!-- Main Navigation Tabs -->
+                <ul class="nav nav-tabs nav-justified mb-4" id="settingsTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab">
+                            <i class="bi bi-person-circle me-2"></i>Profile
                         </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="manage-tab" data-bs-toggle="tab" data-bs-target="#manage" type="button" role="tab">
+                            <i class="bi bi-gear me-2"></i>Settings
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="security-tab" data-bs-toggle="tab" data-bs-target="#security" type="button" role="tab">
+                            <i class="bi bi-shield-lock me-2"></i>Security
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="delete-tab" data-bs-toggle="tab" data-bs-target="#delete" type="button" role="tab">
+                            <i class="bi bi-trash me-2"></i>Delete
+                        </button>
+                    </li>
+                </ul>
+
+                <!-- Tab Content -->
+                <div class="tab-content" id="settingsTabsContent">
+                    <!-- Profile Tab -->
+                    <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="profile-info-container bg-dark rounded p-4 mb-4">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="info-item mb-3">
+                                        <h6 class="text-muted"><i class="bi bi-person me-2"></i>First Name</h6>
+                                        <p class="text-white">@Model.Profile.FirstName</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="info-item mb-3">
+                                        <h6 class="text-muted"><i class="bi bi-person me-2"></i>Last Name</h6>
+                                        <p class="text-white">@Model.Profile.LastName</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info-item mb-3">
+                                <h6 class="text-muted"><i class="bi bi-envelope me-2"></i>Email</h6>
+                                <p class="text-white">
+                                    @Model.Profile.Email
+                                    @if (Model.Profile.EmailVerified)
+                                    {
+                                        <span class="badge bg-success ms-2"><i class="bi bi-check-circle me-1"></i>Verified</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-warning ms-2"><i class="bi bi-exclamation-triangle me-1"></i>Not Verified</span>
+                                    }
+                                </p>
+                            </div>
+
+                            <div class="info-item mb-3">
+                                <h6 class="text-muted"><i class="bi bi-telephone me-2"></i>Phone Number</h6>
+                                <p class="text-white">
+                                    @(Model.Profile.PhoneNumber ?? "Not provided")
+                                    @if (Model.Profile.PhoneNumberConfirmed)
+                                    {
+                                        <span class="badge bg-success ms-2"><i class="bi bi-check-circle me-1"></i>Verified</span>
+                                    }
+                                </p>
+                            </div>
+
+                            <div class="info-item mb-3">
+                                <h6 class="text-muted"><i class="bi bi-info-circle me-2"></i>Bio</h6>
+                                <p class="text-white">@(Model.Profile.Bio ?? "No bio yet")</p>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="info-item mb-3">
+                                        <h6 class="text-muted"><i class="bi bi-calendar-plus me-2"></i>Registration Date</h6>
+                                        <p class="text-white">@Model.Profile.RegistrationDate.ToString("dd MMMM yyyy")</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="info-item mb-3">
+                                        <h6 class="text-muted"><i class="bi bi-clock-history me-2"></i>Last Login</h6>
+                                        <p class="text-white">@(Model.Profile.LastLogin?.ToString("dd MMMM yyyy HH:mm") ?? "Never")</p>
+                                    </div>
+                                </div>
+
+                            @if (User.IsInRole("Instructor"))
+                        {
+
+                                <h5 class="text-accent mb-3"><i class="bi bi-award me-2"></i>Instructor Information</h5>
+
+                                <div class="col-md-6">
+                                    <div class="info-item mb-3">
+                                        <h6 class="text-muted"><i class="bi bi-patch-check me-2"></i>Certifications</h6>
+                                        <p class="text-white">@(Model.Profile.Certifications ?? "No certifications added")</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="info-item mb-3">
+                                        <h6 class="text-muted"><i class="bi bi-clock-history me-2"></i>Experience</h6>
+                                        <p class="text-white">@(Model.Profile.ExperienceYears ?? "Not specified")</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="info-item mb-3">
+                                        <h6 class="text-muted"><i class="bi bi-star-fill me-2"></i>Average Rating</h6>
+                                        <p class="text-white">
+                                            @if (Model.Profile.InstructorRating.HasValue)
+                                            {
+                                                @Model.Profile.InstructorRating.Value.ToString("0.0")
+                                                <span class="text-warning">
+                                                    @for (int i = 0; i < 5; i++)
+                                                    {
+                                                        <i class="bi @(i < Math.Floor(Model.Profile.InstructorRating.Value) ? "bi-star-fill" : (i < Model.Profile.InstructorRating.Value ? "bi-star-half" : "bi-star"))"></i>
+                                                    }
+                                                </span>
+                                            }
+                                            else
+                                            {
+                                                <text>Not rated yet</text>
+                                            }
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="info-item mb-3">
+                                        <h6 class="text-muted"><i class="bi bi-people-fill me-2"></i>Total Students</h6>
+                                        <p class="text-white">@Model.Profile.TotalStudents</p>
+                                    </div>
+                                </div>
+
+                                <div class="info-item mb-3">
+                                    <h6 class="text-muted"><i class="bi bi-shield-check me-2"></i>Verification Status</h6>
+                                    <p class="text-white">
+                                        @if (Model.Profile.IsVerified)
+                                        {
+                                            <span class="badge bg-success"><i class="bi bi-check-circle me-1"></i>Verified Instructor</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-warning"><i class="bi bi-exclamation-triangle me-1"></i>Not Verified</span>
+                                        }
+                                    </p>
+                                </div>
+                           
+                        }
+
+                        @if (User.IsInRole("Student"))
+                        {
+                                <h5 class="text-accent mb-3"><i class="bi bi-mortarboard me-2"></i>Student Information</h5>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="info-item mb-3">
+                                            <h6 class="text-muted"><i class="bi bi-book me-2"></i>Educational Level</h6>
+                                            <p class="text-white">@(Model.Profile.StudentLevel?.ToString() ?? "Not specified")</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="info-item mb-3">
+                                            <h6 class="text-muted"><i class="bi bi-journal-bookmark me-2"></i>Enrolled Courses</h6>
+                                            <p class="text-white">@Model.Profile.EnrolledCoursesCount</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="info-item mb-3">
+                                            <h6 class="text-muted"><i class="bi bi-check-circle me-2"></i>Completed Courses</h6>
+                                            <p class="text-white">@Model.Profile.CompletedCoursesCount</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="info-item mb-3">
+                                            <h6 class="text-muted"><i class="bi bi-trophy me-2"></i>Badges Earned</h6>
+                                            <p class="text-white">@Model.Profile.BadgesCount</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="info-item mb-3">
+                                    <h6 class="text-muted"><i class="bi bi-coin me-2"></i>Current Points</h6>
+                                    <p class="text-white">@Model.Profile.CurrentPoints</p>
+                                </div>
+                        }
+
                     </div>
-                </div>
-
-                <!-- Settings Tab -->
-                <div class="tab-pane fade" id="manage" role="tabpanel" aria-labelledby="manage-tab">
-                        <form asp-controller="Settings" asp-action="UpdateProfile" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
-                        @Html.AntiForgeryToken()
-
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="mb-4 text-center">
-                                        <img src="@(Model.Profile.ProfileImage ?? "/Assets/Identity/images/UserPhoto/logo.png")"
-                                         id="profileImagePreview"
-                                         class="rounded-circle mb-3 shadow"
-                                         width="150" height="150">
-                                    <input type="file" asp-for="Profile.ImageFile" class="form-control d-none" id="profileImageInput" accept=".jpg,.jpeg,.png">
-                                    <button type="button" class="btn btn-sm btn-outline-accent" onclick="document.getElementById('profileImageInput').click()">
-                                        <i class="bi bi-camera-fill me-1"></i> Change Photo
-                                    </button>
-                                    <div class="text-muted small mt-2">JPG, PNG up to 2MB</div>
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="form-floating mb-3">
-                                    <input asp-for="Profile.FirstName" class="form-control" placeholder=" " />
-                                    <label asp-for="Profile.FirstName">First Name</label>
-                                    <span asp-validation-for="Profile.FirstName" class="text-danger small"></span>
-                                </div>
-
-                                <div class="form-floating mb-3">
-                                    <input asp-for="Profile.LastName" class="form-control" placeholder=" " />
-                                    <label asp-for="Profile.LastName">Last Name</label>
-                                    <span asp-validation-for="Profile.LastName" class="text-danger small"></span>
-                                </div>
-
-                                <div class="form-floating mb-3">
-                                    <textarea asp-for="Profile.Bio" class="form-control" placeholder=" " style="height: 100px"></textarea>
-                                    <label asp-for="Profile.Bio">Bio</label>
-                                    <span asp-validation-for="Profile.Bio" class="text-danger small"></span>
-                                </div>
-
-                                <div class="form-floating mb-3">
-                                    <input asp-for="Profile.PhoneNumber" class="form-control" placeholder=" " />
-                                    <label asp-for="Profile.PhoneNumber">Phone Number</label>
-                                    <span asp-validation-for="Profile.PhoneNumber" class="text-danger small"></span>
-                                </div>
-
-                                <div class="d-flex justify-content-between align-items-center mt-4">
-                                    <button type="reset" class="btn btn-outline-secondary">
-                                        <i class="bi bi-arrow-counterclockwise me-2"></i>Reset
-                                    </button>
-                                    <button type="submit" class="btn btn-accent px-4">
-                                        <span class="submit-text">
-                                            <i class="bi bi-save me-2"></i>Save Changes
-                                        </span>
-                                        <span class="spinner-border spinner-border-sm d-none" role="status"></span>
-                                    </button>
-                                </div>
-                            </div>
                         </div>
-                    </form>
-                </div>
+                    </div>
+
+                    <!-- Settings Tab -->
+                    <div class="tab-pane fade" id="manage" role="tabpanel" aria-labelledby="manage-tab">
+                        <form asp-controller="Settings" asp-action="UpdateProfile" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+                            @Html.AntiForgeryToken()
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="mb-4 text-center">
+                                        <img src="@(Model.Profile.ProfileImage ?? "/Assets/Identity/images/UserPhoto/logo.png")"
+                                             id="profileImagePreview"
+                                             class="rounded-circle mb-3 shadow"
+                                             width="150" height="150">
+                                        <input type="file" asp-for="Profile.ImageFile" class="form-control d-none" id="profileImageInput" accept=".jpg,.jpeg,.png">
+                                        <button type="button" class="btn btn-sm btn-outline-accent" onclick="document.getElementById('profileImageInput').click()">
+                                            <i class="bi bi-camera-fill me-1"></i> Change Photo
+                                        </button>
+                                        <div class="text-muted small mt-2">JPG, PNG up to 2MB</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="form-floating mb-3">
+                                        <input asp-for="Profile.FirstName" class="form-control" placeholder=" " />
+                                        <label asp-for="Profile.FirstName">First Name</label>
+                                        <span asp-validation-for="Profile.FirstName" class="text-danger small"></span>
+                                    </div>
+
+                                    <div class="form-floating mb-3">
+                                        <input asp-for="Profile.LastName" class="form-control" placeholder=" " />
+                                        <label asp-for="Profile.LastName">Last Name</label>
+                                        <span asp-validation-for="Profile.LastName" class="text-danger small"></span>
+                                    </div>
+
+                                    <div class="form-floating mb-3">
+                                        <textarea asp-for="Profile.Bio" class="form-control" placeholder=" " style="height: 100px"></textarea>
+                                        <label asp-for="Profile.Bio">Bio</label>
+                                        <span asp-validation-for="Profile.Bio" class="text-danger small"></span>
+                                    </div>
+
+                                    <div class="form-floating mb-3">
+                                        <input asp-for="Profile.PhoneNumber" class="form-control" placeholder=" " />
+                                        <label asp-for="Profile.PhoneNumber">Phone Number</label>
+                                        <span asp-validation-for="Profile.PhoneNumber" class="text-danger small"></span>
+                                    </div>
+
+                                <!-- Add this in the Settings Tab section, inside the form -->
+                                @if (User.IsInRole("Instructor"))
+                                {
+                                    <div class="instructor-fields mt-4 pt-3 border-top">
+                                        
+
+                                        <div class="form-floating mb-3">
+                                                <input asp-for="Profile.Certifications" class="form-control" placeholder=" " />
+                                            <label asp-for="Profile.Certifications">Certifications</label>
+                                            <span asp-validation-for="Profile.Certifications" class="text-danger small"></span>
+                                        </div>
+
+                                        <div class="form-floating mb-3">
+                                            <input asp-for="Profile.ExperienceYears" class="form-control" placeholder=" " />
+                                            <label asp-for="Profile.ExperienceYears">Years of Experience</label>
+                                            <span asp-validation-for="Profile.ExperienceYears" class="text-danger small"></span>
+                                        </div>
+                                    </div>
+                                }
+
+                                @* @if (User.IsInRole("Student")) *@
+                                @* { *@
+                                @*     <div class="student-fields mt-4 pt-3 border-top"> *@
+
+                                @*         <div class="form-floating mb-3"> *@
+                                @*             <select asp-for="Profile.StudentLevel" class="form-control" asp-items="Html.GetEnumSelectList<LevelType>()"> *@
+                                @*                 <option value="">-- Select Level --</option> *@
+                                @*             </select> *@
+                                @*             <label asp-for="Profile.StudentLevel">Educational Level</label> *@
+                                @*             <span asp-validation-for="Profile.StudentLevel" class="text-danger small"></span> *@
+                                @*         </div> *@
+                                @*     </div> *@
+                                @* } *@
+
+                                    <div class="d-flex justify-content-between align-items-center mt-4">
+                                        <button type="reset" class="btn btn-outline-secondary">
+                                            <i class="bi bi-arrow-counterclockwise me-2"></i>Reset
+                                        </button>
+                                        <button type="submit" class="btn btn-accent px-4">
+                                            <span class="submit-text">
+                                                <i class="bi bi-save me-2"></i>Save Changes
+                                            </span>
+                                            <span class="spinner-border spinner-border-sm d-none" role="status"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
 
                     <!-- Security Tab -->
                     <div class="tab-pane fade" id="security" role="tabpanel" aria-labelledby="security-tab">
@@ -368,30 +494,30 @@
                             </div>
                         </div>
                     </div>
-               
+
                     <!-- Delete Account Tab -->
-                <div class="tab-pane fade" id="delete" role="tabpanel" aria-labelledby="delete-tab">
-                    <div class="alert alert-danger">
-                        <div class="d-flex align-items-start">
-                            <i class="bi bi-exclamation-triangle-fill fs-4 me-3"></i>
-                            <div>
-                                <h5 class="alert-heading mb-2">Danger Zone!</h5>
-                                <p class="mb-2">Deleting your account will permanently remove all your data including:</p>
-                                <ul class="mb-2">
-                                    <li>Your profile information</li>
-                                    <li>All your activity history</li>
-                                    <li>Any connected services</li>
-                                    <li>All your personal data</li>
-                                </ul>
-                                <p class="mb-0 fw-bold">This action cannot be undone!</p>
+                    <div class="tab-pane fade" id="delete" role="tabpanel" aria-labelledby="delete-tab">
+                        <div class="alert alert-danger">
+                            <div class="d-flex align-items-start">
+                                <i class="bi bi-exclamation-triangle-fill fs-4 me-3"></i>
+                                <div>
+                                    <h5 class="alert-heading mb-2">Danger Zone!</h5>
+                                    <p class="mb-2">Deleting your account will permanently remove all your data including:</p>
+                                    <ul class="mb-2">
+                                        <li>Your profile information</li>
+                                        <li>All your activity history</li>
+                                        <li>Any connected services</li>
+                                        <li>All your personal data</li>
+                                    </ul>
+                                    <p class="mb-0 fw-bold">This action cannot be undone!</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <form asp-action="DeleteAccount" method="post" class="needs-validation" novalidate>
-                        @Html.AntiForgeryToken()
+                        <form asp-action="DeleteAccount" method="post" class="needs-validation" novalidate>
+                            @Html.AntiForgeryToken()
 
-                        <div class="mb-4 p-4 border border-danger rounded">
+                            <div class="mb-4 p-4 border border-danger rounded">
                                 <!-- Password Field -->
                                 <div class="form-floating mb-3 position-relative">
                                     <input type="password" class="form-control" asp-for="DeleteAccount.Password" required>
@@ -419,265 +545,265 @@
                                 </div>
 
 
-                        <!-- Submit Button -->
-                        <div class="d-grid">
+                                <!-- Submit Button -->
+                                <div class="d-grid">
                                     <button type="submit" class="btn btn-danger btn-lg py-3" id="deleteAccountBtn" disabled>
                                         <span class="submit-text">
-                                    <i class="bi bi-trash-fill me-2"></i>Permanently Delete My Account
-                                </span>
-                                <span class="spinner-border spinner-border-sm d-none" role="status"></span>
-                            </button>
-                        </div>
-                    </form>
+                                            <i class="bi bi-trash-fill me-2"></i>Permanently Delete My Account
+                                        </span>
+                                        <span class="spinner-border spinner-border-sm d-none" role="status"></span>
+                                    </button>
+                                </div>
+                        </form>
+                    </div>
+
                 </div>
-            
             </div>
         </div>
     </div>
-</div>
 
-@section Styles {
-    <style>
-        :root {
-            --accent-color: #1cc88a;
-            --accent-hover: #17a673;
-            --danger-color: #e74a3b;
-            --danger-hover: #be2617;
-        }
-
-        .auth-card {
-            background: rgba(33, 37, 41, 0.95);
-            backdrop-filter: blur(12px);
-            border-radius: 16px;
-            padding: 2.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            margin-bottom: 3rem;
-        }
-
-        .auth-header {
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            margin-bottom: 1.5rem;
-            position: relative;
-        }
-
-        .profile-header-image {
-            transition: all 0.3s ease;
-        }
-
-            .profile-header-image:hover {
-                transform: scale(1.05);
+    @section Styles {
+        <style>
+            :root {
+                --accent-color: #1cc88a;
+                --accent-hover: #17a673;
+                --danger-color: #e74a3b;
+                --danger-hover: #be2617;
             }
 
-            .profile-header-image .btn {
-                width: 32px;
-                height: 32px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+            .auth-card {
+                background: rgba(33, 37, 41, 0.95);
+                backdrop-filter: blur(12px);
+                border-radius: 16px;
+                padding: 2.5rem;
+                border: 1px solid rgba(255, 255, 255, 0.15);
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+                margin-bottom: 3rem;
             }
 
-        .form-control {
-            background-color: rgba(255, 255, 255, 0.08);
-            border-color: rgba(255, 255, 255, 0.2);
-            color: white;
-            transition: all 0.3s ease;
-        }
-
-            .form-control:focus {
-                background-color: rgba(255, 255, 255, 0.15);
-                border-color: var(--accent-color);
-                box-shadow: 0 0 0 0.25rem rgba(28, 200, 138, 0.25);
-                color: white;
-            }
-
-        .form-floating label {
-            color: rgba(255, 255, 255, 0.6);
-            transition: all 0.3s ease;
-        }
-
-        .form-floating > .form-control:focus ~ label,
-        .form-floating > .form-control:not(:placeholder-shown) ~ label {
-            color: var(--accent-color);
-            opacity: 1;
-        }
-
-        .btn-accent {
-            background-color: var(--accent-color);
-            border: none;
-            color: white;
-            transition: all 0.3s ease;
-            padding: 0.5rem 1.5rem;
-            font-weight: 500;
-        }
-
-            .btn-accent:hover {
-                background-color: var(--accent-hover);
-                transform: translateY(-2px);
-                box-shadow: 0 4px 12px rgba(28, 200, 138, 0.3);
-            }
-
-        .btn-outline-accent {
-            border-color: var(--accent-color);
-            color: var(--accent-color);
-        }
-
-            .btn-outline-accent:hover {
-                background-color: var(--accent-color);
-                color: white;
-            }
-
-        .nav-tabs {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-            .nav-tabs .nav-link {
-                color: rgba(255, 255, 255, 0.6);
-                border: none;
-                padding: 0.75rem 1rem;
-                font-weight: 500;
-                transition: all 0.3s ease;
+            .auth-header {
+                padding-bottom: 1.5rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                margin-bottom: 1.5rem;
                 position: relative;
             }
 
-                .nav-tabs .nav-link:hover {
+            .profile-header-image {
+                transition: all 0.3s ease;
+            }
+
+                .profile-header-image:hover {
+                    transform: scale(1.05);
+                }
+
+                .profile-header-image .btn {
+                    width: 32px;
+                    height: 32px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+            .form-control {
+                background-color: rgba(255, 255, 255, 0.08);
+                border-color: rgba(255, 255, 255, 0.2);
+                color: white;
+                transition: all 0.3s ease;
+            }
+
+                .form-control:focus {
+                    background-color: rgba(255, 255, 255, 0.15);
+                    border-color: var(--accent-color);
+                    box-shadow: 0 0 0 0.25rem rgba(28, 200, 138, 0.25);
                     color: white;
-                    border: none;
                 }
 
-                .nav-tabs .nav-link.active {
-                    color: var(--accent-color);
-                    background-color: transparent;
-                    border: none;
+            .form-floating label {
+                color: rgba(255, 255, 255, 0.6);
+                transition: all 0.3s ease;
+            }
+
+            .form-floating > .form-control:focus ~ label,
+            .form-floating > .form-control:not(:placeholder-shown) ~ label {
+                color: var(--accent-color);
+                opacity: 1;
+            }
+
+            .btn-accent {
+                background-color: var(--accent-color);
+                border: none;
+                color: white;
+                transition: all 0.3s ease;
+                padding: 0.5rem 1.5rem;
+                font-weight: 500;
+            }
+
+                .btn-accent:hover {
+                    background-color: var(--accent-hover);
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 12px rgba(28, 200, 138, 0.3);
                 }
 
-                    .nav-tabs .nav-link.active::after {
-                        content: '';
-                        position: absolute;
-                        bottom: -1px;
-                        left: 0;
-                        right: 0;
-                        height: 3px;
-                        background-color: var(--accent-color);
-                        border-radius: 3px 3px 0 0;
+            .btn-outline-accent {
+                border-color: var(--accent-color);
+                color: var(--accent-color);
+            }
+
+                .btn-outline-accent:hover {
+                    background-color: var(--accent-color);
+                    color: white;
+                }
+
+            .nav-tabs {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+                .nav-tabs .nav-link {
+                    color: rgba(255, 255, 255, 0.6);
+                    border: none;
+                    padding: 0.75rem 1rem;
+                    font-weight: 500;
+                    transition: all 0.3s ease;
+                    position: relative;
+                }
+
+                    .nav-tabs .nav-link:hover {
+                        color: white;
+                        border: none;
                     }
 
-        #deleteAccountBtn {
-            transition: all 0.3s ease;
-        }
+                    .nav-tabs .nav-link.active {
+                        color: var(--accent-color);
+                        background-color: transparent;
+                        border: none;
+                    }
 
-            #deleteAccountBtn:hover {
-                background-color: var(--danger-hover);
-                transform: translateY(-2px);
-                box-shadow: 0 4px 12px rgba(231, 74, 59, 0.3);
+                        .nav-tabs .nav-link.active::after {
+                            content: '';
+                            position: absolute;
+                            bottom: -1px;
+                            left: 0;
+                            right: 0;
+                            height: 3px;
+                            background-color: var(--accent-color);
+                            border-radius: 3px 3px 0 0;
+                        }
+
+            #deleteAccountBtn {
+                transition: all 0.3s ease;
             }
 
-        .profile-info-container {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
+                #deleteAccountBtn:hover {
+                    background-color: var(--danger-hover);
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 12px rgba(231, 74, 59, 0.3);
+                }
 
-        .info-item {
-            padding: 0.75rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s ease;
-        }
+            .profile-info-container {
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            }
 
-            .info-item:hover {
+            .info-item {
+                padding: 0.75rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                transition: all 0.3s ease;
+            }
+
+                .info-item:hover {
+                    background-color: rgba(255, 255, 255, 0.03);
+                }
+
+                .info-item:last-child {
+                    border-bottom: none;
+                }
+
+            .accordion-button {
+                background-color: rgba(255, 255, 255, 0.05);
+                color: white;
+                font-weight: 500;
+            }
+
+                .accordion-button:not(.collapsed) {
+                    background-color: rgba(28, 200, 138, 0.1);
+                    color: var(--accent-color);
+                    box-shadow: none;
+                }
+
+                .accordion-button::after {
+                    filter: brightness(0.8);
+                }
+
+                .accordion-button:focus {
+                    box-shadow: none;
+                    border-color: rgba(28, 200, 138, 0.25);
+                }
+
+            .password-toggle {
+                color: rgba(255, 255, 255, 0.5);
+                transition: all 0.3s ease;
+            }
+
+                .password-toggle:hover {
+                    color: var(--accent-color);
+                }
+
+            .session-item {
                 background-color: rgba(255, 255, 255, 0.03);
+                border-left: 3px solid var(--accent-color);
             }
 
-            .info-item:last-child {
-                border-bottom: none;
-            }
-
-        .accordion-button {
-            background-color: rgba(255, 255, 255, 0.05);
-            color: white;
-            font-weight: 500;
-        }
-
-            .accordion-button:not(.collapsed) {
-                background-color: rgba(28, 200, 138, 0.1);
-                color: var(--accent-color);
-                box-shadow: none;
-            }
-
-            .accordion-button::after {
-                filter: brightness(0.8);
-            }
-
-            .accordion-button:focus {
-                box-shadow: none;
-                border-color: rgba(28, 200, 138, 0.25);
-            }
-
-        .password-toggle {
-            color: rgba(255, 255, 255, 0.5);
-            transition: all 0.3s ease;
-        }
-
-            .password-toggle:hover {
-                color: var(--accent-color);
-            }
-
-        .session-item {
-            background-color: rgba(255, 255, 255, 0.03);
-            border-left: 3px solid var(--accent-color);
-        }
-
-            .session-item.active {
-                border-left-color: var(--accent-color);
-            }
-
-        .notifications-container {
-            position: fixed;
-            top: 1rem;
-            right: 1rem;
-            z-index: 1100;
-            max-width: 350px;
-        }
-
-        .alert {
-            backdrop-filter: blur(10px);
-            border: none;
-        }
-
-        .alert-success {
-            background-color: rgba(25, 135, 84, 0.9);
-            color: white;
-        }
-
-        .alert-danger {
-            background-color: rgba(220, 53, 69, 0.9);
-            color: white;
-        }
-
-        .alert-warning {
-            background-color: rgba(255, 193, 7, 0.9);
-            color: #212529;
-        }
-
-        @@media (max-width: 768px) {
-            .auth-card {
-                padding: 1.5rem;
-            }
-
-            .nav-tabs .nav-link {
-                padding: 0.5rem;
-                font-size: 0.85rem;
-            }
+                .session-item.active {
+                    border-left-color: var(--accent-color);
+                }
 
             .notifications-container {
-                max-width: 100%;
-                left: 1rem;
+                position: fixed;
+                top: 1rem;
                 right: 1rem;
+                z-index: 1100;
+                max-width: 350px;
             }
-        }
-    </style>
-}
+
+            .alert {
+                backdrop-filter: blur(10px);
+                border: none;
+            }
+
+            .alert-success {
+                background-color: rgba(25, 135, 84, 0.9);
+                color: white;
+            }
+
+            .alert-danger {
+                background-color: rgba(220, 53, 69, 0.9);
+                color: white;
+            }
+
+            .alert-warning {
+                background-color: rgba(255, 193, 7, 0.9);
+                color: #212529;
+            }
+
+            @@media (max-width: 768px) {
+                .auth-card {
+                    padding: 1.5rem;
+                }
+
+                .nav-tabs .nav-link {
+                    padding: 0.5rem;
+                    font-size: 0.85rem;
+                }
+
+                .notifications-container {
+                    max-width: 100%;
+                    left: 1rem;
+                    right: 1rem;
+                }
+            }
+        </style>
+    }
 
 
     @section Scripts {

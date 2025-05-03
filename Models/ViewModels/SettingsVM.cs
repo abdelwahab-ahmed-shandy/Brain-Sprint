@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using Models.Enums;
 
 
 namespace Models.ViewModels
@@ -71,6 +72,41 @@ namespace Models.ViewModels
 
             [Display(Name = "Two-Factor Authentication")]
             public bool TwoFactorEnabled { get; set; }
+
+
+            // Instructor Specific Properties
+            [Display(Name = "Certifications")]
+            public string? Certifications { get; set; }
+
+            [Display(Name = "Years of Experience")]
+            public string? ExperienceYears { get; set; }
+
+            [Display(Name = "Average Rating")]
+            [Range(1, 5, ErrorMessage = "Rating must be between 1 and 5.")]
+            public decimal? InstructorRating { get; set; }
+
+            [Display(Name = "Total Students")]
+            public int TotalStudents { get; set; }
+
+            [Display(Name = "Verification Status")]
+            public bool IsVerified { get; set; }
+
+            // Student Specific Properties
+            [Display(Name = "Educational Level")]
+            public LevelType? StudentLevel { get; set; }
+
+            [Display(Name = "Enrolled Courses Count")]
+            public int EnrolledCoursesCount { get; set; }
+
+            [Display(Name = "Completed Courses")]
+            public int CompletedCoursesCount { get; set; }
+
+            [Display(Name = "Current Points")]
+            public long CurrentPoints { get; set; }
+
+            [Display(Name = "Badges Earned")]
+            public int BadgesCount { get; set; }
+
         }
 
         public class ManageSettings

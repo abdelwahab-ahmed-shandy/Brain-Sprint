@@ -171,7 +171,7 @@
                                             </a>
                                         </li>
                                     }
-                                    @if (User.IsInRole("Instructor"))
+                                    @if (User.IsInRole("Instructor") || (User.IsInRole("Admin")) || (User.IsInRole("SuperAdmin")))
                                     {
                                         <li>
                                             <a class="dropdown-item" asp-area="Instructor" asp-controller="Home" asp-action="Index">
