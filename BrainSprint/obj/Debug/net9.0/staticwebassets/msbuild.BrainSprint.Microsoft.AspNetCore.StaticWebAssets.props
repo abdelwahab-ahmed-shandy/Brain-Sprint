@@ -216,12 +216,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Assets\Identity\images\education-bg.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Assets\Identity\images\UserPhoto\59766ab9-6445-42e2-8730-94a37fa3b926_20250503121327_8c2919b7-06e5-4a65-8acd-3077aead20a6.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Assets\Identity\images\UserPhoto\52b58c3c-3dcc-4aa2-a56e-943f44fb3606_20250503203838_617b9664-5f91-4035-a447-17a932933fd5.png'))">
       <SourceType>Package</SourceType>
       <SourceId>BrainSprint</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/BrainSprint</BasePath>
-      <RelativePath>Assets/Identity/images/UserPhoto/59766ab9-6445-42e2-8730-94a37fa3b926_20250503121327_8c2919b7-06e5-4a65-8acd-3077aead20a6.png</RelativePath>
+      <RelativePath>Assets/Identity/images/UserPhoto/52b58c3c-3dcc-4aa2-a56e-943f44fb3606_20250503203838_617b9664-5f91-4035-a447-17a932933fd5.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -232,43 +232,7 @@
       <Integrity>sQb/ABatEbHomqLPwplz0ryaRSAv8F1Sfxnj5YemEd4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Assets\Identity\images\UserPhoto\59766ab9-6445-42e2-8730-94a37fa3b926_20250503121327_8c2919b7-06e5-4a65-8acd-3077aead20a6.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Assets\Identity\images\UserPhoto\a76abade-7336-4748-83f5-fd6839529ee3_20250503130425_5f41070e-0fb9-4c2e-86da-0f61c9f99aa3.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>BrainSprint</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/BrainSprint</BasePath>
-      <RelativePath>Assets/Identity/images/UserPhoto/a76abade-7336-4748-83f5-fd6839529ee3_20250503130425_5f41070e-0fb9-4c2e-86da-0f61c9f99aa3.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>jjltrz4lsk</Fingerprint>
-      <Integrity>sQb/ABatEbHomqLPwplz0ryaRSAv8F1Sfxnj5YemEd4=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Assets\Identity\images\UserPhoto\a76abade-7336-4748-83f5-fd6839529ee3_20250503130425_5f41070e-0fb9-4c2e-86da-0f61c9f99aa3.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Assets\Identity\images\UserPhoto\e462062c-301a-469b-968a-ca667740e45e_20250503114729_ef06889f-7aed-4c0e-b8dc-42096c118176.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>BrainSprint</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/BrainSprint</BasePath>
-      <RelativePath>Assets/Identity/images/UserPhoto/e462062c-301a-469b-968a-ca667740e45e_20250503114729_ef06889f-7aed-4c0e-b8dc-42096c118176.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>jjltrz4lsk</Fingerprint>
-      <Integrity>sQb/ABatEbHomqLPwplz0ryaRSAv8F1Sfxnj5YemEd4=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Assets\Identity\images\UserPhoto\e462062c-301a-469b-968a-ca667740e45e_20250503114729_ef06889f-7aed-4c0e-b8dc-42096c118176.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Assets\Identity\images\UserPhoto\52b58c3c-3dcc-4aa2-a56e-943f44fb3606_20250503203838_617b9664-5f91-4035-a447-17a932933fd5.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Assets\Identity\images\UserPhoto\logo.png'))">
       <SourceType>Package</SourceType>

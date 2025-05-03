@@ -12,9 +12,8 @@ namespace DataAccess.Repositories
     {
 
         // Reference to the database context (ApplicationDbContext)
-        private readonly ApplicationDbContext _dbContext;
-
         // DbSet object representing the data table for entity T
+        private readonly ApplicationDbContext _dbContext;
         public DbSet<T> DbSet { get; }
 
         /// <summary>
@@ -35,10 +34,12 @@ namespace DataAccess.Repositories
         /// <summary>
         /// Add a new record to the DbSet asynchronously
         /// </summary>
-        public async Task CreateAsync(T entity, CancellationToken cancellationToken = default)
+        public async Task<T> CreateAsync(T entity, CancellationToken cancellationToken = default)
         {
             if (entity == null) throw new ArgumentNullException(nameof(entity));
             await DbSet.AddAsync(entity, cancellationToken);
+
+            return entity;
         }
 
         /// <summary>
@@ -59,14 +60,15 @@ namespace DataAccess.Repositories
         /// Update an existing record in a DbSet
         /// Note: Updating does not require a direct save until SaveDBAsync() is called
         /// </summary>
-        public async Task<T> EditAsync(T entity, CancellationToken cancellationToken = default)
+        public Task<T> EditAsync(T entity, CancellationToken cancellationToken = default)
         {
             if (entity == null) throw new ArgumentNullException(nameof(entity));
+
             DbSet.Update(entity);
 
-            await _dbContext.SaveChangesAsync(cancellationToken);
+            //await _dbContext.SaveChangesAsync(cancellationToken);
 
-            return entity;
+            return Task.FromResult(entity);
         }
 
         #endregion
@@ -78,26 +80,22 @@ namespace DataAccess.Repositories
         /// <summary>
         /// Delete a specific record from the DbSet
         /// </summary>
-        public async Task<T> DeleteAsync(T entity, CancellationToken cancellationToken = default)
+        public Task<T> DeleteAsync(T entity, CancellationToken cancellationToken = default)
         {
             if (entity == null) throw new ArgumentNullException(nameof(entity));
             DbSet.Remove(entity);
-            await _dbContext.SaveChangesAsync(cancellationToken);
-
-            return entity;
+            return Task.FromResult(entity);
         }
 
 
         /// <summary>
         /// Delete a recordset in bulk from a DbSet
         /// </summary>
-        public async Task DeleteAllAsync(IEnumerable<T> entities, CancellationToken cancellationToken = default)
+        public Task DeleteAllAsync(IEnumerable<T> entities, CancellationToken cancellationToken = default)
         {
             if (entities == null) throw new ArgumentNullException(nameof(entities));
             DbSet.RemoveRange(entities);
-
-            await _dbContext.SaveChangesAsync(cancellationToken);
-
+            return Task.CompletedTask;
         }
 
         #endregion
@@ -109,7 +107,7 @@ namespace DataAccess.Repositories
         /// <summary>
         /// Save all changes made to the context to the database asynchronously
         /// </summary>
-        public async Task<int> SaveDBAsync(CancellationToken cancellationToken = default)
+        public async Task<int> SaveInDataBaseAsync(CancellationToken cancellationToken = default)
         {
             return await _dbContext.SaveChangesAsync(cancellationToken);
         }
@@ -123,8 +121,7 @@ namespace DataAccess.Repositories
         /// <summary>
         /// Retrieve a recordset based on an optional filter, with the ability to load relationships, and with or without tracing
         /// </summary>
-        public async Task<IEnumerable<T>> GetAsync(
-            Expression<Func<T, bool>>? filter = null,
+        public async Task<IEnumerable<T>> GetAsync(Expression<Func<T, bool>>? filter = null,
             IEnumerable<Expression<Func<T, object>>>? includes = null,
             bool tracked = true,
             CancellationToken cancellationToken = default)
@@ -167,6 +164,7 @@ namespace DataAccess.Repositories
         }
 
         #endregion
+
 
 
         #endregion
@@ -250,4 +248,5 @@ namespace DataAccess.Repositories
 
 
     }
+
 }

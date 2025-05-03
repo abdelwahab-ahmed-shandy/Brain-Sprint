@@ -9,8 +9,6 @@ namespace Models
 {
     public class Instructor : BaseModel
     {
-        public string? Certifications { get; set; }
-        public string? ExperienceYears { get; set; }
         public int? Rating { get; set; }
         public bool IsVerified { get; set; }
 

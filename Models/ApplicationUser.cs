@@ -40,6 +40,9 @@ namespace Models
         public string? BlockReason { get; set; }
 
 
+        public string? Certifications { get; set; }
+        public string? ExperienceYears { get; set; }
+
         public AccountStateType? AccountState { get; set; }
         public int CreatedBy { get; set; }
         public DateTime CreatedDateUtc { get; set; }

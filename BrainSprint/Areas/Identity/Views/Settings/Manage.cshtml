@@ -285,21 +285,16 @@
                                 <!-- Add this in the Settings Tab section, inside the form -->
                                 @if (User.IsInRole("Instructor"))
                                 {
-                                    <div class="instructor-fields mt-4 pt-3 border-top">
-                                        
-
                                         <div class="form-floating mb-3">
-                                                <input asp-for="Profile.Certifications" class="form-control" placeholder=" " />
+                                            <input asp-for="Profile.Certifications" class="form-control" placeholder=" " />
                                             <label asp-for="Profile.Certifications">Certifications</label>
                                             <span asp-validation-for="Profile.Certifications" class="text-danger small"></span>
                                         </div>
-
                                         <div class="form-floating mb-3">
                                             <input asp-for="Profile.ExperienceYears" class="form-control" placeholder=" " />
                                             <label asp-for="Profile.ExperienceYears">Years of Experience</label>
                                             <span asp-validation-for="Profile.ExperienceYears" class="text-danger small"></span>
                                         </div>
-                                    </div>
                                 }
 
                                 @* @if (User.IsInRole("Student")) *@

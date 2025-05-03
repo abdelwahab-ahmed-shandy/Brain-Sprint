@@ -43,6 +43,8 @@ namespace DataAccess.Migrations
                     IsBlocked = table.Column<bool>(type: "bit", nullable: false),
                     BlockedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     BlockReason = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: true),
+                    Certifications = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ExperienceYears = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     AccountState = table.Column<int>(type: "int", nullable: true),
                     CreatedBy = table.Column<int>(type: "int", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -261,8 +263,6 @@ namespace DataAccess.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Certifications = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ExperienceYears = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Rating = table.Column<int>(type: "int", nullable: true),
                     IsVerified = table.Column<bool>(type: "bit", nullable: false),
                     ApplicationUserId = table.Column<string>(type: "nvarchar(450)", nullable: true),

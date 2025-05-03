@@ -3,6 +3,7 @@ using DataAccess.Repositories.IRepositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
+using Models;
 using Models.ViewModels;
 using System.Linq.Expressions;
 
@@ -78,7 +79,9 @@ namespace BrainSprint.Areas.Identity.Controllers
                     TotalPoints = user.TotalPoints,
                     RegistrationDate = user.RegistrationDate,
                     LastLogin = user.LastLogin,
-                    TwoFactorEnabled = await _userManager.GetTwoFactorEnabledAsync(user)
+                    TwoFactorEnabled = await _userManager.GetTwoFactorEnabledAsync(user),
+                    Certifications = user.Certifications,
+                    ExperienceYears = user.ExperienceYears
                 },
                 Manage = new SettingsVM.ManageSettings(),
                 DeleteAccount = new SettingsVM.DeleteAccountSettings()
@@ -113,8 +116,7 @@ namespace BrainSprint.Areas.Identity.Controllers
 
                 if (instructor != null)
                 {
-                    settingsVM.Profile.Certifications = instructor.Certifications;
-                    settingsVM.Profile.ExperienceYears = instructor.ExperienceYears;
+
                     settingsVM.Profile.InstructorRating = instructor.Rating;
                     settingsVM.Profile.IsVerified = instructor.IsVerified;
                     settingsVM.Profile.TotalStudents = instructor.Courses?.Sum(c => c.EnrollmentCourses?.Count ?? 0) ?? 0;
@@ -150,9 +152,8 @@ namespace BrainSprint.Areas.Identity.Controllers
                 user.LastName = settingsVM.Profile.LastName;
                 user.Bio = settingsVM.Profile.Bio;
                 user.PhoneNumber = settingsVM.Profile.PhoneNumber;
-                //user.Instructor.Certifications = settingsVM.Profile.Certifications;
-                //user.Instructor.ExperienceYears = settingsVM.Profile.ExperienceYears;
-                //user.Level = settingsVM.Profile.Level;
+                user.Certifications = settingsVM.Profile.Certifications;
+                user.ExperienceYears = settingsVM.Profile.ExperienceYears;
 
                 if (settingsVM.Profile.ImageFile != null && settingsVM.Profile.ImageFile.Length > 0)
                 {
@@ -206,30 +207,47 @@ namespace BrainSprint.Areas.Identity.Controllers
                     user.ProfileImage = settingsVM.Profile.ProfileImage;
                 }
 
+
                 if (await _userManager.IsInRoleAsync(user, "Student"))
                 {
                     var student = await _studentRepository.GetOneAsync(s => s.ApplicationUserId == user.Id);
-                    if (student != null)
-                    {
-                        student.Level = settingsVM.Profile.StudentLevel;
-                        await _studentRepository.EditAsync(student);
 
-                        await _studentRepository.SaveDBAsync();
+                    if (student == null)
+                    {
+                        student = new Models.Student
+                        {
+                            ApplicationUserId = user.Id,
+                            Level = settingsVM.Profile.StudentLevel ?? LevelType.Beginner
+                        };
+                        await _studentRepository.CreateAsync(student);
                     }
+                    else if (settingsVM?.Profile?.StudentLevel != null)
+                    {
+                        student.Level = settingsVM.Profile.StudentLevel.Value;
+                        await _studentRepository.EditAsync(student);
+                    }
+                    await _studentRepository.SaveInDataBaseAsync();
                 }
+
                 else if (await _userManager.IsInRoleAsync(user, "Instructor"))
                 {
                     var instructor = await _instructorRepository.GetOneAsync(i => i.ApplicationUserId == user.Id);
-                    if (instructor != null)
+
+                    if (instructor == null)
                     {
-                        instructor.Certifications = settingsVM.Profile.Certifications;
-                        instructor.ExperienceYears = settingsVM.Profile.ExperienceYears;
-                        await _instructorRepository.EditAsync(instructor);
-
-                        await _instructorRepository.SaveDBAsync();
-
+                        instructor = new Models.Instructor
+                        {
+                            ApplicationUserId = user.Id,
+                        };
+                        await _instructorRepository.CreateAsync(instructor);
                     }
+                    else
+                    {
+                        await _instructorRepository.EditAsync(instructor);
+                    }
+                    await _instructorRepository.SaveInDataBaseAsync();
                 }
+
 
                 var result = await _userManager.UpdateAsync(user);
                 if (result.Succeeded)
@@ -256,41 +274,6 @@ namespace BrainSprint.Areas.Identity.Controllers
                 return View("Manage", settingsVM);
             }
         }
-
-        //private async Task<(bool Success, string FilePath, string ErrorMessage)> HandleProfileImageUpload(IFormFile imageFile, string userId)
-        //{
-        //    var allowedExtensions = new[] { ".jpg", ".jpeg", ".png" };
-        //    var fileExtension = Path.GetExtension(imageFile.FileName).ToLower();
-
-        //    if (!allowedExtensions.Contains(fileExtension))
-        //    {
-        //        return (false, null, "Invalid file type. Only JPG, JPEG, and PNG files are allowed.");
-        //    }
-
-        //    if (imageFile.Length > 2 * 1024 * 1024) // 2MB
-        //    {
-        //        return (false, null, "File size should be less than 2MB.");
-        //    }
-
-        //    try
-        //    {
-        //        var fileName = $"{userId}_{DateTime.UtcNow:yyyyMMddHHmmss}_{Guid.NewGuid()}{fileExtension}";
-        //        var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Assets", "Identity", "images", "UserPhoto", fileName);
-
-        //        using (var stream = new FileStream(filePath, FileMode.Create))
-        //        {
-        //            await imageFile.CopyToAsync(stream);
-        //        }
-
-        //        return (true, $"/Assets/Identity/images/UserPhoto/{fileName}", null);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        _logger.LogError(ex, "Error uploading profile image");
-        //        return (false, null, "An error occurred while uploading the image.");
-        //    }
-        //}
-
 
         #endregion
 

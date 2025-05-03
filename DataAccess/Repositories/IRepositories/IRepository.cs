@@ -8,6 +8,7 @@
     public interface IRepository<T>
     {
 
+
         #region Async CRUD Operations
 
 
@@ -16,8 +17,7 @@
         /// <summary>
         /// Create a new record of type T in the database asynchronously 
         /// </summary>
-        Task CreateAsync(T entity, CancellationToken cancellationToken = default);
-
+        Task<T> CreateAsync(T entity, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Create multiple records in the database asynchronously 
@@ -58,11 +58,13 @@
 
         #region Save Changes
 
+
         /// <summary>
         /// Save all changes made to the context to the database asynchronously
         /// </summary>
         /// <returns>Number of records affected by the save</returns>
-        Task<int> SaveDBAsync(CancellationToken cancellationToken = default);
+        Task<int> SaveInDataBaseAsync(CancellationToken cancellationToken = default);
+
 
         #endregion
 
@@ -98,7 +100,11 @@
         #endregion
 
 
+
+
+
         #endregion
+
 
 
         #region Sync Methods (Legacy Support)
@@ -152,6 +158,7 @@
             bool tracked = true);
 
         #endregion
+
 
 
     }

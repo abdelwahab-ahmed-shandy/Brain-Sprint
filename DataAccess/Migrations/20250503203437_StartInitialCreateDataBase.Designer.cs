@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250502013621_StartInitialCreateDataBase")]
+    [Migration("20250503203437_StartInitialCreateDataBase")]
     partial class StartInitialCreateDataBase
     {
         /// <inheritdoc />
@@ -219,6 +219,9 @@ namespace DataAccess.Migrations
                     b.Property<DateTime?>("BlockedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Certifications")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
@@ -235,6 +238,9 @@ namespace DataAccess.Migrations
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
+
+                    b.Property<string>("ExperienceYears")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(max)");
@@ -806,9 +812,6 @@ namespace DataAccess.Migrations
                     b.Property<string>("ApplicationUserId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("Certifications")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("CreatedBy")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -818,9 +821,6 @@ namespace DataAccess.Migrations
 
                     b.Property<int?>("CurrentState")
                         .HasColumnType("int");
-
-                    b.Property<string>("ExperienceYears")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsVerified")
                         .HasColumnType("bit");

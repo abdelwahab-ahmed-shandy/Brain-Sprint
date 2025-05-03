@@ -94,7 +94,10 @@
                 Level = 1,
                 TotalPoints = 0,
                 EmailConfirmed = false,
-                AccountState = AccountStateType.PendingActivation
+                AccountState = AccountStateType.PendingActivation,
+                Certifications = registerVM.Certifications,
+                ExperienceYears = registerVM.ExperienceYears,
+
             };
 
             var newUser = await _userManager.CreateAsync(applicationUser, registerVM.Password);
@@ -121,8 +124,6 @@
                             ApplicationUserId = applicationUser.Id,
                             IsVerified = false,
                             CurrentState = CurrentState.Active,
-                            Certifications = registerVM.Certifications,
-                            ExperienceYears = registerVM.ExperienceYears,
                         });
                     }
                     else
@@ -461,7 +462,9 @@
                 LastName = info.Principal.FindFirstValue(ClaimTypes.Surname) ?? "Unknown",
                 RegistrationDate = DateTime.UtcNow,
                 IsActive = true,
-                AccountState = AccountStateType.Active
+                AccountState = AccountStateType.Active,
+                Certifications = "Nono",
+                ExperienceYears = "0"
             };
 
             var createResult = await _userManager.CreateAsync(user);
@@ -492,8 +495,7 @@
                             ApplicationUserId = user.Id,
                             IsVerified = false,
                             CurrentState = CurrentState.Active,
-                            Certifications = "From Google Sign-In",
-                            ExperienceYears = "0"
+
                         });
                         break;
 
