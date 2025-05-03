@@ -1,0 +1,217 @@
+﻿<div class="main-content">
+    <div class="section">
+        <div class="section-header">
+            <h3 class="section-title">Courses Management</h3>
+            <a href="/Instructor/Home/Create" style="text-decoration:none; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer;">
+                <i class="fas fa-plus"></i> Add New Course
+            </a>
+        </div>
+
+        <div class="search-bar" style="margin-bottom: 20px; width: 100%;">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search courses...">
+            <select style="margin-left: 10px; padding: 5px; border-radius: 4px; border: 1px solid #ddd;">
+                <option>All Categories</option>
+                <option>Programming</option>
+                <option>Web Development</option>
+                <option>Databases</option>
+                <option>Artificial Intelligence</option>
+            </select>
+        </div>
+
+        <div class="courses-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;"></th>
+                        <th>Course Name</th>
+                        <th>Students</th>
+                        <th>Average</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="course-icon" style="background-color: #e3f2fd; color: #4a6fa5; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fab fa-python"></i>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="font-weight: 600;">Python Fundamentals</div>
+                            <div style="font-size: 12px; color: #777;">Python programming basics</div>
+                        </td>
+                        <td>142</td>
+                        <td>
+                            <div style="display: flex; align-items: center;">
+                                <div style="width: 60px; height: 6px; background-color: #e0e0e0; border-radius: 3px; margin-right: 10px;">
+                                    <div style="height: 100%; width: 89%; background: linear-gradient(to right, #4a6fa5, #4fc3f7); border-radius: 3px;"></div>
+                                </div>
+                                <span>89%</span>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="badge success">Active</span>
+                        </td>
+                        <td>
+                            <button style="background: none; border: none; color: #4a6fa5; cursor: pointer; margin-right: 10px;" title="Edit">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button style="background: none; border: none; color: #dc3545; cursor: pointer;" title="Delete">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="course-icon" style="background-color: #fff8e6; color: #ffc107; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fab fa-js"></i>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="font-weight: 600;">JavaScript Mastery</div>
+                            <div style="font-size: 12px; color: #777;">From beginner to advanced JS</div>
+                        </td>
+                        <td>98</td>
+                        <td>
+                            <div style="display: flex; align-items: center;">
+                                <div style="width: 60px; height: 6px; background-color: #e0e0e0; border-radius: 3px; margin-right: 10px;">
+                                    <div style="height: 100%; width: 85%; background: linear-gradient(to right, #4a6fa5, #4fc3f7); border-radius: 3px;"></div>
+                                </div>
+                                <span>85%</span>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="badge success">Active</span>
+                        </td>
+                        <td>
+                            <button style="background: none; border: none; color: #4a6fa5; cursor: pointer; margin-right: 10px;" title="Edit">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button style="background: none; border: none; color: #dc3545; cursor: pointer;" title="Delete">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="course-icon" style="background-color: #e6f7ee; color: #28a745; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-database"></i>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="font-weight: 600;">SQL for Beginners</div>
+                            <div style="font-size: 12px; color: #777;">Database fundamentals</div>
+                        </td>
+                        <td>76</td>
+                        <td>
+                            <div style="display: flex; align-items: center;">
+                                <div style="width: 60px; height: 6px; background-color: #e0e0e0; border-radius: 3px; margin-right: 10px;">
+                                    <div style="height: 100%; width: 82%; background: linear-gradient(to right, #4a6fa5, #4fc3f7); border-radius: 3px;"></div>
+                                </div>
+                                <span>82%</span>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="badge success">Active</span>
+                        </td>
+                        <td>
+                            <button style="background: none; border: none; color: #4a6fa5; cursor: pointer; margin-right: 10px;" title="Edit">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button style="background: none; border: none; color: #dc3545; cursor: pointer;" title="Delete">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="course-icon" style="background-color: #fce8e8; color: #dc3545; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="font-weight: 600;">Data Structures</div>
+                            <div style="font-size: 12px; color: #777;">Algorithms and data structures</div>
+                        </td>
+                        <td>54</td>
+                        <td>
+                            <div style="display: flex; align-items: center;">
+                                <div style="width: 60px; height: 6px; background-color: #e0e0e0; border-radius: 3px; margin-right: 10px;">
+                                    <div style="height: 100%; width: 65%; background: linear-gradient(to right, #4a6fa5, #4fc3f7); border-radius: 3px;"></div>
+                                </div>
+                                <span>65%</span>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="badge warning">In Development</span>
+                        </td>
+                        <td>
+                            <button style="background: none; border: none; color: #4a6fa5; cursor: pointer; margin-right: 10px;" title="Edit">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button style="background: none; border: none; color: #dc3545; cursor: pointer;" title="Delete">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="course-icon" style="background-color: #e3f2fd; color: #4fc3f7; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fab fa-react"></i>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="font-weight: 600;">React Advanced</div>
+                            <div style="font-size: 12px; color: #777;">Building advanced React apps</div>
+                        </td>
+                        <td>87</td>
+                        <td>
+                            <div style="display: flex; align-items: center;">
+                                <div style="width: 60px; height: 6px; background-color: #e0e0e0; border-radius: 3px; margin-right: 10px;">
+                                    <div style="height: 100%; width: 90%; background: linear-gradient(to right, #4a6fa5, #4fc3f7); border-radius: 3px;"></div>
+                                </div>
+                                <span>90%</span>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="badge success">Active</span>
+                        </td>
+                        <td>
+                            <button style="background: none; border: none; color: #4a6fa5; cursor: pointer; margin-right: 10px;" title="Edit">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button style="background: none; border: none; color: #dc3545; cursor: pointer;" title="Delete">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+            <div style="font-size: 14px; color: #777;">
+                Showing 1 to 5 of 12 courses
+            </div>
+            <div style="display: flex;">
+                <button style="background: #f8f9fa; border: 1px solid #ddd; padding: 5px 10px; border-radius: 4px; margin-right: 5px; cursor: pointer;">
+                    Previous
+                </button>
+                <button style="background: #4a6fa5; color: white; border: none; padding: 5px 10px; border-radius: 4px; margin-right: 5px; cursor: pointer;">
+                    1
+                </button>
+                <button style="background: #f8f9fa; border: 1px solid #ddd; padding: 5px 10px; border-radius: 4px; margin-right: 5px; cursor: pointer;">
+                    2
+                </button>
+                <button style="background: #f8f9fa; border: 1px solid #ddd; padding: 5px 10px; border-radius: 4px; margin-right: 5px; cursor: pointer;">
+                    3
+                </button>
+                <button style="background: #f8f9fa; border: 1px solid #ddd; padding: 5px 10px; border-radius: 4px; cursor: pointer;">
+                    Next
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

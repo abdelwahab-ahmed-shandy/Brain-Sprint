@@ -728,8 +728,6 @@ C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\sg7v3os
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\3lji2oxwsm-9vr69e8ynj.gz
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\g6bodlcvxq-87fc7y1x7t.gz
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\hs9f672u14-mlv21k5csn.gz
-C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\1cqd7pe8yl-sp53c8ikm6.gz
-C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\q0lfynpajj-sp53c8ikm6.gz
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\staticwebassets.build.endpoints.json
@@ -746,3 +744,5 @@ C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\refint\BrainSprint
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\BrainSprint.pdb
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\BrainSprint.genruntimeconfig.cache
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\ref\BrainSprint.dll
+C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\1cqd7pe8yl-fvz3fv8s7p.gz
+C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\q0lfynpajj-fvz3fv8s7p.gz

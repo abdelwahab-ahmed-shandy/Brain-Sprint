@@ -1,0 +1,247 @@
+﻿<div class="main-content">
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <h1>Course Reviews</h1>
+            <div class="user-menu">
+                <div class="user-info">
+                    <div class="user-name">
+                        Bradlin Riderum
+                        <div class="dropdown" onclick="toggleDropdown(this)">
+                            <button class="dropbtn"><i class="fas fa-chevron-down"></i></button>
+                            <div class="dropdown-content">
+                                <a href="#"><i class="fas fa-cog"></i>Settings</a>
+                                <a href="#" class="logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-role">Senior Instructor</div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Rating Summary -->
+        <div class="rating-summary">
+            <div class="row align-items-center">
+                <div class="col-md-3 text-center">
+                    <div class="average-rating">4.8</div>
+                    <div class="stars-large">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="text-muted">Based on 124 reviews</div>
+                </div>
+                <div class="col-md-9">
+                    <div class="d-flex align-items-center mb-2">
+                        <div class="me-3" style="width: 40px;">5 <i class="fas fa-star text-warning"></i></div>
+                        <div class="flex-grow-1 me-3">
+                            <div class="rating-progress">
+                                <div class="progress-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="text-muted">105</div>
+                    </div>
+                    <div class="d-flex align-items-center mb-2">
+                        <div class="me-3" style="width: 40px;">4 <i class="fas fa-star text-warning"></i></div>
+                        <div class="flex-grow-1 me-3">
+                            <div class="rating-progress">
+                                <div class="progress-bar" style="width: 12%"></div>
+                            </div>
+                        </div>
+                        <div class="text-muted">15</div>
+                    </div>
+                    <div class="d-flex align-items-center mb-2">
+                        <div class="me-3" style="width: 40px;">3 <i class="fas fa-star text-warning"></i></div>
+                        <div class="flex-grow-1 me-3">
+                            <div class="rating-progress">
+                                <div class="progress-bar" style="width: 2%"></div>
+                            </div>
+                        </div>
+                        <div class="text-muted">3</div>
+                    </div>
+                    <div class="d-flex align-items-center mb-2">
+                        <div class="me-3" style="width: 40px;">2 <i class="fas fa-star text-warning"></i></div>
+                        <div class="flex-grow-1 me-3">
+                            <div class="rating-progress">
+                                <div class="progress-bar" style="width: 1%"></div>
+                            </div>
+                        </div>
+                        <div class="text-muted">1</div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="me-3" style="width: 40px;">1 <i class="fas fa-star text-warning"></i></div>
+                        <div class="flex-grow-1 me-3">
+                            <div class="rating-progress">
+                                <div class="progress-bar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="text-muted">0</div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="filter-controls">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label class="form-label">Filter by Course</label>
+                    <select class="form-select">
+                        <option>All Courses</option>
+                        <option>Web Development</option>
+                        <option>Data Science</option>
+                        <option>Artificial Intelligence</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Filter by Rating</label>
+                    <select class="form-select">
+                        <option>All Ratings</option>
+                        <option>5 Stars</option>
+                        <option>4 Stars</option>
+                        <option>3 Stars</option>
+                        <option>2 Stars</option>
+                        <option>1 Star</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Sort By</label>
+                    <select class="form-select">
+                        <option>Newest First</option>
+                        <option>Oldest First</option>
+                        <option>Highest Rated</option>
+                        <option>Lowest Rated</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reviews Container -->
+        <div class="reviews-container">
+            <h4 class="mb-4">Recent Reviews</h4>
+
+            <!-- Review Card 1 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">AM</div>
+                        <div>
+                            <div class="reviewer-name">Ahmed Mohamed</div>
+                            <div class="review-date">March 15, 2023</div>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <h6>Web Development Course</h6>
+                    <p>This course completely transformed my understanding of modern web development. The instructor's teaching style is engaging and the projects were challenging but rewarding. I went from beginner to building full-stack applications in just 3 months!</p>
+                </div>
+            </div>
+
+            <!-- Review Card 2 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">SK</div>
+                        <div>
+                            <div class="reviewer-name">Sarah Khalil</div>
+                            <div class="review-date">February 28, 2023</div>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <h6>Data Science Fundamentals</h6>
+                    <p>Excellent content and well-structured curriculum. The real-world datasets and case studies made the learning practical. I would suggest adding more content about deploying models in production environments.</p>
+                </div>
+            </div>
+
+            <!-- Review Card 3 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">MA</div>
+                        <div>
+                            <div class="reviewer-name">Mohammed Ali</div>
+                            <div class="review-date">February 10, 2023</div>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <h6>Mobile App Development</h6>
+                    <p>Great introduction to Flutter and Dart. The instructor explains complex concepts in simple terms. The course could benefit from more advanced topics like state management solutions and integration with backend services.</p>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <nav aria-label="Reviews pagination" class="mt-4">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<style>
+    function toggleDropdown(element) {
+        element .classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+        if (!event.target.closest('.dropdown'))
+
+    {
+        document .querySelectorAll('.dropdown').forEach(function(drop) {
+                drop.classList.remove('show');
+              });
+    }
+
+    }
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+                    const bars = document.querySelectorAll('.bar-fill');
+                    bars.forEach(bar => {
+                        const targetHeight = bar.style.height;
+                        bar.style.height = '0%';
+                        setTimeout(() => {
+                            bar.style.height = targetHeight;
+                        }, 100);
+                    });
+                });
+</style>
