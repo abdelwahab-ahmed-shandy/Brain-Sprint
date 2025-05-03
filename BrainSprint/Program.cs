@@ -56,12 +56,14 @@ namespace BrainSprint
 
 
             #region Register repository services with Dependency Injection (Scoped Lifetime) 
+
             // This ensures that a new instance is created per request, improving efficiency 
             // while maintaining consistency within a request's lifecycle.
+
             builder.Services.AddHttpContextAccessor();
 
             builder.Services.AddScoped<IApplicationUserRepository, ApplicationUserRepository>();
-            builder.Services.AddScoped<IAdminRepository, IAdminRepository>();
+            builder.Services.AddScoped<IAdminRepository, AdminRepository>();
             builder.Services.AddScoped<IInstructorRepository, InstructorRepository>();
             builder.Services.AddScoped<IStudentRepository, StudentRepository>();
             //builder.Services.AddScoped<IUserSessionService, UserSessionService>();

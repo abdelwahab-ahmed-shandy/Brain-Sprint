@@ -53,16 +53,7 @@ namespace Models.ViewModels
 
         [RequiredIf("UserType", UserType.Instructor, ErrorMessage = "Experience is required for instructors")]
         public string? ExperienceYears { get; set; }
-
-        // Student Specific Fields
-        [RequiredIf("UserType", UserType.Student, ErrorMessage = "Level is required for students")]
-        public LevelType? Level { get; set; }
-
-        // Common File Upload
-        public IFormFile? ProfileImage { get; set; }
     }
-
-
 
     // Custom validation attribute for conditional requirements
     public class RequiredIfAttribute : ValidationAttribute

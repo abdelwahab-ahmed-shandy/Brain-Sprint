@@ -31,25 +31,32 @@
         }
 
 
+
         #region Register
+
 
         [HttpGet]
         public async Task<IActionResult> Register()
         {
-            if (_roleManager.Roles.IsNullOrEmpty())
-            {
-                await _roleManager.CreateAsync(role: new IdentityRole("SuperAdmin"));
-                await _roleManager.CreateAsync(role: new IdentityRole("Admin"));
-                await _roleManager.CreateAsync(role: new IdentityRole("Student"));
-                await _roleManager.CreateAsync(role: new IdentityRole("Instructor"));
 
-            }
+
+            if (!await _roleManager.RoleExistsAsync("SuperAdmin"))
+                await _roleManager.CreateAsync(new IdentityRole("SuperAdmin"));
+
+            if (!await _roleManager.RoleExistsAsync("Admin"))
+                await _roleManager.CreateAsync(new IdentityRole("Admin"));
+
+            if (!await _roleManager.RoleExistsAsync("Student"))
+                await _roleManager.CreateAsync(new IdentityRole("Student"));
+
+            if (!await _roleManager.RoleExistsAsync("Instructor"))
+                await _roleManager.CreateAsync(new IdentityRole("Instructor"));
+
 
             if (User.Identity?.IsAuthenticated == true)
             {
                 TempData["notification"] = "Your account has been created! Please check your email to confirm the account before logging in";
                 TempData["MessageType"] = "Information";
-
                 return RedirectToAction("Index", "Home", new { area = "Customer" });
             }
             return View(new RegisterVM());
@@ -61,7 +68,6 @@
         {
             returnUrl ??= Url.Content("~/");
 
-            // التحقق من صحة البيانات الإضافية
             if (registerVM.UserType == UserType.Instructor)
             {
                 if (string.IsNullOrWhiteSpace(registerVM.Certifications))
@@ -97,7 +103,6 @@
             {
                 string userRole = Enum.GetName(typeof(UserType), registerVM.UserType) ?? "Student";
 
-                // التحقق من وجود الدور
                 if (!await _roleManager.RoleExistsAsync(userRole))
                 {
                     await _userManager.DeleteAsync(applicationUser);
@@ -125,7 +130,7 @@
                         await _studentRepository.CreateAsync(new Models.Student
                         {
                             ApplicationUserId = applicationUser.Id,
-                            Level = registerVM.Level,
+                            Level = LevelType.Beginner,
                             CurrentState = CurrentState.Active
                         });
                     }
@@ -173,6 +178,7 @@
         #endregion
 
 
+
         #region LogOut
 
         public async Task<IActionResult> Logout()
@@ -183,6 +189,7 @@
         }
 
         #endregion
+
 
 
         #region Login
@@ -230,8 +237,8 @@
 
                     var roles = await _userManager.GetRolesAsync(user);
 
-                    if (await _userManager.IsInRoleAsync(user, "Admin") ||
-                        await _userManager.IsInRoleAsync(user, "SuperAdmin"))
+                    if (await _userManager.IsInRoleAsync(user, "SuperAdmin") ||
+                        await _userManager.IsInRoleAsync(user, "Admin"))
                     {
                         return RedirectToAction("Index", "Home", new { area = "Admin" });
                     }
@@ -247,6 +254,7 @@
             return View(loginVM);
         }
         #endregion
+
 
 
         #region Forget Password
@@ -357,26 +365,25 @@
 
 
 
-
-
-
         #region External Login
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult ExternalLogin(string provider, string returnUrl = null, string userType = "Customer")
+        public IActionResult ExternalLogin(string provider, string returnUrl = null, UserType userType = UserType.Student)
         {
             var redirectUrl = Url.Action(nameof(ExternalLoginCallback), "Account", new { ReturnUrl = returnUrl });
+
             var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
 
-            // تخزين نوع المستخدم في AuthenticationProperties
-            properties.Parameters.Add("userType", userType);
+            //properties.Parameters.Add("userType", userType);
+
+            properties.Items["userType"] = ((int)userType).ToString();
 
             return Challenge(properties, provider);
         }
 
         [HttpGet]
-        public async Task<IActionResult> ExternalLoginCallback(string returnUrl = null, string remoteError = null)
+        public async Task<IActionResult> ExternalLoginCallback(string returnUrl = null, string remoteError = null, string userType = "0")
         {
             returnUrl ??= Url.Content("~/");
 
@@ -395,11 +402,27 @@
                 return RedirectToAction(nameof(Login));
             }
 
-            // استرجاع نوع المستخدم من AuthenticationProperties
-            var userType = info.AuthenticationProperties?.GetParameter<string>("userType") ?? "Customer";
+
+            var userTypeValue = Request.Query["userType"].FirstOrDefault()
+                             ?? info.AuthenticationProperties?.Items["userType"]
+                             ?? userType;
+
+
+            UserType parsedUserType;
+            if (!Enum.TryParse(userTypeValue, out parsedUserType) &&
+                !int.TryParse(userTypeValue, out int numericValue))
+            {
+                parsedUserType = UserType.Student;
+                _logger.LogWarning($"Invalid userType value: {userTypeValue}, defaulting to Student");
+            }
+            else if (int.TryParse(userTypeValue, out numericValue))
+            {
+                parsedUserType = (UserType)numericValue;
+            }
+
+            string roleName = parsedUserType.ToString();
 
             var email = info.Principal.FindFirstValue(ClaimTypes.Email);
-
             if (email == null)
             {
                 TempData["notification"] = "Email not retrieved from Google account.";
@@ -414,6 +437,13 @@
                 var addLoginResult = await _userManager.AddLoginAsync(user, info);
                 if (addLoginResult.Succeeded)
                 {
+                    var currentRoles = await _userManager.GetRolesAsync(user);
+                    if (!currentRoles.Contains(roleName))
+                    {
+                        await _userManager.RemoveFromRolesAsync(user, currentRoles);
+                        await _userManager.AddToRoleAsync(user, roleName);
+                    }
+
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     TempData["notification"] = "Google account linked and login successful.";
                     TempData["MessageType"] = "success";
@@ -422,14 +452,13 @@
                 return HandleErrors(addLoginResult.Errors, "An error occurred while linking the Google account.");
             }
 
-            // إنشاء مستخدم جديد
             user = new ApplicationUser
             {
                 UserName = email,
                 Email = email,
                 EmailConfirmed = true,
-                FirstName = info.Principal.FindFirstValue(ClaimTypes.GivenName),
-                LastName = info.Principal.FindFirstValue(ClaimTypes.Surname),
+                FirstName = info.Principal.FindFirstValue(ClaimTypes.GivenName) ?? "User",
+                LastName = info.Principal.FindFirstValue(ClaimTypes.Surname) ?? "Unknown",
                 RegistrationDate = DateTime.UtcNow,
                 IsActive = true,
                 AccountState = AccountStateType.Active
@@ -441,41 +470,56 @@
                 return HandleErrors(createResult.Errors, "Account creation failed.");
             }
 
-            // إضافة الدور المناسب
-            await _userManager.AddToRoleAsync(user, userType);
+            if (!await _roleManager.RoleExistsAsync(roleName))
+            {
+                await _roleManager.CreateAsync(new IdentityRole(roleName));
+                _logger.LogInformation($"Created new role: {roleName}");
+            }
 
-            // إنشاء السجل المناسب في جدول Instructors أو Students
+            var addToRoleResult = await _userManager.AddToRoleAsync(user, roleName);
+            if (!addToRoleResult.Succeeded)
+            {
+                _logger.LogError($"Failed to add user to role: {string.Join(", ", addToRoleResult.Errors)}");
+            }
+
             try
             {
-                if (userType == "Instructor")
+                switch (parsedUserType)
                 {
-                    await _instructorRepository.CreateAsync(new Models.Instructor() // تأكيد استخدام النوع الصحيح
-                    {
-                        ApplicationUserId = user.Id,
-                        IsVerified = false,
-                        CurrentState = CurrentState.Active
-                    });
-                }
-                else
-                {
-                    await _studentRepository.CreateAsync(new Models.Student() // تأكيد استخدام النوع الصحيح
-                    {
-                        ApplicationUserId = user.Id,
-                        CurrentState = CurrentState.Active
-                    });
+                    case UserType.Instructor:
+                        await _instructorRepository.CreateAsync(new Models.Instructor()
+                        {
+                            ApplicationUserId = user.Id,
+                            IsVerified = false,
+                            CurrentState = CurrentState.Active,
+                            Certifications = "From Google Sign-In",
+                            ExperienceYears = "0"
+                        });
+                        break;
+
+                    case UserType.Student:
+                    default:
+                        await _studentRepository.CreateAsync(new Models.Student()
+                        {
+                            ApplicationUserId = user.Id,
+                            CurrentState = CurrentState.Active,
+                            Level = LevelType.Beginner
+                        });
+                        break;
                 }
 
                 await _userManager.AddLoginAsync(user, info);
                 await _signInManager.SignInAsync(user, isPersistent: false);
 
-                TempData["notification"] = "Account created and successful sign-in via Google.";
+                TempData["notification"] = "Account created and successful sign in via Google.";
                 TempData["MessageType"] = "success";
                 return LocalRedirect(returnUrl);
             }
             catch (Exception ex)
             {
                 await _userManager.DeleteAsync(user);
-                TempData["notification"] = $"Error creating user profile: {ex.Message}";
+                _logger.LogError(ex, "Error during external login registration");
+                TempData["notification"] = "Error creating user profile. Please try again.";
                 TempData["MessageType"] = "error";
                 return RedirectToAction(nameof(Login));
             }
@@ -493,6 +537,7 @@
         }
 
         #endregion
+
 
 
         #region ConfirmEmail (Beginning of the email confirmation section )

@@ -116,23 +116,6 @@
                         </div>
                     </div>
 
-                    <!-- Student Specific Fields -->
-                    <div id="studentSpecificFields" style="display: none;">
-                        <div class="form-floating mb-3">
-                            <select asp-for="Level" class="form-control" required>
-                                <option value="">-- Select Education Level --</option>
-                                <option value="Primary">Primary School</option>
-                                <option value="Secondary">Secondary School</option>
-                                <option value="HighSchool">High School</option>
-                                <option value="Undergraduate">Undergraduate</option>
-                                <option value="Graduate">Graduate</option>
-                                <option value="Professional">Professional</option>
-                            </select>
-                            <label asp-for="Level" class="text-dark">Education Level</label>
-                            <span asp-validation-for="Level" class="text-danger small"></span>
-                        </div>
-                    </div>
-
                     <!-- Password -->
                     <div class="form-floating mb-3 position-relative">
                         <input asp-for="Password" type="password" class="form-control" id="passwordField" placeholder=" " required />
@@ -186,12 +169,14 @@
                     <form asp-area="Identity" asp-action="ExternalLogin" asp-controller="Account" method="post">
                         <input type="hidden" name="provider" value="Google" />
                         <input type="hidden" name="returnUrl" value="@Context.Request.Path" />
-                        <input type="hidden" name="userType" id="externalUserType" value="" />
+                        <input type="hidden" name="userType" id="externalUserType" value="Student" />
                         <button type="submit" class="btn btn-outline-light btn-lg py-3 w-100">
                             <i class="bi bi-google me-2"></i> Register with Google
                         </button>
                     </form>
                 </div>
+
+
             </div>
         </div>
     </div>
@@ -307,123 +292,163 @@
     }
 
     <script>
-        $(document).ready(function () {
-            // Role selection
+
+
+                $(document).ready(function () {
+            // Cache DOM elements
+            const $roleCards = $('.role-card');
+            const $instructorFields = $('#instructorSpecificFields');
+            const $studentFields = $('#studentSpecificFields');
+            const $roleSelection = $('#roleSelection');
+            const $registrationForm = $('#registrationForm');
+            const $userTypeInput = $('#userTypeInput');
+            const $externalUserType = $('#externalUserType');
+            const $roleTitle = $('#roleTitle');
+            const $passwordField = $('#passwordField');
+            const $passwordStrength = $('#passwordStrength');
+            const $passwordHelp = $('#passwordHelp');
+            const $registerForm = $('#registerForm');
+
+            // Initialize elements
+            $instructorFields.hide();
+            $studentFields.hide();
+
+            // Role selection handler
             $('.select-role').click(function(e) {
                 e.preventDefault();
                 const role = $(this).data('role');
-                $('#userTypeInput').val(role);
-                $('#externalUserType').val(role);
-                $('#roleTitle').text(role === 'Student' ? 'Student Registration' : 'Instructor Registration');
 
-                // Show/hide specific fields
+                // Update form values
+                $userTypeInput.val(role);
+                $externalUserType.val(role);
+                $roleTitle.text(role === 'Student' ? 'Student Registration' : 'Instructor Registration');
+
+                // Toggle specific fields
                 if (role === 'Instructor') {
-                    $('#instructorSpecificFields').show();
-                    $('#studentSpecificFields').hide();
+                    $instructorFields.show();
+                    $studentFields.hide();
                 } else {
-                    $('#instructorSpecificFields').hide();
-                    $('#studentSpecificFields').show();
+                    $instructorFields.hide();
+                    $studentFields.show();
                 }
 
-                // Visual feedback
-                $('.role-card').removeClass('selected');
+                // Update UI feedback
+                $roleCards.removeClass('selected');
                 $(this).closest('.role-card').addClass('selected');
 
-                // Switch to form view
-                $('#roleSelection').hide();
-                $('#registrationForm').show();
+                // Switch views
+                $roleSelection.hide();
+                $registrationForm.show();
             });
 
-            // Back button
+            // Back button handler
             $('#backToRoleSelection').click(function(e) {
                 e.preventDefault();
-                $('#registrationForm').hide();
-                $('#roleSelection').show();
-                $('.role-card').removeClass('selected');
+                $registrationForm.hide();
+                $roleSelection.show();
+                $roleCards.removeClass('selected');
             });
 
-            // Password toggle
+            // Password toggle functionality
             $('.password-toggle').click(function() {
-                const input = $(this).siblings('input');
-                const icon = $(this).find('i');
+                const $input = $(this).siblings('input');
+                const $icon = $(this).find('i');
 
-                if (input.attr('type') === 'password') {
-                    input.attr('type', 'text');
-                    icon.removeClass('bi-eye-fill').addClass('bi-eye-slash-fill');
-                } else {
-                    input.attr('type', 'password');
-                    icon.removeClass('bi-eye-slash-fill').addClass('bi-eye-fill');
-                }
+                $input.attr('type', function(i, type) {
+                    return type === 'password' ? 'text' : 'password';
+                });
+
+                $icon.toggleClass('bi-eye-fill bi-eye-slash-fill');
             });
 
-            // Password strength
-            $('#passwordField').on('input', function() {
+            // Password strength meter
+            $passwordField.on('input', function() {
                 const password = $(this).val();
-                const strengthBar = $('#passwordStrength');
-                const helpText = $('#passwordHelp');
 
-                // Reset
-                strengthBar.removeClass('progress-bar-weak progress-bar-medium progress-bar-strong')
-                          .css('width', '0%');
+                // Reset meter
+                $passwordStrength
+                    .removeClass('progress-bar-weak progress-bar-medium progress-bar-strong')
+                    .css('width', '0%');
+                $passwordHelp.text('').removeClass();
 
-                if (!password) {
-                    helpText.text('').removeClass();
-                    return;
-                }
+                if (!password) return;
 
-                // Strength calculation
+                // Calculate strength
                 let strength = 0;
-                if (password.length >= 6) strength += 1;
-                if (password.length >= 8) strength += 1;
-                if (/[A-Z]/.test(password)) strength += 1;
-                if (/[0-9]/.test(password)) strength += 1;
-                if (/[^A-Za-z0-9]/.test(password)) strength += 1;
+                const hasMinLength = password.length >= 8;
+                const hasUpperCase = /[A-Z]/.test(password);
+                const hasNumber = /[0-9]/.test(password);
+                const hasSpecialChar = /[^A-Za-z0-9]/.test(password);
 
-                // Update UI
-                if (strength <= 2) {
-                    strengthBar.css('width', '33%').addClass('progress-bar-weak');
-                    helpText.text('Weak').removeClass().addClass('text-danger');
-                } else if (strength <= 4) {
-                    strengthBar.css('width', '66%').addClass('progress-bar-medium');
-                    helpText.text('Medium').removeClass().addClass('text-warning');
-                } else {
-                    strengthBar.css('width', '100%').addClass('progress-bar-strong');
-                    helpText.text('Strong').removeClass().addClass('text-success');
-                }
+                if (hasMinLength) strength++;
+                if (hasUpperCase) strength++;
+                if (hasNumber) strength++;
+                if (hasSpecialChar) strength++;
+
+                // Update UI based on strength
+                const strengthClasses = [
+                    { class: 'progress-bar-weak', text: 'Weak', color: 'text-danger' },
+                    { class: 'progress-bar-weak', text: 'Weak', color: 'text-danger' },
+                    { class: 'progress-bar-medium', text: 'Medium', color: 'text-warning' },
+                    { class: 'progress-bar-strong', text: 'Strong', color: 'text-success' },
+                    { class: 'progress-bar-strong', text: 'Very Strong', color: 'text-success' }
+                ];
+
+                const currentStrength = strengthClasses[strength];
+                const width = (strength / 4) * 100;
+
+                $passwordStrength
+                    .css('width', width + '%')
+                    .addClass(currentStrength.class);
+
+                $passwordHelp
+                    .text(currentStrength.text)
+                    .addClass(currentStrength.color);
             });
 
             // Form validation
-            (function() {
-                'use strict';
-
-                const form = document.getElementById('registerForm');
-                const password = document.getElementById('passwordField');
-                const confirmPassword = document.querySelector('input[name="ConfirmPassword"]');
+            if ($registerForm.length) {
+                const form = $registerForm[0];
+                const password = $passwordField[0];
+                const confirmPassword = form.querySelector('input[name="ConfirmPassword"]');
 
                 // Confirm password validation
-                confirmPassword.addEventListener('input', function() {
-                    if (confirmPassword.value !== password.value) {
-                        confirmPassword.setCustomValidity("Passwords don't match");
-                    } else {
-                        confirmPassword.setCustomValidity("");
-                    }
-                });
+                if (confirmPassword) {
+                    confirmPassword.addEventListener('input', function() {
+                        this.setCustomValidity(
+                            this.value !== password.value ? "Passwords don't match" : ""
+                        );
+                    });
+                }
 
+                // Form submission handler
                 form.addEventListener('submit', function(event) {
                     if (!form.checkValidity()) {
                         event.preventDefault();
                         event.stopPropagation();
                     } else {
-                        // Show loading state
                         const submitBtn = form.querySelector('button[type="submit"]');
-                        submitBtn.querySelector('.submit-text').classList.add('d-none');
-                        submitBtn.querySelector('.spinner-border').classList.remove('d-none');
-                        submitBtn.disabled = true;
-                    }
+                        if (submitBtn) {
+                            const submitText = submitBtn.querySelector('.submit-text');
+                            const spinner = submitBtn.querySelector('.spinner-border');
 
+                            if (submitText) submitText.classList.add('d-none');
+                            if (spinner) spinner.classList.remove('d-none');
+                            submitBtn.disabled = true;
+                        }
+                    }
                     form.classList.add('was-validated');
                 }, false);
-            })();
+            }
+
+            // Error handling
+            try {
+                // Any additional initialization code
+            } catch (error) {
+                console.error('Initialization error:', error);
+            }
         });
+
+
     </script>
 }

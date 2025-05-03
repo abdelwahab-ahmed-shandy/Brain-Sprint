@@ -1,19 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|c:\\users\\fm\\desktop\\brain-sprint\\brainsprint\\areas\\identity\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|solutionrelative:areas\\identity\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE4FD232-847D-4620-8F9A-16BDF37770D5}|..\\Models\\Models.csproj|c:\\users\\fm\\desktop\\brain-sprint\\models\\viewmodels\\registervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|c:\\users\\fm\\desktop\\brain-sprint\\brainsprint\\areas\\identity\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|solutionrelative:areas\\identity\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -21,50 +9,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1416,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RegisterVM.cs",
-              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\ViewModels\\RegisterVM.cs",
-              "RelativeDocumentMoniker": "..\\Models\\ViewModels\\RegisterVM.cs",
-              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\ViewModels\\RegisterVM.cs",
-              "RelativeToolTip": "..\\Models\\ViewModels\\RegisterVM.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAswC8AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T20:30:23.544Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Identity\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Views\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Identity\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "Areas\\Identity\\Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKwBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-02T20:32:11.793Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Identity\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Identity\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Areas\\Identity\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T20:35:48.047Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
