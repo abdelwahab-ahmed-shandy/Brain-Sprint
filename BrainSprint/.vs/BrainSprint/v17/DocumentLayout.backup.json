@@ -3,27 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|c:\\users\\fm\\desktop\\brain-sprint\\brainsprint\\areas\\identity\\controllers\\settingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|solutionrelative:areas\\identity\\controllers\\settingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|c:\\users\\fm\\desktop\\brain-sprint\\brainsprint\\areas\\identity\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|solutionrelative:areas\\identity\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE4FD232-847D-4620-8F9A-16BDF37770D5}|..\\Models\\Models.csproj|c:\\users\\fm\\desktop\\brain-sprint\\models\\videonode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE4FD232-847D-4620-8F9A-16BDF37770D5}|..\\Models\\Models.csproj|c:\\users\\fm\\desktop\\brain-sprint\\models\\textnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE4FD232-847D-4620-8F9A-16BDF37770D5}|..\\Models\\Models.csproj|c:\\users\\fm\\desktop\\brain-sprint\\models\\certificate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE4FD232-847D-4620-8F9A-16BDF37770D5}|..\\Models\\Models.csproj|c:\\users\\fm\\desktop\\brain-sprint\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE4FD232-847D-4620-8F9A-16BDF37770D5}|..\\Models\\Models.csproj|c:\\users\\fm\\desktop\\brain-sprint\\models\\instructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\FM\\AppData\\Local\\SourceServer\\b4e9377c113e39ffb48e5e1c3df29973f6c8d0c25df98dcd0dc4783e262e1042\\BrainSprint\\Areas\\Identity\\Controllers\\AccountController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,99 +17,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1416,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SettingsController.cs",
-              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Identity\\Controllers\\SettingsController.cs",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Controllers\\SettingsController.cs",
-              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Identity\\Controllers\\SettingsController.cs",
-              "RelativeToolTip": "Areas\\Identity\\Controllers\\SettingsController.cs",
-              "ViewState": "AgIAAHcAAAAAAAAAAAAuwKUBAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T20:29:57.048Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Identity\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Identity\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Areas\\Identity\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAOwBAAAAAAAAAAAuwIIBAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T20:28:06.997Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "VideoNode.cs",
-              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\VideoNode.cs",
-              "RelativeDocumentMoniker": "..\\Models\\VideoNode.cs",
-              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\VideoNode.cs",
-              "RelativeToolTip": "..\\Models\\VideoNode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T20:27:54.331Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TextNode.cs",
-              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\TextNode.cs",
-              "RelativeDocumentMoniker": "..\\Models\\TextNode.cs",
-              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\TextNode.cs",
-              "RelativeToolTip": "..\\Models\\TextNode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T20:27:53.166Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Certificate.cs",
-              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Certificate.cs",
-              "RelativeDocumentMoniker": "..\\Models\\Certificate.cs",
-              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Certificate.cs",
-              "RelativeToolTip": "..\\Models\\Certificate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T20:27:50.13Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "..\\Models\\ApplicationUser.cs",
-              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\ApplicationUser.cs",
-              "RelativeToolTip": "..\\Models\\ApplicationUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T20:26:56.592Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Instructor.cs",
-              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Instructor.cs",
-              "RelativeDocumentMoniker": "..\\Models\\Instructor.cs",
-              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Instructor.cs",
-              "RelativeToolTip": "..\\Models\\Instructor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T20:26:38.397Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -133,6 +26,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\AppData\\Local\\SourceServer\\b4e9377c113e39ffb48e5e1c3df29973f6c8d0c25df98dcd0dc4783e262e1042\\BrainSprint\\Areas\\Identity\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\SourceServer\\b4e9377c113e39ffb48e5e1c3df29973f6c8d0c25df98dcd0dc4783e262e1042\\BrainSprint\\Areas\\Identity\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\FM\\AppData\\Local\\SourceServer\\b4e9377c113e39ffb48e5e1c3df29973f6c8d0c25df98dcd0dc4783e262e1042\\BrainSprint\\Areas\\Identity\\Controllers\\AccountController.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\SourceServer\\b4e9377c113e39ffb48e5e1c3df29973f6c8d0c25df98dcd0dc4783e262e1042\\BrainSprint\\Areas\\Identity\\Controllers\\AccountController.cs [Read Only]",
+              "ViewState": "AgIAAAABAAAAAAAAAAAAwHUBAAAIAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T21:27:36.301Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Identity\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Identity\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Areas\\Identity\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAKMCAAAAAAAAAAAawLwCAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T21:19:24.679Z",
+              "EditorCaption": ""
             }
           ]
         }

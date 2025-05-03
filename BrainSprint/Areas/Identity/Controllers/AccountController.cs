@@ -366,179 +366,179 @@
 
 
 
-        #region External Login
+        //#region External Login
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult ExternalLogin(string provider, string returnUrl = null, UserType userType = UserType.Student)
-        {
-            var redirectUrl = Url.Action(nameof(ExternalLoginCallback), "Account", new { ReturnUrl = returnUrl });
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public IActionResult ExternalLogin(string provider, string returnUrl = null, UserType userType = UserType.Student)
+        //{
+        //    var redirectUrl = Url.Action(nameof(ExternalLoginCallback), "Account", new { ReturnUrl = returnUrl });
 
-            var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
+        //    var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
 
-            //properties.Parameters.Add("userType", userType);
+        //    properties.Parameters.Add("userType", userType);
 
-            properties.Items["userType"] = ((int)userType).ToString();
+        //    properties.Items["userType"] = ((int)userType).ToString();
 
-            return Challenge(properties, provider);
-        }
+        //    return Challenge(properties, provider);
+        //}
 
-        [HttpGet]
-        public async Task<IActionResult> ExternalLoginCallback(string returnUrl = null, string remoteError = null, string userType = "0")
-        {
-            returnUrl ??= Url.Content("~/");
+        //[HttpGet]
+        //public async Task<IActionResult> ExternalLoginCallback(string returnUrl = null, string remoteError = null, string userType = "0")
+        //{
+        //    returnUrl ??= Url.Content("~/");
 
-            if (!string.IsNullOrEmpty(remoteError))
-            {
-                TempData["notification"] = $"Service provider error: {remoteError}";
-                TempData["MessageType"] = "error";
-                return RedirectToAction(nameof(Login));
-            }
+        //    if (!string.IsNullOrEmpty(remoteError))
+        //    {
+        //        TempData["notification"] = $"Service provider error: {remoteError}";
+        //        TempData["MessageType"] = "error";
+        //        return RedirectToAction(nameof(Login));
+        //    }
 
-            var info = await _signInManager.GetExternalLoginInfoAsync();
-            if (info == null)
-            {
-                TempData["notification"] = "Failed to retrieve login information from Google.";
-                TempData["MessageType"] = "error";
-                return RedirectToAction(nameof(Login));
-            }
-
-
-            var userTypeValue = Request.Query["userType"].FirstOrDefault()
-                             ?? info.AuthenticationProperties?.Items["userType"]
-                             ?? userType;
+        //    var info = await _signInManager.GetExternalLoginInfoAsync();
+        //    if (info == null)
+        //    {
+        //        TempData["notification"] = "Failed to retrieve login information from Google.";
+        //        TempData["MessageType"] = "error";
+        //        return RedirectToAction(nameof(Login));
+        //    }
 
 
-            UserType parsedUserType;
-            if (!Enum.TryParse(userTypeValue, out parsedUserType) &&
-                !int.TryParse(userTypeValue, out int numericValue))
-            {
-                parsedUserType = UserType.Student;
-                _logger.LogWarning($"Invalid userType value: {userTypeValue}, defaulting to Student");
-            }
-            else if (int.TryParse(userTypeValue, out numericValue))
-            {
-                parsedUserType = (UserType)numericValue;
-            }
+        //    var userTypeValue = Request.Query["userType"].FirstOrDefault()
+        //                     ?? info.AuthenticationProperties?.Items["userType"]
+        //                     ?? userType;
 
-            string roleName = parsedUserType.ToString();
 
-            var email = info.Principal.FindFirstValue(ClaimTypes.Email);
-            if (email == null)
-            {
-                TempData["notification"] = "Email not retrieved from Google account.";
-                TempData["MessageType"] = "error";
-                return RedirectToAction(nameof(Login));
-            }
+        //    UserType parsedUserType;
+        //    if (!Enum.TryParse(userTypeValue, out parsedUserType) &&
+        //        !int.TryParse(userTypeValue, out int numericValue))
+        //    {
+        //        parsedUserType = UserType.Student;
+        //        _logger.LogWarning($"Invalid userType value: {userTypeValue}, defaulting to Student");
+        //    }
+        //    else if (int.TryParse(userTypeValue, out numericValue))
+        //    {
+        //        parsedUserType = (UserType)numericValue;
+        //    }
 
-            var user = await _userManager.FindByEmailAsync(email);
+        //    string roleName = parsedUserType.ToString();
 
-            if (user != null)
-            {
-                var addLoginResult = await _userManager.AddLoginAsync(user, info);
-                if (addLoginResult.Succeeded)
-                {
-                    var currentRoles = await _userManager.GetRolesAsync(user);
-                    if (!currentRoles.Contains(roleName))
-                    {
-                        await _userManager.RemoveFromRolesAsync(user, currentRoles);
-                        await _userManager.AddToRoleAsync(user, roleName);
-                    }
+        //    var email = info.Principal.FindFirstValue(ClaimTypes.Email);
+        //    if (email == null)
+        //    {
+        //        TempData["notification"] = "Email not retrieved from Google account.";
+        //        TempData["MessageType"] = "error";
+        //        return RedirectToAction(nameof(Login));
+        //    }
 
-                    await _signInManager.SignInAsync(user, isPersistent: false);
-                    TempData["notification"] = "Google account linked and login successful.";
-                    TempData["MessageType"] = "success";
-                    return LocalRedirect(returnUrl);
-                }
-                return HandleErrors(addLoginResult.Errors, "An error occurred while linking the Google account.");
-            }
+        //    var user = await _userManager.FindByEmailAsync(email);
 
-            user = new ApplicationUser
-            {
-                UserName = email,
-                Email = email,
-                EmailConfirmed = true,
-                FirstName = info.Principal.FindFirstValue(ClaimTypes.GivenName) ?? "User",
-                LastName = info.Principal.FindFirstValue(ClaimTypes.Surname) ?? "Unknown",
-                RegistrationDate = DateTime.UtcNow,
-                IsActive = true,
-                AccountState = AccountStateType.Active,
-                Certifications = "Nono",
-                ExperienceYears = "0"
-            };
+        //    if (user != null)
+        //    {
+        //        var addLoginResult = await _userManager.AddLoginAsync(user, info);
+        //        if (addLoginResult.Succeeded)
+        //        {
+        //            var currentRoles = await _userManager.GetRolesAsync(user);
+        //            if (!currentRoles.Contains(roleName))
+        //            {
+        //                await _userManager.RemoveFromRolesAsync(user, currentRoles);
+        //                await _userManager.AddToRoleAsync(user, roleName);
+        //            }
 
-            var createResult = await _userManager.CreateAsync(user);
-            if (!createResult.Succeeded)
-            {
-                return HandleErrors(createResult.Errors, "Account creation failed.");
-            }
+        //            await _signInManager.SignInAsync(user, isPersistent: false);
+        //            TempData["notification"] = "Google account linked and login successful.";
+        //            TempData["MessageType"] = "success";
+        //            return LocalRedirect(returnUrl);
+        //        }
+        //        return HandleErrors(addLoginResult.Errors, "An error occurred while linking the Google account.");
+        //    }
 
-            if (!await _roleManager.RoleExistsAsync(roleName))
-            {
-                await _roleManager.CreateAsync(new IdentityRole(roleName));
-                _logger.LogInformation($"Created new role: {roleName}");
-            }
+        //    user = new ApplicationUser
+        //    {
+        //        UserName = email,
+        //        Email = email,
+        //        EmailConfirmed = true,
+        //        FirstName = info.Principal.FindFirstValue(ClaimTypes.GivenName) ?? "User",
+        //        LastName = info.Principal.FindFirstValue(ClaimTypes.Surname) ?? "Unknown",
+        //        RegistrationDate = DateTime.UtcNow,
+        //        IsActive = true,
+        //        AccountState = AccountStateType.Active,
+        //        Certifications = "Nono",
+        //        ExperienceYears = "0"
+        //    };
 
-            var addToRoleResult = await _userManager.AddToRoleAsync(user, roleName);
-            if (!addToRoleResult.Succeeded)
-            {
-                _logger.LogError($"Failed to add user to role: {string.Join(", ", addToRoleResult.Errors)}");
-            }
+        //    var createResult = await _userManager.CreateAsync(user);
+        //    if (!createResult.Succeeded)
+        //    {
+        //        return HandleErrors(createResult.Errors, "Account creation failed.");
+        //    }
 
-            try
-            {
-                switch (parsedUserType)
-                {
-                    case UserType.Instructor:
-                        await _instructorRepository.CreateAsync(new Models.Instructor()
-                        {
-                            ApplicationUserId = user.Id,
-                            IsVerified = false,
-                            CurrentState = CurrentState.Active,
+        //    if (!await _roleManager.RoleExistsAsync(roleName))
+        //    {
+        //        await _roleManager.CreateAsync(new IdentityRole(roleName));
+        //        _logger.LogInformation($"Created new role: {roleName}");
+        //    }
 
-                        });
-                        break;
+        //    var addToRoleResult = await _userManager.AddToRoleAsync(user, roleName);
+        //    if (!addToRoleResult.Succeeded)
+        //    {
+        //        _logger.LogError($"Failed to add user to role: {string.Join(", ", addToRoleResult.Errors)}");
+        //    }
 
-                    case UserType.Student:
-                    default:
-                        await _studentRepository.CreateAsync(new Models.Student()
-                        {
-                            ApplicationUserId = user.Id,
-                            CurrentState = CurrentState.Active,
-                            Level = LevelType.Beginner
-                        });
-                        break;
-                }
+        //    try
+        //    {
+        //        switch (parsedUserType)
+        //        {
+        //            case UserType.Instructor:
+        //                await _instructorRepository.CreateAsync(new Models.Instructor()
+        //                {
+        //                    ApplicationUserId = user.Id,
+        //                    IsVerified = false,
+        //                    CurrentState = CurrentState.Active,
 
-                await _userManager.AddLoginAsync(user, info);
-                await _signInManager.SignInAsync(user, isPersistent: false);
+        //                });
+        //                break;
 
-                TempData["notification"] = "Account created and successful sign in via Google.";
-                TempData["MessageType"] = "success";
-                return LocalRedirect(returnUrl);
-            }
-            catch (Exception ex)
-            {
-                await _userManager.DeleteAsync(user);
-                _logger.LogError(ex, "Error during external login registration");
-                TempData["notification"] = "Error creating user profile. Please try again.";
-                TempData["MessageType"] = "error";
-                return RedirectToAction(nameof(Login));
-            }
-        }
+        //            case UserType.Student:
+        //            default:
+        //                await _studentRepository.CreateAsync(new Models.Student()
+        //                {
+        //                    ApplicationUserId = user.Id,
+        //                    CurrentState = CurrentState.Active,
+        //                    Level = LevelType.Beginner
+        //                });
+        //                break;
+        //        }
 
-        private IActionResult HandleErrors(IEnumerable<IdentityError> errors, string defaultMessage)
-        {
-            foreach (var error in errors)
-            {
-                ModelState.AddModelError(string.Empty, error.Description);
-            }
-            TempData["notification"] = defaultMessage;
-            TempData["MessageType"] = "error";
-            return RedirectToAction(nameof(Login));
-        }
+        //        await _userManager.AddLoginAsync(user, info);
+        //        await _signInManager.SignInAsync(user, isPersistent: false);
 
-        #endregion
+        //        TempData["notification"] = "Account created and successful sign in via Google.";
+        //        TempData["MessageType"] = "success";
+        //        return LocalRedirect(returnUrl);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        await _userManager.DeleteAsync(user);
+        //        _logger.LogError(ex, "Error during external login registration");
+        //        TempData["notification"] = "Error creating user profile. Please try again.";
+        //        TempData["MessageType"] = "error";
+        //        return RedirectToAction(nameof(Login));
+        //    }
+        //}
+
+        //private IActionResult HandleErrors(IEnumerable<IdentityError> errors, string defaultMessage)
+        //{
+        //    foreach (var error in errors)
+        //    {
+        //        ModelState.AddModelError(string.Empty, error.Description);
+        //    }
+        //    TempData["notification"] = defaultMessage;
+        //    TempData["MessageType"] = "error";
+        //    return RedirectToAction(nameof(Login));
+        //}
+
+        //#endregion
 
 
 
@@ -577,126 +577,126 @@
 
         //============================
 
-        //#region External Login
+        #region External Login
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public IActionResult ExternalLogin(string provider, string returnUrl = null)
-        //{
-        //    var redirectUrl = Url.Action(nameof(ExternalLoginCallback), "Account", new { ReturnUrl = returnUrl });
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult ExternalLogin(string provider, string returnUrl = null)
+        {
+            var redirectUrl = Url.Action(nameof(ExternalLoginCallback), "Account", new { ReturnUrl = returnUrl });
 
-        //    var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
+            var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
 
-        //    return Challenge(properties, provider);
-        //}
+            return Challenge(properties, provider);
+        }
 
-        //[HttpGet]
-        //public async Task<IActionResult> ExternalLoginCallback(string returnUrl = null, string remoteError = null)
-        //{
-        //    returnUrl ??= Url.Content("~/");
+        [HttpGet]
+        public async Task<IActionResult> ExternalLoginCallback(string returnUrl = null, string remoteError = null)
+        {
+            returnUrl ??= Url.Content("~/");
 
-        //    if (!string.IsNullOrEmpty(remoteError))
-        //    {
+            if (!string.IsNullOrEmpty(remoteError))
+            {
 
-        //        TempData["notification"] = $"Service provider error: {remoteError}";
-        //        TempData["MessageType"] = "error";
-        //        return RedirectToAction(nameof(Login));
-        //    }
+                TempData["notification"] = $"Service provider error: {remoteError}";
+                TempData["MessageType"] = "error";
+                return RedirectToAction(nameof(Login));
+            }
 
-        //    var info = await _signInManager.GetExternalLoginInfoAsync();
-        //    if (info == null)
-        //    {
+            var info = await _signInManager.GetExternalLoginInfoAsync();
+            if (info == null)
+            {
 
-        //        TempData["notification"] = "Failed to retrieve login information from Google.";
-        //        TempData["MessageType"] = "error";
-        //        return RedirectToAction(nameof(Login));
-        //    }
+                TempData["notification"] = "Failed to retrieve login information from Google.";
+                TempData["MessageType"] = "error";
+                return RedirectToAction(nameof(Login));
+            }
 
-        //    var signInResult = await _signInManager.ExternalLoginSignInAsync(
-        //    info.LoginProvider,
-        //    info.ProviderKey,
-        //    isPersistent: false,
-        //    bypassTwoFactor: true
-        //    );
+            var signInResult = await _signInManager.ExternalLoginSignInAsync(
+            info.LoginProvider,
+            info.ProviderKey,
+            isPersistent: false,
+            bypassTwoFactor: true
+            );
 
-        //    // If the login process was successful
-        //    if (signInResult.Succeeded)
-        //    {
-        //        TempData["notification"] = "Successfully logged in with Google.";
-        //        TempData["MessageType"] = "success";
-        //        return LocalRedirect(returnUrl);
-        //    }
+            // If the login process was successful
+            if (signInResult.Succeeded)
+            {
+                TempData["notification"] = "Successfully logged in with Google.";
+                TempData["MessageType"] = "success";
+                return LocalRedirect(returnUrl);
+            }
 
-        //    var email = info.Principal.FindFirstValue(ClaimTypes.Email);
+            var email = info.Principal.FindFirstValue(ClaimTypes.Email);
 
-        //    if (email == null)
-        //    {
-        //        TempData["notification"] = "Email not retrieved from Google account.";
-        //        TempData["MessageType"] = "error";
-        //        return RedirectToAction(nameof(Login));
-        //    }
+            if (email == null)
+            {
+                TempData["notification"] = "Email not retrieved from Google account.";
+                TempData["MessageType"] = "error";
+                return RedirectToAction(nameof(Login));
+            }
 
-        //    var user = await _userManager.FindByEmailAsync(email);
+            var user = await _userManager.FindByEmailAsync(email);
 
-        //    if (user != null)
-        //    {
-        //        var addLoginResult = await _userManager.AddLoginAsync(user, info);
-        //        if (addLoginResult.Succeeded)
-        //        {
-        //            await _signInManager.SignInAsync(user, isPersistent: false);
-        //            TempData["notification"] = "Google account linked and login successful.";
-        //            TempData["MessageType"] = "success";
-        //            return LocalRedirect(returnUrl);
-        //        }
+            if (user != null)
+            {
+                var addLoginResult = await _userManager.AddLoginAsync(user, info);
+                if (addLoginResult.Succeeded)
+                {
+                    await _signInManager.SignInAsync(user, isPersistent: false);
+                    TempData["notification"] = "Google account linked and login successful.";
+                    TempData["MessageType"] = "success";
+                    return LocalRedirect(returnUrl);
+                }
 
-        //        foreach (var error in addLoginResult.Errors)
-        //            ModelState.AddModelError(string.Empty, error.Description);
+                foreach (var error in addLoginResult.Errors)
+                    ModelState.AddModelError(string.Empty, error.Description);
 
-        //        TempData["notification"] = "An error occurred while linking the Google account.";
-        //        TempData["MessageType"] = "error";
-        //        return RedirectToAction(nameof(Login));
-        //    }
+                TempData["notification"] = "An error occurred while linking the Google account.";
+                TempData["MessageType"] = "error";
+                return RedirectToAction(nameof(Login));
+            }
 
-        //    user = new ApplicationUser
-        //    {
-        //        UserName = email,
-        //        Email = email,
-        //        EmailConfirmed = true,
-        //        FirstName = info.Principal.FindFirstValue(ClaimTypes.GivenName),
-        //        LastName = info.Principal.FindFirstValue(ClaimTypes.Surname),
-        //        Address = info.Principal.FindFirstValue(ClaimTypes.StreetAddress),
-        //        IsBlocked = false
+            user = new ApplicationUser
+            {
+                UserName = email,
+                Email = email,
+                EmailConfirmed = true,
+                FirstName = info.Principal.FindFirstValue(ClaimTypes.GivenName),
+                LastName = info.Principal.FindFirstValue(ClaimTypes.Surname),
+                Address = info.Principal.FindFirstValue(ClaimTypes.StreetAddress),
+                IsBlocked = false
 
-        //    };
+            };
 
-        //    var createResult = await _userManager.CreateAsync(user);
-        //    if (createResult.Succeeded)
-        //    {
-        //        var addLoginResult = await _userManager.AddLoginAsync(user, info);
-        //        if (addLoginResult.Succeeded)
-        //        {
-        //            await _signInManager.SignInAsync(user, isPersistent: false);
-        //            TempData["notification"] = "Account created and successful sign-in via Google.";
-        //            TempData["MessageType"] = "success";
-        //            return LocalRedirect(returnUrl);
-        //        }
+            var createResult = await _userManager.CreateAsync(user);
+            if (createResult.Succeeded)
+            {
+                var addLoginResult = await _userManager.AddLoginAsync(user, info);
+                if (addLoginResult.Succeeded)
+                {
+                    await _signInManager.SignInAsync(user, isPersistent: false);
+                    TempData["notification"] = "Account created and successful sign-in via Google.";
+                    TempData["MessageType"] = "success";
+                    return LocalRedirect(returnUrl);
+                }
 
-        //        TempData["notification"] = "Account created, but Google account linking failed.";
-        //        TempData["MessageType"] = "error";
-        //    }
-        //    else
-        //    {
-        //        TempData["notification"] = "Account creation failed.";
-        //        TempData["MessageType"] = "error";
-        //        foreach (var error in createResult.Errors)
-        //            ModelState.AddModelError(string.Empty, error.Description);
-        //    }
+                TempData["notification"] = "Account created, but Google account linking failed.";
+                TempData["MessageType"] = "error";
+            }
+            else
+            {
+                TempData["notification"] = "Account creation failed.";
+                TempData["MessageType"] = "error";
+                foreach (var error in createResult.Errors)
+                    ModelState.AddModelError(string.Empty, error.Description);
+            }
 
-        //    return RedirectToAction(nameof(Login));
-        //}
+            return RedirectToAction(nameof(Login));
+        }
 
 
-        //#endregion
+        #endregion
 
         //============================
     }
