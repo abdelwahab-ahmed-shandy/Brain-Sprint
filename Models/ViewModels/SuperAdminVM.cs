@@ -20,6 +20,8 @@ namespace Models.ViewModels
         public string? Bio { get; set; }
         public DateTime RegistrationDate { get; set; }
         public DateTime? LastLogin { get; set; }
+
+        public bool IsBlocked { get; set; }
     }
 
     public class PaginationVM

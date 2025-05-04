@@ -92,7 +92,6 @@ wwwroot\Assets\Identity\css\bootstrap\mixins\_visibility.css
 wwwroot\Assets\Identity\css\bootstrap\utilities\_stretched-link.css
 wwwroot\Assets\Identity\css\site.css
 wwwroot\Assets\Identity\images\education-bg.jpg
-wwwroot\Assets\Identity\images\UserPhoto\52b58c3c-3dcc-4aa2-a56e-943f44fb3606_20250503203838_617b9664-5f91-4035-a447-17a932933fd5.png
 wwwroot\Assets\Identity\images\UserPhoto\logo.png
 wwwroot\css\Admin.css
 wwwroot\css\customer.css

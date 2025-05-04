@@ -157,6 +157,7 @@
                     }
 
                     TempData["notification"] = "Registration successful! Please check your email.";
+                    TempData["MessageType"] = "success";
                     return RedirectToAction("Login", "Account", new { area = "Identity", returnUrl });
                 }
                 catch (Exception ex)

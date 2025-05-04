@@ -11,6 +11,8 @@ namespace Models
 {
     public class ApplicationUser : IdentityUser
     {
+        // Add this new property
+        public DateTime? PasswordChangedDate { get; set; }
         public string? FirstName { get; set; }
 
         public string? LastName { get; set; }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "r6v4lDCVwrL216iQr0p/TBU8fIoMtsXdc5qUr9ABKoY=",
+  "Hash": "1FGjmaBHAcbAKLYidymZ6t2aKGon0ogZe5GnCb+ammM=",
   "Source": "BrainSprint",
   "BasePath": "_content/BrainSprint",
   "Mode": "Default",
@@ -2073,27 +2073,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Assets\\Identity\\images\\education-bg.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Identity\\images\\UserPhoto\\52b58c3c-3dcc-4aa2-a56e-943f44fb3606_20250503203838_617b9664-5f91-4035-a447-17a932933fd5.png",
-      "SourceId": "BrainSprint",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\",
-      "BasePath": "_content/BrainSprint",
-      "RelativePath": "Assets/Identity/images/UserPhoto/52b58c3c-3dcc-4aa2-a56e-943f44fb3606_20250503203838_617b9664-5f91-4035-a447-17a932933fd5#[.{fingerprint}]?.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "jjltrz4lsk",
-      "Integrity": "sQb/ABatEbHomqLPwplz0ryaRSAv8F1Sfxnj5YemEd4=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Assets\\Identity\\images\\UserPhoto\\52b58c3c-3dcc-4aa2-a56e-943f44fb3606_20250503203838_617b9664-5f91-4035-a447-17a932933fd5.png"
     },
     {
       "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Identity\\images\\UserPhoto\\logo.png",
@@ -6402,88 +6381,6 @@
         {
           "Name": "integrity",
           "Value": "sha256-NLxxFDLtf/oKldPRMCzwiL8dva+feZiHWHW4jEQ/gDc="
-        }
-      ]
-    },
-    {
-      "Route": "Assets/Identity/images/UserPhoto/52b58c3c-3dcc-4aa2-a56e-943f44fb3606_20250503203838_617b9664-5f91-4035-a447-17a932933fd5.jjltrz4lsk.png",
-      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Identity\\images\\UserPhoto\\52b58c3c-3dcc-4aa2-a56e-943f44fb3606_20250503203838_617b9664-5f91-4035-a447-17a932933fd5.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "442904"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"sQb/ABatEbHomqLPwplz0ryaRSAv8F1Sfxnj5YemEd4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 20:38:38 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "jjltrz4lsk"
-        },
-        {
-          "Name": "label",
-          "Value": "Assets/Identity/images/UserPhoto/52b58c3c-3dcc-4aa2-a56e-943f44fb3606_20250503203838_617b9664-5f91-4035-a447-17a932933fd5.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-sQb/ABatEbHomqLPwplz0ryaRSAv8F1Sfxnj5YemEd4="
-        }
-      ]
-    },
-    {
-      "Route": "Assets/Identity/images/UserPhoto/52b58c3c-3dcc-4aa2-a56e-943f44fb3606_20250503203838_617b9664-5f91-4035-a447-17a932933fd5.png",
-      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Identity\\images\\UserPhoto\\52b58c3c-3dcc-4aa2-a56e-943f44fb3606_20250503203838_617b9664-5f91-4035-a447-17a932933fd5.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "442904"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"sQb/ABatEbHomqLPwplz0ryaRSAv8F1Sfxnj5YemEd4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 03 May 2025 20:38:38 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-sQb/ABatEbHomqLPwplz0ryaRSAv8F1Sfxnj5YemEd4="
         }
       ]
     },
