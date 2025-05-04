@@ -12,8 +12,10 @@ namespace Models
         public string Message { get; set; } = string.Empty;
         public DateTime CreatedAt { get; set; }
 
-        public string? ResponderUserId { get; set; }
-        public ApplicationUser ResponderUser { get; set; } = new ApplicationUser();
+        public int AdminId { get; set; }
+        [ForeignKey("AdminId")]
+        public Admin Admin { get; set; } = null!;
+
 
         public int TicketId { get; set; }
         [ForeignKey("TicketId")]

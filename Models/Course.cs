@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Reflection;
@@ -11,15 +12,15 @@ namespace Models
     public class Course : BaseModel
     {
         public string Title { get; set; } = string.Empty;
-        public string? ShortDescription { get; set; }
-        public string? LongDescription { get; set; }
+        public string? Description { get; set; }
         public double Price { get; set; }
         public double? Discount { get; set; }
-        public TimeSpan? Duration { get; set; }
-        public string? ThumbnailUrl { get; set; }
+        public int Duration { get; set; }
+        public string? VideoUrl { get; set; }
         public string? ImgUrl { get; set; }
 
-        public int? InstructorId { get; set; } = new int?();
+        [Required]
+        public int InstructorId { get; set; }
         [ForeignKey("InstructorId")]
         public Instructor? Instructor { get; set; }
 

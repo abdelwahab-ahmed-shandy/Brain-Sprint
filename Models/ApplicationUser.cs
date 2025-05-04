@@ -49,10 +49,13 @@ namespace Models
         public Guid? UpdatedBy { get; set; }
         public DateTime? UpdatedDateUtc { get; set; }
 
+
+        // One-to-One Relationship Between ApplicationUser and Student/Instructor/Admin
         public Student? Student { get; set; }
         public Instructor? Instructor { get; set; }
         public Admin? Admin { get; set; }
 
+        // One-to-Many from ApplicationUser to Tickets
         public IEnumerable<Ticket>? Tickets { get; set; } = new List<Ticket>();
 
     }

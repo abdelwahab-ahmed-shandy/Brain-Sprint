@@ -1,6 +1,7 @@
 ﻿using Models.Enums;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,11 +16,15 @@ namespace Models
         public DateTime CreateAt { get; set; }
         public DateTime? ColsedAt { get; set; }
 
-        public string ApplicationUserId { get; set; } = string.Empty;
 
-        public ApplicationUser ApplicationUser { get; set; } = new ApplicationUser();
+        public string CreatedByUserId { get; set; }
+        [ForeignKey("CreatedByUserId")]
+        public ApplicationUser CreatedByUser { get; set; } = null!;
+
+
 
         public List<TicketResponse> TicketResponses { get; set; } = new List<TicketResponse>();
+
     }
 }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -7,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace Models
 {
+    // Use the Unique Index in CourseLearningPath to prevent the same course from being linked to the same path more than once:
+    [Index(nameof(CourseId), nameof(LearningPathId), IsUnique = true)]
     public class CourseLearningPath : BaseModel
     {
         public int CourseId { get; set; }
@@ -19,10 +22,4 @@ namespace Models
     }
 }
 
-/*
-    CourseId             => المعرف الخاص بالدورة
-    Course               => الكائن الذي يمثل الدورة المرتبطة بهذا المسار التعليمي
 
-    LearningPathId       => المعرف الخاص بالمسار التعليمي
-    LearningPath         => الكائن الذي يمثل المسار التعليمي المرتبط بهذه الدورة
-*/

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,8 +13,10 @@ namespace Models
     {
         public LevelType? Level { get; set; }
 
+
+        [ForeignKey("ApplicationUser")]
         public string? ApplicationUserId { get; set; }
-        public ApplicationUser ApplicationUser { get; set; } = new ApplicationUser();
+        public ApplicationUser ApplicationUser { get; set; } = null!;
 
 
         public List<Cart> Carts { get; set; } = new List<Cart>();
