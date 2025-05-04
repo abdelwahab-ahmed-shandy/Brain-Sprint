@@ -449,6 +449,11 @@
             }
         });
 
+                $('#registerForm').on('submit', function(e) {
+            e.preventDefault();
+            console.log('Form data:', $(this).serialize());
+            this.submit();
+        });
 
     </script>
 }

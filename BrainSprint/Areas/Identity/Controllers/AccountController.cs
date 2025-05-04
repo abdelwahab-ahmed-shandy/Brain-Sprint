@@ -506,7 +506,7 @@
                 TempData["notification"] = "Your email has been successfully confirmed! You have been automatically logged in.";
                 TempData["MessageType"] = "Success";
 
-                return RedirectToAction("Profile", "Settings", new { area = "Identity" });
+                return RedirectToAction("Manage", "Settings", new { area = "Identity" });
             }
 
             return View("Error");

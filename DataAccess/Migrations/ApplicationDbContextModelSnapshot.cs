@@ -223,9 +223,6 @@ namespace DataAccess.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CreatedBy")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("CreatedDateUtc")
                         .HasColumnType("datetime2");
 
@@ -295,8 +292,8 @@ namespace DataAccess.Migrations
                     b.Property<bool>("TwoFactorEnabled")
                         .HasColumnType("bit");
 
-                    b.Property<Guid?>("UpdatedBy")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("UpdatedDateUtc")
                         .HasColumnType("datetime2");

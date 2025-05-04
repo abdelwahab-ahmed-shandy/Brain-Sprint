@@ -44,9 +44,8 @@ namespace Models
         public string? ExperienceYears { get; set; }
 
         public AccountStateType? AccountState { get; set; }
-        public int CreatedBy { get; set; }
         public DateTime CreatedDateUtc { get; set; }
-        public Guid? UpdatedBy { get; set; }
+        public string? UpdatedBy { get; set; }
         public DateTime? UpdatedDateUtc { get; set; }
 
 

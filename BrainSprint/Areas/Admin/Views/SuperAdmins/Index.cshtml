@@ -1,127 +1,213 @@
-﻿@model IEnumerable<SuperAdminViewModel>
+﻿@model IEnumerable<SuperAdminVM>
 @{
-    ViewData["Title"] = "All Super Admins";
+    ViewData["Title"] = "Super Admins Management";
 }
 
-@* <div class="container mt-4"> *@
-@*     <h2 class="mb-4 text-center text-muted">Super Admins Management</h2> *@
+<div class="container-fluid px-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="mt-4">
+            <i class="fas fa-user-shield me-2"></i>@ViewData["Title"]
+        </h1>
+        <a asp-action="Create" class="btn btn-primary">
+            <i class="fas fa-plus me-2"></i>Add New Super Admin
+        </a>
+    </div>
 
-@*     <!-- Control buttons --> *@
-@*     <div class="d-flex justify-content-between mb-3"> *@
-@*         <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary"> *@
-@*             <i class="fas fa-home"></i> Back to Home *@
-@*         </a> *@
-@*         <a asp-action="Create" class="btn btn-sm bg-gradient text-white shadow-sm" style="background-color: #6f42c1; border-color: #6f42c1;"> *@
-@*             <i class="fas fa-plus-circle"></i> Add New Super Admin *@
-@*         </a> *@
-@*     </div> *@
+    <div class="card mb-4">
+        <div class="card-header bg-white">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <form class="input-group" method="get">
 
+                        <input type="text" class="form-control" name="query" placeholder="Search super admins..." value="@Context.Request.Query["query"]">
+                        <button class="btn btn-outline-secondary" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        @if (!string.IsNullOrEmpty(Context.Request.Query["query"]))
+                        {
+                            <a href="@Url.Action("Index")" class="btn btn-outline-danger">
+                                <i class="fas fa-times"></i>
+                            </a>
+                        }
+                    </form>
+                </div>
+                <div class="col-md-6 d-flex justify-content-end">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-filter me-2"></i>Filter
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="filterDropdown">
+                            <li><a class="dropdown-item" href="?status=Active">Active</a></li>
+                            <li><a class="dropdown-item" href="?status=Blocked">Blocked</a></li>
+                            <li><a class="dropdown-item" href="?status=Inactive">Inactive</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="@Url.Action("Index")">Clear filters</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-@*     <!-- Search Bar --> *@
-@*     <div class="row mb-4"> *@
-@*         <div class="col-12 d-sm-flex justify-content-center"> *@
-@*             <form class="input-group w-50" method="get" action="@Url.Action("AllSuperAdmins", "SuperAdmins")"> *@
-@*                 <input type="text" class="form-control" id="query" name="query" placeholder="Search users..." value="@Context.Request.Query["query"]" /> *@
-@*                 <button class="btn btn-primary" type="submit"> *@
-@*                     <i class="fas fa-search"></i> Search *@
-@*                 </button> *@
-@*             </form> *@
-@*         </div> *@
-@*     </div> *@
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover table-striped">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Profile</th>
+                            <th>Name</th>
+                            <th>Contact</th>
+                            <th>Status</th>
+                            <th>Registration</th>
+                            <th>Last Login</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var admin in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(admin.ProfileImage))
+                                    {
+                                        <img src="@admin.ProfileImage" class="rounded-circle" style="width:40px;height:40px;object-fit:cover;" alt="Profile Image">
+                                    }
+                                    else
+                                    {
+                                        <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center" style="width:40px;height:40px;">
+                                            <i class="fas fa-user text-white"></i>
+                                        </div>
+                                    }
+                                </td>
+                                <td>
+                                    <strong>@admin.FirstName @admin.LastName</strong><br>
+                                    <small class="text-muted">@admin.Email</small>
+                                </td>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(admin.PhoneNumber))
+                                    {
+                                        <a href="tel:@admin.PhoneNumber" class="text-decoration-none">
+                                            <i class="fas fa-phone me-2"></i>@admin.PhoneNumber
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-muted">Not provided</span>
+                                    }
+                                </td>
+                                <td>
+                                    @if (admin.Status == "Blocked")
+                                    {
+                                        <span class="badge bg-danger">@admin.Status</span>
+                                    }
+                                    else if (admin.Status == "Active")
+                                    {
+                                        <span class="badge bg-success">@admin.Status</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-secondary">@admin.Status</span>
+                                    }
+                                    <br>
+                                    <small class="text-muted">@admin.AccountState</small>
+                                </td>
+                                <td>
+                                    <small>@admin.RegistrationDate.ToString("dd MMM yyyy")</small>
+                                </td>
+                                <td>
+                                    @if (admin.LastLogin.HasValue)
+                                    {
+                                        <small>@admin.LastLogin.Value.ToString("dd MMM yyyy HH:mm")</small>
+                                    }
+                                    else
+                                    {
+                                        <small class="text-muted">Never logged in</small>
+                                    }
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <a asp-action="Details" asp-route-id="@admin.Id" class="btn btn-outline-primary" title="View Details">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
 
+                                        @if (admin.Status == "Blocked")
+                                        {
+                                            <a asp-action="UnBlock" asp-route-id="@admin.Id" class="btn btn-outline-success" title="Unblock">
+                                                <i class="fas fa-lock-open"></i>
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <a asp-action="Block" asp-route-id="@admin.Id" class="btn btn-outline-warning" title="Block">
+                                                <i class="fas fa-lock"></i>
+                                            </a>
+                                        }
 
-@*     <div class="table-responsive"> *@
-@*         <table class="table table-hover table-bordered"> *@
-@*             <thead class="table-dark text-center"> *@
-@*                 <tr> *@
-@*                     <th>ID</th> *@
-@*                     <th>First Name</th> *@
-@*                     <th>Last Name</th> *@
-@*                     <th>User Name</th> *@
-@*                     <th>Email</th> *@
-@*                     <th>Address</th> *@
-@*                     <th>Action</th> *@
-@*                 </tr> *@
-@*             </thead> *@
-@*             <tbody class="text-center align-middle"> *@
-@*                 @foreach (var item in Model) *@
-@*                 { *@
-@*                     <tr> *@
-@*                         <td>@item.Id</td> *@
-@*                         <td>@item.FirstName</td> *@
-@*                         <td>@item.LastName</td> *@
-@*                         <td>@item.UserName</td> *@
-@*                         <td>@item.Email</td> *@
-@*                         <td>@item.Address</td> *@
-@*                         <td> *@
-@*                             <div class="btn-group btn-group-sm" role="group"> *@
-@*                                 @if (item.IsBlocked) *@
-@*                                 { *@
-@*                                     <!-- Unblock button --> *@
-@*                                     <a asp-action="UnBlock" asp-route-id="@item.Id" class="btn btn-warning me-1"> *@
-@*                                         <i class="fas fa-edit"></i> Unblock *@
-@*                                     </a> *@
-@*                                 } *@
-@*                                 else *@
-@*                                 { *@
-@*                                     <!-- Block button --> *@
-@*                                     <a asp-action="Block" asp-route-id="@item.Id" class="btn btn-info me-1"> *@
-@*                                         <i class="fas fa-ban"></i> Block *@
-@*                                     </a> *@
-@*                                 } *@
+                                        <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span class="visually-hidden">Toggle Dropdown</span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" asp-action="Edit" asp-route-id="@admin.Id"><i class="fas fa-edit me-2"></i>Edit</a></li>
+                                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#resetPasswordModal-@admin.Id"><i class="fas fa-key me-2"></i>Reset Password</a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><a class="dropdown-item text-danger" asp-action="Delete" asp-route-id="@admin.Id"><i class="fas fa-trash me-2"></i>Delete</a></li>
+                                        </ul>
+                                    </div>
 
-@*                                 <!-- Manage Permissions button --> *@
-@*                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#permissionModal-@item.Id"> *@
-@*                                     <i class="fas fa-user-cog"></i> Manage Permissions *@
-@*                                 </button> *@
-@*                             </div> *@
-@*                         </td> *@
-@*                     </tr> *@
+                                    <!-- Reset Password Modal -->
+                                    <div class="modal fade" id="resetPasswordModal-@admin.Id" tabindex="-1" aria-labelledby="resetPasswordModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="resetPasswordModalLabel">Reset Password</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Are you sure you want to reset password for <strong>@admin.FirstName @admin.LastName</strong>?</p>
+                                                    <form asp-action="ResetPassword" method="post">
+                                                        <input type="hidden" name="id" value="@admin.Id" />
+                                                        <div class="mb-3">
+                                                            <label for="newPassword" class="form-label">New Password</label>
+                                                            <input type="password" class="form-control" id="newPassword" name="newPassword" required>
+                                                        </div>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Cancel</button>
+                                                            <button type="submit" class="btn btn-primary">Reset Password</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
 
-@*                     <!-- Modal for Managing Permissions --> *@
-@*                     <div class="modal fade" id="permissionModal-@item.Id" tabindex="-1" aria-labelledby="permissionModalLabel-@item.Id" aria-hidden="true"> *@
-@*                         <div class="modal-dialog modal-dialog-centered"> *@
-@*                             <div class="modal-content"> *@
-@*                                 <div class="modal-header"> *@
-@*                                     <h5 class="modal-title" id="permissionModalLabel-@item.Id">Manage Permissions for @item.UserName</h5> *@
-@*                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> *@
-@*                                 </div> *@
-@*                                 <div class="modal-body"> *@
-@*                                     <form method="post" action="@Url.Action("UpdatePermissions", "Admins")"> *@
-@*                                         <input type="hidden" name="userId" value="@item.Id" /> *@
-@*                                         <div class="form-check"> *@
-@*                                             <input type="checkbox" class="form-check-input" id="permission1-@item.Id" name="permissions" value="Permission1"> *@
-@*                                             <label class="form-check-label" for="permission1-@item.Id">Admin Access</label> *@
-@*                                         </div> *@
-@*                                         <div class="form-check"> *@
-@*                                             <input type="checkbox" class="form-check-input" id="permission2-@item.Id" name="permissions" value="Permission2"> *@
-@*                                             <label class="form-check-label" for="permission2-@item.Id">Super Admin Access</label> *@
-@*                                         </div> *@
-
-@*                                         <!-- Submit Button --> *@
-@*                                         <button type="submit" class="btn btn-primary mt-3">Save Changes</button> *@
-@*                                     </form> *@
-@*                                 </div> *@
-@*                             </div> *@
-@*                         </div> *@
-@*                     </div> *@
-@*                 } *@
-@*             </tbody> *@
-@*         </table> *@
-@*     </div> *@
-
-@*     <!-- Pagination --> *@
-@*     <div class="row"> *@
-@*         <nav aria-label="..."> *@
-@*             <ul class="pagination"> *@
-@*                 @for (int i = 1; i <= ViewBag.totalPages; i++) *@
-@*                 { *@
-@*                     <li class="page-item @(i == ViewBag.currentPage ? "active" : "")"> *@
-@*                         <a class="page-link" href="/Admin/SuperAdmins/AllSuperAdmins?page=@i">@i</a> *@
-@*                     </li> *@
-@*                 } *@
-@*             </ul> *@
-@*         </nav> *@
-@*     </div> *@
-
-@* </div> *@
+            @if (ViewBag.totalPages > 1)
+            {
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item @(ViewBag.currentPage == 1 ? "disabled" : "")">
+                            <a class="page-link" href="@Url.Action("Index", new { page = ViewBag.currentPage - 1, query = Context.Request.Query["query"] })" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        @for (int i = 1; i <= ViewBag.totalPages; i++)
+                        {
+                            <li class="page-item @(i == ViewBag.currentPage ? "active" : "")">
+                                <a class="page-link" href="@Url.Action("Index", new { page = i, query = Context.Request.Query["query"] })">@i</a>
+                            </li>
+                        }
+                        <li class="page-item @(ViewBag.currentPage == ViewBag.totalPages ? "disabled" : "")">
+                            <a class="page-link" href="@Url.Action("Index", new { page = ViewBag.currentPage + 1, query = Context.Request.Query["query"] })" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            }
+        </div>
+    </div>
+</div>
