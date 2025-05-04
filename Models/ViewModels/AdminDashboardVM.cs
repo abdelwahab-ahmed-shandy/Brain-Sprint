@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models.ViewModels
 {
-    public class AdminDashboardViewModel
+    public class AdminDashboardVM
     {
         // User statistics 
         public int TotalUsers { get; set; }

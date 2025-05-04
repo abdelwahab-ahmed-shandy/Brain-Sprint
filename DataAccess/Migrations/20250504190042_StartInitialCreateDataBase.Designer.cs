@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250503203437_StartInitialCreateDataBase")]
+    [Migration("20250504190042_StartInitialCreateDataBase")]
     partial class StartInitialCreateDataBase
     {
         /// <inheritdoc />
@@ -466,7 +466,7 @@ namespace DataAccess.Migrations
                     b.Property<int?>("CurrentState")
                         .HasColumnType("int");
 
-                    b.Property<int>("EnrollmantCourseId")
+                    b.Property<int>("EnrollmentCourseId")
                         .HasColumnType("int");
 
                     b.Property<string>("StudentScore")
@@ -481,7 +481,7 @@ namespace DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("EnrollmantCourseId")
+                    b.HasIndex("EnrollmentCourseId")
                         .IsUnique();
 
                     b.ToTable("Certificates");
@@ -546,29 +546,23 @@ namespace DataAccess.Migrations
                     b.Property<int?>("CurrentState")
                         .HasColumnType("int");
 
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<double?>("Discount")
                         .HasColumnType("float");
 
-                    b.Property<TimeSpan?>("Duration")
-                        .HasColumnType("time");
+                    b.Property<int>("Duration")
+                        .HasColumnType("int");
 
                     b.Property<string>("ImgUrl")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("InstructorId")
+                    b.Property<int>("InstructorId")
                         .HasColumnType("int");
-
-                    b.Property<string>("LongDescription")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("Price")
                         .HasColumnType("float");
-
-                    b.Property<string>("ShortDescription")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ThumbnailUrl")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -579,6 +573,9 @@ namespace DataAccess.Migrations
 
                     b.Property<DateTime?>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("VideoUrl")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -619,9 +616,10 @@ namespace DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CourseId");
-
                     b.HasIndex("LearningPathId");
+
+                    b.HasIndex("CourseId", "LearningPathId")
+                        .IsUnique();
 
                     b.ToTable("CourseLearningPaths");
                 });
@@ -719,9 +717,6 @@ namespace DataAccess.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int?>("CertificateId")
-                        .HasColumnType("int");
 
                     b.Property<int>("CourseId")
                         .HasColumnType("int");
@@ -1045,8 +1040,8 @@ namespace DataAccess.Migrations
                     b.Property<int>("OrderId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Price")
-                        .HasColumnType("int");
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
 
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
@@ -1196,10 +1191,6 @@ namespace DataAccess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("ApplicationUserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<DateTime?>("ColsedAt")
                         .HasColumnType("datetime2");
 
@@ -1209,6 +1200,10 @@ namespace DataAccess.Migrations
                     b.Property<string>("CreatedBy")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CreatedByUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedDateUtc")
                         .HasColumnType("datetime2");
@@ -1235,7 +1230,7 @@ namespace DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ApplicationUserId");
+                    b.HasIndex("CreatedByUserId");
 
                     b.ToTable("Tickets");
                 });
@@ -1248,7 +1243,7 @@ namespace DataAccess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("AdminId")
+                    b.Property<int>("AdminId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
@@ -1268,9 +1263,6 @@ namespace DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ResponderUserId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<int>("TicketId")
                         .HasColumnType("int");
 
@@ -1283,8 +1275,6 @@ namespace DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("AdminId");
-
-                    b.HasIndex("ResponderUserId");
 
                     b.HasIndex("TicketId");
 
@@ -1451,7 +1441,8 @@ namespace DataAccess.Migrations
 
                     b.HasIndex("BadgeId");
 
-                    b.HasIndex("StudentId");
+                    b.HasIndex("StudentId", "BadgeId")
+                        .IsUnique();
 
                     b.ToTable("UsersBadges");
                 });
@@ -1638,7 +1629,7 @@ namespace DataAccess.Migrations
                 {
                     b.HasOne("Models.EnrollmentCourse", "EnrollmentCourse")
                         .WithOne("Certificate")
-                        .HasForeignKey("Models.Certificate", "EnrollmantCourseId")
+                        .HasForeignKey("Models.Certificate", "EnrollmentCourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -1660,7 +1651,9 @@ namespace DataAccess.Migrations
                 {
                     b.HasOne("Models.Instructor", "Instructor")
                         .WithMany("Courses")
-                        .HasForeignKey("InstructorId");
+                        .HasForeignKey("InstructorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Instructor");
                 });
@@ -1838,24 +1831,22 @@ namespace DataAccess.Migrations
 
             modelBuilder.Entity("Models.Ticket", b =>
                 {
-                    b.HasOne("Models.ApplicationUser", "ApplicationUser")
+                    b.HasOne("Models.ApplicationUser", "CreatedByUser")
                         .WithMany("Tickets")
-                        .HasForeignKey("ApplicationUserId")
+                        .HasForeignKey("CreatedByUserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("ApplicationUser");
+                    b.Navigation("CreatedByUser");
                 });
 
             modelBuilder.Entity("Models.TicketResponse", b =>
                 {
-                    b.HasOne("Models.Admin", null)
+                    b.HasOne("Models.Admin", "Admin")
                         .WithMany("TicketResponses")
-                        .HasForeignKey("AdminId");
-
-                    b.HasOne("Models.ApplicationUser", "ResponderUser")
-                        .WithMany()
-                        .HasForeignKey("ResponderUserId");
+                        .HasForeignKey("AdminId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Models.Ticket", "Ticket")
                         .WithMany("TicketResponses")
@@ -1863,7 +1854,7 @@ namespace DataAccess.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("ResponderUser");
+                    b.Navigation("Admin");
 
                     b.Navigation("Ticket");
                 });

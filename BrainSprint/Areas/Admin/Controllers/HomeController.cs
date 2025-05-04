@@ -54,7 +54,7 @@ namespace BrainSprint.Areas.Admin.Controllers
 
             var totalUsers = await _userManager.Users.ToListAsync();
 
-            var dashboard = new AdminDashboardViewModel
+            var dashboard = new AdminDashboardVM
             {
                 // User statistics
                 TotalUsers = totalUsers.Count,

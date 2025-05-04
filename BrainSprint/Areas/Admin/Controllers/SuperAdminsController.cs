@@ -16,6 +16,7 @@ namespace BrainSprint.Areas.Admin.Controllers
             _userManager = userManager;
         }
 
+        #region View Suber Admin .
         public async Task<IActionResult> Index()
         {
             var applicationUsers = await _applicationUserRepository.Get(tracked: false).ToListAsync();
@@ -45,6 +46,14 @@ namespace BrainSprint.Areas.Admin.Controllers
 
             return View(superAdminViewModels);
         }
+
+        #endregion
+
+
+
+
+
+
 
 
 

@@ -1,23 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{CE4FD232-847D-4620-8F9A-16BDF37770D5}|..\\Models\\Models.csproj|c:\\users\\fm\\desktop\\brain-sprint\\models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE4FD232-847D-4620-8F9A-16BDF37770D5}|..\\Models\\Models.csproj|c:\\users\\fm\\desktop\\brain-sprint\\models\\userexamattemp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE4FD232-847D-4620-8F9A-16BDF37770D5}|..\\Models\\Models.csproj|c:\\users\\fm\\desktop\\brain-sprint\\models\\exam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE4FD232-847D-4620-8F9A-16BDF37770D5}|..\\Models\\Models.csproj|c:\\users\\fm\\desktop\\brain-sprint\\models\\choice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE4FD232-847D-4620-8F9A-16BDF37770D5}|..\\Models\\Models.csproj|c:\\users\\fm\\desktop\\brain-sprint\\models\\useranswer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -25,60 +9,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1416,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserAnswer.cs",
-              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\UserAnswer.cs",
-              "RelativeDocumentMoniker": "..\\Models\\UserAnswer.cs",
-              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\UserAnswer.cs",
-              "RelativeToolTip": "..\\Models\\UserAnswer.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T18:41:47.649Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserExamAttemp.cs",
-              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\UserExamAttemp.cs",
-              "RelativeDocumentMoniker": "..\\Models\\UserExamAttemp.cs",
-              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\UserExamAttemp.cs",
-              "RelativeToolTip": "..\\Models\\UserExamAttemp.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAkwBoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T18:41:25.916Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Question.cs",
-              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Question.cs",
-              "RelativeDocumentMoniker": "..\\Models\\Question.cs",
-              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Question.cs",
-              "RelativeToolTip": "..\\Models\\Question.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAmwBkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T18:40:58.419Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Choice.cs",
-              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Choice.cs",
-              "RelativeDocumentMoniker": "..\\Models\\Choice.cs",
-              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Choice.cs",
-              "RelativeToolTip": "..\\Models\\Choice.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T18:40:09.624Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -86,19 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Exam.cs",
-              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Exam.cs",
-              "RelativeDocumentMoniker": "..\\Models\\Exam.cs",
-              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\Exam.cs",
-              "RelativeToolTip": "..\\Models\\Exam.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T18:39:37.306Z",
-              "EditorCaption": ""
             }
           ]
         }

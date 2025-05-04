@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BrainSprint")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16c8574ac74f022bf84edeac500e350efb8d3747")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28bc41aee7b1c70d24ab1c80c3a3d1f18366f8b3")]
 [assembly: System.Reflection.AssemblyProductAttribute("BrainSprint")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BrainSprint")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

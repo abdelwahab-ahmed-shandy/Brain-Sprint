@@ -317,7 +317,7 @@ namespace DataAccess.Migrations
                     Status = table.Column<int>(type: "int", nullable: true),
                     CreateAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ColsedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    ApplicationUserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    CreatedByUserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     CurrentState = table.Column<int>(type: "int", nullable: true),
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -328,8 +328,8 @@ namespace DataAccess.Migrations
                 {
                     table.PrimaryKey("PK_Tickets", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Tickets_AspNetUsers_ApplicationUserId",
-                        column: x => x.ApplicationUserId,
+                        name: "FK_Tickets_AspNetUsers_CreatedByUserId",
+                        column: x => x.CreatedByUserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -342,14 +342,13 @@ namespace DataAccess.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ShortDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    LongDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Price = table.Column<double>(type: "float", nullable: false),
                     Discount = table.Column<double>(type: "float", nullable: true),
-                    Duration = table.Column<TimeSpan>(type: "time", nullable: true),
-                    ThumbnailUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Duration = table.Column<int>(type: "int", nullable: false),
+                    VideoUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ImgUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    InstructorId = table.Column<int>(type: "int", nullable: true),
+                    InstructorId = table.Column<int>(type: "int", nullable: false),
                     CurrentState = table.Column<int>(type: "int", nullable: true),
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -363,7 +362,8 @@ namespace DataAccess.Migrations
                         name: "FK_Courses_Instructors_InstructorId",
                         column: x => x.InstructorId,
                         principalTable: "Instructors",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -457,9 +457,8 @@ namespace DataAccess.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Message = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ResponderUserId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    AdminId = table.Column<int>(type: "int", nullable: false),
                     TicketId = table.Column<int>(type: "int", nullable: false),
-                    AdminId = table.Column<int>(type: "int", nullable: true),
                     CurrentState = table.Column<int>(type: "int", nullable: true),
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -473,12 +472,8 @@ namespace DataAccess.Migrations
                         name: "FK_TicketResponses_Admins_AdminId",
                         column: x => x.AdminId,
                         principalTable: "Admins",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_TicketResponses_AspNetUsers_ResponderUserId",
-                        column: x => x.ResponderUserId,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_TicketResponses_Tickets_TicketId",
                         column: x => x.TicketId,
@@ -586,7 +581,6 @@ namespace DataAccess.Migrations
                     EnrollmentDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     StudentId = table.Column<int>(type: "int", nullable: false),
                     CourseId = table.Column<int>(type: "int", nullable: false),
-                    CertificateId = table.Column<int>(type: "int", nullable: true),
                     CurrentState = table.Column<int>(type: "int", nullable: true),
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -654,7 +648,7 @@ namespace DataAccess.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Price = table.Column<int>(type: "int", nullable: false),
+                    Price = table.Column<double>(type: "float", nullable: false),
                     OrderId = table.Column<int>(type: "int", nullable: false),
                     CourseId = table.Column<int>(type: "int", nullable: false),
                     CurrentState = table.Column<int>(type: "int", nullable: true),
@@ -744,7 +738,7 @@ namespace DataAccess.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     StudentScore = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    EnrollmantCourseId = table.Column<int>(type: "int", nullable: false),
+                    EnrollmentCourseId = table.Column<int>(type: "int", nullable: false),
                     CurrentState = table.Column<int>(type: "int", nullable: true),
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -755,8 +749,8 @@ namespace DataAccess.Migrations
                 {
                     table.PrimaryKey("PK_Certificates", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Certificates_EnrollmentCourses_EnrollmantCourseId",
-                        column: x => x.EnrollmantCourseId,
+                        name: "FK_Certificates_EnrollmentCourses_EnrollmentCourseId",
+                        column: x => x.EnrollmentCourseId,
                         principalTable: "EnrollmentCourses",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -1066,9 +1060,9 @@ namespace DataAccess.Migrations
                 column: "StudentId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Certificates_EnrollmantCourseId",
+                name: "IX_Certificates_EnrollmentCourseId",
                 table: "Certificates",
-                column: "EnrollmantCourseId",
+                column: "EnrollmentCourseId",
                 unique: true);
 
             migrationBuilder.CreateIndex(
@@ -1077,9 +1071,10 @@ namespace DataAccess.Migrations
                 column: "QuestionId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_CourseLearningPaths_CourseId",
+                name: "IX_CourseLearningPaths_CourseId_LearningPathId",
                 table: "CourseLearningPaths",
-                column: "CourseId");
+                columns: new[] { "CourseId", "LearningPathId" },
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_CourseLearningPaths_LearningPathId",
@@ -1177,19 +1172,14 @@ namespace DataAccess.Migrations
                 column: "AdminId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_TicketResponses_ResponderUserId",
-                table: "TicketResponses",
-                column: "ResponderUserId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_TicketResponses_TicketId",
                 table: "TicketResponses",
                 column: "TicketId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Tickets_ApplicationUserId",
+                name: "IX_Tickets_CreatedByUserId",
                 table: "Tickets",
-                column: "ApplicationUserId");
+                column: "CreatedByUserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserAnswers_ChoiceId",
@@ -1222,9 +1212,10 @@ namespace DataAccess.Migrations
                 column: "BadgeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_UsersBadges_StudentId",
+                name: "IX_UsersBadges_StudentId_BadgeId",
                 table: "UsersBadges",
-                column: "StudentId");
+                columns: new[] { "StudentId", "BadgeId" },
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_UsersWatchedNodes_NodeId",
