@@ -13,22 +13,10 @@ namespace Models
 
         public int StudentId { get; set; }
         [ForeignKey("StudentId")]
-        public Student Student { get; set; } = new Student();
+        public Student Student { get; set; }
 
         public int NodeId { get; set; }
         [ForeignKey("NodeId")]
-        public Node Node { get; set; } = new Node();
+        public Node Node { get; set; }
     }
 }
-
-/*
-    IsWatched    => حالة ما إذا كان الطالب قد شاهد هذا العنصر (نعم أو لا)
-
-    StudentId    => المعرف الخاص بالطالب الذي شاهد العنصر
-
-    Student      => الكائن الذي يمثل الطالب الذي شاهد العنصر
-
-    NodeId       => المعرف الخاص بالعنصر الذي شاهده الطالب
-
-    Node         => الكائن الذي يمثل العنصر الذي تم مشاهدته
-*/

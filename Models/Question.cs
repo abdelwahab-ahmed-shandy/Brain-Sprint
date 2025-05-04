@@ -16,27 +16,10 @@ namespace Models
         public int ExamId { get; set; }
 
         [ForeignKey("ExamId")]
-        public Exam Exam { get; set; } = null!;
+        public Exam Exam { get; set; }
 
-        public List<Choice> Choices { get; set; } = new List<Choice>();
+        public List<Choice> Choices { get; set; }
         public List<UserAnswer> UserAnswers { get; set; } = new List<UserAnswer>();
     }
 
 }
-
-/*
-    QuestionText  => نص السؤال الذي يُطرح في الاختبار
-
-    IsCorrect     => حالة السؤال (صحيح أم خاطئ)
-
-    Score         => عدد النقاط التي يمنحها السؤال في حالة الإجابة الصحيحة
-
-    ExamId        => معرف الاختبار الذي ينتمي إليه السؤال
-
-    Exam          => الكائن الخاص بالاختبار الذي يحتوي على هذا السؤال
-
-    Choices       => قائمة الخيارات المتاحة للإجابة على السؤال
-
-    UserAnswers   => قائمة الإجابات التي قدمها المستخدمون لهذا السؤال
-*/
-

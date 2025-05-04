@@ -20,28 +20,9 @@ namespace Models
 
         public int ExamId { get; set; }
         [ForeignKey("ExamId")]
-        public Exam Exam { get; set; } = new Exam();
+        public Exam Exam { get; set; }
 
-        public List<UserAnswer> UserAnswers { get; set; } = new List<UserAnswer>();
+        public List<UserAnswer> UserAnswers { get; set; }
     }
 }
 
-/*
-    ExamScore    => النتيجة التي حصل عليها الطالب في الاختبار
-
-    UserScore    => النتيجة التي سجلها المستخدم بناءً على إجابات الأسئلة
-
-    StartedAt    => تاريخ ووقت بدء الاختبار
-
-    FinishedAt   => تاريخ ووقت إتمام الاختبار
-
-    StudentId    => المعرف الخاص بالطالب الذي أجرى الاختبار
-
-    Student      => الكائن الذي يمثل الطالب الذي أجرى الاختبار
-
-    ExamId       => المعرف الخاص بالاختبار الذي تم التقدم له
-
-    Exam         => الكائن الذي يمثل الاختبار
-
-    UserAnswers  => قائمة بالإجابات التي قدمها المستخدم للأسئلة
-*/

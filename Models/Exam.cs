@@ -20,23 +20,8 @@ namespace Models
         [ForeignKey("CourseModuleId")]
         public CourseModule CourseModule { get; set; } = null!;
 
-        public List<Question> Questions { get; set; } = new List<Question>();
-        public List<UserExamAttemp> UserExamAttemps { get; set; } = new List<UserExamAttemp>();
+        public List<Question> Questions { get; set; }
+        public List<UserExamAttemp> UserExamAttemps { get; set; }
     }
 }
 
-
-/*
-    Title                => عنوان الامتحان
-
-    Score                => الدرجة الإجمالية للامتحان
-
-    MaximumTime          => الحد الأقصى للوقت المسموح به للإجابة على الامتحان (اختياري)
-
-    CourseModuleId       => المعرف الخاص بالوحدة التي يتبعها الامتحان
-    CourseModule               => الكائن الذي يمثل الوحدة التي يحتوي عليها الامتحان
-
-    Questions            => قائمة الأسئلة التي يتضمنها الامتحان
-
-    UserExamAttemps      => قائمة المحاولات التي قام بها الطلاب للامتحان
-*/

@@ -25,32 +25,10 @@ namespace Models
         public int? TextNodeId { get; set; }
         public TextNode? TextNode { get; set; }
 
-        public List<NodeAttachment>? NodeAttachments { get; set; }
-        public List<UsersWatchedNode>? UsersWatchedNodes { get; set; }
+        public ICollection<NodeAttachment>? NodeAttachments { get; set; }
+
+        public ICollection<UsersWatchedNode>? UsersWatchedNodes { get; set; }
     }
 }
 
-/*
-    Title               => عنوان العقدة (مثل العنوان الخاص بالفيديو أو النص)
 
-    NodeType            => نوع العقدة (مثل فيديو، نص، صورة، إلخ)
-
-    Index               => ترتيب العقدة داخل الوحدة
-
-    IsFree              => إذا كانت العقدة مجانية (نعم/لا)
-
-    CourseModuleId      => معرف الوحدة التدريبية التي تنتمي إليها العقدة
-    CourseModule        => الكائن الخاص بالوحدة التدريبية المرتبطة
-
-    VidoeNodeId         => معرف العقدة الخاصة بالفيديو (اختياري)
-
-    VideoNode           => الكائن الخاص بالفيديو المرتبط (اختياري)
-
-    TextNodeID          => معرف العقدة الخاصة بالنص (اختياري)
-
-    TextNode            => الكائن الخاص بالنص المرتبط (اختياري)
-
-    NodeAttachments     => قائمة الملفات المرفقة بالعقدة (اختياري)
-
-    UsersWatchedNodes   => قائمة المستخدمين الذين شاهدوا هذه العقدة (اختياري)
-*/

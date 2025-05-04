@@ -17,25 +17,9 @@ namespace Models
         public int CourseId { get; set; }
         [ForeignKey("CourseId")]
         public Course? Course { get; set; }
-        public ICollection<Exam> Exams { get; set; } = new List<Exam>();
-        public List<Node> Nodes { get; set; } = new List<Node>();
 
+        public ICollection<Exam> Exams { get; set; } = new List<Exam>();
+
+        public ICollection<Node> Nodes { get; set; } = new List<Node>();
     }
 }
-
-
-/*
-    Title       => عنوان الوحدة الدراسية
-
-    Index       => ترتيب الوحدة في الدورة التدريبية
-
-    CourseId    => معرف الدورة التدريبية التي تنتمي إليها الوحدة
-
-    Course      => الكائن الخاص بالدورة التدريبية المرتبطة
-
-    ExamId      => معرف الاختبار الذي قد يكون مرتبطًا بهذه الوحدة (اختياري)
-
-    Exam        => الكائن الخاص بالاختبار المرتبط (اختياري)
-
-    Nodes       => قائمة العقد (مثل الفيديو، النصوص، الصور، الخ) المرتبطة بهذه الوحدة
-*/

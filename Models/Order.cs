@@ -11,25 +11,14 @@ namespace Models
     public class Order : BaseModel
     {
         public double TotalAmount { get; set; }
+
         public PaymentMethod PaymentMethod { get; set; }
 
         public int StudentId { get; set; }
         [ForeignKey("StudentId")]
-        public Student Student { get; set; } = new Student();
+        public Student Student { get; set; }
 
         public List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
     }
 }
-
-/*
-    TotalAmount          => إجمالي المبلغ المطلوب دفعه للطلب
-
-    PaymentMethod        => طريقة الدفع المستخدمة في الطلب
-
-    StudentId            => معرف الطالب الذي قام بالطلب
-
-    Student              => الكائن الخاص بالطالب الذي قام بالطلب
-
-    OrderItems           => قائمة بالعناصر (المنتجات) التي تم طلبها في هذا الطلب
-*/
 

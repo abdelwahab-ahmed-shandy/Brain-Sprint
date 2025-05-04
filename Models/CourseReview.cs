@@ -14,21 +14,11 @@ namespace Models
 
         public int StudentId { get; set; }
         [ForeignKey("StudentId")]
-        public Student Student { get; set; } = new Student();
+        public Student Student { get; set; }
 
         public int CourseId { get; set; }
         [ForeignKey("CourseId")]
-        public Course Course { get; set; } = new Course();
+        public Course Course { get; set; }
     }
 }
 
-/*
-    Rating               => تقييم الدورة من قبل الطالب (مثال: من 1 إلى 5)
-    Comment              => تعليق الطالب على الدورة (اختياري)
-
-    StudentId            => المعرف الخاص بالطالب الذي قام بتقييم الدورة
-    Student              => الكائن الذي يمثل الطالب الذي قام بتقييم الدورة
-
-    CourseId             => المعرف الخاص بالدورة التي تم تقييمها
-    Course               => الكائن الذي يمثل الدورة التي تم تقييمها
-*/

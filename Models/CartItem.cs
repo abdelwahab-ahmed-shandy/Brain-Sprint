@@ -10,19 +10,14 @@ namespace Models
     public class CartItem : BaseModel
     {
         public double PriceAtPurchase { get; set; }
+
         public int CartId { get; set; }
         [ForeignKey("CartId")]
-        public Cart Cart { get; set; } = new Cart();
+        public Cart Cart { get; set; }
+
         public int CourseId { get; set; }
         [ForeignKey("CourseId")]
-        public Course Course { get; set; } = new Course();
+        public Course Course { get; set; }
     }
 }
 
-/*
-    PriceAtPurchase  => السعر الذي تم شراء العنصر به في السلة
-    CartId           => المعرف الخارجي للسلة المرتبطة بهذا العنصر
-    Cart             => الكائن الذي يمثل السلة المرتبطة بهذا العنصر
-    CourseId         => المعرف الخارجي للدورة المرتبطة بهذا العنصر
-    Course           => الكائن الذي يمثل الدورة المرتبطة بهذا العنصر
-*/

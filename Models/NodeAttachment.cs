@@ -15,19 +15,8 @@ namespace Models
 
         public int NodeId { get; set; }
         [ForeignKey("NodeId")]
-        public Node Node { get; set; } = new Node();
+        public Node Node { get; set; }
     }
 }
 
-/*
-    Title               => عنوان الملف المرفق
-
-    Description         => وصف للملف المرفق (اختياري)
-
-    FileUrl             => رابط الملف المرفق
-
-    NodeId              => معرف العقدة التي يرتبط بها هذا المرفق
-
-    Node                => الكائن الخاص بالعقدة المرتبطة بالملف المرفق
-*/
 

@@ -12,31 +12,16 @@ namespace Models
         public int UserExamAttempId { get; set; }
 
         [ForeignKey("UserExamAttempId")]
-        public UserExamAttemp UserExamAttemp { get; set; } = null!;
+        public UserExamAttemp UserExamAttemp { get; set; }
 
         public int QuestionId { get; set; }
 
         [ForeignKey("QuestionId")]
-        public Question Question { get; set; } = null!;
+        public Question Question { get; set; }
 
         public int ChoiceId { get; set; }
 
         [ForeignKey("ChoiceId")]
-        public Choice Choice { get; set; } = null!;
+        public Choice Choice { get; set; }
     }
 }
-
-/*
-    UserExamAttempId => المعرف الخاص بمحاولة اختبار المستخدم المرتبطة بالإجابة
-
-    UserExamAttemp   => الكائن الذي يمثل محاولة اختبار المستخدم المرتبطة بالإجابة
-
-    QuestionId       => المعرف الخاص بالسؤال الذي تم الإجابة عليه
-
-    Question         => الكائن الذي يمثل السؤال المرتبط بالإجابة
-
-    ChoiceId         => المعرف الخاص بالخيار الذي تم اختياره في الإجابة
-
-    Choice           => الكائن الذي يمثل الخيار المختار للإجابة
-*/
-
