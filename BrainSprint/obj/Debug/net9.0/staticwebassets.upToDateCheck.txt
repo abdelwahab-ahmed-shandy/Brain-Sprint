@@ -2,6 +2,7 @@ C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\jquery\dist\jquery.min.
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\css\site.css
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\js\chart-area-demo.js
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\Assets\Identity\css\bootstrap\mixins\_border-radius.css
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
@@ -10,6 +11,7 @@ C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\bootstrap\dist\js\boots
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\jquery\dist\jquery.min.js
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\js\chart-pie-demo.js
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
@@ -23,11 +25,14 @@ C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\Assets\Identity\css\bootstr
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\bootstrap\dist\js\bootstrap.js
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\js\scripts.js
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\jquery\dist\jquery.js
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\favicon.ico
+C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\js\chart-bar-demo.js
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\js\datatables-simple-demo.js
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\Assets\Identity\css\bootstrap\mixins\_screen-reader.css
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\jquery\dist\jquery.slim.min.map
@@ -57,6 +62,7 @@ C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\Assets\Identity\css\bootstr
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\jquery-validation\dist\jquery.validate.js
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\css\Admin.css
+C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\js\datatables-demo.js
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\wwwroot\Assets\Identity\css\bootstrap\mixins\_reset-text.css
@@ -93,7 +99,13 @@ wwwroot\css\customer.css
 wwwroot\css\Instructor.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\js\chart-area-demo.js
+wwwroot\js\chart-bar-demo.js
+wwwroot\js\chart-pie-demo.js
+wwwroot\js\datatables-demo.js
+wwwroot\js\datatables-simple-demo.js
 wwwroot\js\notifications.js
+wwwroot\js\scripts.js
 wwwroot\js\search.js
 wwwroot\js\site.js
 wwwroot\js\theme.js

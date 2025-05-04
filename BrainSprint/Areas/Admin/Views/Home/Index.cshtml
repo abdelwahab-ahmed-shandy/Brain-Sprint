@@ -1,5 +1,275 @@
-﻿@{
-    ViewData["Title"] = "Admin Dashboard";
-}
+﻿@* @model Models.ViewModels.AdminDashboardViewModel *@
+
+@* @{ *@
+@*     ViewData["Title"] = "Admin Dashboard"; *@
+@* } *@
+
+@* <div class="container-fluid">  *@
+@* <!-- Header Section -->  *@
+@* <div class="d-flex justify-content-between align-items-center mb-4">  *@
+@* <h1 class="display-4">Administrative Control Panel</h1>  *@
+@* <div class="text-muted">@DateTime.Now.ToString("yyyy/MM/dd")</div>  *@
+@* </div>  *@
+
+@* <!-- Quick Stats Cards -->  *@
+@* <div class="row">  *@
+@* <!-- Users Card -->  *@
+@* <div class="col-xl-3 col-md-6 mb-4">  *@
+@* <div class="card border-left-primary shadow h-100 py-2">  *@
+@* <div class="card-body">  *@
+@* <div class="row no-gutters align-items-center">  *@
+@* <div class="col mr-2">  *@
+@* <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total users</div>  *@
+@* <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.TotalUsers</div>  *@
+@* </div>  *@
+@* <div class="col-auto">  *@
+@* <i class="fas fa-users fa-2x text-gray-300"></i>  *@
+@* </div>  *@
+@* </div>  *@
+@* </div>  *@
+@* </div>  *@
+@* </div>  *@
+
+@* <!-- Students Card -->  *@
+@* <div class="col-xl-3 col-md-6 mb-4">  *@
+@* <div class="card border-left-success shadow h-100 py-2">  *@
+@* <div class="card-body">  *@
+@* <div class="row no-gutters align-items-center">  *@
+@* <div class="col mr-2">  *@
+@* <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Students</div>  *@
+@* <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.TotalStudents</div>  *@
+@* </div>  *@
+@* <div class="col-auto">  *@
+@* <i class="fas fa-user-graduate fa-2x text-gray-300"></i>  *@
+@* </div>  *@
+@* </div>  *@
+@* </div>  *@
+@* </div>  *@
+@* </div>  *@
+
+@* <!-- Instructors Card -->  *@
+@* <div class="col-xl-3 col-md-6 mb-4">  *@
+@* <div class="card border-left-info shadow h-100 py-2">  *@
+@* <div class="card-body">  *@
+@* <div class="row no-gutters align-items-center">  *@
+@* <div class="col mr-2">  *@
+@* <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Teachers</div>  *@
+@* <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.TotalInstructors</div>  *@
+@* </div>  *@
+@* <div class="col-auto">  *@
+@* <i class="fas fa-chalkboard-teacher fa-2x text-gray-300"></i>  *@
+@* </div>  *@
+@* </div>  *@
+@* </div>  *@
+@* </div>  *@
+@* </div>  *@
+
+@* <!-- Courses Card -->  *@
+@* <div class="col-xl-3 col-md-6 mb-4">  *@
+@* <div class="card border-left-warning shadow h-100 py-2">  *@
+@* <div class="card-body">  *@
+@* <div class="row no-gutters align-items-center">  *@
+@* <div class="col mr-2">  *@
+@* <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Courses</div>  *@
+@* <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.TotalCourses</div>  *@
+@* </div>  *@
+@* <div class="col-auto">  *@
+@* <i class="fas fa-book fa-2x text-gray-300"></i>  *@
+@* </div>  *@
+@* </div>  *@
+@* </div>  *@
+@* </div>  *@
+@* </div>  *@
+@* </div> *@
 
 
+@*     <!-- Content Row --> *@
+@*     <div class="row"> *@
+@*         <!-- Recent Activities --> *@
+@*         <div class="col-lg-6 mb-4"> *@
+@*             <div class="card shadow mb-4"> *@
+@*                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between"> *@
+@*                     <h6 class="m-0 font-weight-bold text-primary">Recent activities</h6> *@
+@*                 </div> *@
+@*                 <div class="card-body"> *@
+@*                     <div class="table-responsive"> *@
+@*                         <table class="table table-bordered" width="100%" cellspacing="0"> *@
+@*                             <thead> *@
+@*                                 <tr> *@
+@*                                     <th>Date</th> *@
+@*                                     <th>Activity</th> *@
+@*                                     <th>User</th> *@
+@*                                 </tr> *@
+@*                             </thead> *@
+@*                             <tbody> *@
+@*                                 @foreach (var activity in Model.RecentActivities) *@
+@*                                 { *@
+@*                                     <tr> *@
+@*                                         <td>@activity.Timestamp.ToString("g")</td> *@
+@*                                         <td>@activity.Action</td> *@
+@*                                         <td>@activity.User?.Email</td> *@
+@*                                     </tr> *@
+@*                                 } *@
+@*                             </tbody> *@
+@*                         </table> *@
+@*                     </div> *@
+@*                 </div> *@
+@*             </div> *@
+@*         </div> *@
+
+@*         <!-- Top Learners --> *@
+@*         <div class="col-lg-6 mb-4"> *@
+@*             <div class="card shadow mb-4"> *@
+@*                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between"> *@
+@*                     <h6 class="m-0 font-weight-bold text-primary">Best Learners</h6> *@
+@*                 </div> *@
+@*                 <div class="card-body"> *@
+@*                     <div class="table-responsive"> *@
+@*                         <table class="table table-bordered" width="100%" cellspacing="0"> *@
+@*                             <thead> *@
+@*                                 <tr> *@
+@*                                     <th>#</th> *@
+@*                                     <th>Name</th> *@
+@*                                     <th>Points</th> *@
+@*                                     <th>Level</th> *@
+@*                                 </tr> *@
+@*                             </thead> *@
+@*                             <tbody> *@
+@*                                 @{ *@
+@*                                     int rank = 1; *@
+@*                                 } *@
+@*                                 @foreach (var learner in Model.TopLearners) *@
+@*                                 { *@
+@*                                     <tr> *@
+@*                                         <td>@(rank++)</td> *@
+@*                                         <td>@learner.UserName</td> *@
+@*                                         <td>@learner.TotalXP</td> *@
+@*                                         <td>@learner.Level</td> *@
+@*                                     </tr> *@
+@*                                 } *@
+@*                             </tbody> *@
+@*                         </table> *@
+@*                     </div> *@
+@*                 </div> *@
+@*             </div> *@
+@*         </div> *@
+@*     </div> *@
+
+
+
+
+@*     <!-- Gamification Section --> *@
+@*     <div class="row"> *@
+@*         <div class="col-lg-6 mb-4"> *@
+@*             <div class="card shadow mb-4"> *@
+@*                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between"> *@
+@*                     <h6 class="m-0 font-weight-bold text-primary">Prize system</h6> *@
+@*                 </div> *@
+@*                 <div class="card-body"> *@
+@*                     <div class="row"> *@
+@*                         <div class="col-md-6"> *@
+@*                             <div class="card border-left-success shadow h-100 py-2 mb-4"> *@
+@*                                 <div class="card-body"> *@
+@*                                     <div class="row no-gutters align-items-center"> *@
+@*                                         <div class="col mr-2"> *@
+@*                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Prizes</div> *@
+@*                                             <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.TotalBadges</div> *@
+@*                                         </div> *@
+@*                                         <div class="col-auto"> *@
+@*                                             <i class="fas fa-medal fa-2x text-gray-300"></i> *@
+@*                                         </div> *@
+@*                                     </div> *@
+@*                                 </div> *@
+@*                             </div> *@
+@*                         </div> *@
+@*                         <div class="col-md-6"> *@
+@*                             <div class="card border-left-info shadow h-100 py-2 mb-4"> *@
+@*                                 <div class="card-body"> *@
+@*                                     <div class="row no-gutters align-items-center"> *@
+@*                                         <div class="col mr-2"> *@
+@*                                             <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Most Prize Common</div> *@
+@*                                             <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.MostPopularBadge</div> *@
+@*                                         </div> *@
+@*                                         <div class="col-auto"> *@
+@*                                             <i class="fas fa-trophy fa-2x text-gray-300"></i> *@
+@*                                         </div> *@
+@*                                     </div> *@
+@*                                 </div> *@
+@*                             </div> *@
+@*                         </div> *@
+@*                     </div> *@
+@*                 </div> *@
+@*             </div> *@
+@*         </div> *@
+
+@*         <!-- Popular Courses --> *@
+@*         <div class="col-lg-6 mb-4"> *@
+@*             <div class="card shadow mb-4"> *@
+@*                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between"> *@
+@*                     <h6 class="m-0 font-weight-bold text-primary">Most courses Popular</h6> *@
+@*                 </div> *@
+@*                 <div class="card-body"> *@
+@*                     <div class="list-group"> *@
+@*                         @foreach (var course in Model.PopularCourses) *@
+@*                         { *@
+@*                             <a href="#" class="list-group-item list-group-item-action"> *@
+@*                                 <div class="d-flex w-100 justify-content-between"> *@
+@*                                     <h5 class="mb-1">@course</h5> *@
+@*                                     <small>@course.EnrollmentsCount Student</small> *@
+@*                                 </div> *@
+@*                                 <p class="mb-1">@course.Description</p> *@
+@*                             </a> *@
+@*                         } *@
+@*                     </div> *@
+@*                 </div> *@
+@*             </div> *@
+@*         </div> *@
+@*     </div> *@
+@* </div> *@
+
+@* @section Styles { *@
+@*     <style> *@
+@*         .card { *@
+@*             border-radius: 0.35rem; *@
+@*         } *@
+
+@*         .card-header { *@
+@*             background-color: #f8f9fc; *@
+@*             border-bottom: 1px solid #e3e6f0; *@
+@*         } *@
+
+@*         .table { *@
+@*             font-size: 0.85rem; *@
+@*         } *@
+
+@*         .border-left-primary { *@
+@*             border-left: 0.25rem solid #4e73df !important; *@
+@*         } *@
+
+@*         .border-left-success { *@
+@*             border-left: 0.25rem solid #1cc88a !important; *@
+@*         } *@
+
+@*         .border-left-info { *@
+@*             border-left: 0.25rem solid #36b9cc !important; *@
+@*         } *@
+
+@*         .border-left-warning { *@
+@*             border-left: 0.25rem solid #f6c23e !important; *@
+@*         } *@
+@*     </style> *@
+@* } *@
+
+@* @section Scripts { *@
+@*     <script> *@
+@*         // You can add any additional scripts here *@
+@*         $(document).ready(function() { *@
+@*         $('.table').DataTable({ *@
+@*         responsive: true, *@
+@*         language: { *@
+@*         url: '//cdn.datatables.net/plug-ins/1.10.24/i18n/Arabic.json' *@
+@*         } *@
+@*         }); *@
+@*         }); *@
+@*     </script> *@
+@* } *@

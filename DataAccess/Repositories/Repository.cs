@@ -166,6 +166,19 @@ namespace DataAccess.Repositories
         #endregion
 
 
+        #region Get Count
+
+        public async Task<int> CountAsync(Expression<Func<T, bool>>? filter = null)
+        {
+            IQueryable<T> query = DbSet;
+
+            if (filter != null)
+                query = query.Where(filter);
+
+            return await query.CountAsync();
+        }
+
+        #endregion
 
         #endregion
 

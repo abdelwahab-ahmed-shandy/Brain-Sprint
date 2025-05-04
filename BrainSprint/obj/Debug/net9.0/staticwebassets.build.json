@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mThIfLdavCFqrqPZOCEV6zP28PcCBMsaMa4yEeAlYTs=",
+  "Hash": "r6v4lDCVwrL216iQr0p/TBU8fIoMtsXdc5qUr9ABKoY=",
   "Source": "BrainSprint",
   "BasePath": "_content/BrainSprint",
   "Mode": "Default",
@@ -120,6 +120,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\2ksdi3m58e-8flq4k35dk.gz",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "js/chart-area-demo#[.{fingerprint=8flq4k35dk}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\chart-area-demo.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "9k50g1cuk7",
+      "Integrity": "KRAVGw6vu4FlK1E+NUHEMiozJlvyES1MittWI1dnqdA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\chart-area-demo.js"
     },
     {
       "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\2nxjvrl5u9-5ipweew5fc.gz",
@@ -288,6 +309,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\78kg277p19-hw7eaup9v4.gz",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "js/chart-pie-demo#[.{fingerprint=hw7eaup9v4}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\chart-pie-demo.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "1ysyhzfdgx",
+      "Integrity": "CRTAMXtNBshUtBEDirpNtW5s4L20f/M2h9IwGulgstg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\chart-pie-demo.js"
     },
     {
       "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\7hscxsekf6-cosvhxvwiu.gz",
@@ -563,6 +605,27 @@
       "OriginalItemSpec": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
+      "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\c0yltx5b70-dqle62frat.gz",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "js/scripts#[.{fingerprint=dqle62frat}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\scripts.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "yvdnluo0hc",
+      "Integrity": "8mwblwUU4NvD8IMKjUSDsC4WxI8PE1XmFjKGfKyr46s=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\scripts.js"
+    },
+    {
       "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\ctvp11nr94-sejl45xvog.gz",
       "SourceId": "BrainSprint",
       "SourceType": "Discovered",
@@ -626,6 +689,27 @@
       "OriginalItemSpec": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\d32472u94u-qbt6h4ox5y.gz",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "js/chart-bar-demo#[.{fingerprint=qbt6h4ox5y}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\chart-bar-demo.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "0amxk975gj",
+      "Integrity": "CPcUUOqP/2Z14WIVyGYkq5LjjZXFxhN/ls311+JAM+Q=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\chart-bar-demo.js"
+    },
+    {
       "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\eiorylazgq-pj5nd1wqec.gz",
       "SourceId": "BrainSprint",
       "SourceType": "Discovered",
@@ -666,6 +750,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\ferel9za1n-xnqwbb6zwd.gz",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "js/datatables-simple-demo#[.{fingerprint=xnqwbb6zwd}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\datatables-simple-demo.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "4c56rs97fw",
+      "Integrity": "hJtsBXqcWGs0wlAWHrwUFgY5BqJ8NgUi30WxpQVUqPc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\datatables-simple-demo.js"
     },
     {
       "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\fhf9chxr0x-aexeepp0ev.gz",
@@ -1277,12 +1382,12 @@
       "OriginalItemSpec": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\t23hu5vkki-jvvrg9x4wq.gz",
+      "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\t23hu5vkki-xtb6zq3fpe.gz",
       "SourceId": "BrainSprint",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/BrainSprint",
-      "RelativePath": "css/Admin#[.{fingerprint=jvvrg9x4wq}]?.css.gz",
+      "RelativePath": "css/Admin#[.{fingerprint=xtb6zq3fpe}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1291,11 +1396,32 @@
       "RelatedAsset": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\css\\Admin.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "rl0wz6lrff",
-      "Integrity": "D7b/6PG7ot46fptYBcV9KLV5yQ1PaXRoeiSK+mk+oEI=",
+      "Fingerprint": "1vg86e9lfb",
+      "Integrity": "o2rtBJ/C9DSzMdwp7foeN3Q5a6ftc2rXlT9b7oH2mKQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\css\\Admin.css"
+    },
+    {
+      "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\ti267ch81o-w9gruc5uo1.gz",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "js/datatables-demo#[.{fingerprint=w9gruc5uo1}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\datatables-demo.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "cklkj24bb6",
+      "Integrity": "1BrJYp/fJgi2ISqUUHaWgDnwkJJvO/IyDtxyHYYS1lg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\datatables-demo.js"
     },
     {
       "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\tugk12w7i5-c2oey78nd0.gz",
@@ -2005,8 +2131,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "jvvrg9x4wq",
-      "Integrity": "4UHAkJhtLh/1JohJIZCdVZ2qlzrOoP/ww4DTQpvQ5ng=",
+      "Fingerprint": "xtb6zq3fpe",
+      "Integrity": "m+Ox3JvwU5CpTpynOFa0+UuHLmeJW9dYRWlMy2EAYFA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Admin.css"
@@ -2096,6 +2222,111 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\chart-area-demo.js",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "js/chart-area-demo#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8flq4k35dk",
+      "Integrity": "9LLP7XKqyptnrNbmQqIjm5rIDw5zwE9KWE4hVhK5Jvk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\chart-area-demo.js"
+    },
+    {
+      "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\chart-bar-demo.js",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "js/chart-bar-demo#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qbt6h4ox5y",
+      "Integrity": "9tpvm3R5RdFWxUDIA09CWwnWxpLxiJYWKom8gdLwl3I=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\chart-bar-demo.js"
+    },
+    {
+      "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\chart-pie-demo.js",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "js/chart-pie-demo#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hw7eaup9v4",
+      "Integrity": "gXHh8OZnGFZ8Pb+CoSlwJ7lx7tZD1amOLrSASwI8Neo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\chart-pie-demo.js"
+    },
+    {
+      "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\datatables-demo.js",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "js/datatables-demo#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "w9gruc5uo1",
+      "Integrity": "3BYZ/ie9x2nIWSAO1N9M0VISPR5FfP5Wg0EKHZzNOoo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\datatables-demo.js"
+    },
+    {
+      "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\datatables-simple-demo.js",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "js/datatables-simple-demo#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xnqwbb6zwd",
+      "Integrity": "A5r4X24Y4UOeA7FBC6HS3voj76xkmczywh9qO+Ly5hQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\datatables-simple-demo.js"
+    },
+    {
       "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\notifications.js",
       "SourceId": "BrainSprint",
       "SourceType": "Discovered",
@@ -2115,6 +2346,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\notifications.js"
+    },
+    {
+      "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\scripts.js",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "js/scripts#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dqle62frat",
+      "Integrity": "hSOKtaoLbtAX3QLxogVcaVg8Fv7Y6HTCcpJqVePv720=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\scripts.js"
     },
     {
       "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\search.js",
@@ -6915,12 +7167,12 @@
     },
     {
       "Route": "css/Admin.css",
-      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\t23hu5vkki-jvvrg9x4wq.gz",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\t23hu5vkki-xtb6zq3fpe.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.004016064257"
+          "Quality": "0.000029425612"
         }
       ],
       "ResponseHeaders": [
@@ -6930,15 +7182,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "248"
+          "Value": "33983"
         },
         {
           "Name": "ETag",
-          "Value": "\"D7b/6PG7ot46fptYBcV9KLV5yQ1PaXRoeiSK+mk+oEI=\""
+          "Value": "\"o2rtBJ/C9DSzMdwp7foeN3Q5a6ftc2rXlT9b7oH2mKQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 21:06:24 GMT"
+          "Value": "Sun, 04 May 2025 02:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6958,13 +7210,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"4UHAkJhtLh/1JohJIZCdVZ2qlzrOoP/ww4DTQpvQ5ng=\""
+          "Value": "W/\"m+Ox3JvwU5CpTpynOFa0+UuHLmeJW9dYRWlMy2EAYFA=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4UHAkJhtLh/1JohJIZCdVZ2qlzrOoP/ww4DTQpvQ5ng="
+          "Value": "sha256-m+Ox3JvwU5CpTpynOFa0+UuHLmeJW9dYRWlMy2EAYFA="
         }
       ]
     },
@@ -6979,7 +7231,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "378"
+          "Value": "292031"
         },
         {
           "Name": "Content-Type",
@@ -6987,11 +7239,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4UHAkJhtLh/1JohJIZCdVZ2qlzrOoP/ww4DTQpvQ5ng=\""
+          "Value": "\"m+Ox3JvwU5CpTpynOFa0+UuHLmeJW9dYRWlMy2EAYFA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 21:06:24 GMT"
+          "Value": "Sun, 04 May 2025 02:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7001,13 +7253,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4UHAkJhtLh/1JohJIZCdVZ2qlzrOoP/ww4DTQpvQ5ng="
+          "Value": "sha256-m+Ox3JvwU5CpTpynOFa0+UuHLmeJW9dYRWlMy2EAYFA="
         }
       ]
     },
     {
       "Route": "css/Admin.css.gz",
-      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\t23hu5vkki-jvvrg9x4wq.gz",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\t23hu5vkki-xtb6zq3fpe.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7016,7 +7268,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "248"
+          "Value": "33983"
         },
         {
           "Name": "Content-Type",
@@ -7024,11 +7276,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"D7b/6PG7ot46fptYBcV9KLV5yQ1PaXRoeiSK+mk+oEI=\""
+          "Value": "\"o2rtBJ/C9DSzMdwp7foeN3Q5a6ftc2rXlT9b7oH2mKQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 21:06:24 GMT"
+          "Value": "Sun, 04 May 2025 02:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7046,18 +7298,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-D7b/6PG7ot46fptYBcV9KLV5yQ1PaXRoeiSK+mk+oEI="
+          "Value": "sha256-o2rtBJ/C9DSzMdwp7foeN3Q5a6ftc2rXlT9b7oH2mKQ="
         }
       ]
     },
     {
-      "Route": "css/Admin.jvvrg9x4wq.css",
-      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\t23hu5vkki-jvvrg9x4wq.gz",
+      "Route": "css/Admin.xtb6zq3fpe.css",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\t23hu5vkki-xtb6zq3fpe.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.004016064257"
+          "Quality": "0.000029425612"
         }
       ],
       "ResponseHeaders": [
@@ -7067,15 +7319,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "248"
+          "Value": "33983"
         },
         {
           "Name": "ETag",
-          "Value": "\"D7b/6PG7ot46fptYBcV9KLV5yQ1PaXRoeiSK+mk+oEI=\""
+          "Value": "\"o2rtBJ/C9DSzMdwp7foeN3Q5a6ftc2rXlT9b7oH2mKQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 21:06:24 GMT"
+          "Value": "Sun, 04 May 2025 02:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7095,13 +7347,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"4UHAkJhtLh/1JohJIZCdVZ2qlzrOoP/ww4DTQpvQ5ng=\""
+          "Value": "W/\"m+Ox3JvwU5CpTpynOFa0+UuHLmeJW9dYRWlMy2EAYFA=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "jvvrg9x4wq"
+          "Value": "xtb6zq3fpe"
         },
         {
           "Name": "label",
@@ -7109,12 +7361,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-4UHAkJhtLh/1JohJIZCdVZ2qlzrOoP/ww4DTQpvQ5ng="
+          "Value": "sha256-m+Ox3JvwU5CpTpynOFa0+UuHLmeJW9dYRWlMy2EAYFA="
         }
       ]
     },
     {
-      "Route": "css/Admin.jvvrg9x4wq.css",
+      "Route": "css/Admin.xtb6zq3fpe.css",
       "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\css\\Admin.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -7124,7 +7376,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "378"
+          "Value": "292031"
         },
         {
           "Name": "Content-Type",
@@ -7132,11 +7384,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4UHAkJhtLh/1JohJIZCdVZ2qlzrOoP/ww4DTQpvQ5ng=\""
+          "Value": "\"m+Ox3JvwU5CpTpynOFa0+UuHLmeJW9dYRWlMy2EAYFA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 21:06:24 GMT"
+          "Value": "Sun, 04 May 2025 02:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7146,7 +7398,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "jvvrg9x4wq"
+          "Value": "xtb6zq3fpe"
         },
         {
           "Name": "label",
@@ -7154,13 +7406,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-4UHAkJhtLh/1JohJIZCdVZ2qlzrOoP/ww4DTQpvQ5ng="
+          "Value": "sha256-m+Ox3JvwU5CpTpynOFa0+UuHLmeJW9dYRWlMy2EAYFA="
         }
       ]
     },
     {
-      "Route": "css/Admin.jvvrg9x4wq.css.gz",
-      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\t23hu5vkki-jvvrg9x4wq.gz",
+      "Route": "css/Admin.xtb6zq3fpe.css.gz",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\t23hu5vkki-xtb6zq3fpe.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7169,7 +7421,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "248"
+          "Value": "33983"
         },
         {
           "Name": "Content-Type",
@@ -7177,11 +7429,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"D7b/6PG7ot46fptYBcV9KLV5yQ1PaXRoeiSK+mk+oEI=\""
+          "Value": "\"o2rtBJ/C9DSzMdwp7foeN3Q5a6ftc2rXlT9b7oH2mKQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 30 Apr 2025 21:06:24 GMT"
+          "Value": "Sun, 04 May 2025 02:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7199,7 +7451,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "jvvrg9x4wq"
+          "Value": "xtb6zq3fpe"
         },
         {
           "Name": "label",
@@ -7207,7 +7459,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-D7b/6PG7ot46fptYBcV9KLV5yQ1PaXRoeiSK+mk+oEI="
+          "Value": "sha256-o2rtBJ/C9DSzMdwp7foeN3Q5a6ftc2rXlT9b7oH2mKQ="
         }
       ]
     },
@@ -8404,6 +8656,1496 @@
       ]
     },
     {
+      "Route": "js/chart-area-demo.8flq4k35dk.js",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\2ksdi3m58e-8flq4k35dk.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001490312966"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "670"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KRAVGw6vu4FlK1E+NUHEMiozJlvyES1MittWI1dnqdA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"9LLP7XKqyptnrNbmQqIjm5rIDw5zwE9KWE4hVhK5Jvk=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8flq4k35dk"
+        },
+        {
+          "Name": "label",
+          "Value": "js/chart-area-demo.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9LLP7XKqyptnrNbmQqIjm5rIDw5zwE9KWE4hVhK5Jvk="
+        }
+      ]
+    },
+    {
+      "Route": "js/chart-area-demo.8flq4k35dk.js",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\chart-area-demo.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1530"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9LLP7XKqyptnrNbmQqIjm5rIDw5zwE9KWE4hVhK5Jvk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8flq4k35dk"
+        },
+        {
+          "Name": "label",
+          "Value": "js/chart-area-demo.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9LLP7XKqyptnrNbmQqIjm5rIDw5zwE9KWE4hVhK5Jvk="
+        }
+      ]
+    },
+    {
+      "Route": "js/chart-area-demo.8flq4k35dk.js.gz",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\2ksdi3m58e-8flq4k35dk.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "670"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KRAVGw6vu4FlK1E+NUHEMiozJlvyES1MittWI1dnqdA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8flq4k35dk"
+        },
+        {
+          "Name": "label",
+          "Value": "js/chart-area-demo.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KRAVGw6vu4FlK1E+NUHEMiozJlvyES1MittWI1dnqdA="
+        }
+      ]
+    },
+    {
+      "Route": "js/chart-area-demo.js",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\2ksdi3m58e-8flq4k35dk.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001490312966"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "670"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KRAVGw6vu4FlK1E+NUHEMiozJlvyES1MittWI1dnqdA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"9LLP7XKqyptnrNbmQqIjm5rIDw5zwE9KWE4hVhK5Jvk=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9LLP7XKqyptnrNbmQqIjm5rIDw5zwE9KWE4hVhK5Jvk="
+        }
+      ]
+    },
+    {
+      "Route": "js/chart-area-demo.js",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\chart-area-demo.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1530"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9LLP7XKqyptnrNbmQqIjm5rIDw5zwE9KWE4hVhK5Jvk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9LLP7XKqyptnrNbmQqIjm5rIDw5zwE9KWE4hVhK5Jvk="
+        }
+      ]
+    },
+    {
+      "Route": "js/chart-area-demo.js.gz",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\2ksdi3m58e-8flq4k35dk.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "670"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KRAVGw6vu4FlK1E+NUHEMiozJlvyES1MittWI1dnqdA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KRAVGw6vu4FlK1E+NUHEMiozJlvyES1MittWI1dnqdA="
+        }
+      ]
+    },
+    {
+      "Route": "js/chart-bar-demo.js",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\d32472u94u-qbt6h4ox5y.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001814882033"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "550"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CPcUUOqP/2Z14WIVyGYkq5LjjZXFxhN/ls311+JAM+Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"9tpvm3R5RdFWxUDIA09CWwnWxpLxiJYWKom8gdLwl3I=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9tpvm3R5RdFWxUDIA09CWwnWxpLxiJYWKom8gdLwl3I="
+        }
+      ]
+    },
+    {
+      "Route": "js/chart-bar-demo.js",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\chart-bar-demo.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1112"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9tpvm3R5RdFWxUDIA09CWwnWxpLxiJYWKom8gdLwl3I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9tpvm3R5RdFWxUDIA09CWwnWxpLxiJYWKom8gdLwl3I="
+        }
+      ]
+    },
+    {
+      "Route": "js/chart-bar-demo.js.gz",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\d32472u94u-qbt6h4ox5y.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "550"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CPcUUOqP/2Z14WIVyGYkq5LjjZXFxhN/ls311+JAM+Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-CPcUUOqP/2Z14WIVyGYkq5LjjZXFxhN/ls311+JAM+Q="
+        }
+      ]
+    },
+    {
+      "Route": "js/chart-bar-demo.qbt6h4ox5y.js",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\d32472u94u-qbt6h4ox5y.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001814882033"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "550"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CPcUUOqP/2Z14WIVyGYkq5LjjZXFxhN/ls311+JAM+Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"9tpvm3R5RdFWxUDIA09CWwnWxpLxiJYWKom8gdLwl3I=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qbt6h4ox5y"
+        },
+        {
+          "Name": "label",
+          "Value": "js/chart-bar-demo.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9tpvm3R5RdFWxUDIA09CWwnWxpLxiJYWKom8gdLwl3I="
+        }
+      ]
+    },
+    {
+      "Route": "js/chart-bar-demo.qbt6h4ox5y.js",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\chart-bar-demo.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1112"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9tpvm3R5RdFWxUDIA09CWwnWxpLxiJYWKom8gdLwl3I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qbt6h4ox5y"
+        },
+        {
+          "Name": "label",
+          "Value": "js/chart-bar-demo.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9tpvm3R5RdFWxUDIA09CWwnWxpLxiJYWKom8gdLwl3I="
+        }
+      ]
+    },
+    {
+      "Route": "js/chart-bar-demo.qbt6h4ox5y.js.gz",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\d32472u94u-qbt6h4ox5y.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "550"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CPcUUOqP/2Z14WIVyGYkq5LjjZXFxhN/ls311+JAM+Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qbt6h4ox5y"
+        },
+        {
+          "Name": "label",
+          "Value": "js/chart-bar-demo.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-CPcUUOqP/2Z14WIVyGYkq5LjjZXFxhN/ls311+JAM+Q="
+        }
+      ]
+    },
+    {
+      "Route": "js/chart-pie-demo.hw7eaup9v4.js",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\78kg277p19-hw7eaup9v4.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002538071066"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "393"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CRTAMXtNBshUtBEDirpNtW5s4L20f/M2h9IwGulgstg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"gXHh8OZnGFZ8Pb+CoSlwJ7lx7tZD1amOLrSASwI8Neo=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hw7eaup9v4"
+        },
+        {
+          "Name": "label",
+          "Value": "js/chart-pie-demo.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gXHh8OZnGFZ8Pb+CoSlwJ7lx7tZD1amOLrSASwI8Neo="
+        }
+      ]
+    },
+    {
+      "Route": "js/chart-pie-demo.hw7eaup9v4.js",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\chart-pie-demo.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "597"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gXHh8OZnGFZ8Pb+CoSlwJ7lx7tZD1amOLrSASwI8Neo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hw7eaup9v4"
+        },
+        {
+          "Name": "label",
+          "Value": "js/chart-pie-demo.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gXHh8OZnGFZ8Pb+CoSlwJ7lx7tZD1amOLrSASwI8Neo="
+        }
+      ]
+    },
+    {
+      "Route": "js/chart-pie-demo.hw7eaup9v4.js.gz",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\78kg277p19-hw7eaup9v4.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "393"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CRTAMXtNBshUtBEDirpNtW5s4L20f/M2h9IwGulgstg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hw7eaup9v4"
+        },
+        {
+          "Name": "label",
+          "Value": "js/chart-pie-demo.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-CRTAMXtNBshUtBEDirpNtW5s4L20f/M2h9IwGulgstg="
+        }
+      ]
+    },
+    {
+      "Route": "js/chart-pie-demo.js",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\78kg277p19-hw7eaup9v4.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002538071066"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "393"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CRTAMXtNBshUtBEDirpNtW5s4L20f/M2h9IwGulgstg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"gXHh8OZnGFZ8Pb+CoSlwJ7lx7tZD1amOLrSASwI8Neo=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gXHh8OZnGFZ8Pb+CoSlwJ7lx7tZD1amOLrSASwI8Neo="
+        }
+      ]
+    },
+    {
+      "Route": "js/chart-pie-demo.js",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\chart-pie-demo.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "597"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gXHh8OZnGFZ8Pb+CoSlwJ7lx7tZD1amOLrSASwI8Neo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gXHh8OZnGFZ8Pb+CoSlwJ7lx7tZD1amOLrSASwI8Neo="
+        }
+      ]
+    },
+    {
+      "Route": "js/chart-pie-demo.js.gz",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\78kg277p19-hw7eaup9v4.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "393"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CRTAMXtNBshUtBEDirpNtW5s4L20f/M2h9IwGulgstg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-CRTAMXtNBshUtBEDirpNtW5s4L20f/M2h9IwGulgstg="
+        }
+      ]
+    },
+    {
+      "Route": "js/datatables-demo.js",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\ti267ch81o-w9gruc5uo1.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.009174311927"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "108"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1BrJYp/fJgi2ISqUUHaWgDnwkJJvO/IyDtxyHYYS1lg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"3BYZ/ie9x2nIWSAO1N9M0VISPR5FfP5Wg0EKHZzNOoo=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-3BYZ/ie9x2nIWSAO1N9M0VISPR5FfP5Wg0EKHZzNOoo="
+        }
+      ]
+    },
+    {
+      "Route": "js/datatables-demo.js",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\datatables-demo.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "103"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3BYZ/ie9x2nIWSAO1N9M0VISPR5FfP5Wg0EKHZzNOoo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-3BYZ/ie9x2nIWSAO1N9M0VISPR5FfP5Wg0EKHZzNOoo="
+        }
+      ]
+    },
+    {
+      "Route": "js/datatables-demo.js.gz",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\ti267ch81o-w9gruc5uo1.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "108"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1BrJYp/fJgi2ISqUUHaWgDnwkJJvO/IyDtxyHYYS1lg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1BrJYp/fJgi2ISqUUHaWgDnwkJJvO/IyDtxyHYYS1lg="
+        }
+      ]
+    },
+    {
+      "Route": "js/datatables-demo.w9gruc5uo1.js",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\ti267ch81o-w9gruc5uo1.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.009174311927"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "108"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1BrJYp/fJgi2ISqUUHaWgDnwkJJvO/IyDtxyHYYS1lg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"3BYZ/ie9x2nIWSAO1N9M0VISPR5FfP5Wg0EKHZzNOoo=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w9gruc5uo1"
+        },
+        {
+          "Name": "label",
+          "Value": "js/datatables-demo.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-3BYZ/ie9x2nIWSAO1N9M0VISPR5FfP5Wg0EKHZzNOoo="
+        }
+      ]
+    },
+    {
+      "Route": "js/datatables-demo.w9gruc5uo1.js",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\datatables-demo.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "103"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3BYZ/ie9x2nIWSAO1N9M0VISPR5FfP5Wg0EKHZzNOoo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w9gruc5uo1"
+        },
+        {
+          "Name": "label",
+          "Value": "js/datatables-demo.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-3BYZ/ie9x2nIWSAO1N9M0VISPR5FfP5Wg0EKHZzNOoo="
+        }
+      ]
+    },
+    {
+      "Route": "js/datatables-demo.w9gruc5uo1.js.gz",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\ti267ch81o-w9gruc5uo1.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "108"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1BrJYp/fJgi2ISqUUHaWgDnwkJJvO/IyDtxyHYYS1lg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w9gruc5uo1"
+        },
+        {
+          "Name": "label",
+          "Value": "js/datatables-demo.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1BrJYp/fJgi2ISqUUHaWgDnwkJJvO/IyDtxyHYYS1lg="
+        }
+      ]
+    },
+    {
+      "Route": "js/datatables-simple-demo.js",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\ferel9za1n-xnqwbb6zwd.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.005025125628"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "198"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hJtsBXqcWGs0wlAWHrwUFgY5BqJ8NgUi30WxpQVUqPc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"A5r4X24Y4UOeA7FBC6HS3voj76xkmczywh9qO+Ly5hQ=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-A5r4X24Y4UOeA7FBC6HS3voj76xkmczywh9qO+Ly5hQ="
+        }
+      ]
+    },
+    {
+      "Route": "js/datatables-simple-demo.js",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\datatables-simple-demo.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "312"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"A5r4X24Y4UOeA7FBC6HS3voj76xkmczywh9qO+Ly5hQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-A5r4X24Y4UOeA7FBC6HS3voj76xkmczywh9qO+Ly5hQ="
+        }
+      ]
+    },
+    {
+      "Route": "js/datatables-simple-demo.js.gz",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\ferel9za1n-xnqwbb6zwd.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "198"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hJtsBXqcWGs0wlAWHrwUFgY5BqJ8NgUi30WxpQVUqPc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hJtsBXqcWGs0wlAWHrwUFgY5BqJ8NgUi30WxpQVUqPc="
+        }
+      ]
+    },
+    {
+      "Route": "js/datatables-simple-demo.xnqwbb6zwd.js",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\ferel9za1n-xnqwbb6zwd.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.005025125628"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "198"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hJtsBXqcWGs0wlAWHrwUFgY5BqJ8NgUi30WxpQVUqPc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"A5r4X24Y4UOeA7FBC6HS3voj76xkmczywh9qO+Ly5hQ=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xnqwbb6zwd"
+        },
+        {
+          "Name": "label",
+          "Value": "js/datatables-simple-demo.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-A5r4X24Y4UOeA7FBC6HS3voj76xkmczywh9qO+Ly5hQ="
+        }
+      ]
+    },
+    {
+      "Route": "js/datatables-simple-demo.xnqwbb6zwd.js",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\datatables-simple-demo.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "312"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"A5r4X24Y4UOeA7FBC6HS3voj76xkmczywh9qO+Ly5hQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xnqwbb6zwd"
+        },
+        {
+          "Name": "label",
+          "Value": "js/datatables-simple-demo.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-A5r4X24Y4UOeA7FBC6HS3voj76xkmczywh9qO+Ly5hQ="
+        }
+      ]
+    },
+    {
+      "Route": "js/datatables-simple-demo.xnqwbb6zwd.js.gz",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\ferel9za1n-xnqwbb6zwd.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "198"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hJtsBXqcWGs0wlAWHrwUFgY5BqJ8NgUi30WxpQVUqPc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xnqwbb6zwd"
+        },
+        {
+          "Name": "label",
+          "Value": "js/datatables-simple-demo.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hJtsBXqcWGs0wlAWHrwUFgY5BqJ8NgUi30WxpQVUqPc="
+        }
+      ]
+    },
+    {
       "Route": "js/notifications.8d6ebtl8bo.js",
       "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\wlan6o8wrd-8d6ebtl8bo.gz",
       "Selectors": [
@@ -8698,6 +10440,304 @@
         {
           "Name": "integrity",
           "Value": "sha256-m3UtyYsxqN3HVZDCEbV1PO/WW4EcQ5C8cCKA/yUQ4h4="
+        }
+      ]
+    },
+    {
+      "Route": "js/scripts.dqle62frat.js",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\c0yltx5b70-dqle62frat.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002169197397"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "460"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8mwblwUU4NvD8IMKjUSDsC4WxI8PE1XmFjKGfKyr46s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"hSOKtaoLbtAX3QLxogVcaVg8Fv7Y6HTCcpJqVePv720=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dqle62frat"
+        },
+        {
+          "Name": "label",
+          "Value": "js/scripts.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hSOKtaoLbtAX3QLxogVcaVg8Fv7Y6HTCcpJqVePv720="
+        }
+      ]
+    },
+    {
+      "Route": "js/scripts.dqle62frat.js",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\scripts.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "976"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hSOKtaoLbtAX3QLxogVcaVg8Fv7Y6HTCcpJqVePv720=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dqle62frat"
+        },
+        {
+          "Name": "label",
+          "Value": "js/scripts.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hSOKtaoLbtAX3QLxogVcaVg8Fv7Y6HTCcpJqVePv720="
+        }
+      ]
+    },
+    {
+      "Route": "js/scripts.dqle62frat.js.gz",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\c0yltx5b70-dqle62frat.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "460"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8mwblwUU4NvD8IMKjUSDsC4WxI8PE1XmFjKGfKyr46s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dqle62frat"
+        },
+        {
+          "Name": "label",
+          "Value": "js/scripts.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8mwblwUU4NvD8IMKjUSDsC4WxI8PE1XmFjKGfKyr46s="
+        }
+      ]
+    },
+    {
+      "Route": "js/scripts.js",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\c0yltx5b70-dqle62frat.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002169197397"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "460"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8mwblwUU4NvD8IMKjUSDsC4WxI8PE1XmFjKGfKyr46s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"hSOKtaoLbtAX3QLxogVcaVg8Fv7Y6HTCcpJqVePv720=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hSOKtaoLbtAX3QLxogVcaVg8Fv7Y6HTCcpJqVePv720="
+        }
+      ]
+    },
+    {
+      "Route": "js/scripts.js",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\js\\scripts.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "976"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hSOKtaoLbtAX3QLxogVcaVg8Fv7Y6HTCcpJqVePv720=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hSOKtaoLbtAX3QLxogVcaVg8Fv7Y6HTCcpJqVePv720="
+        }
+      ]
+    },
+    {
+      "Route": "js/scripts.js.gz",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\compressed\\c0yltx5b70-dqle62frat.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "460"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8mwblwUU4NvD8IMKjUSDsC4WxI8PE1XmFjKGfKyr46s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Mar 2023 22:09:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8mwblwUU4NvD8IMKjUSDsC4WxI8PE1XmFjKGfKyr46s="
         }
       ]
     },

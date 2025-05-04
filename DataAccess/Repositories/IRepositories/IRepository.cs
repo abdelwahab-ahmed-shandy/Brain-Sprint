@@ -100,7 +100,9 @@
         #endregion
 
 
-
+        #region Get Count
+        Task<int> CountAsync(Expression<Func<T, bool>>? filter = null);
+        #endregion
 
 
         #endregion

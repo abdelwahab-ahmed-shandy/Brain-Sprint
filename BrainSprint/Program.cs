@@ -68,7 +68,7 @@ namespace BrainSprint
             builder.Services.AddScoped<IStudentRepository, StudentRepository>();
             //builder.Services.AddScoped<IUserSessionService, UserSessionService>();
 
-
+            builder.Services.AddScoped<IActivityLogRepository, ActivityLogRepository>();
 
             builder.Services.AddScoped<IBadgeRepository, BadgeRepository>();
             builder.Services.AddScoped<ICartItemRepository, CartItemRepository>();
