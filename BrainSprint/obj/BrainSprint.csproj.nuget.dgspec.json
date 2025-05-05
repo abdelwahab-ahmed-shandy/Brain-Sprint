@@ -308,7 +308,11 @@
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\DataAccess\\DataAccess.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

@@ -1,0 +1,166 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+@model List<Course>
+
+<!-- My paths -->
+<section class="courses-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>My Courses</h2>
+            <p>Start your learning journey with our most popular courses</p>
+        </div>
+        <div class="row">
+            @foreach (var c in Model)
+            {
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card course-card">
+                        <img src="~/Uploads/Images/Courses/@c.ImgUrl" class="card-img-top" alt="Course Image">
+                        <span class="badge-card">Programming</span>
+                        <div class="card-body">
+                            <h5 class="card-title">@c.Title</h5>
+                            <p class="card-text text-muted small">By @c.Instructor.ApplicationUser.FirstName @c.Instructor.ApplicationUser.LastName</p>
+                            <div class="course-meta mt-3">
+                                <span><i class="far fa-clock"></i> @c.Duration h</span>
+                                <span class="course-price">60%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</section>
+
+<!-- Achievements System -->
+<section class="achievements-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Earn Achievements</h2>
+            <p>Complete challenges and unlock badges to showcase your progress</p>
+        </div>
+        <div class="row">
+            <!-- Fast Learner Badge -->
+            <div class="col-md-3 mb-4">
+                <div class="badge-item">
+                    <div class="badge-icon gold">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h4>Fast Learner</h4>
+                    <p>Complete 5 courses in one month</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 60%"></div>
+                    </div>
+                    <small>60% completed</small>
+                </div>
+            </div>
+
+            <!-- Night Owl Badge -->
+            <div class="col-md-3 mb-4">
+                <div class="badge-item">
+                    <div class="badge-icon purple">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <h4>Night Owl</h4>
+                    <p>Complete 10 lessons after midnight</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 30%"></div>
+                    </div>
+                    <small>30% completed</small>
+                </div>
+            </div>
+
+            <!-- Quiz Master Badge -->
+            <div class="col-md-3 mb-4">
+                <div class="badge-item">
+                    <div class="badge-icon blue">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h4>Quiz Master</h4>
+                    <p>Score 100% on 5 quizzes</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 80%"></div>
+                    </div>
+                    <small>80% completed</small>
+                </div>
+            </div>
+
+            <!-- Streak Builder Badge -->
+            <div class="col-md-3 mb-4">
+                <div class="badge-item">
+                    <div class="badge-icon red">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h4>Streak Builder</h4>
+                    <p>Learn for 7 consecutive days</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 45%"></div>
+                    </div>
+                    <small>45% completed</small>
+                </div>
+            </div>
+
+            <!-- Social Butterfly Badge -->
+            <div class="col-md-3 mb-4">
+                <div class="badge-item">
+                    <div class="badge-icon pink">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Social Butterfly</h4>
+                    <p>Share 3 achievements on social media</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 20%"></div>
+                    </div>
+                    <small>20% completed</small>
+                </div>
+            </div>
+
+            <!-- Perfectionist Badge -->
+            <div class="col-md-3 mb-4">
+                <div class="badge-item">
+                    <div class="badge-icon diamond">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h4>Perfectionist</h4>
+                    <p>Complete all exercises in a course</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 75%"></div>
+                    </div>
+                    <small>75% completed</small>
+                </div>
+            </div>
+
+            <!-- Early Bird Badge -->
+            <div class="col-md-3 mb-4">
+                <div class="badge-item">
+                    <div class="badge-icon green">
+                        <i class="fas fa-earlybirds"></i>
+                    </div>
+                    <h4>Early Bird</h4>
+                    <p>Complete 5 lessons before 8 AM</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 10%"></div>
+                    </div>
+                    <small>10% completed</small>
+                </div>
+            </div>
+
+            <!-- Marathoner Badge -->
+            <div class="col-md-3 mb-4">
+                <div class="badge-item">
+                    <div class="badge-icon bronze">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h4>Marathoner</h4>
+                    <p>Spend 10+ hours learning in one week</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 55%"></div>
+                    </div>
+                    <small>55% completed</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -123,6 +123,7 @@ namespace DataAccess.Repositories
         /// </summary>
         public async Task<IEnumerable<T>> GetAsync(Expression<Func<T, bool>>? filter = null,
             IEnumerable<Expression<Func<T, object>>>? includes = null,
+            IEnumerable<Func<IQueryable<T>, IQueryable<T>>>? thenIncludes = null,
             bool tracked = true,
             CancellationToken cancellationToken = default)
         {
@@ -136,6 +137,9 @@ namespace DataAccess.Repositories
 
             if (includes != null)
                 query = includes.Aggregate(query, (current, include) => current.Include(include));
+
+            if (thenIncludes != null)
+                query = thenIncludes.Aggregate(query, (current, include) => include(current));
 
             return await query.ToListAsync(cancellationToken);
         }
@@ -146,6 +150,7 @@ namespace DataAccess.Repositories
         public async Task<T?> GetOneAsync(
             Expression<Func<T, bool>>? filter = null,
             IEnumerable<Expression<Func<T, object>>>? includes = null,
+            IEnumerable<Func<IQueryable<T>, IQueryable<T>>>? thenIncludes = null,
             bool tracked = true,
             CancellationToken cancellationToken = default)
         {
@@ -159,6 +164,9 @@ namespace DataAccess.Repositories
 
             if (includes != null)
                 query = includes.Aggregate(query, (current, include) => current.Include(include));
+
+            if (thenIncludes != null)
+                query = thenIncludes.Aggregate(query, (current, include) => include(current));
 
             return await query.FirstOrDefaultAsync(cancellationToken);
         }

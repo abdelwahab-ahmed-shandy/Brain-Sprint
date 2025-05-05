@@ -98,7 +98,7 @@ namespace BrainSprint
             builder.Services.AddScoped<IVideoNodeRepository, VideoNodeRepository>();
             builder.Services.AddScoped<IUserExamAttempRepository, UserExamAttempRepository>();
 
-
+            builder.Services.AddScoped<IEnrollmentCourseService, EnrollmentCourseService>();
 
             #endregion
 

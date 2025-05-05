@@ -1,0 +1,13 @@
+﻿global using Models;
+global using DataAccess.Repositories;
+global using DataAccess.Repositories.IRepositories;
+global using Services;
+global using Services.Implementations;
+global using System;
+global using Services.Interfaces;
+global using System.Collections.Generic;
+global using System.Linq;
+global using System.Linq.Expressions;
+global using System.Text;
+global using System.Threading.Tasks;
+global using Microsoft.EntityFrameworkCore;

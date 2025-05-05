@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
+﻿
 namespace BrainSprint.Areas.Customer.Controllers
 {
     [Area("Customer")]

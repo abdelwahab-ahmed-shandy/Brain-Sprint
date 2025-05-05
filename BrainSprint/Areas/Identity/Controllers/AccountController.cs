@@ -125,6 +125,7 @@
                             IsVerified = false,
                             CurrentState = CurrentState.Active,
                         });
+                        await _instructorRepository.SaveInDataBaseAsync();
                     }
                     else
                     {
@@ -134,6 +135,7 @@
                             Level = LevelType.Beginner,
                             CurrentState = CurrentState.Active
                         });
+                        await _studentRepository.SaveInDataBaseAsync();
                     }
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(applicationUser);
@@ -520,6 +522,3 @@
     }
 
 }
-
-
-
