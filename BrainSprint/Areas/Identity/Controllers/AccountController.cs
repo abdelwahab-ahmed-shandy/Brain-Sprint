@@ -73,7 +73,7 @@
                 if (string.IsNullOrWhiteSpace(registerVM.Certifications))
                     ModelState.AddModelError("Certifications", "Certifications are required");
 
-                if (string.IsNullOrWhiteSpace(registerVM.ExperienceYears))
+                if (!registerVM.ExperienceYears.HasValue)
                     ModelState.AddModelError("ExperienceYears", "Experience is required");
             }
 

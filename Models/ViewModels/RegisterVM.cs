@@ -51,8 +51,7 @@ namespace Models.ViewModels
         [RequiredIf("UserType", UserType.Instructor, ErrorMessage = "Certifications are required for instructors")]
         public string? Certifications { get; set; }
 
-        [RequiredIf("UserType", UserType.Instructor, ErrorMessage = "Experience is required for instructors")]
-        public string? ExperienceYears { get; set; }
+        public int? ExperienceYears { get; set; }
     }
 
     // Custom validation attribute for conditional requirements

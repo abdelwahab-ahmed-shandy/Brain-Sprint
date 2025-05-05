@@ -202,8 +202,14 @@
             50% {
                 transform: translateY(-8px);
             }
+        
+        /* Icon */
+        .fa-stack {
+            width: 1em;
+            height: 1em;
+            line-height: 1em;
+            vertical-align: middle;
         }
-
     </style>
 
 
@@ -359,105 +365,110 @@
         <div id="layoutSidenav_nav">
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
+
                     <div class="nav">
+                        <!-- Core Section -->
                         <div class="sb-sidenav-menu-heading">Core</div>
                         <a class="nav-link @(ViewContext.RouteData.Values["Controller"].ToString() == "Home" ? "active" : "")" asp-area="Admin" asp-controller="Home" asp-action="Index">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Dashboard
                         </a>
 
+                        <!-- User Management Section -->
                         @if (User.IsInRole("SuperAdmin") || User.IsInRole("Admin"))
                         {
                             <div class="sb-sidenav-menu-heading">User Management</div>
                             @if (User.IsInRole("SuperAdmin"))
                             {
-                                <a class="nav-link @(ViewContext.RouteData.Values["Controller"].ToString() == "SuperAdmins" ? "active" : "")" asp-area="Admin" asp-controller="SuperAdmins" asp-action="Index">
+                                <a class="nav-link @(ViewContext.RouteData.Values["Controller"].ToString() == "SuperAdmins" ? "active" : "")"
+                                   asp-area="Admin" asp-controller="SuperAdmins" asp-action="Index">
                                     <div class="sb-nav-link-icon">
-                                        <i class="fas fa-crown text-warning"> </i>
-
+                                        <i class="fas fa-crown text-warning"></i> 
                                     </div>
                                     Super Admins
                                 </a>
 
                                 <a class="nav-link @(ViewContext.RouteData.Values["Controller"].ToString() == "Admins" ? "active" : "")" asp-area="Admin" asp-controller="Admins" asp-action="Index">
-                                    <div class="sb-nav-link-icon"><i class="fas fa-user-shield"></i></div>
+                                    <div class="sb-nav-link-icon"><i class="fas fa-user-tie text-primary"></i></div> <!-- Differentiated icon -->
                                     Admins
                                 </a>
-
-                                <a class="nav-link @(ViewContext.RouteData.Values["Controller"].ToString() == "Instructor" ? "active" : "")" asp-area="Admin" asp-controller="Instructor" asp-action="Index">
-                                    <div class="sb-nav-link-icon"><i class="fas fa-user-shield"></i></div>
-                                    Instructors
-                                </a>
-
                             }
 
-                            <a class="nav-link @(ViewContext.RouteData.Values["Controller"].ToString() == "Customers" ? "active" : "")" asp-area="Admin" asp-controller="Customers" asp-action="Index">
-                                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
-                                Customers
+                            <a class="nav-link @(ViewContext.RouteData.Values["Controller"].ToString() == "Instructor" ? "active" : "")" asp-area="Admin" asp-controller="Instructor" asp-action="Index">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chalkboard-teacher text-info"></i></div> <!-- Education-themed icon -->
+                                Instructors
+                            </a>
+
+                            <a class="nav-link @(ViewContext.RouteData.Values["Controller"].ToString() == "Student" ? "active" : "")" asp-area="Admin" asp-controller="Student" asp-action="Index">
+                                <div class="sb-nav-link-icon"><i class="fas fa-users text-success"></i></div>
+                                Students
                             </a>
                         }
 
+                        <!-- Content Management Section -->
                         <div class="sb-sidenav-menu-heading">Content Management</div>
-
                         <a class="nav-link @(ViewContext.RouteData.Values["Controller"].ToString() == "LearningPaths" ? "active" : "")" asp-area="Admin" asp-controller="LearningPaths" asp-action="Index">
-                            <div class="sb-nav-link-icon"><i class="bi bi-building"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fas fa-road text-primary"></i></div> <!-- Better metaphor for paths -->
                             Learning Paths
                         </a>
 
                         <a class="nav-link @(ViewContext.RouteData.Values["Controller"].ToString() == "CourseLearningPaths" ? "active" : "")" asp-area="Admin" asp-controller="CourseLearningPaths" asp-action="Index">
-                            <div class="sb-nav-link-icon"><i class="bi bi-film"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fas fa-map-signs text-info"></i></div> <!-- Signpost metaphor -->
                             Course Learning Paths
                         </a>
 
                         <a class="nav-link @(ViewContext.RouteData.Values["Controller"].ToString() == "Courses" ? "active" : "")" asp-area="Admin" asp-controller="Courses" asp-action="Index">
-                            <div class="sb-nav-link-icon"><i class="bi bi-collection"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fas fa-graduation-cap text-warning"></i></div> <!-- Classic education icon -->
                             Courses
                         </a>
 
                         <a class="nav-link @(ViewContext.RouteData.Values["Controller"].ToString() == "EnrollmentCourses" ? "active" : "")" asp-area="Admin" asp-controller="EnrollmentCourses" asp-action="Index">
-                            <div class="sb-nav-link-icon"><i class="bi bi-people"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fas fa-user-graduate text-success"></i></div> <!-- Graduating student -->
                             Enrollment Courses
                         </a>
 
-                        @* <div class="sb-sidenav-menu-heading">TV Series</div> *@
+                        <!-- Learning Content Section -->
+                        <div class="sb-sidenav-menu-heading">Learning Content</div> <!-- Changed from "TV Series" -->
 
                         <a class="nav-link @(ViewContext.RouteData.Values["Controller"].ToString() == "CourseReviews" ? "active" : "")" asp-area="Admin" asp-controller="CourseReviews" asp-action="Index">
-                            <div class="sb-nav-link-icon"><i class="bi bi-tv"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fas fa-star-half-alt text-warning"></i></div> <!-- Review icon -->
                             Course Reviews
                         </a>
 
                         <a class="nav-link @(ViewContext.RouteData.Values["Controller"].ToString() == "CourseModules" ? "active" : "")" asp-area="Admin" asp-controller="CourseModules" asp-action="Index">
-                            <div class="sb-nav-link-icon"><i class="bi bi-tv"></i></div>
-                            Course Module
+                            <div class="sb-nav-link-icon"><i class="fas fa-layer-group text-info"></i></div> <!-- Stacked layers -->
+                            Course Modules
                         </a>
 
                         <a class="nav-link @(ViewContext.RouteData.Values["Controller"].ToString() == "Certificates" ? "active" : "")" asp-area="Admin" asp-controller="Certificate" asp-action="Index">
-                            <div class="sb-nav-link-icon"><i class="bi bi-collection-play"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fas fa-certificate text-danger"></i></div> <!-- Certificate icon -->
                             Certificates
                         </a>
 
                         <a class="nav-link @(ViewContext.RouteData.Values["Controller"].ToString() == "Episode" ? "active" : "")" asp-area="Admin" asp-controller="Episode" asp-action="Index">
-                            <div class="sb-nav-link-icon"><i class="bi bi-play-circle"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fas fa-play-circle text-primary"></i></div> <!-- Play icon -->
                             Episodes
                         </a>
 
+                        <!-- Orders Section -->
                         <div class="sb-sidenav-menu-heading">Orders</div>
-
                         <a class="nav-link @(ViewContext.RouteData.Values["Controller"].ToString() == "Order" && ViewContext.RouteData.Values["Action"].ToString() == "AllOrders" ? "active" : "")" asp-area="Admin" asp-controller="Order" asp-action="AllOrders">
-                            <div class="sb-nav-link-icon"><i class="bi bi-receipt"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fas fa-shopping-basket text-primary"></i></div> <!-- Shopping basket -->
                             All Orders
                         </a>
 
                         <a class="nav-link @(ViewContext.RouteData.Values["Controller"].ToString() == "Order" && ViewContext.RouteData.Values["Action"].ToString() == "TrackOrders" ? "active" : "")" asp-area="Admin" asp-controller="Order" asp-action="TrackOrders">
-                            <div class="sb-nav-link-icon"><i class="bi bi-truck"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fas fa-truck text-info"></i></div> <!-- Delivery truck -->
                             Track Orders
                         </a>
 
                         <a class="nav-link @(ViewContext.RouteData.Values["Controller"].ToString() == "Order" && ViewContext.RouteData.Values["Action"].ToString() == "CancelRequests" ? "active" : "")" asp-area="Admin" asp-controller="Order" asp-action="CancelRequests">
-                            <div class="sb-nav-link-icon"><i class="bi bi-x-circle"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fas fa-ban text-danger"></i></div> <!-- Prohibition symbol -->
                             Cancel Requests
                         </a>
                     </div>
+
+
                 </div>
                 <div class="sb-sidenav-footer bg-dark">
                     <div class="small">Logged in as:</div>

@@ -233,8 +233,8 @@ namespace DataAccess.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
-                    b.Property<string>("ExperienceYears")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("ExperienceYears")
+                        .HasColumnType("int");
 
                     b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(max)");

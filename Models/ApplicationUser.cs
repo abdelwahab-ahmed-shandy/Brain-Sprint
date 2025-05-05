@@ -43,7 +43,7 @@ namespace Models
 
 
         public string? Certifications { get; set; }
-        public string? ExperienceYears { get; set; }
+        public int? ExperienceYears { get; set; }
 
         public AccountStateType? AccountState { get; set; }
         public DateTime CreatedDateUtc { get; set; }

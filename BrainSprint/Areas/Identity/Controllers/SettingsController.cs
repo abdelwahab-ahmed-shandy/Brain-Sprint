@@ -152,7 +152,7 @@ namespace BrainSprint.Areas.Identity.Controllers
                 user.LastName = settingsVM.Profile.LastName;
                 user.Bio = settingsVM.Profile.Bio;
                 user.PhoneNumber = settingsVM.Profile.PhoneNumber;
-                user.Certifications = settingsVM.Profile.Certifications;
+                user.Certifications = settingsVM.Profile.Certifications?.ToString();
                 user.ExperienceYears = settingsVM.Profile.ExperienceYears;
 
                 if (settingsVM.Profile.ImageFile != null && settingsVM.Profile.ImageFile.Length > 0)

@@ -26,14 +26,14 @@ namespace BrainSprint.Areas.Admin.Controllers
         public async Task<IActionResult> Index(string? query, string? status, int page = 1)
         {
             var applicationUsers = await _applicationUserRepository.Get(tracked: false).ToListAsync();
-            var superAdminVMs = new List<SuperAdminVM>();
+            var superAdminVMs = new List<UserVM>();
 
             foreach (var user in applicationUsers)
             {
                 var roles = await _userManager.GetRolesAsync(user);
                 if (roles.Contains("SuperAdmin"))
                 {
-                    superAdminVMs.Add(new SuperAdminVM
+                    superAdminVMs.Add(new UserVM
                     {
                         Id = user.Id,
                         FirstName = user.FirstName,
@@ -112,7 +112,7 @@ namespace BrainSprint.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Create()
         {
-            var model = new SuperAdminCreateVM  // New ViewModel
+            var model = new UserCreateVM
             {
                 RegistrationDate = DateTime.Now,
                 IsActive = true,
@@ -123,7 +123,7 @@ namespace BrainSprint.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(SuperAdminCreateVM model)
+        public async Task<IActionResult> Create(UserCreateVM model)
         {
             if (ModelState.IsValid)
             {
@@ -193,7 +193,7 @@ namespace BrainSprint.Areas.Admin.Controllers
                 return RedirectToAction(nameof(Index));
             }
             var roles = await _userManager.GetRolesAsync(user);
-            var superAdminVM = new SuperAdminVM
+            var superAdminVM = new UserVM
             {
                 Id = user.Id,
                 FirstName = user.FirstName,
@@ -214,12 +214,33 @@ namespace BrainSprint.Areas.Admin.Controllers
 
 
 
-        #region Block Customer Account :
+        #region Block SuperAdmin Account :
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Block(string Id)
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return Challenge();
+            }
+
+            var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(currentUserId))
+            {
+                TempData["Notification"] = "User session invalid";
+                TempData["MessageType"] = "error";
+
+                return RedirectToAction(nameof(Index));
+            }
+
+            if (currentUserId == Id)
+            {
+                TempData["Notification"] = "You cannot Block your own account!";
+                TempData["MessageType"] = "error";
+                return RedirectToAction(nameof(Index));
+            }
+
             var userDB = await _userManager.FindByIdAsync(Id);
 
             if (userDB != null)
@@ -256,7 +277,7 @@ namespace BrainSprint.Areas.Admin.Controllers
 
 
 
-        #region Un Block Customer Account :
+        #region Un Block SuperAdmin Account :
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> UnBlock(string Id)
@@ -414,6 +435,75 @@ namespace BrainSprint.Areas.Admin.Controllers
 
 
         #endregion
+
+
+
+        #region Edit Super Admin
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            if (user == null)
+            {
+                TempData["notification"] = "User not found";
+                TempData["MessageType"] = "error";
+                return RedirectToAction(nameof(Index));
+            }
+            var superAdminVM = new UserEditVM
+            {
+                Id = user.Id,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                PhoneNumber = user.PhoneNumber,
+                Address = user.Address,
+                IsActive = user.IsActive,
+                AccountState = user.AccountState ?? AccountStateType.Active
+            };
+            return View(superAdminVM);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(UserEditVM model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _userManager.FindByIdAsync(model.Id);
+                if (user == null)
+                {
+                    TempData["notification"] = "User not found";
+                    TempData["MessageType"] = "error";
+                    return RedirectToAction(nameof(Index));
+                }
+
+                user.FirstName = model.FirstName;
+                user.LastName = model.LastName;
+                user.PhoneNumber = model.PhoneNumber;
+                user.Address = model.Address;
+                user.IsActive = model.IsActive;
+                user.AccountState = model.AccountState;
+
+                var result = await _userManager.UpdateAsync(user);
+                if (result.Succeeded)
+                {
+                    TempData["notification"] = "Super Admin updated successfully!";
+                    TempData["MessageType"] = "success";
+                    return RedirectToAction(nameof(Index));
+                }
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(string.Empty, error.Description);
+                }
+
+            }
+            return View(model);
+        }
+
+
+
+        #endregion
+
 
     }
 }

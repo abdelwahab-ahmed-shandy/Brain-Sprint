@@ -78,8 +78,7 @@ namespace Models.ViewModels
             [Display(Name = "Certifications")]
             public string? Certifications { get; set; }
 
-            [Display(Name = "Years of Experience")]
-            public string? ExperienceYears { get; set; }
+            public int? ExperienceYears { get; set; }
 
             [Display(Name = "Average Rating")]
             [Range(1, 5, ErrorMessage = "Rating must be between 1 and 5.")]

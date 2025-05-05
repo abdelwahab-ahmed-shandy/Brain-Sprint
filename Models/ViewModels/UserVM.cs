@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Models.ViewModels
 {
-    public class SuperAdminVM
+    public class UserVM
     {
         public string Id { get; set; }
         public string FirstName { get; set; }
@@ -22,21 +22,35 @@ namespace Models.ViewModels
         public DateTime? LastLogin { get; set; }
 
         public bool IsBlocked { get; set; }
+
+        public string? Certifications { get; set; }
+        public int? ExperienceYears { get; set; }
     }
 
-    public class PaginationVM
-    {
-        public int CurrentPage { get; set; } = 1;
-        public int PageSize { get; set; } = 5;
-        public int TotalItems { get; set; }
-        public int TotalPages => (int)Math.Ceiling((double)TotalItems / PageSize);
-        public string Query { get; set; }
-        public string StatusFilter { get; set; }
-    }
+
 
     public class SuperAdminListVM
     {
-        public IEnumerable<SuperAdminVM> SuperAdmins { get; set; }
+        public IEnumerable<UserVM> SuperAdmins { get; set; }
         public PaginationVM Pagination { get; set; }
     }
+
+    public class AdminListVM
+    {
+        public IEnumerable<UserVM> Admins { get; set; }
+        public PaginationVM Pagination { get; set; }
+    }
+
+    public class InstructorListVM
+    {
+        public IEnumerable<UserVM> Instructors { get; set; }
+        public PaginationVM Pagination { get; set; }
+    }
+
+    public class StudentListVM
+    {
+        public IEnumerable<UserVM> Students { get; set; }
+        public PaginationVM Pagination { get; set; }
+    }
+
 }
