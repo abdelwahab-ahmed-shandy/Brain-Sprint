@@ -21,6 +21,9 @@ namespace Models
 
         public string? UpdatedBy { get; set; }
 
+        public string? BlockedBy { get; set; }
+
+
         public DateTime? UpdatedDateUtc { get; set; }
     }
 }

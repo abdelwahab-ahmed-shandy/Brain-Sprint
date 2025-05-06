@@ -8,15 +8,16 @@ namespace BrainSprint.Areas.Admin.Controllers
     public class InstructorController : Controller
     {
         private readonly IApplicationUserRepository _applicationUserRepository;
+        private readonly IInstructorRepository _instructorRepository;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<InstructorController> _logger;
-
         public InstructorController(IApplicationUserRepository applicationUserRepository, UserManager<ApplicationUser> userManager,
-                                    ILogger<InstructorController> logger)
+                                    ILogger<InstructorController> logger, IInstructorRepository instructorRepository)
         {
             _applicationUserRepository = applicationUserRepository;
             _userManager = userManager;
             _logger = logger;
+            _instructorRepository = instructorRepository;
         }
 
 
@@ -155,6 +156,17 @@ namespace BrainSprint.Areas.Admin.Controllers
                     {
                         await _userManager.AddToRoleAsync(user, "Instructor");
 
+                        await _instructorRepository.CreateAsync(new Models.Instructor()
+                        {
+                            ApplicationUserId = user.Id,
+                            IsVerified = true,
+                            CurrentState = CurrentState.Active,
+                            CreatedBy = User.Identity.Name,
+                            CreatedDateUtc = DateTime.Now,
+                        });
+
+                        await _instructorRepository.SaveInDataBaseAsync();
+
                         TempData["notification"] = "Instructor created successfully!";
                         TempData["MessageType"] = "success";
                         return RedirectToAction(nameof(Index));
@@ -251,10 +263,24 @@ namespace BrainSprint.Areas.Admin.Controllers
                 userDB.IsBlocked = true;
                 userDB.AccountState = AccountStateType.Blocked;
                 userDB.IsActive = false;
+                userDB.BlockedDate = DateTime.UtcNow;
+                userDB.BlockReason = "Account blocked by admin";
+
                 var result = await _userManager.UpdateAsync(userDB);
 
                 if (result.Succeeded)
                 {
+                    var instructor = await _instructorRepository.GetOneAsync(i => i.ApplicationUserId == userDB.Id);
+
+                    if (instructor != null)
+                    {
+                        instructor.BlockedBy = $"Block With {User.Identity.Name}";
+
+                        await _instructorRepository.EditAsync(instructor);
+                        await _instructorRepository.SaveInDataBaseAsync();
+                    }
+
+
                     TempData["notification"] = "The Instructor's account has been successfully banned.";
                     TempData["MessageType"] = "Warning";
 
@@ -296,6 +322,16 @@ namespace BrainSprint.Areas.Admin.Controllers
 
                 if (result.Succeeded)
                 {
+                    var instructor = await _instructorRepository.GetOneAsync(i => i.ApplicationUserId == userDB.Id);
+
+                    if (instructor != null)
+                    {
+                        instructor.BlockedBy = $"Un Block With {User.Identity.Name}";
+
+                        await _instructorRepository.EditAsync(instructor);
+                        await _instructorRepository.SaveInDataBaseAsync();
+                    }
+
                     TempData["notification"] = "The Instructors's account has been successfully unblocked.";
                     TempData["MessageType"] = "Success";
 
@@ -348,7 +384,11 @@ namespace BrainSprint.Areas.Admin.Controllers
                 }
 
 
-                var user = await _userManager.FindByIdAsync(id);
+                var user = await _userManager.Users
+                    .Include(u => u.Instructor)
+                    .FirstOrDefaultAsync(u => u.Id == id);
+
+
                 if (user == null)
                 {
                     TempData["Notification"] = "User not found";
@@ -356,16 +396,27 @@ namespace BrainSprint.Areas.Admin.Controllers
                     return RedirectToAction(nameof(Index));
                 }
 
-                var result = await _userManager.DeleteAsync(user);
-                if (result.Succeeded)
+                if (user.Instructor == null)
                 {
-                    TempData["Notification"] = "Account deleted successfully";
-                    TempData["MessageType"] = "success";
-
+                    TempData["Notification"] = "No instructor record found for this user";
+                    TempData["MessageType"] = "error";
                     return RedirectToAction(nameof(Index));
                 }
 
-                TempData["Notification"] = "Error deleting account";
+
+                await _instructorRepository.DeleteAsync(user.Instructor);
+                await _instructorRepository.SaveInDataBaseAsync();
+
+                var result = await _userManager.DeleteAsync(user);
+
+                if (result.Succeeded)
+                {
+
+                    TempData["Notification"] = "Instructor account deleted successfully";
+                    TempData["MessageType"] = "success";
+                    return RedirectToAction(nameof(Index));
+                }
+                TempData["Notification"] = "Error deleted user account";
                 TempData["MessageType"] = "error";
                 return RedirectToAction(nameof(Index));
             }
@@ -452,6 +503,9 @@ namespace BrainSprint.Areas.Admin.Controllers
                 TempData["MessageType"] = "error";
                 return RedirectToAction(nameof(Index));
             }
+
+            var instructor = await _instructorRepository.GetOneAsync(i => i.ApplicationUserId == user.Id);
+
             var InstructorVM = new UserEditVM
             {
                 Id = user.Id,
@@ -460,7 +514,9 @@ namespace BrainSprint.Areas.Admin.Controllers
                 PhoneNumber = user.PhoneNumber,
                 Address = user.Address,
                 IsActive = user.IsActive,
-                AccountState = user.AccountState ?? AccountStateType.Active
+                AccountState = user.AccountState ?? AccountStateType.Active,
+                CurrentState = instructor?.CurrentState ?? CurrentState.Active,
+
             };
             return View(InstructorVM);
         }
@@ -489,6 +545,20 @@ namespace BrainSprint.Areas.Admin.Controllers
                 var result = await _userManager.UpdateAsync(user);
                 if (result.Succeeded)
                 {
+                    var instructor = await _instructorRepository.GetOneAsync(i => i.ApplicationUserId == user.Id);
+
+                    if (instructor != null)
+                    {
+                        instructor.UpdatedBy = User.Identity.Name;
+                        instructor.UpdatedDateUtc = DateTime.UtcNow;
+                        instructor.UpdatedBy = User.Identity.Name;
+                        instructor.CurrentState = model.CurrentState;
+
+
+                        await _instructorRepository.EditAsync(instructor);
+                        await _instructorRepository.SaveInDataBaseAsync();
+                    }
+
                     TempData["notification"] = "Instructor updated successfully!";
                     TempData["MessageType"] = "success";
                     return RedirectToAction(nameof(Index));

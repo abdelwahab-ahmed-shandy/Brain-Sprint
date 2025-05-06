@@ -9,13 +9,15 @@ namespace BrainSprint.Areas.Admin.Controllers
         private readonly IApplicationUserRepository _applicationUserRepository;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<AdminsController> _logger;
+        private readonly IAdminRepository _adminRepository;
 
         public AdminsController(IApplicationUserRepository applicationUserRepository, UserManager<ApplicationUser> userManager,
-                                    ILogger<AdminsController> logger)
+                                    ILogger<AdminsController> logger, IAdminRepository adminRepository)
         {
             _applicationUserRepository = applicationUserRepository;
             _userManager = userManager;
             _logger = logger;
+            _adminRepository = adminRepository;
         }
 
 
@@ -154,6 +156,17 @@ namespace BrainSprint.Areas.Admin.Controllers
                     {
                         await _userManager.AddToRoleAsync(user, "Admin");
 
+                        await _adminRepository.CreateAsync(new Models.Admin()
+                        {
+                            ApplicationUserId = user.Id,
+                            CreatedDateUtc = DateTime.UtcNow,
+                            CurrentState = CurrentState.Active,
+                            CreatedBy = User.Identity.Name
+                        });
+
+                        await _adminRepository.SaveInDataBaseAsync();
+
+
                         TempData["notification"] = "Admin created successfully!";
                         TempData["MessageType"] = "success";
                         return RedirectToAction(nameof(Index));
@@ -244,14 +257,27 @@ namespace BrainSprint.Areas.Admin.Controllers
 
             if (userDB != null)
             {
-
+                userDB.BlockedDate = DateTime.Now;
+                userDB.BlockReason = "Account blocked by admin";
                 userDB.IsBlocked = true;
                 userDB.AccountState = AccountStateType.Blocked;
                 userDB.IsActive = false;
+
                 var result = await _userManager.UpdateAsync(userDB);
 
                 if (result.Succeeded)
                 {
+                    var admin = await _adminRepository.GetOneAsync(i => i.ApplicationUserId == userDB.Id);
+
+                    if (admin != null)
+                    {
+                        admin.BlockedBy = $"Block With {User.Identity.Name}";
+
+                        await _adminRepository.EditAsync(admin);
+                        await _adminRepository.SaveInDataBaseAsync();
+                    }
+
+
                     TempData["notification"] = "The Admin's account has been successfully banned.";
                     TempData["MessageType"] = "Warning";
 
@@ -293,6 +319,17 @@ namespace BrainSprint.Areas.Admin.Controllers
 
                 if (result.Succeeded)
                 {
+                    var admin = await _adminRepository.GetOneAsync(i => i.ApplicationUserId == userDB.Id);
+
+                    if (admin != null)
+                    {
+                        admin.BlockedBy = $"Un Block With {User.Identity.Name}";
+
+                        await _adminRepository.EditAsync(admin);
+                        await _adminRepository.SaveInDataBaseAsync();
+                    }
+
+
                     TempData["notification"] = "The SuberAdmins's account has been successfully unblocked.";
                     TempData["MessageType"] = "Success";
 
@@ -344,14 +381,28 @@ namespace BrainSprint.Areas.Admin.Controllers
                     return RedirectToAction(nameof(Index));
                 }
 
+                var user = await _userManager.Users
+                        .Include(u => u.Admin)
+                        .FirstOrDefaultAsync(u => u.Id == id);
 
-                var user = await _userManager.FindByIdAsync(id);
                 if (user == null)
                 {
                     TempData["Notification"] = "User not found";
                     TempData["MessageType"] = "error";
                     return RedirectToAction(nameof(Index));
                 }
+
+                if (user.Admin == null)
+                {
+                    TempData["Notification"] = "No admin record found for this user";
+                    TempData["MessageType"] = "error";
+                    return RedirectToAction(nameof(Index));
+                }
+
+
+                await _adminRepository.DeleteAsync(user.Admin);
+                await _adminRepository.SaveInDataBaseAsync();
+
 
                 var result = await _userManager.DeleteAsync(user);
                 if (result.Succeeded)
@@ -449,6 +500,9 @@ namespace BrainSprint.Areas.Admin.Controllers
                 TempData["MessageType"] = "error";
                 return RedirectToAction(nameof(Index));
             }
+
+            var admin = await _adminRepository.GetOneAsync(i => i.ApplicationUserId == user.Id);
+
             var AdminVM = new UserEditVM
             {
                 Id = user.Id,
@@ -486,6 +540,20 @@ namespace BrainSprint.Areas.Admin.Controllers
                 var result = await _userManager.UpdateAsync(user);
                 if (result.Succeeded)
                 {
+                    var admin = await _adminRepository.GetOneAsync(i => i.ApplicationUserId == user.Id);
+
+                    if (admin != null)
+                    {
+                        admin.UpdatedBy = User.Identity.Name;
+                        admin.UpdatedDateUtc = DateTime.UtcNow;
+                        admin.UpdatedBy = User.Identity.Name;
+                        admin.CurrentState = model.CurrentState;
+
+
+                        await _adminRepository.EditAsync(admin);
+                        await _adminRepository.SaveInDataBaseAsync();
+                    }
+
                     TempData["notification"] = "Admin updated successfully!";
                     TempData["MessageType"] = "success";
                     return RedirectToAction(nameof(Index));

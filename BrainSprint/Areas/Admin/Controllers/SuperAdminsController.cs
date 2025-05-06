@@ -146,7 +146,9 @@ namespace BrainSprint.Areas.Admin.Controllers
                         IsActive = model.IsActive,
                         AccountState = model.AccountState,
                         RegistrationDate = DateTime.Now,
-                        EmailConfirmed = true
+                        EmailConfirmed = true,
+                        CreatedDateUtc = DateTime.Now,
+
                     };
 
                     var result = await _userManager.CreateAsync(user, model.Password);
@@ -249,6 +251,8 @@ namespace BrainSprint.Areas.Admin.Controllers
                 userDB.IsBlocked = true;
                 userDB.AccountState = AccountStateType.Blocked;
                 userDB.IsActive = false;
+                userDB.BlockReason = $"Blocked By {User.Identity.Name}";
+
                 var result = await _userManager.UpdateAsync(userDB);
 
                 if (result.Succeeded)
@@ -289,6 +293,7 @@ namespace BrainSprint.Areas.Admin.Controllers
                 userDB.IsBlocked = false;
                 userDB.AccountState = AccountStateType.Active;
                 userDB.IsActive = true;
+                userDB.BlockReason = $"Un Blocked By {User.Identity.Name}";
 
                 var result = await _userManager.UpdateAsync(user: userDB);
 
@@ -458,7 +463,8 @@ namespace BrainSprint.Areas.Admin.Controllers
                 PhoneNumber = user.PhoneNumber,
                 Address = user.Address,
                 IsActive = user.IsActive,
-                AccountState = user.AccountState ?? AccountStateType.Active
+                AccountState = user.AccountState ?? AccountStateType.Active,
+
             };
             return View(superAdminVM);
         }
@@ -483,6 +489,8 @@ namespace BrainSprint.Areas.Admin.Controllers
                 user.Address = model.Address;
                 user.IsActive = model.IsActive;
                 user.AccountState = model.AccountState;
+                user.UpdatedDateUtc = DateTime.UtcNow;
+                user.UpdatedBy = User.Identity.Name;
 
                 var result = await _userManager.UpdateAsync(user);
                 if (result.Succeeded)

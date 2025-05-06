@@ -37,5 +37,7 @@ namespace Models.ViewModels
 
         public string? Certifications { get; set; }
         public int? ExperienceYears { get; set; }
+        public CurrentState? CurrentState { get; set; }
+
     }
 }

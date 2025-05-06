@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uz2bEq0f4bQj7Ija8JdiY9yp9LVJRx0qQI9x8Vt2p0M=",
+  "Hash": "8nNi954oo9J9PswOgseUaFZFXQqOeUWbcj+HHb5NMwI=",
   "Source": "BrainSprint",
   "BasePath": "_content/BrainSprint",
   "Mode": "Default",
@@ -1821,6 +1821,237 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\BrainSprint.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\08fae317-59cd-4e6b-a40c-862b4adf9e4f.png",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "Admin/IconelearningPaths/08fae317-59cd-4e6b-a40c-862b4adf9e4f#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zalzg40m0l",
+      "Integrity": "ZYmUh24ZVue7RBM52ki5sRA3Uk4l3nRvjE3GXtnIR5A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Admin\\IconelearningPaths\\08fae317-59cd-4e6b-a40c-862b4adf9e4f.png"
+    },
+    {
+      "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\2162251b-80e6-4c6d-a116-f634174310d9.png",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "Admin/IconelearningPaths/2162251b-80e6-4c6d-a116-f634174310d9#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "t0y8bqv8pi",
+      "Integrity": "wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Admin\\IconelearningPaths\\2162251b-80e6-4c6d-a116-f634174310d9.png"
+    },
+    {
+      "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\359e7393-c8f4-482a-8756-1c158452d2f8.png",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "Admin/IconelearningPaths/359e7393-c8f4-482a-8756-1c158452d2f8#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "t0y8bqv8pi",
+      "Integrity": "wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Admin\\IconelearningPaths\\359e7393-c8f4-482a-8756-1c158452d2f8.png"
+    },
+    {
+      "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\3699fd3d-3114-4c74-b1f2-c75acc9453e8.png",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "Admin/IconelearningPaths/3699fd3d-3114-4c74-b1f2-c75acc9453e8#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "t0y8bqv8pi",
+      "Integrity": "wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Admin\\IconelearningPaths\\3699fd3d-3114-4c74-b1f2-c75acc9453e8.png"
+    },
+    {
+      "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\3ad6f141-eb67-497e-af8f-b6f188a122ef.jpg",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "Admin/IconelearningPaths/3ad6f141-eb67-497e-af8f-b6f188a122ef#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0xldg7cftv",
+      "Integrity": "NLxxFDLtf/oKldPRMCzwiL8dva+feZiHWHW4jEQ/gDc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Admin\\IconelearningPaths\\3ad6f141-eb67-497e-af8f-b6f188a122ef.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\4319f34f-2f48-44bc-b133-35b89c1e53a5.png",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "Admin/IconelearningPaths/4319f34f-2f48-44bc-b133-35b89c1e53a5#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "t0y8bqv8pi",
+      "Integrity": "wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Admin\\IconelearningPaths\\4319f34f-2f48-44bc-b133-35b89c1e53a5.png"
+    },
+    {
+      "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\ad38d9da-f171-42d5-a0b7-7e1d02e5ea2b.png",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "Admin/IconelearningPaths/ad38d9da-f171-42d5-a0b7-7e1d02e5ea2b#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "t0y8bqv8pi",
+      "Integrity": "wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Admin\\IconelearningPaths\\ad38d9da-f171-42d5-a0b7-7e1d02e5ea2b.png"
+    },
+    {
+      "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\aee1d2e0-34c7-43ee-908e-1d09d4873a03.png",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "Admin/IconelearningPaths/aee1d2e0-34c7-43ee-908e-1d09d4873a03#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "t0y8bqv8pi",
+      "Integrity": "wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Admin\\IconelearningPaths\\aee1d2e0-34c7-43ee-908e-1d09d4873a03.png"
+    },
+    {
+      "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\ba01668c-4758-423a-92c5-95433cf601ce.png",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "Admin/IconelearningPaths/ba01668c-4758-423a-92c5-95433cf601ce#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "t0y8bqv8pi",
+      "Integrity": "wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Admin\\IconelearningPaths\\ba01668c-4758-423a-92c5-95433cf601ce.png"
+    },
+    {
+      "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\c20c2537-752c-42c2-a426-6511d58d6429.png",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "Admin/IconelearningPaths/c20c2537-752c-42c2-a426-6511d58d6429#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "t0y8bqv8pi",
+      "Integrity": "wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Admin\\IconelearningPaths\\c20c2537-752c-42c2-a426-6511d58d6429.png"
+    },
+    {
+      "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\d342eb91-d803-4941-83c4-375543e36ade.jpg",
+      "SourceId": "BrainSprint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\",
+      "BasePath": "_content/BrainSprint",
+      "RelativePath": "Admin/IconelearningPaths/d342eb91-d803-4941-83c4-375543e36ade#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0xldg7cftv",
+      "Integrity": "NLxxFDLtf/oKldPRMCzwiL8dva+feZiHWHW4jEQ/gDc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Admin\\IconelearningPaths\\d342eb91-d803-4941-83c4-375543e36ade.jpg"
     },
     {
       "Identity": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Customer\\images\\app.png",
@@ -3672,6 +3903,908 @@
     }
   ],
   "Endpoints": [
+    {
+      "Route": "Admin/IconelearningPaths/08fae317-59cd-4e6b-a40c-862b4adf9e4f.png",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\08fae317-59cd-4e6b-a40c-862b4adf9e4f.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1126300"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZYmUh24ZVue7RBM52ki5sRA3Uk4l3nRvjE3GXtnIR5A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 21:16:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZYmUh24ZVue7RBM52ki5sRA3Uk4l3nRvjE3GXtnIR5A="
+        }
+      ]
+    },
+    {
+      "Route": "Admin/IconelearningPaths/08fae317-59cd-4e6b-a40c-862b4adf9e4f.zalzg40m0l.png",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\08fae317-59cd-4e6b-a40c-862b4adf9e4f.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1126300"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZYmUh24ZVue7RBM52ki5sRA3Uk4l3nRvjE3GXtnIR5A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 21:16:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zalzg40m0l"
+        },
+        {
+          "Name": "label",
+          "Value": "Admin/IconelearningPaths/08fae317-59cd-4e6b-a40c-862b4adf9e4f.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZYmUh24ZVue7RBM52ki5sRA3Uk4l3nRvjE3GXtnIR5A="
+        }
+      ]
+    },
+    {
+      "Route": "Admin/IconelearningPaths/2162251b-80e6-4c6d-a116-f634174310d9.png",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\2162251b-80e6-4c6d-a116-f634174310d9.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 21:19:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps="
+        }
+      ]
+    },
+    {
+      "Route": "Admin/IconelearningPaths/2162251b-80e6-4c6d-a116-f634174310d9.t0y8bqv8pi.png",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\2162251b-80e6-4c6d-a116-f634174310d9.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 21:19:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t0y8bqv8pi"
+        },
+        {
+          "Name": "label",
+          "Value": "Admin/IconelearningPaths/2162251b-80e6-4c6d-a116-f634174310d9.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps="
+        }
+      ]
+    },
+    {
+      "Route": "Admin/IconelearningPaths/359e7393-c8f4-482a-8756-1c158452d2f8.png",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\359e7393-c8f4-482a-8756-1c158452d2f8.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 21:17:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps="
+        }
+      ]
+    },
+    {
+      "Route": "Admin/IconelearningPaths/359e7393-c8f4-482a-8756-1c158452d2f8.t0y8bqv8pi.png",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\359e7393-c8f4-482a-8756-1c158452d2f8.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 21:17:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t0y8bqv8pi"
+        },
+        {
+          "Name": "label",
+          "Value": "Admin/IconelearningPaths/359e7393-c8f4-482a-8756-1c158452d2f8.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps="
+        }
+      ]
+    },
+    {
+      "Route": "Admin/IconelearningPaths/3699fd3d-3114-4c74-b1f2-c75acc9453e8.png",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\3699fd3d-3114-4c74-b1f2-c75acc9453e8.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 21:16:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps="
+        }
+      ]
+    },
+    {
+      "Route": "Admin/IconelearningPaths/3699fd3d-3114-4c74-b1f2-c75acc9453e8.t0y8bqv8pi.png",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\3699fd3d-3114-4c74-b1f2-c75acc9453e8.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 21:16:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t0y8bqv8pi"
+        },
+        {
+          "Name": "label",
+          "Value": "Admin/IconelearningPaths/3699fd3d-3114-4c74-b1f2-c75acc9453e8.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps="
+        }
+      ]
+    },
+    {
+      "Route": "Admin/IconelearningPaths/3ad6f141-eb67-497e-af8f-b6f188a122ef.0xldg7cftv.jpg",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\3ad6f141-eb67-497e-af8f-b6f188a122ef.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2013491"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NLxxFDLtf/oKldPRMCzwiL8dva+feZiHWHW4jEQ/gDc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 21:13:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0xldg7cftv"
+        },
+        {
+          "Name": "label",
+          "Value": "Admin/IconelearningPaths/3ad6f141-eb67-497e-af8f-b6f188a122ef.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NLxxFDLtf/oKldPRMCzwiL8dva+feZiHWHW4jEQ/gDc="
+        }
+      ]
+    },
+    {
+      "Route": "Admin/IconelearningPaths/3ad6f141-eb67-497e-af8f-b6f188a122ef.jpg",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\3ad6f141-eb67-497e-af8f-b6f188a122ef.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2013491"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NLxxFDLtf/oKldPRMCzwiL8dva+feZiHWHW4jEQ/gDc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 21:13:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NLxxFDLtf/oKldPRMCzwiL8dva+feZiHWHW4jEQ/gDc="
+        }
+      ]
+    },
+    {
+      "Route": "Admin/IconelearningPaths/4319f34f-2f48-44bc-b133-35b89c1e53a5.png",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\4319f34f-2f48-44bc-b133-35b89c1e53a5.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 22:14:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps="
+        }
+      ]
+    },
+    {
+      "Route": "Admin/IconelearningPaths/4319f34f-2f48-44bc-b133-35b89c1e53a5.t0y8bqv8pi.png",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\4319f34f-2f48-44bc-b133-35b89c1e53a5.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 22:14:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t0y8bqv8pi"
+        },
+        {
+          "Name": "label",
+          "Value": "Admin/IconelearningPaths/4319f34f-2f48-44bc-b133-35b89c1e53a5.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps="
+        }
+      ]
+    },
+    {
+      "Route": "Admin/IconelearningPaths/ad38d9da-f171-42d5-a0b7-7e1d02e5ea2b.png",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\ad38d9da-f171-42d5-a0b7-7e1d02e5ea2b.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 21:19:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps="
+        }
+      ]
+    },
+    {
+      "Route": "Admin/IconelearningPaths/ad38d9da-f171-42d5-a0b7-7e1d02e5ea2b.t0y8bqv8pi.png",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\ad38d9da-f171-42d5-a0b7-7e1d02e5ea2b.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 21:19:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t0y8bqv8pi"
+        },
+        {
+          "Name": "label",
+          "Value": "Admin/IconelearningPaths/ad38d9da-f171-42d5-a0b7-7e1d02e5ea2b.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps="
+        }
+      ]
+    },
+    {
+      "Route": "Admin/IconelearningPaths/aee1d2e0-34c7-43ee-908e-1d09d4873a03.png",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\aee1d2e0-34c7-43ee-908e-1d09d4873a03.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 21:21:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps="
+        }
+      ]
+    },
+    {
+      "Route": "Admin/IconelearningPaths/aee1d2e0-34c7-43ee-908e-1d09d4873a03.t0y8bqv8pi.png",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\aee1d2e0-34c7-43ee-908e-1d09d4873a03.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 21:21:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t0y8bqv8pi"
+        },
+        {
+          "Name": "label",
+          "Value": "Admin/IconelearningPaths/aee1d2e0-34c7-43ee-908e-1d09d4873a03.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps="
+        }
+      ]
+    },
+    {
+      "Route": "Admin/IconelearningPaths/ba01668c-4758-423a-92c5-95433cf601ce.png",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\ba01668c-4758-423a-92c5-95433cf601ce.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 21:14:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps="
+        }
+      ]
+    },
+    {
+      "Route": "Admin/IconelearningPaths/ba01668c-4758-423a-92c5-95433cf601ce.t0y8bqv8pi.png",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\ba01668c-4758-423a-92c5-95433cf601ce.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 21:14:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t0y8bqv8pi"
+        },
+        {
+          "Name": "label",
+          "Value": "Admin/IconelearningPaths/ba01668c-4758-423a-92c5-95433cf601ce.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps="
+        }
+      ]
+    },
+    {
+      "Route": "Admin/IconelearningPaths/c20c2537-752c-42c2-a426-6511d58d6429.png",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\c20c2537-752c-42c2-a426-6511d58d6429.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 21:21:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps="
+        }
+      ]
+    },
+    {
+      "Route": "Admin/IconelearningPaths/c20c2537-752c-42c2-a426-6511d58d6429.t0y8bqv8pi.png",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\c20c2537-752c-42c2-a426-6511d58d6429.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 21:21:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t0y8bqv8pi"
+        },
+        {
+          "Name": "label",
+          "Value": "Admin/IconelearningPaths/c20c2537-752c-42c2-a426-6511d58d6429.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps="
+        }
+      ]
+    },
+    {
+      "Route": "Admin/IconelearningPaths/d342eb91-d803-4941-83c4-375543e36ade.0xldg7cftv.jpg",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\d342eb91-d803-4941-83c4-375543e36ade.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2013491"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NLxxFDLtf/oKldPRMCzwiL8dva+feZiHWHW4jEQ/gDc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 21:09:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0xldg7cftv"
+        },
+        {
+          "Name": "label",
+          "Value": "Admin/IconelearningPaths/d342eb91-d803-4941-83c4-375543e36ade.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NLxxFDLtf/oKldPRMCzwiL8dva+feZiHWHW4jEQ/gDc="
+        }
+      ]
+    },
+    {
+      "Route": "Admin/IconelearningPaths/d342eb91-d803-4941-83c4-375543e36ade.jpg",
+      "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Admin\\IconelearningPaths\\d342eb91-d803-4941-83c4-375543e36ade.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2013491"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NLxxFDLtf/oKldPRMCzwiL8dva+feZiHWHW4jEQ/gDc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 21:09:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NLxxFDLtf/oKldPRMCzwiL8dva+feZiHWHW4jEQ/gDc="
+        }
+      ]
+    },
     {
       "Route": "Assets/Customer/images/app.png",
       "AssetFile": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\wwwroot\\Assets\\Customer\\images\\app.png",
@@ -6491,7 +7624,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 May 2025 03:26:37 GMT"
+          "Value": "Tue, 06 May 2025 11:58:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6544,7 +7677,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 May 2025 03:26:37 GMT"
+          "Value": "Tue, 06 May 2025 11:58:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6581,7 +7714,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 May 2025 03:26:37 GMT"
+          "Value": "Tue, 06 May 2025 11:58:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6628,7 +7761,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 May 2025 03:26:37 GMT"
+          "Value": "Tue, 06 May 2025 11:58:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6689,7 +7822,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 May 2025 03:26:37 GMT"
+          "Value": "Tue, 06 May 2025 11:58:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6734,7 +7867,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 May 2025 03:26:37 GMT"
+          "Value": "Tue, 06 May 2025 11:58:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6789,7 +7922,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 May 2025 03:26:37 GMT"
+          "Value": "Tue, 06 May 2025 11:58:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6850,7 +7983,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 May 2025 03:26:37 GMT"
+          "Value": "Tue, 06 May 2025 11:58:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6895,7 +8028,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 May 2025 03:26:37 GMT"
+          "Value": "Tue, 06 May 2025 11:58:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6950,7 +8083,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 May 2025 03:26:37 GMT"
+          "Value": "Tue, 06 May 2025 11:58:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7003,7 +8136,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 May 2025 03:26:37 GMT"
+          "Value": "Tue, 06 May 2025 11:58:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7040,7 +8173,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 May 2025 03:26:37 GMT"
+          "Value": "Tue, 06 May 2025 11:58:30 GMT"
         },
         {
           "Name": "Cache-Control",

@@ -34,6 +34,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="wwwroot\Assets\Admin\IconelearningPaths\" />
 	  <Folder Include="wwwroot\Assets\Customer\StudentImges\" />
 	  <Folder Include="wwwroot\Assets\Instructors\" />
 	</ItemGroup>
