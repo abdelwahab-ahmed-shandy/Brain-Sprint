@@ -8,53 +8,46 @@
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1 class="mt-4"><i class="fas fa-map-signs me-2"></i>Learning Paths</h1>
         <a asp-action="Create" class="btn btn-primary">
-            <i class="fas fa-plus-circle me-1"></i> Create New
+            <i class="fas fa-plus me-1"></i> Create New
         </a>
     </div>
 
     <div class="card mb-4 shadow-sm">
         <div class="card-header bg-primary text-white py-3">
-            <div class="d-flex justify-content-between align-items-center">
-                <h5 class="mb-0">
-                    <i class="fas fa-table me-1"></i> Learning Paths Management
-                </h5>
-                <div class="small">
-                    <i class="fas fa-filter me-1"></i> Advanced Filtering
-                </div>
-            </div>
+            <h5 class="mb-0">
+                <i class="fas fa-table me-1"></i> Learning Paths List
+            </h5>
         </div>
 
         <div class="card-body">
-            <!-- Search and Filter Section -->
-            <div class="search-filter-section mb-4 p-3 bg-light rounded">
-                <form method="get" class="row g-3 align-items-end">
+            <!-- Simplified Search Section -->
+            <div class="mb-4">
+                <form method="get" class="row g-2">
                     <div class="col-md-10">
-                        <label for="searchQuery" class="form-label">Search Learning Paths</label>
                         <div class="input-group">
-                            <span class="input-group-text"><i class="fas fa-search"></i></span>
-                            <input type="text" name="query" id="searchQuery" class="form-control"
-                                   placeholder="Search by name, description..."
+                            <span class="input-group-text bg-white"><i class="fas fa-search text-muted"></i></span>
+                            <input type="text" name="query" class="form-control"
+                                   placeholder="Search by name or description..."
                                    value="@Model.Pagination.Query">
                         </div>
                     </div>
-                   
                     <div class="col-md-2">
                         <button type="submit" class="btn btn-primary w-100">
-                            <i class="fas fa-filter me-1"></i> Apply
+                            <i class="fas fa-search me-1"></i> Search
                         </button>
                     </div>
                 </form>
             </div>
 
-            <!-- Learning Paths Table -->
+            <!-- Cleaner Table Design -->
             <div class="table-responsive">
-                <table class="table table-hover table-striped table-bordered">
-                    <thead class="table-dark">
+                <table class="table table-hover">
+                    <thead class="table-light">
                         <tr>
-                            <th width="80px">Icon</th>
+                            <th width="60px">Icon</th>
                             <th>Name</th>
                             <th>Description</th>
-                            <th width="220px" class="text-center">Actions</th>
+                            <th width="180px" class="text-end">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -63,56 +56,78 @@
                             @foreach (var item in Model.LearningPaths)
                             {
                                 <tr>
-                                    <td class="align-middle text-center">
+                                    <td class="text-center">
                                         @if (!string.IsNullOrEmpty(item.IconUrl))
                                         {
-                                            <img src="@item.IconUrl" alt="Icon" class="img-thumbnail" style="width: 40px; height: 40px; object-fit: cover;" />
+                                            <img src="@item.IconUrl" alt="Icon" class="rounded" style="width: 36px; height: 36px; object-fit: cover;" />
                                         }
                                         else
                                         {
-                                            <i class="fas fa-map-signs fa-2x text-secondary"></i>
+                                            <i class="fas fa-map-signs text-muted"></i>
                                         }
                                     </td>
-                                    <td class="align-middle">
+                                    <td>
                                         <strong>@item.Name</strong>
                                     </td>
-                                    <td class="align-middle">
+                                    <td>
                                         @if (!string.IsNullOrEmpty(item.Description))
                                         {
-                                            <span class="d-inline-block text-truncate" style="max-width: 300px;">
-                                                @item.Description
-                                            </span>
+                                            <span class="text-muted">@item.Description</span>
                                         }
                                     </td>
-                                    <td class="align-middle text-center">
-                                        <div class="btn-group" role="group">
+                                    <td class="text-end">
+                                        <div class="btn-group btn-group-sm" role="group">
                                             <a asp-action="Edit" asp-route-id="@item.Id"
-                                               class="btn btn-sm btn-outline-primary" title="Edit">
+                                               class="btn btn-outline-primary" title="Edit">
                                                 <i class="fas fa-edit"></i>
                                             </a>
                                             <a asp-action="Details" asp-route-id="@item.Id"
-                                               class="btn btn-sm btn-outline-info" title="Details">
-                                                <i class="fas fa-info-circle"></i>
+                                               class="btn btn-outline-secondary" title="Details">
+                                                <i class="fas fa-eye"></i>
                                             </a>
-                                            <a asp-action="Delete" asp-route-id="@item.Id"
-                                               class="btn btn-sm btn-outline-danger" title="Delete">
+                                            <button type="button" class="btn btn-outline-danger" title="Delete"
+                                                    data-bs-toggle="modal" data-bs-target="#deleteModal-@item.Id">
                                                 <i class="fas fa-trash-alt"></i>
-                                            </a>
+                                            </button>
                                         </div>
                                     </td>
                                 </tr>
+
+                                <!-- Delete Modal -->
+                                <div class="modal fade" id="deleteModal-@item.Id" tabindex="-1">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header bg-danger text-white">
+                                                <h5 class="modal-title">Confirm Deletion</h5>
+                                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Are you sure you want to delete <strong>@item.Name</strong>?</p>
+                                                <p class="text-muted small">This action cannot be undone.</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                                                <form asp-action="Delete" method="post" class="d-inline">
+                                                    <input type="hidden" name="id" value="@item.Id" />
+                                                    @Html.AntiForgeryToken()
+                                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             }
                         }
                         else
                         {
                             <tr>
-                                <td colspan="4" class="text-center py-4">
-                                    <div class="empty-state">
-                                        <i class="fas fa-map-signs fa-3x text-muted mb-3"></i>
-                                        <h5>No Learning Paths Found</h5>
-                                        <p class="text-muted">Create your first learning path to get started</p>
-                                        <a asp-action="Create" class="btn btn-primary mt-2">
-                                            <i class="fas fa-plus me-1"></i> Create Learning Path
+                                <td colspan="4" class="text-center py-5">
+                                    <div class="text-muted">
+                                        <i class="fas fa-map-signs fa-3x mb-3"></i>
+                                        <h4>No Learning Paths Found</h4>
+                                        <p>Get started by creating your first learning path</p>
+                                        <a asp-action="Create" class="btn btn-primary">
+                                            <i class="fas fa-plus me-1"></i> Create New
                                         </a>
                                     </div>
                                 </td>
@@ -122,25 +137,22 @@
                 </table>
             </div>
 
-            <!-- Pagination and Summary -->
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-4">
-                <div class="mb-2 mb-md-0">
-                    <span class="text-muted">
-                        Showing <strong>@((Model.Pagination.CurrentPage - 1) * Model.Pagination.PageSize + 1)</strong> to
-                        <strong>@Math.Min(Model.Pagination.CurrentPage * Model.Pagination.PageSize, Model.Pagination.TotalItems)</strong> of
-                        <strong>@Model.Pagination.TotalItems</strong> entries
-                    </span>
+            <!-- Simplified Pagination -->
+            <div class="d-flex justify-content-between align-items-center mt-4">
+                <div class="text-muted small">
+                    Showing @((Model.Pagination.CurrentPage - 1) * Model.Pagination.PageSize + 1) to
+                    @Math.Min(Model.Pagination.CurrentPage * Model.Pagination.PageSize, Model.Pagination.TotalItems) of
+                    @Model.Pagination.TotalItems entries
                 </div>
 
-                <nav aria-label="Page navigation">
+                <nav>
                     <ul class="pagination pagination-sm mb-0">
                         <li class="page-item @(Model.Pagination.CurrentPage == 1 ? "disabled" : "")">
                             <a class="page-link"
                                asp-action="Index"
                                asp-route-page="@(Model.Pagination.CurrentPage - 1)"
-                               asp-route-query="@Model.Pagination.Query"
-                               asp-route-pageSize="@Model.Pagination.PageSize">
-                                <i class="fas fa-chevron-left"></i>
+                               asp-route-query="@Model.Pagination.Query">
+                                &laquo;
                             </a>
                         </li>
 
@@ -150,8 +162,7 @@
                                 <a class="page-link"
                                    asp-action="Index"
                                    asp-route-page="@i"
-                                   asp-route-query="@Model.Pagination.Query"
-                                   asp-route-pageSize="@Model.Pagination.PageSize">@i</a>
+                                   asp-route-query="@Model.Pagination.Query">@i</a>
                             </li>
                         }
 
@@ -159,9 +170,8 @@
                             <a class="page-link"
                                asp-action="Index"
                                asp-route-page="@(Model.Pagination.CurrentPage + 1)"
-                               asp-route-query="@Model.Pagination.Query"
-                               asp-route-pageSize="@Model.Pagination.PageSize">
-                                <i class="fas fa-chevron-right"></i>
+                               asp-route-query="@Model.Pagination.Query">
+                                &raquo;
                             </a>
                         </li>
                     </ul>
@@ -173,46 +183,32 @@
 
 @section Styles {
     <style>
-        .empty-state {
-            padding: 2rem;
-            text-align: center;
-            background-color: #f8f9fa;
-            border-radius: 0.5rem;
-        }
-
         .table th {
-            white-space: nowrap;
+            font-weight: 500;
+            border-top: none;
         }
 
-        .search-filter-section {
-            background-color: #f8f9fa;
-            border-left: 4px solid #0d6efd;
+        .table td {
+            vertical-align: middle;
         }
 
-        .img-thumbnail {
-            padding: 0.25rem;
-            background-color: #fff;
-            border: 1px solid #dee2e6;
-            border-radius: 0.25rem;
+        .btn-group-sm > .btn {
+            padding: 0.25rem 0.5rem;
         }
     </style>
 }
 
 @section Scripts {
     <script>
-        // Add some interactivity
         $(document).ready(function() {
-            // Highlight search term in table
-            const searchQuery = "@Model.Pagination.Query";
-            if (searchQuery) {
-                $("td").highlight(searchQuery);
-            }
+            // Enable tooltips
+            $('[title]').tooltip();
 
-            // Tooltips for action buttons
-            $('[title]').tooltip({
-                placement: 'top',
-                trigger: 'hover'
-            });
+            // Highlight search term if exists
+            const query = "@Model.Pagination.Query";
+            if (query) {
+                $("td").highlight(query);
+            }
         });
     </script>
 }

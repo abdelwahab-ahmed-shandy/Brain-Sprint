@@ -23,6 +23,7 @@ namespace BrainSprint.Areas.Admin.Controllers
 
             var learningPathVMs = learningPaths.Select(lp => new ContentManagementVM
             {
+                Id = lp.Id,
                 Name = lp.Name,
                 Description = lp.Description,
                 IconUrl = lp.IconUrl,
@@ -102,7 +103,7 @@ namespace BrainSprint.Areas.Admin.Controllers
                     }
 
                     // Create directory if it doesn't exist
-                    var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Admin", "IconelearningPaths");
+                    var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Assets", "Admin", "IconelearningPaths");
                     if (!Directory.Exists(uploadsFolder))
                     {
                         Directory.CreateDirectory(uploadsFolder);
@@ -116,7 +117,7 @@ namespace BrainSprint.Areas.Admin.Controllers
                         await icon.CopyToAsync(stream);
                     }
 
-                    model.IconUrl = $"/Admin/IconelearningPaths/{uniqueFileName}";
+                    model.IconUrl = $"/Assets/Admin/IconelearningPaths/{uniqueFileName}";
                 }
 
                 var learningPath = new LearningPath
@@ -180,85 +181,179 @@ namespace BrainSprint.Areas.Admin.Controllers
                 return View(learningPath);
             }
 
-            // Get the existing learning path with tracking enabled
-            var learningPathInDB = _learningPathRepository.GetOne(lp => lp.Id == learningPath.Id);
+            try
+            {
+                var learningPathInDB = _learningPathRepository.GetOne(lp => lp.Id == learningPath.Id);
+                if (learningPathInDB == null)
+                {
+                    TempData["notification"] = "The LearningPath Was Not Found!";
+                    TempData["MessageType"] = "error";
+                    return RedirectToAction(nameof(Index));
+                }
 
-            if (learningPathInDB == null)
+                // Save the old path before updating
+                var oldIconPath = learningPathInDB.IconUrl;
+                string oldPhysicalPath = null;
+
+                if (!string.IsNullOrEmpty(oldIconPath))
+                {
+                    // Ensure path is correct (handles leading slash and avoids missing "Assets")
+                    oldPhysicalPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot",
+                        oldIconPath.TrimStart('/').Replace("/", Path.DirectorySeparatorChar.ToString()));
+                }
+
+                if (icon != null && icon.Length > 0)
+                {
+                    var allowedExten = new[] { ".jpg", ".jpeg", ".png", ".svg" };
+                    var fileExten = Path.GetExtension(icon.FileName).ToLower();
+                    if (!allowedExten.Contains(fileExten))
+                    {
+                        ModelState.AddModelError("icon", "Unallowed file type. Please upload an image in JPG, PNG, or SVG format");
+                        return View(learningPath);
+                    }
+
+                    var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot",
+                        "Assets", "Admin", "IconelearningPaths");
+                    if (!Directory.Exists(uploadsFolder))
+                    {
+                        Directory.CreateDirectory(uploadsFolder);
+                    }
+
+                    // Create a unique name for the new file
+                    var uniqueFileName = $"{Guid.NewGuid()}{fileExten}";
+                    var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                    // Save the new file
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await icon.CopyToAsync(stream);
+                    }
+
+                    // Update the file path in the database 
+                    learningPathInDB.IconUrl = $"/Assets/Admin/IconelearningPaths/{uniqueFileName}";
+
+                    // Delete the old file if it exists
+                    if (!string.IsNullOrEmpty(oldPhysicalPath) && System.IO.File.Exists(oldPhysicalPath))
+                    {
+                        try
+                        {
+                            System.IO.File.Delete(oldPhysicalPath);
+                            _logger.LogInformation($"Old file deleted: {oldPhysicalPath}");
+                        }
+                        catch (Exception ex)
+                        {
+                            _logger.LogError(ex, $"Failed to delete old file: {oldPhysicalPath}");
+                        }
+                    }
+                }
+
+                // Update other properties
+                learningPathInDB.Name = learningPath.Name;
+                learningPathInDB.Description = learningPath.Description;
+                learningPathInDB.UpdatedBy = User.Identity.Name;
+                learningPathInDB.UpdatedDateUtc = DateTime.UtcNow;
+
+                await _learningPathRepository.EditAsync(learningPathInDB);
+                await _learningPathRepository.SaveInDataBaseAsync();
+
+                TempData["notification"] = "Learning path updated successfully!";
+                TempData["MessageType"] = "success";
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while updating the learning path");
+                TempData["notification"] = "An error occurred while updating the learning path";
+                TempData["MessageType"] = "error";
+                return View(learningPath);
+            }
+        }
+
+        #endregion
+
+
+        #region Detils Learning Path
+
+        [HttpGet]
+        public IActionResult Details(int Id)
+        {
+            var learningPath = _learningPathRepository.GetOne(lp => lp.Id == Id);
+
+            if (learningPath == null)
             {
                 TempData["notification"] = "The LearningPath Was Not Found!";
                 TempData["MessageType"] = "error";
                 return RedirectToAction(nameof(Index));
             }
 
-            // Save the old icon path before potential update
-            var oldIconPath = learningPathInDB.IconUrl;
-
-            if (icon != null && icon.Length > 0)
+            var pathDetails = new ContentManagementVM
             {
-                var allowedExten = new[] { ".jpg", ".jpeg", ".png", ".svg" };
-                var fileExten = Path.GetExtension(icon.FileName).ToLower();
+                Id = learningPath.Id,
+                Name = learningPath.Name,
+                Description = learningPath.Description,
+                IconUrl = learningPath.IconUrl,
+                CreatedBy = learningPath.CreatedBy,
+                CreatedDateUtc = learningPath.CreatedDateUtc,
+                UpdatedBy = learningPath.UpdatedBy,
+                UpdatedDateUtc = learningPath.UpdatedDateUtc,
+                BlockedBy = learningPath.BlockedBy
+            };
 
-                if (!allowedExten.Contains(fileExten))
-                {
-                    ModelState.AddModelError("icon", "The file type is not allowed. Please upload an image in JPG, PNG, or SVG format");
-                    return View(learningPath);
-                }
+            return View(pathDetails);
+        }
 
-                // Create directory if it doesn't exist
-                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Admin", "IconelearningPaths");
+        #endregion
 
-                if (!Directory.Exists(uploadsFolder))
-                {
-                    Directory.CreateDirectory(uploadsFolder);
-                }
 
-                var uniqueFileName = $"{Guid.NewGuid()}{fileExten}";
-                var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+        #region Delete Learning Path
 
-                using (var stream = new FileStream(filePath, FileMode.Create))
-                {
-                    await icon.CopyToAsync(stream);
-                }
-
-                // Update with new icon path
-                learningPathInDB.IconUrl = $"/Admin/IconelearningPaths/{uniqueFileName}";
-
-                // Delete old icon file if it exists
-                if (!string.IsNullOrEmpty(oldIconPath))
-                {
-                    var oldPhysicalPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", oldIconPath.TrimStart('/'));
-                    if (System.IO.File.Exists(oldPhysicalPath))
-                    {
-                        try
-                        {
-                            System.IO.File.Delete(oldPhysicalPath);
-                        }
-                        catch (Exception ex)
-                        {
-                            // Log the error but don't stop the process
-                            _logger.LogError(ex, $"Failed to delete old icon file: {oldPhysicalPath}");
-                            // You could optionally add a message to TempData to inform admin
-                        }
-                    }
-                }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(int Id)
+        {
+            var learningPath = _learningPathRepository.GetOne(lp => lp.Id == Id);
+            if (learningPath == null)
+            {
+                TempData["notification"] = "The LearningPath Was Not Found!";
+                TempData["MessageType"] = "error";
+                return RedirectToAction(nameof(Index));
             }
 
-            // Update other properties
-            learningPathInDB.Name = learningPath.Name;
-            learningPathInDB.Description = learningPath.Description;
-            learningPathInDB.UpdatedBy = User.Identity.Name;
-            learningPathInDB.UpdatedDateUtc = DateTime.UtcNow;
+            try
+            {
+                // Delete the icon file if it exists
+                if (!string.IsNullOrEmpty(learningPath.IconUrl))
+                {
+                    var fileName = Path.GetFileName(learningPath.IconUrl);
+                    var oldPhysicalPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\Assets\\Admin\\IconelearningPaths", fileName);
 
-            await _learningPathRepository.EditAsync(learningPathInDB);
-            await _learningPathRepository.SaveInDataBaseAsync();
+                    if (System.IO.File.Exists(oldPhysicalPath))
+                    {
+                        System.IO.File.Delete(oldPhysicalPath);
+                    }
+                }
 
-            TempData["notification"] = "The LearningPath Was Edited Successfully!";
-            TempData["MessageType"] = "success";
+                // Delete the learning path from database
+                await _learningPathRepository.DeleteAsync(learningPath);
+                await _learningPathRepository.SaveInDataBaseAsync();
+
+                TempData["notification"] = "The LearningPath Was Deleted Successfully!";
+                TempData["MessageType"] = "success";
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Error deleting learning path with ID {Id}");
+                TempData["notification"] = "An error occurred while deleting the learning path!";
+                TempData["MessageType"] = "error";
+            }
+
             return RedirectToAction(nameof(Index));
         }
 
-
         #endregion
+
+
+
 
     }
 }

@@ -7,10 +7,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <Compile Remove="wwwroot\Assets\Instructor\**" />
-	  <Content Remove="wwwroot\Assets\Instructor\**" />
-	  <EmbeddedResource Remove="wwwroot\Assets\Instructor\**" />
-	  <None Remove="wwwroot\Assets\Instructor\**" />
+		<Compile Remove="wwwroot\Assets\Instructor\**" />
+		<Content Remove="wwwroot\Assets\Instructor\**" />
+		<EmbeddedResource Remove="wwwroot\Assets\Instructor\**" />
+		<None Remove="wwwroot\Assets\Instructor\**" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -34,9 +34,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="wwwroot\Assets\Admin\IconelearningPaths\" />
-	  <Folder Include="wwwroot\Assets\Customer\StudentImges\" />
-	  <Folder Include="wwwroot\Assets\Instructors\" />
+		<Folder Include="wwwroot\Assets\Admin\IconelearningPaths\" />
+		<Folder Include="wwwroot\Assets\Customer\StudentImges\" />
+		<Folder Include="wwwroot\Assets\Instructors\" />
 	</ItemGroup>
 
 </Project>

@@ -9,7 +9,14 @@ namespace Models.ViewModels
 {
     public class ContentManagementVM
     {
+        //Base:
         public int Id { get; set; }
+        public string CreatedBy { get; set; } = string.Empty;
+        public DateTime CreatedDateUtc { get; set; } = DateTime.UtcNow;
+        public string? UpdatedBy { get; set; }
+        public string? BlockedBy { get; set; }
+        public DateTime? UpdatedDateUtc { get; set; }
+
         // LearningPaths
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
