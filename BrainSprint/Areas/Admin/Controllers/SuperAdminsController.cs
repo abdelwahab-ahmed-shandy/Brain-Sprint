@@ -45,7 +45,7 @@ namespace BrainSprint.Areas.Admin.Controllers
                         Bio = user.Bio,
                         RegistrationDate = user.RegistrationDate,
                         LastLogin = user.LastLogin,
-                        AccountState = user.AccountState ?? AccountStateType.Banned,
+                        AccountState = user.AccountState ?? AccountStateType.PendingActivation
                     });
                 }
             }
@@ -116,7 +116,7 @@ namespace BrainSprint.Areas.Admin.Controllers
             {
                 RegistrationDate = DateTime.Now,
                 IsActive = true,
-                AccountState = AccountStateType.Active
+                AccountState = AccountStateType.PendingActivation
             };
             return View(model);
         }

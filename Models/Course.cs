@@ -23,9 +23,10 @@ namespace Models
         public int InstructorId { get; set; }
         [ForeignKey("InstructorId")]
         public Instructor? Instructor { get; set; }
+        public List<CourseLearningPath> CourseLearningPaths { get; set; } = new List<CourseLearningPath>();
+
 
         public List<CartItem> CartItems { get; set; } = new List<CartItem>();
-        public List<CourseLearningPath> CourseLearningPaths { get; set; } = new List<CourseLearningPath>();
         public List<CourseReview> CourseReviews { get; set; } = new List<CourseReview>();
         public List<EnrollmentCourse> EnrollmentCourses { get; set; } = new List<EnrollmentCourse>();
         public List<CourseModule> CourseModules { get; set; } = new List<CourseModule>();

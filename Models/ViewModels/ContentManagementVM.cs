@@ -17,6 +17,8 @@ namespace Models.ViewModels
         public string? BlockedBy { get; set; }
         public DateTime? UpdatedDateUtc { get; set; }
 
+
+
         // LearningPaths
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
@@ -29,6 +31,10 @@ namespace Models.ViewModels
         public int? Duration { get; set; }
         public string? VideoUrl { get; set; }
         public string? ImgUrl { get; set; }
+
+        // Instructors
+        public string? InstructorName { get; set; }
+        public string? LearningPathName { get; set; }
 
 
     }
