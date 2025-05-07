@@ -1,7 +1,19 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|c:\\users\\fm\\desktop\\brain-sprint\\brainsprint\\areas\\admin\\views\\courses\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|solutionrelative:areas\\admin\\views\\courses\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|c:\\users\\fm\\desktop\\brain-sprint\\brainsprint\\areas\\admin\\controllers\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|solutionrelative:areas\\admin\\controllers\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE4FD232-847D-4620-8F9A-16BDF37770D5}|..\\Models\\Models.csproj|c:\\users\\fm\\desktop\\brain-sprint\\models\\viewmodels\\contentmanagementvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +21,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1416,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ContentManagementVM.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\ViewModels\\ContentManagementVM.cs",
+              "RelativeDocumentMoniker": "..\\Models\\ViewModels\\ContentManagementVM.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\ViewModels\\ContentManagementVM.cs",
+              "RelativeToolTip": "..\\Models\\ViewModels\\ContentManagementVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T21:59:21.709Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CoursesController.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Admin\\Controllers\\CoursesController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\CoursesController.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Admin\\Controllers\\CoursesController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\CoursesController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAcwBwAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T21:49:46.486Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -18,6 +58,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Admin\\Views\\Courses\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Courses\\Index.cshtml",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Admin\\Views\\Courses\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Courses\\Index.cshtml",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAWwCEAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-06T22:33:15.78Z",
+              "EditorCaption": ""
             }
           ]
         }

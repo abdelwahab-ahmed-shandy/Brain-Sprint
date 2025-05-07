@@ -26,7 +26,7 @@ namespace Models.ViewModels
         public string Title { get; set; } = string.Empty;
         public double Price { get; set; }
         public double? Discount { get; set; }
-        public int Duration { get; set; }
+        public int? Duration { get; set; }
         public string? VideoUrl { get; set; }
         public string? ImgUrl { get; set; }
 
@@ -37,4 +37,12 @@ namespace Models.ViewModels
         public IEnumerable<ContentManagementVM> LearningPaths { get; set; }
         public PaginationVM Pagination { get; set; }
     }
+
+    public class CoursesVM
+    {
+        public IEnumerable<ContentManagementVM> Courses { get; set; }
+        public PaginationVM Pagination { get; set; }
+
+    }
+
 }
