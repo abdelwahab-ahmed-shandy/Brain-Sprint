@@ -1,197 +1,197 @@
-﻿@model Models.Course
-@{
-    ViewData["Title"] = "Create New Course";
-    var instructors = ViewBag.Instructors as List<Instructor>;
-    var learningPaths = ViewBag.LearningPaths as List<LearningPath>;
-}
+﻿@* @model Models.Course *@
+@* @{ *@
+@*     ViewData["Title"] = "Create New Course"; *@
+@*     var instructors = ViewBag.Instructors as List<Instructor>; *@
+@*     var learningPaths = ViewBag.LearningPaths as List<LearningPath>; *@
+@* } *@
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-lg-8">
-            <div class="card shadow-sm">
-                <div class="card-header bg-primary text-white">
-                    <h3 class="mb-0"><i class="fas fa-plus-circle me-2"></i>@ViewData["Title"]</h3>
-                </div>
-                <div class="card-body">
-                    <form asp-action="Create" method="post" enctype="multipart/form-data">
-                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+@* <div class="container"> *@
+@*     <div class="row justify-content-center"> *@
+@*         <div class="col-lg-8"> *@
+@*             <div class="card shadow-sm"> *@
+@*                 <div class="card-header bg-primary text-white"> *@
+@*                     <h3 class="mb-0"><i class="fas fa-plus-circle me-2"></i>@ViewData["Title"]</h3> *@
+@*                 </div> *@
+@*                 <div class="card-body"> *@
+@*                     <form asp-action="Create" method="post" enctype="multipart/form-data"> *@
+@*                         <div asp-validation-summary="ModelOnly" class="text-danger"></div> *@
 
-                        <!-- Basic Information -->
-                        <div class="row mb-4">
-                            <div class="col-md-8">
-                                <div class="form-group mb-3">
-                                    <label asp-for="Title" class="form-label"></label>
-                                    <input asp-for="Title" class="form-control" placeholder="Enter course title" />
-                                    <span asp-validation-for="Title" class="text-danger"></span>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group mb-3">
-                                    <label asp-for="Duration" class="form-label"></label>
-                                    <input asp-for="Duration" class="form-control" placeholder="In hours" />
-                                    <span asp-validation-for="Duration" class="text-danger"></span>
-                                </div>
-                            </div>
-                        </div>
+@*                         <!-- Basic Information --> *@
+@*                         <div class="row mb-4"> *@
+@*                             <div class="col-md-8"> *@
+@*                                 <div class="form-group mb-3"> *@
+@*                                     <label asp-for="Title" class="form-label"></label> *@
+@*                                     <input asp-for="Title" class="form-control" placeholder="Enter course title" /> *@
+@*                                     <span asp-validation-for="Title" class="text-danger"></span> *@
+@*                                 </div> *@
+@*                             </div> *@
+@*                             <div class="col-md-4"> *@
+@*                                 <div class="form-group mb-3"> *@
+@*                                     <label asp-for="Duration" class="form-label"></label> *@
+@*                                     <input asp-for="Duration" class="form-control" placeholder="In hours" /> *@
+@*                                     <span asp-validation-for="Duration" class="text-danger"></span> *@
+@*                                 </div> *@
+@*                             </div> *@
+@*                         </div> *@
 
-                        <!-- Description -->
-                        <div class="form-group mb-3">
-                            <label asp-for="Description" class="form-label"></label>
-                            <textarea asp-for="Description" class="form-control" rows="4" placeholder="Course description..."></textarea>
-                            <span asp-validation-for="Description" class="text-danger"></span>
-                        </div>
+@*                         <!-- Description --> *@
+@*                         <div class="form-group mb-3"> *@
+@*                             <label asp-for="Description" class="form-label"></label> *@
+@*                             <textarea asp-for="Description" class="form-control" rows="4" placeholder="Course description..."></textarea> *@
+@*                             <span asp-validation-for="Description" class="text-danger"></span> *@
+@*                         </div> *@
 
-                        <!-- Pricing Section -->
-                        <div class="row mb-4">
-                            <div class="col-md-6">
-                                <div class="form-group mb-3">
-                                    <label asp-for="Price" class="form-label"></label>
-                                    <div class="input-group">
-                                        <span class="input-group-text">$</span>
-                                        <input asp-for="Price" class="form-control" placeholder="0.00" />
-                                    </div>
-                                    <span asp-validation-for="Price" class="text-danger"></span>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group mb-3">
-                                    <label asp-for="Discount" class="form-label"></label>
-                                    <div class="input-group">
-                                        <input asp-for="Discount" class="form-control" placeholder="0" />
-                                        <span class="input-group-text">%</span>
-                                    </div>
-                                    <span asp-validation-for="Discount" class="text-danger"></span>
-                                </div>
-                            </div>
-                        </div>
+@*                         <!-- Pricing Section --> *@
+@*                         <div class="row mb-4"> *@
+@*                             <div class="col-md-6"> *@
+@*                                 <div class="form-group mb-3"> *@
+@*                                     <label asp-for="Price" class="form-label"></label> *@
+@*                                     <div class="input-group"> *@
+@*                                         <span class="input-group-text">$</span> *@
+@*                                         <input asp-for="Price" class="form-control" placeholder="0.00" /> *@
+@*                                     </div> *@
+@*                                     <span asp-validation-for="Price" class="text-danger"></span> *@
+@*                                 </div> *@
+@*                             </div> *@
+@*                             <div class="col-md-6"> *@
+@*                                 <div class="form-group mb-3"> *@
+@*                                     <label asp-for="Discount" class="form-label"></label> *@
+@*                                     <div class="input-group"> *@
+@*                                         <input asp-for="Discount" class="form-control" placeholder="0" /> *@
+@*                                         <span class="input-group-text">%</span> *@
+@*                                     </div> *@
+@*                                     <span asp-validation-for="Discount" class="text-danger"></span> *@
+@*                                 </div> *@
+@*                             </div> *@
+@*                         </div> *@
 
-                        <!-- Media Section -->
-                        <div class="row mb-4">
-                            <div class="col-md-6">
-                                <div class="form-group mb-3">
-                                    <label asp-for="ImgUrl" class="form-label">Course Image</label>
-                                    <input type="file" name="imageFile" class="form-control" accept="image/*" />
-                                    <small class="text-muted">Recommended size: 800x450 pixels</small>
-                                    <span asp-validation-for="ImgUrl" class="text-danger"></span>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group mb-3">
-                                    <label asp-for="VideoUrl" class="form-label">Preview Video URL</label>
-                                    <input asp-for="VideoUrl" class="form-control" placeholder="https://example.com/video" />
-                                    <span asp-validation-for="VideoUrl" class="text-danger"></span>
-                                </div>
-                            </div>
-                        </div>
+@*                         <!-- Media Section --> *@
+@*                         <div class="row mb-4"> *@
+@*                             <div class="col-md-6"> *@
+@*                                 <div class="form-group mb-3"> *@
+@*                                     <label asp-for="ImgUrl" class="form-label">Course Image</label> *@
+@*                                     <input type="file" name="imageFile" class="form-control" accept="image/*" /> *@
+@*                                     <small class="text-muted">Recommended size: 800x450 pixels</small> *@
+@*                                     <span asp-validation-for="ImgUrl" class="text-danger"></span> *@
+@*                                 </div> *@
+@*                             </div> *@
+@*                             <div class="col-md-6"> *@
+@*                                 <div class="form-group mb-3"> *@
+@*                                     <label asp-for="VideoUrl" class="form-label">Preview Video URL</label> *@
+@*                                     <input asp-for="VideoUrl" class="form-control" placeholder="https://example.com/video" /> *@
+@*                                     <span asp-validation-for="VideoUrl" class="text-danger"></span> *@
+@*                                 </div> *@
+@*                             </div> *@
+@*                         </div> *@
 
-                        <!-- Relationships Section -->
-                        <div class="row mb-4">
-                            <div class="col-md-6">
-                                <div class="form-group mb-3">
-                                    <label asp-for="InstructorId" class="form-label">Instructor</label>
-                                    <select asp-for="InstructorId" class="form-select">
-                                        <option value="">-- Select Instructor --</option>
-                                        @if (instructors != null)
-                                        {
-                                            foreach (var instructor in instructors)
-                                            {
-                                                <option value="@instructor.Id">
-                                                    @instructor.ApplicationUser?.FirstName @instructor.ApplicationUser?.LastName
-                                                </option>
-                                            }
-                                        }
-                                    </select>
-                                    <span asp-validation-for="InstructorId" class="text-danger"></span>
-                                </div>
-                            </div>
+@*                         <!-- Relationships Section --> *@
+@*                         <div class="row mb-4"> *@
+@*                             <div class="col-md-6"> *@
+@*                                 <div class="form-group mb-3"> *@
+@*                                     <label asp-for="InstructorId" class="form-label">Instructor</label> *@
+@*                                     <select asp-for="InstructorId" class="form-select"> *@
+@*                                         <option value="">-- Select Instructor --</option> *@
+@*                                         @if (instructors != null) *@
+@*                                         { *@
+@*                                             foreach (var instructor in instructors) *@
+@*                                             { *@
+@*                                                 <option value="@instructor.Id"> *@
+@*                                                     @instructor.ApplicationUser?.FirstName @instructor.ApplicationUser?.LastName *@
+@*                                                 </option> *@
+@*                                             } *@
+@*                                         } *@
+@*                                     </select> *@
+@*                                     <span asp-validation-for="InstructorId" class="text-danger"></span> *@
+@*                                 </div> *@
+@*                             </div> *@
 
-                            <!-- Modified Learning Path selection -->
-                            <div class="col-md-6">
-                                <div class="form-group mb-3">
-                                    <label class="form-label">Learning Path</label>
-                                    <select name="learningPathId" class="form-select">
-                                        <option value="">-- Select Learning Path --</option>
-                                        @if (learningPaths != null)
-                                        {
-                                            foreach (var path in learningPaths)
-                                            {
-                                                <option value="@path.Id">@path.Name</option>
-                                            }
-                                        }
-                                    </select>
-                                </div>
-                            </div>
+@*                             <!-- Modified Learning Path selection --> *@
+@*                             <div class="col-md-6"> *@
+@*                                 <div class="form-group mb-3"> *@
+@*                                     <label class="form-label">Learning Path</label> *@
+@*                                     <select name="learningPathId" class="form-select"> *@
+@*                                         <option value="">-- Select Learning Path --</option> *@
+@*                                         @if (learningPaths != null) *@
+@*                                         { *@
+@*                                             foreach (var path in learningPaths) *@
+@*                                             { *@
+@*                                                 <option value="@path.Id">@path.Name</option> *@
+@*                                             } *@
+@*                                         } *@
+@*                                     </select> *@
+@*                                 </div> *@
+@*                             </div> *@
                         
                         
-                        </div>
+@*                         </div> *@
 
-                        <!-- Form Actions -->
-                        <div class="form-group mt-4">
-                            <button type="submit" class="btn btn-primary me-2">
-                                <i class="fas fa-save me-1"></i> Create Course
-                            </button>
-                            <a asp-action="Index" class="btn btn-outline-secondary">
-                                <i class="fas fa-arrow-left me-1"></i> Back to List
-                            </a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+@*                         <!-- Form Actions --> *@
+@*                         <div class="form-group mt-4"> *@
+@*                             <button type="submit" class="btn btn-primary me-2"> *@
+@*                                 <i class="fas fa-save me-1"></i> Create Course *@
+@*                             </button> *@
+@*                             <a asp-action="Index" class="btn btn-outline-secondary"> *@
+@*                                 <i class="fas fa-arrow-left me-1"></i> Back to List *@
+@*                             </a> *@
+@*                         </div> *@
+@*                     </form> *@
+@*                 </div> *@
+@*             </div> *@
+@*         </div> *@
+@*     </div> *@
+@* </div> *@
 
-@section Styles {
-    <style>
-        .card {
-            border-radius: 0.5rem;
-            border: none;
-        }
+@* @section Styles { *@
+@*     <style> *@
+@*         .card { *@
+@*             border-radius: 0.5rem; *@
+@*             border: none; *@
+@*         } *@
 
-        .card-header {
-            border-radius: 0.5rem 0.5rem 0 0 !important;
-            padding: 1.25rem 1.5rem;
-        }
+@*         .card-header { *@
+@*             border-radius: 0.5rem 0.5rem 0 0 !important; *@
+@*             padding: 1.25rem 1.5rem; *@
+@*         } *@
 
-        .form-label {
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-        }
+@*         .form-label { *@
+@*             font-weight: 500; *@
+@*             margin-bottom: 0.5rem; *@
+@*         } *@
 
-        .form-control, .form-select {
-            padding: 0.5rem 0.75rem;
-        }
-    </style>
-}
+@*         .form-control, .form-select { *@
+@*             padding: 0.5rem 0.75rem; *@
+@*         } *@
+@*     </style> *@
+@* } *@
 
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
+@* @section Scripts { *@
+@*     @{ *@
+@*         await Html.RenderPartialAsync("_ValidationScriptsPartial"); *@
+@*     } *@
 
-    <script>
-        $(document).ready(function() {
-            // Price formatting
-            $('#Price').on('input', function() {
-                this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');
-            });
+@*     <script> *@
+@*         $(document).ready(function() { *@
+@*             // Price formatting *@
+@*             $('#Price').on('input', function() { *@
+@*                 this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'); *@
+@*             }); *@
 
-            // Discount validation (0-100)
-            $('#Discount').on('change', function() {
-                let value = parseFloat(this.value) || 0;
-                this.value = Math.min(100, Math.max(0, value));
-            });
+@*             // Discount validation (0-100) *@
+@*             $('#Discount').on('change', function() { *@
+@*                 let value = parseFloat(this.value) || 0; *@
+@*                 this.value = Math.min(100, Math.max(0, value)); *@
+@*             }); *@
 
-            // Image preview functionality (optional)
-            $('input[type="file"]').change(function(e) {
-                if (this.files && this.files[0]) {
-                    var reader = new FileReader();
-                    reader.onload = function(e) {
-                        // You could display a preview here if needed
-                    }
-                    reader.readAsDataURL(this.files[0]);
-                }
-            });
-        });
-    </script>
-}
+@*             // Image preview functionality (optional) *@
+@*             $('input[type="file"]').change(function(e) { *@
+@*                 if (this.files && this.files[0]) { *@
+@*                     var reader = new FileReader(); *@
+@*                     reader.onload = function(e) { *@
+@*                         // You could display a preview here if needed *@
+@*                     } *@
+@*                     reader.readAsDataURL(this.files[0]); *@
+@*                 } *@
+@*             }); *@
+@*         }); *@
+@*     </script> *@
+@* } *@

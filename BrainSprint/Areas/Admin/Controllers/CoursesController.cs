@@ -50,6 +50,10 @@ namespace BrainSprint.Areas.Admin.Controllers
                 UpdatedDateUtc = c.UpdatedDateUtc,
             });
 
+            //if (!string.IsNullOrEmpty(status) && status != "All")
+            //{
+            //    coursesQuery = coursesQuery.Where(c => c.Status == status);
+            //}
 
             if (!string.IsNullOrEmpty(query))
             {
@@ -95,104 +99,101 @@ namespace BrainSprint.Areas.Admin.Controllers
 
 
 
+
+
+
+
         #region Add Cource
 
-        [HttpGet]
-        public IActionResult Create()
-        {
-            var instructors = _instructor.Get(includes: [i => i.ApplicationUser]).ToList();
+        //[HttpGet]
+        //public IActionResult Create()
+        //{
+        //    var instructors = _instructor.Get(includes: [i => i.ApplicationUser]).ToList();
 
-            var learningPaths = _learningPath.Get().ToList();
+        //    var learningPaths = _learningPath.Get().ToList();
 
-            ViewBag.Instructors = instructors;
+        //    ViewBag.Instructors = instructors;
 
-            ViewBag.LearningPaths = learningPaths;
+        //    ViewBag.LearningPaths = learningPaths;
 
-            return View(new Models.Course());
-        }
+        //    return View(new Models.Course());
+        //}
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Course course, IFormFile imageFile, int learningPathId)
-        {
-            var instructor = _instructor.GetOne(i => i.Id == course.InstructorId);
-            if (instructor == null)
-            {
-                ModelState.AddModelError("InstructorId", "Selected instructor does not exist.");
-            }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Create(Course course, IFormFile imageFile, int learningPathId)
+        //{
+        //    var instructor = _instructor.GetOne(i => i.Id == course.InstructorId);
+        //    if (instructor == null)
+        //    {
+        //        ModelState.AddModelError("InstructorId", "Selected instructor does not exist.");
+        //    }
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    // Handle image upload
-                    if (imageFile != null && imageFile.Length > 0)
-                    {
-                        // Create unique filename
-                        var fileName = Guid.NewGuid().ToString() + Path.GetExtension(imageFile.FileName);
-                        var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Assets", "Admin", "courses");
+        //    if (ModelState.IsValid)
+        //    {
+        //        try
+        //        {
+        //            // Handle image upload
+        //            if (imageFile != null && imageFile.Length > 0)
+        //            {
+        //                // Create unique filename
+        //                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(imageFile.FileName);
+        //                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Assets", "Admin", "courses");
 
-                        // Create directory if it doesn't exist
-                        if (!Directory.Exists(uploadsFolder))
-                        {
-                            Directory.CreateDirectory(uploadsFolder);
-                        }
+        //                // Create directory if it doesn't exist
+        //                if (!Directory.Exists(uploadsFolder))
+        //                {
+        //                    Directory.CreateDirectory(uploadsFolder);
+        //                }
 
-                        var filePath = Path.Combine(uploadsFolder, fileName);
+        //                var filePath = Path.Combine(uploadsFolder, fileName);
 
-                        // Save file to server
-                        using (var stream = new FileStream(filePath, FileMode.Create))
-                        {
-                            await imageFile.CopyToAsync(stream);
-                        }
+        //                // Save file to server
+        //                using (var stream = new FileStream(filePath, FileMode.Create))
+        //                {
+        //                    await imageFile.CopyToAsync(stream);
+        //                }
 
-                        // Set image URL in the course object
-                        course.ImgUrl = $"/Assets/Admin/courses/{fileName}";
-                    }
+        //                // Set image URL in the course object
+        //                course.ImgUrl = $"/Assets/Admin/courses/{fileName}";
+        //            }
 
-                    // Add course to database
-                    _course.Create(course);
-                    _course.SaveDB();
+        //            // Add course to database
+        //            _course.Create(course);
+        //            _course.SaveDB();
 
-                    // Associate with learning path if selected
-                    if (learningPathId > 0)
-                    {
-                        var courseLearningPath = new CourseLearningPath
-                        {
-                            CourseId = course.Id,
-                            LearningPathId = learningPathId
-                        };
-                        _courseLearningPath.Create(courseLearningPath);
-                        _courseLearningPath.SaveDB(); // Fixed: Changed from _learningPath to _courseLearningPath
-                    }
+        //            // Associate with learning path if selected
+        //            if (learningPathId > 0)
+        //            {
+        //                var courseLearningPath = new CourseLearningPath
+        //                {
+        //                    CourseId = course.Id,
+        //                    LearningPathId = learningPathId
+        //                };
+        //                _courseLearningPath.Create(courseLearningPath);
+        //                _courseLearningPath.SaveDB(); // Fixed: Changed from _learningPath to _courseLearningPath
+        //            }
 
-                    TempData["SuccessMessage"] = "Course created successfully!";
-                    return RedirectToAction(nameof(Index));
-                }
-                catch (Exception ex)
-                {
-                    ModelState.AddModelError("", "An error occurred while saving the course: " + ex.Message);
-                    _logger.LogError(ex, "Error creating course");
-                }
-            }
+        //            TempData["SuccessMessage"] = "Course created successfully!";
+        //            return RedirectToAction(nameof(Index));
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            ModelState.AddModelError("", "An error occurred while saving the course: " + ex.Message);
+        //            _logger.LogError(ex, "Error creating course");
+        //        }
+        //    }
 
-            // If we got this far, something failed; redisplay form with existing data
-            ViewBag.Instructors = _instructor.Get()
-                .Include(i => i.ApplicationUser)
-                .ToList();
-            ViewBag.LearningPaths = _learningPath.Get().ToList();
+        //    // If we got this far, something failed; redisplay form with existing data
+        //    ViewBag.Instructors = _instructor.Get()
+        //        .Include(i => i.ApplicationUser)
+        //        .ToList();
+        //    ViewBag.LearningPaths = _learningPath.Get().ToList();
 
-            return View(course);
-        }
+        //    return View(course);
+        //}
 
         #endregion
-
-
-
-
-
-
-
 
 
     }

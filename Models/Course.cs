@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Models.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -34,6 +35,10 @@ namespace Models
 
         //new
         public bool? IsPublished { get; set; } = false;
+        public CourseStatus Status { get; set; } = CourseStatus.Pending;
+        public string? RejectionReason { get; set; }
+        public DateTime? ReviewedDate { get; set; }
+        public string? ReviewedBy { get; set; }
     }
 }
 
