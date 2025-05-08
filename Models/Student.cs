@@ -29,27 +29,3 @@ namespace Models
         public List<UsersWatchedNode> UsersWatchedNodes { get; set; } = new List<UsersWatchedNode>();
     }
 }
-
-/*
-    Level      => المستوى الدراسي للطالب (قد يكون غير مُحدد)
-    
-    UserId     => المعرف الخاص بالمستخدم (يتم ربطه بكائن ApplicationUser)
-
-    User       => الكائن الخاص بالمستخدم المرتبط بالطالب
-
-    Carts      => قائمة السلال المشتراة من قبل الطالب
-
-    CartItems  => قائمة العناصر المضافة إلى سلة الطالب
-
-    CourseReviews => قائمة تقييمات الدورات التي قدمها الطالب
-
-    EnrollmentCourses => قائمة الدورات التي قام الطالب بالتسجيل فيها
-
-    Orders     => قائمة الطلبات التي أتمها الطالب
-
-    UserExamAttemps => قائمة محاولات الاختبارات التي قام بها الطالب
-
-    UsersBadges => قائمة الشهادات أو الجوائز التي حصل عليها الطالب
-
-    UsersWatchedNodes => قائمة العقد التي قام الطالب بمشاهدتها
-*/

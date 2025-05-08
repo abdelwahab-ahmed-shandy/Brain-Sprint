@@ -31,6 +31,9 @@ namespace Models
         public List<EnrollmentCourse> EnrollmentCourses { get; set; } = new List<EnrollmentCourse>();
         public List<CourseModule> CourseModules { get; set; } = new List<CourseModule>();
         public List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
+
+        //new
+        public bool IsPublished { get; set; } = false;
     }
 }
 

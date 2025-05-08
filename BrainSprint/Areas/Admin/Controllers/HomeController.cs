@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Models;
 
 namespace BrainSprint.Areas.Admin.Controllers
 {
@@ -7,116 +8,145 @@ namespace BrainSprint.Areas.Admin.Controllers
     [Authorize(Roles = "Admin,SuperAdmin")]
     public class HomeController : Controller
     {
-        private readonly IApplicationUserRepository _applicationUserRepository;
-        private readonly IInstructorRepository _instructorRepository;
-        private readonly IAdminRepository _adminRepository;
-        private readonly IStudentRepository _studentRepository;
-        private readonly IActivityLogRepository _activityLogRepository;
-        private readonly ICourseRepository _courseRepository;
-        private readonly ICourseReviewRepository _courseReviewRepository;
-        private readonly ICourseLearningPathRepository _courseLearningPathRepository;
-        private readonly IBadgeRepository _badgeRepository;
-        private readonly ICartItemRepository _cartItemRepository;
-        private readonly ICertificateRepository _certificateRepository;
-        private readonly ITicketResponseRepository _ticketResponseRepository;
-        private readonly ITicketRepository _ticketRepository;
-        private readonly IEnrollmentCourseRepository _enrollmentCourseRepository;
-        private readonly IOrderItemRepository _orderItemRepository;
+        private readonly ApplicationDbContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
-
-        public HomeController(IApplicationUserRepository applicationUserRepository, IInstructorRepository instructorRepository,
-                                IAdminRepository adminRepository, IStudentRepository studentRepository, IActivityLogRepository activityLogRepository,
-                                    ICourseRepository courseRepository, ICourseReviewRepository courseReviewRepository, ICourseLearningPathRepository courseLearningPathRepository,
-                                        IBadgeRepository badgeRepository, ICartItemRepository cartItemRepository, ICertificateRepository certificateRepository,
-                                            ITicketResponseRepository ticketResponseRepository, ITicketRepository ticketRepository, IEnrollmentCourseRepository enrollmentCourseRepository,
-                                                IOrderItemRepository orderItemRepository, UserManager<ApplicationUser> userManager)
+        public HomeController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
         {
-            _applicationUserRepository = applicationUserRepository;
-            _instructorRepository = instructorRepository;
-            _adminRepository = adminRepository;
-            _studentRepository = studentRepository;
-            _activityLogRepository = activityLogRepository;
-            _courseRepository = courseRepository;
-            _courseReviewRepository = courseReviewRepository;
-            _courseLearningPathRepository = courseLearningPathRepository;
-            _badgeRepository = badgeRepository;
-            _cartItemRepository = cartItemRepository;
-            _certificateRepository = certificateRepository;
-            _ticketResponseRepository = ticketResponseRepository;
-            _ticketRepository = ticketRepository;
-            _enrollmentCourseRepository = enrollmentCourseRepository;
-            _orderItemRepository = orderItemRepository;
+            _context = context;
             _userManager = userManager;
         }
 
+
         public async Task<IActionResult> Index()
         {
-
-            var totalUsers = await _userManager.Users.ToListAsync();
-
             var dashboard = new AdminDashboardVM
             {
                 // User statistics
-                TotalUsers = totalUsers.Count,
-                //    TotalStudents = await _studentRepository.GetAsync().CountAsync(),
-                //    TotalInstructors = await _instructorRepository.GetAsync().CountAsync(),
-                //    TotalAdmins = await _adminRepository.GetAsync().CountAsync(),
-                //    TotalSuperAdmins = totalUsers.Count(u => _userManager.GetRolesAsync(u).Result.Contains("SuperAdmin")),
-                //    NewUsersThisWeek = await _applicationUserRepository.GetAsync(u =>
-                //        u.CreatedDate >= DateTime.Now.AddDays(-7)).CountAsync(),
-                //    ActiveUsersToday = await _applicationUserRepository.GetAsync(u =>
-                //        u.LastLoginDate >= DateTime.Today).CountAsync(),
+                TotalUsers = await _userManager.Users.CountAsync(),
+                TotalStudents = (await _userManager.GetUsersInRoleAsync("Student")).Count,
+                TotalInstructors = (await _userManager.GetUsersInRoleAsync("Instructor")).Count,
+                TotalAdmins = (await _userManager.GetUsersInRoleAsync("Admin")).Count,
+                TotalSuperAdmins = (await _userManager.GetUsersInRoleAsync("SuperAdmin")).Count,
+                NewUsersThisWeek = await _context.Users
+                    .CountAsync(u => u.CreatedDateUtc >= DateTime.UtcNow.AddDays(-7)),
 
-                //    // Educational content
-                //    TotalCourses = await _courseRepository.GetAsync().CountAsync(),
-                //    ActiveCourses = await _courseRepository.GetAsync(c => c.IsActive).CountAsync(),
-                //    TotalLearningPaths = await _courseLearningPathRepository.GetAsync().CountAsync(),
-                //    NewContentThisWeek = await _courseRepository.GetAsync(c =>
-                //        c.CreatedDate >= DateTime.Now.AddDays(-7)).CountAsync(),
+                // Course statistics
+                TotalCourses = await _context.Courses.CountAsync(),
+                TotalLearningPaths = await _context.LearningPaths.CountAsync(),
+                NewContentThisWeek = await _context.Courses
+                    .CountAsync(c => c.CreatedDateUtc >= DateTime.UtcNow.AddDays(-7)),
 
-                //    // Reviews and assessments
-                //    TotalCourseReviews = await _courseReviewRepository.GetAsync().CountAsync(),
+                // Reviews
+                TotalCourseReviews = await _context.CourseReviews.CountAsync(),
 
-                //    // Gamification
-                //    TotalBadges = await _badgeRepository.GetAsync().CountAsync(),
-                //    TotalUserBadges = await _badgeRepository.GetUserBadgesCountAsync(),
-                //    BadgesAwardedThisWeek = await _badgeRepository.GetAsync(b =>
-                //        b.AwardedDate >= DateTime.Now.AddDays(-7)).CountAsync(),
-                //    MostPopularBadge = (await _badgeRepository.GetMostPopularBadgeAsync())?.Name,
+                // Gamification
+                TotalBadges = await _context.Badges.CountAsync(),
+                TotalUserBadges = await _context.UsersBadges.CountAsync(),
+                BadgesAwardedThisWeek = await _context.UsersBadges
+                    .CountAsync(b => b.AwardedDate >= DateTime.UtcNow.AddDays(-7)),
+                MostPopularBadge = await _context.UsersBadges
+                    .Include(ub => ub.Badge)
+                    .GroupBy(ub => ub.BadgeId)
+                    .OrderByDescending(g => g.Count())
+                    .Select(g => g.First().Badge.Name)
+                    .FirstOrDefaultAsync() ?? "No badges awarded yet",
 
-                //    // Enrollment and certificates
-                //    TotalEnrollments = await _enrollmentCourseRepository.GetAsync().CountAsync(),
-                //    TotalCertificatesIssued = await _certificateRepository.GetAsync().CountAsync(),
+                // Enrollment
+                TotalEnrollments = await _context.EnrollmentCourses.CountAsync(),
+                TotalCertificatesIssued = await _context.Certificates.CountAsync(),
 
-                //    // Orders and sales
-                //    TotalOrders = await _orderItemRepository.GetAsync().CountAsync(),
-                //    PendingOrders = await _orderItemRepository.GetAsync(o =>
-                //        o.Status == OrderStatus.Pending).CountAsync(),
-                //    CompletedOrders = await _orderItemRepository.GetAsync(o =>
-                //        o.Status == OrderStatus.Completed).CountAsync(),
-                //    TotalCartItems = await _cartItemRepository.GetAsync().CountAsync(),
+                // Orders statistics
+                TotalOrders = await _context.Orders.CountAsync(),
+                PendingOrders = await _context.Orders.CountAsync(o => o.Status == OrderStatus.Pending),
+                CancelledOrders = await _context.Orders.CountAsync(o => o.Status == OrderStatus.Canceled),
+                CompletedOrders = await _context.Orders.CountAsync(o => o.Status == OrderStatus.Completed),
 
-                //    // Support system
-                //    TotalTickets = await _ticketRepository.GetAsync().CountAsync(),
-                //    OpenTickets = await _ticketRepository.GetAsync(t =>
-                //        t.Status == TicketStatus.Open).CountAsync(),
-                //    HighPriorityTickets = await _ticketRepository.GetAsync(t =>
-                //        t.Priority == TicketPriority.High).CountAsync(),
+                // Revenue and carts
+                TotalRevenue = await _context.Carts
+                    .Where(c => c.CartStatus == CartStatusType.Completed)
+                    .Include(c => c.CartItems)
+                    .SelectMany(c => c.CartItems)
+                    .SumAsync(ci => ci.PriceAtPurchase),
+                TotalCartItemsInCompletedCarts = await _context.Carts
+                    .Where(c => c.CartStatus == CartStatusType.Completed)
+                    .SumAsync(c => c.CartItems.Count),
 
-                //    // Activities
-                //    RecentActivities = await _activityLogRepository.GetAsync(
-                //orderBy: q => q.OrderByDescending(a => a.Timestamp),
-                //take: 10),
+                // Support
+                TotalTickets = await _context.Tickets.CountAsync(),
+                OpenTickets = await _context.Tickets.CountAsync(t => t.Status == TicketStatusType.Opened),
+                HighPriorityTickets = await _context.Tickets
+                    .CountAsync(t => t.Priority == TicketPriorityType.High),
 
-                //    // Top learners
-                //    TopLearners = await _badgeRepository.GetTopLearnersAsync(5),
+                // Activity data
+                RecentActivities = await _context.ActivityLogs
+                    .Include(a => a.User)
+                    .OrderByDescending(a => a.Timestamp)
+                    .Take(10)
+                    .Select(a => new ActivityLogDashboardVM
+                    {
+                        Id = a.Id,
+                        Timestamp = a.Timestamp,
+                        UserName = a.User.UserName ?? "Unknown",
+                        UserAvatar = a.User.ProfileImage ?? "/images/default-avatar.png",
+                        Action = a.Action,
+                        Details = a.Details,
+                        Status = a.Status
+                    })
+                    .ToListAsync(),
 
-                //    // Popular courses
-                //    PopularCourses = await _courseRepository.GetPopularCoursesAsync(3)
+                PopularCourses = await _context.Courses
+                    .Where(c => c.IsPublished)
+                    .Include(c => c.Instructor)
+                        .ThenInclude(i => i.ApplicationUser)
+                    .Include(c => c.EnrollmentCourses)
+                    .Include(c => c.CourseReviews)
+                    .OrderByDescending(c => c.EnrollmentCourses.Count)
+                    .Take(5)
+                    .Select(c => new CourseDashboardVM
+                    {
+                        Id = c.Id,
+                        Title = c.Title,
+                        ImageUrl = c.ImgUrl ?? "/images/default-course.png",
+                        InstructorName = c.Instructor.ApplicationUser.UserName ?? "Unknown Instructor",
+                        EnrollmentCount = c.EnrollmentCourses.Count,
+                        AverageRating = c.CourseReviews.Any() ? c.CourseReviews.Average(r => r.Rating) : null
+                    })
+                    .ToListAsync(),
 
+                TopLearners = await _context.Users
+                        .Include(u => u.Student)
+                            .ThenInclude(s => s.UsersBadges)
+                                .ThenInclude(ub => ub.Badge)
+                        .Where(u => u.TotalPoints > 0 && u.Student != null)
+                        .OrderByDescending(u => u.TotalPoints)
+                        .Take(5)
+                        .Select(u => new LeaderboardDashboardUser
+                        {
+                            UserId = u.Id,
+                            UserName = u.UserName,
+                            AvatarUrl = u.ProfileImage ?? "/images/default-avatar.png",
+                            TotalPonit = u.TotalPoints,
+                            Level = u.Level,
+                            BadgeCount = u.Student.UsersBadges.Count,
+                            RecentBadges = u.Student.UsersBadges
+                                .OrderByDescending(ub => ub.AwardedDate)
+                                .Take(3)
+                                .Select(ub => new BadgeDashboardVM
+                                {
+                                    Id = ub.Badge.Id,
+                                    Name = ub.Badge.Name ?? "Unnamed Badge",
+                                    ImageUrl = ub.Badge.ImageUrl ?? "/images/default-badge.png",
+                                    AwardedDate = ub.AwardedDate
+                                })
+                                .ToList()
+                        })
+                        .AsNoTracking()
+                        .ToListAsync()
             };
 
             return View(dashboard);
         }
+
+
     }
 }

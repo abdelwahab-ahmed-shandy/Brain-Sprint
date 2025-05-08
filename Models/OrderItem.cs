@@ -18,5 +18,8 @@ namespace Models
         public int CourseId { get; set; }
         [ForeignKey("CourseId")]
         public Course Course { get; set; }
+
+        //new 
+        public int Count { get; set; }
     }
 }

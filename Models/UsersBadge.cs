@@ -11,7 +11,7 @@ namespace Models
     [Index(nameof(StudentId), nameof(BadgeId), IsUnique = true)]
     public class UsersBadge : BaseModel
     {
-        public DateTime DateEarned { get; set; } = DateTime.UtcNow;
+        public DateTime AwardedDate { get; set; } = DateTime.UtcNow;
 
         public int StudentId { get; set; }
         [ForeignKey("StudentId")]

@@ -13,6 +13,12 @@ namespace DataAccess
 
 
 
+        #region Activity Logs
+        public DbSet<ActivityLog> ActivityLogs { get; set; }
+        #endregion
+
+
+
         #region Users and Permissions
 
 
@@ -31,19 +37,14 @@ namespace DataAccess
         */
 
 
-        // يمثل المستخدمين المسجلين في النظام
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
 
-        // مسؤولو النظام أو مدراء المنصة
         public DbSet<Admin> Admins { get; set; }
 
-        // الطلاب المسجلين
         public DbSet<Student> Students { get; set; }
 
-        // المعلمون أو المدربون
         public DbSet<Instructor> Instructors { get; set; }
 
-        // جلسات المستخدمين لتتبع النشاط أو تسجيل الدخول
         public DbSet<UserSession> UserSessions { get; set; }
 
         #endregion
@@ -66,16 +67,12 @@ namespace DataAccess
          */
 
 
-        // عربة التسوق الخاصة بالمستخدمين
         public DbSet<Cart> Carts { get; set; }
 
-        // العناصر داخل عربة التسوق
         public DbSet<CartItem> CartItems { get; set; }
 
-        // الطلبات التي قام بها المستخدمون
         public DbSet<Order> Orders { get; set; }
 
-        // تفاصيل العناصر داخل الطلب
         public DbSet<OrderItem> OrderItems { get; set; }
 
 
@@ -101,19 +98,14 @@ namespace DataAccess
          */
 
 
-        // الكورسات التعليمية
         public DbSet<Course> Courses { get; set; }
 
-        // الوحدات المكونة للكورسات
         public DbSet<CourseModule> CourseModules { get; set; }
 
-        // اشتراك المستخدم في كورس معين
         public DbSet<EnrollmentCourse> EnrollmentCourses { get; set; }
 
-        // الشهادات الممنوحة بعد إتمام الكورسات
         public DbSet<Certificate> Certificates { get; set; }
 
-        // مراجعات وتقييمات الكورسات
         public DbSet<CourseReview> CourseReviews { get; set; }
 
         #endregion
@@ -132,10 +124,8 @@ namespace DataAccess
          */
 
 
-        // مسارات تعلم تتضمن عدة كورسات
         public DbSet<LearningPath> LearningPaths { get; set; }
 
-        // العلاقة بين الكورسات ومسارات التعلم
         public DbSet<CourseLearningPath> CourseLearningPaths { get; set; }
 
         #endregion
@@ -160,19 +150,14 @@ namespace DataAccess
          */
 
 
-        // العقد التعليمية (محتوى مرن)
         public DbSet<Node> Nodes { get; set; }
 
-        // العقد التي تحتوي على نصوص
         public DbSet<TextNode> TextNodes { get; set; }
 
-        // العقد التي تحتوي على فيديوهات
         public DbSet<VideoNode> VideoNodes { get; set; }
 
-        // المرفقات الخاصة بكل عقدة
         public DbSet<NodeAttachment> NodeAttachments { get; set; }
 
-        // تتبع العقد التي شاهدها المستخدم
         public DbSet<UsersWatchedNode> UsersWatchedNodes { get; set; }
 
 
@@ -199,19 +184,14 @@ namespace DataAccess
 
 
 
-        // الامتحانات داخل المنصة
         public DbSet<Exam> Exams { get; set; }
 
-        // الأسئلة المستخدمة في الامتحانات
         public DbSet<Question> Questions { get; set; }
 
-        // الخيارات المرتبطة بكل سؤال
         public DbSet<Choice> Choices { get; set; }
 
-        // محاولات أداء الامتحانات من قبل المستخدمين
         public DbSet<UserExamAttemp> UserExamAttemps { get; set; }
 
-        // إجابات المستخدمين على الأسئلة
         public DbSet<UserAnswer> UserAnswers { get; set; }
 
 
@@ -231,10 +211,8 @@ namespace DataAccess
          */
 
 
-        // الشارات التي يمكن للمستخدمين الحصول عليها
         public DbSet<Badge> Badges { get; set; }
 
-        // العلاقة بين المستخدمين والشارات التي حصلوا عليها
         public DbSet<UsersBadge> UsersBadges { get; set; }
 
         #endregion
@@ -253,10 +231,8 @@ namespace DataAccess
          */
 
 
-        // التذاكر التي يرسلها المستخدمون لفريق الدعم
         public DbSet<Ticket> Tickets { get; set; }
 
-        // ردود الدعم على التذاكر
         public DbSet<TicketResponse> TicketResponses { get; set; }
 
 

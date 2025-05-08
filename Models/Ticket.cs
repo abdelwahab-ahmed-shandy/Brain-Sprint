@@ -20,10 +20,11 @@ namespace Models
         public string CreatedByUserId { get; set; }
         [ForeignKey("CreatedByUserId")]
         public ApplicationUser CreatedByUser { get; set; } = null!;
-
-
-
         public List<TicketResponse> TicketResponses { get; set; } = new List<TicketResponse>();
+
+        //new 
+        public TicketPriorityType Priority { get; set; }
+
 
     }
 }

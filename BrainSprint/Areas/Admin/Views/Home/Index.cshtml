@@ -1,275 +1,489 @@
-﻿@* @model Models.ViewModels.AdminDashboardViewModel *@
+﻿@model Models.ViewModels.AdminDashboardVM
 
-@{ 
-     ViewData["Title"] = "Admin Dashboard"; 
+@{
+    ViewData["Title"] = "Admin Dashboard";
 }
 
-@* <div class="container-fluid">  *@
-@* <!-- Header Section -->  *@
-@* <div class="d-flex justify-content-between align-items-center mb-4">  *@
-@* <h1 class="display-4">Administrative Control Panel</h1>  *@
-@* <div class="text-muted">@DateTime.Now.ToString("yyyy/MM/dd")</div>  *@
-@* </div>  *@
+<div class="container-fluid">
+    <h1 class="mt-4">Admin Dashboard</h1>
 
-@* <!-- Quick Stats Cards -->  *@
-@* <div class="row">  *@
-@* <!-- Users Card -->  *@
-@* <div class="col-xl-3 col-md-6 mb-4">  *@
-@* <div class="card border-left-primary shadow h-100 py-2">  *@
-@* <div class="card-body">  *@
-@* <div class="row no-gutters align-items-center">  *@
-@* <div class="col mr-2">  *@
-@* <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total users</div>  *@
-@* <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.TotalUsers</div>  *@
-@* </div>  *@
-@* <div class="col-auto">  *@
-@* <i class="fas fa-users fa-2x text-gray-300"></i>  *@
-@* </div>  *@
-@* </div>  *@
-@* </div>  *@
-@* </div>  *@
-@* </div>  *@
+    <!-- User Statistics Section -->
+    <div class="row mt-4">
+        <div class="col-xl-12">
+            <h4 class="mb-3">User Statistics</h4>
+        </div>
 
-@* <!-- Students Card -->  *@
-@* <div class="col-xl-3 col-md-6 mb-4">  *@
-@* <div class="card border-left-success shadow h-100 py-2">  *@
-@* <div class="card-body">  *@
-@* <div class="row no-gutters align-items-center">  *@
-@* <div class="col mr-2">  *@
-@* <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Students</div>  *@
-@* <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.TotalStudents</div>  *@
-@* </div>  *@
-@* <div class="col-auto">  *@
-@* <i class="fas fa-user-graduate fa-2x text-gray-300"></i>  *@
-@* </div>  *@
-@* </div>  *@
-@* </div>  *@
-@* </div>  *@
-@* </div>  *@
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card bg-primary text-white h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Total Users</h5>
+                    <h2 class="card-text">@Model.TotalUsers</h2>
+                </div>
+            </div>
+        </div>
 
-@* <!-- Instructors Card -->  *@
-@* <div class="col-xl-3 col-md-6 mb-4">  *@
-@* <div class="card border-left-info shadow h-100 py-2">  *@
-@* <div class="card-body">  *@
-@* <div class="row no-gutters align-items-center">  *@
-@* <div class="col mr-2">  *@
-@* <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Teachers</div>  *@
-@* <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.TotalInstructors</div>  *@
-@* </div>  *@
-@* <div class="col-auto">  *@
-@* <i class="fas fa-chalkboard-teacher fa-2x text-gray-300"></i>  *@
-@* </div>  *@
-@* </div>  *@
-@* </div>  *@
-@* </div>  *@
-@* </div>  *@
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card bg-success text-white h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Students</h5>
+                    <h2 class="card-text">@Model.TotalStudents</h2>
+                </div>
+            </div>
+        </div>
 
-@* <!-- Courses Card -->  *@
-@* <div class="col-xl-3 col-md-6 mb-4">  *@
-@* <div class="card border-left-warning shadow h-100 py-2">  *@
-@* <div class="card-body">  *@
-@* <div class="row no-gutters align-items-center">  *@
-@* <div class="col mr-2">  *@
-@* <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Courses</div>  *@
-@* <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.TotalCourses</div>  *@
-@* </div>  *@
-@* <div class="col-auto">  *@
-@* <i class="fas fa-book fa-2x text-gray-300"></i>  *@
-@* </div>  *@
-@* </div>  *@
-@* </div>  *@
-@* </div>  *@
-@* </div>  *@
-@* </div> *@
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card bg-info text-white h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Instructors</h5>
+                    <h2 class="card-text">@Model.TotalInstructors</h2>
+                </div>
+            </div>
+        </div>
 
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card bg-warning text-dark h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Admins</h5>
+                    <h2 class="card-text">@Model.TotalAdmins</h2>
+                </div>
+            </div>
+        </div>
 
-@*     <!-- Content Row --> *@
-@*     <div class="row"> *@
-@*         <!-- Recent Activities --> *@
-@*         <div class="col-lg-6 mb-4"> *@
-@*             <div class="card shadow mb-4"> *@
-@*                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between"> *@
-@*                     <h6 class="m-0 font-weight-bold text-primary">Recent activities</h6> *@
-@*                 </div> *@
-@*                 <div class="card-body"> *@
-@*                     <div class="table-responsive"> *@
-@*                         <table class="table table-bordered" width="100%" cellspacing="0"> *@
-@*                             <thead> *@
-@*                                 <tr> *@
-@*                                     <th>Date</th> *@
-@*                                     <th>Activity</th> *@
-@*                                     <th>User</th> *@
-@*                                 </tr> *@
-@*                             </thead> *@
-@*                             <tbody> *@
-@*                                 @foreach (var activity in Model.RecentActivities) *@
-@*                                 { *@
-@*                                     <tr> *@
-@*                                         <td>@activity.Timestamp.ToString("g")</td> *@
-@*                                         <td>@activity.Action</td> *@
-@*                                         <td>@activity.User?.Email</td> *@
-@*                                     </tr> *@
-@*                                 } *@
-@*                             </tbody> *@
-@*                         </table> *@
-@*                     </div> *@
-@*                 </div> *@
-@*             </div> *@
-@*         </div> *@
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card bg-danger text-white h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Super Admins</h5>
+                    <h2 class="card-text">@Model.TotalSuperAdmins</h2>
+                </div>
+            </div>
+        </div>
 
-@*         <!-- Top Learners --> *@
-@*         <div class="col-lg-6 mb-4"> *@
-@*             <div class="card shadow mb-4"> *@
-@*                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between"> *@
-@*                     <h6 class="m-0 font-weight-bold text-primary">Best Learners</h6> *@
-@*                 </div> *@
-@*                 <div class="card-body"> *@
-@*                     <div class="table-responsive"> *@
-@*                         <table class="table table-bordered" width="100%" cellspacing="0"> *@
-@*                             <thead> *@
-@*                                 <tr> *@
-@*                                     <th>#</th> *@
-@*                                     <th>Name</th> *@
-@*                                     <th>Points</th> *@
-@*                                     <th>Level</th> *@
-@*                                 </tr> *@
-@*                             </thead> *@
-@*                             <tbody> *@
-@*                                 @{ *@
-@*                                     int rank = 1; *@
-@*                                 } *@
-@*                                 @foreach (var learner in Model.TopLearners) *@
-@*                                 { *@
-@*                                     <tr> *@
-@*                                         <td>@(rank++)</td> *@
-@*                                         <td>@learner.UserName</td> *@
-@*                                         <td>@learner.TotalXP</td> *@
-@*                                         <td>@learner.Level</td> *@
-@*                                     </tr> *@
-@*                                 } *@
-@*                             </tbody> *@
-@*                         </table> *@
-@*                     </div> *@
-@*                 </div> *@
-@*             </div> *@
-@*         </div> *@
-@*     </div> *@
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card bg-secondary text-white h-100">
+                <div class="card-body">
+                    <h5 class="card-title">New Users (7 days)</h5>
+                    <h2 class="card-text">@Model.NewUsersThisWeek</h2>
+                </div>
+            </div>
+        </div>
 
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card bg-secondary text-white h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Active Users Today</h5>
+                    <h2 class="card-text">@Model.ActiveUsersToday</h2>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Content Statistics Section -->
+    <div class="row mt-4">
+        <div class="col-xl-12">
+            <h4 class="mb-3">Content Statistics</h4>
+        </div>
 
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card bg-dark text-white h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Total Courses</h5>
+                    <h2 class="card-text">@Model.TotalCourses</h2>
+                </div>
+            </div>
+        </div>
 
-@*     <!-- Gamification Section --> *@
-@*     <div class="row"> *@
-@*         <div class="col-lg-6 mb-4"> *@
-@*             <div class="card shadow mb-4"> *@
-@*                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between"> *@
-@*                     <h6 class="m-0 font-weight-bold text-primary">Prize system</h6> *@
-@*                 </div> *@
-@*                 <div class="card-body"> *@
-@*                     <div class="row"> *@
-@*                         <div class="col-md-6"> *@
-@*                             <div class="card border-left-success shadow h-100 py-2 mb-4"> *@
-@*                                 <div class="card-body"> *@
-@*                                     <div class="row no-gutters align-items-center"> *@
-@*                                         <div class="col mr-2"> *@
-@*                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Prizes</div> *@
-@*                                             <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.TotalBadges</div> *@
-@*                                         </div> *@
-@*                                         <div class="col-auto"> *@
-@*                                             <i class="fas fa-medal fa-2x text-gray-300"></i> *@
-@*                                         </div> *@
-@*                                     </div> *@
-@*                                 </div> *@
-@*                             </div> *@
-@*                         </div> *@
-@*                         <div class="col-md-6"> *@
-@*                             <div class="card border-left-info shadow h-100 py-2 mb-4"> *@
-@*                                 <div class="card-body"> *@
-@*                                     <div class="row no-gutters align-items-center"> *@
-@*                                         <div class="col mr-2"> *@
-@*                                             <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Most Prize Common</div> *@
-@*                                             <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.MostPopularBadge</div> *@
-@*                                         </div> *@
-@*                                         <div class="col-auto"> *@
-@*                                             <i class="fas fa-trophy fa-2x text-gray-300"></i> *@
-@*                                         </div> *@
-@*                                     </div> *@
-@*                                 </div> *@
-@*                             </div> *@
-@*                         </div> *@
-@*                     </div> *@
-@*                 </div> *@
-@*             </div> *@
-@*         </div> *@
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card bg-dark text-white h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Active Courses</h5>
+                    <h2 class="card-text">@Model.ActiveCourses</h2>
+                </div>
+            </div>
+        </div>
 
-@*         <!-- Popular Courses --> *@
-@*         <div class="col-lg-6 mb-4"> *@
-@*             <div class="card shadow mb-4"> *@
-@*                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between"> *@
-@*                     <h6 class="m-0 font-weight-bold text-primary">Most courses Popular</h6> *@
-@*                 </div> *@
-@*                 <div class="card-body"> *@
-@*                     <div class="list-group"> *@
-@*                         @foreach (var course in Model.PopularCourses) *@
-@*                         { *@
-@*                             <a href="#" class="list-group-item list-group-item-action"> *@
-@*                                 <div class="d-flex w-100 justify-content-between"> *@
-@*                                     <h5 class="mb-1">@course</h5> *@
-@*                                     <small>@course.EnrollmentsCount Student</small> *@
-@*                                 </div> *@
-@*                                 <p class="mb-1">@course.Description</p> *@
-@*                             </a> *@
-@*                         } *@
-@*                     </div> *@
-@*                 </div> *@
-@*             </div> *@
-@*         </div> *@
-@*     </div> *@
-@* </div> *@
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card bg-dark text-white h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Learning Paths</h5>
+                    <h2 class="card-text">@Model.TotalLearningPaths</h2>
+                </div>
+            </div>
+        </div>
 
-@* @section Styles { *@
-@*     <style> *@
-@*         .card { *@
-@*             border-radius: 0.35rem; *@
-@*         } *@
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card bg-dark text-white h-100">
+                <div class="card-body">
+                    <h5 class="card-title">New Content (7 days)</h5>
+                    <h2 class="card-text">@Model.NewContentThisWeek</h2>
+                </div>
+            </div>
+        </div>
+    </div>
 
-@*         .card-header { *@
-@*             background-color: #f8f9fc; *@
-@*             border-bottom: 1px solid #e3e6f0; *@
-@*         } *@
+    <!-- Gamification Section -->
+    <div class="row mt-4">
+        <div class="col-xl-12">
+            <h4 class="mb-3">Gamification</h4>
+        </div>
 
-@*         .table { *@
-@*             font-size: 0.85rem; *@
-@*         } *@
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card bg-purple text-white h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Total Badges</h5>
+                    <h2 class="card-text">@Model.TotalBadges</h2>
+                </div>
+            </div>
+        </div>
 
-@*         .border-left-primary { *@
-@*             border-left: 0.25rem solid #4e73df !important; *@
-@*         } *@
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card bg-purple text-white h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Badges Awarded</h5>
+                    <h2 class="card-text">@Model.TotalUserBadges</h2>
+                </div>
+            </div>
+        </div>
 
-@*         .border-left-success { *@
-@*             border-left: 0.25rem solid #1cc88a !important; *@
-@*         } *@
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card bg-purple text-white h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Recent Awards (7 days)</h5>
+                    <h2 class="card-text">@Model.BadgesAwardedThisWeek</h2>
+                </div>
+            </div>
+        </div>
 
-@*         .border-left-info { *@
-@*             border-left: 0.25rem solid #36b9cc !important; *@
-@*         } *@
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card bg-purple text-white h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Most Popular Badge</h5>
+                    <h4 class="card-text">@Model.MostPopularBadge</h4>
+                </div>
+            </div>
+        </div>
+    </div>
 
-@*         .border-left-warning { *@
-@*             border-left: 0.25rem solid #f6c23e !important; *@
-@*         } *@
-@*     </style> *@
-@* } *@
+    <!-- Enrollment & Orders Section -->
+    <div class="row mt-4">
+        <div class="col-xl-12">
+            <h4 class="mb-3">Enrollment & Orders</h4>
+        </div>
 
-@* @section Scripts { *@
-@*     <script> *@
-@*         // You can add any additional scripts here *@
-@*         $(document).ready(function() { *@
-@*         $('.table').DataTable({ *@
-@*         responsive: true, *@
-@*         language: { *@
-@*         url: '//cdn.datatables.net/plug-ins/1.10.24/i18n/Arabic.json' *@
-@*         } *@
-@*         }); *@
-@*         }); *@
-@*     </script> *@
-@* } *@
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card bg-indigo text-white h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Total Enrollments</h5>
+                    <h2 class="card-text">@Model.TotalEnrollments</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card bg-indigo text-white h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Certificates Issued</h5>
+                    <h2 class="card-text">@Model.TotalCertificatesIssued</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card bg-indigo text-white h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Total Orders</h5>
+                    <h2 class="card-text">@Model.TotalOrders</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card bg-indigo text-white h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Completed Orders</h5>
+                    <h2 class="card-text">@Model.CompletedOrders</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card bg-indigo text-white h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Pending Orders</h5>
+                    <h2 class="card-text">@Model.PendingOrders</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card bg-indigo text-white h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Cancelled Orders</h5>
+                    <h2 class="card-text">@Model.CancelledOrders</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Revenue Section -->
+    <div class="row mt-4">
+        <div class="col-xl-12">
+            <h4 class="mb-3">Revenue</h4>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card bg-teal text-white h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Total Revenue</h5>
+                    <h2 class="card-text">@Model.TotalRevenue.ToString("C")</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card bg-teal text-white h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Items Sold</h5>
+                    <h2 class="card-text">@Model.TotalCartItemsInCompletedCarts</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card bg-teal text-white h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Total Carts</h5>
+                    <h2 class="card-text">@Model.TotalCarts</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card bg-teal text-white h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Total Cart Items</h5>
+                    <h2 class="card-text">@Model.TotalCartItems</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Support Section -->
+    <div class="row mt-4">
+        <div class="col-xl-12">
+            <h4 class="mb-3">Support</h4>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card bg-orange text-white h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Total Tickets</h5>
+                    <h2 class="card-text">@Model.TotalTickets</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card bg-orange text-white h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Open Tickets</h5>
+                    <h2 class="card-text">@Model.OpenTickets</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card bg-orange text-white h-100">
+                <div class="card-body">
+                    <h5 class="card-title">High Priority</h5>
+                    <h2 class="card-text">@Model.HighPriorityTickets</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card bg-orange text-white h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Ticket Responses</h5>
+                    <h2 class="card-text">@Model.TotalTicketResponses</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Activities & Popular Courses Section -->
+    <div class="row mt-4">
+        <!-- Recent Activities -->
+        <div class="col-lg-6 mb-4">
+            <div class="card shadow h-100">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Recent Activities</h5>
+                </div>
+                <div class="card-body">
+                    <div class="activity-feed">
+                        @foreach (var activity in Model.RecentActivities)
+                        {
+                            <div class="feed-item mb-3">
+                                <div class="d-flex">
+                                    <img src="@activity.UserAvatar" class="rounded-circle me-3" width="40" height="40" alt="User Avatar">
+                                    <div>
+                                        <h6 class="mb-0">@activity.UserName</h6>
+                                        <small class="text-muted">@activity.Timestamp.ToString("g")</small>
+                                        <p class="mb-0">@activity.Action - @activity.Details</p>
+                                        <span class="badge bg-@(activity.Status == ActivityStatus.Success ? "success" : activity.Status == ActivityStatus.Failed ? "danger" : "warning")">
+                                            @activity.Status
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popular Courses -->
+        <div class="col-lg-6 mb-4">
+            <div class="card shadow h-100">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0">Popular Courses</h5>
+                </div>
+                <div class="card-body">
+                    @foreach (var course in Model.PopularCourses)
+                    {
+                        <div class="d-flex mb-3">
+                            <img src="@course.ImageUrl" class="rounded me-3" width="80" height="60" alt="Course Image">
+                            <div class="flex-grow-1">
+                                <h6 class="mb-0">@course.Title</h6>
+                                <small class="text-muted">By @course.InstructorName</small>
+                                <div class="d-flex justify-content-between mt-1">
+                                    <span class="text-muted">
+                                        <i class="fas fa-users"></i> @course.EnrollmentCount enrollments
+                                    </span>
+                                    @if (course.AverageRating.HasValue)
+                                    {
+                                        <span class="text-warning">
+                                            <i class="fas fa-star"></i> @course.AverageRating.Value.ToString("0.0")
+                                        </span>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Learners Section -->
+    <div class="row mt-4">
+        <div class="col-12 mb-4">
+            <div class="card shadow">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0">Top Learners</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>User</th>
+                                    <th>Points</th>
+                                    <th>Level</th>
+                                    <th>Badges</th>
+                                    <th>Recent Badges</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    int rank = 1;
+                                    foreach (var learner in Model.TopLearners)
+                                    {
+                                        <tr>
+                                            <td>@rank</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="@learner.AvatarUrl" class="rounded-circle me-2" width="40" height="40" alt="User Avatar">
+                                                    <span>@learner.UserName</span>
+                                                </div>
+                                            </td>
+                                            <td>@learner.TotalPonit</td>
+                                            <td>@learner.Level</td>
+                                            <td>@learner.BadgeCount</td>
+                                            <td>
+                                                <div class="d-flex">
+                                                    @foreach (var badge in learner.RecentBadges.Take(3))
+                                                    {
+                                                        <img src="@badge.ImageUrl" class="rounded-circle me-1" width="30" height="30"
+                                                             data-bs-toggle="tooltip" data-bs-placement="top"
+                                                             title="@badge.Name (Awarded: @badge.AwardedDate.ToString("d"))" alt="Badge">
+                                                    }
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        rank++;
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <style>
+        .bg-purple {
+            background-color: #6f42c1 !important;
+        }
+
+        .bg-indigo {
+            background-color: #6610f2 !important;
+        }
+
+        .bg-teal {
+            background-color: #20c997 !important;
+        }
+
+        .bg-orange {
+            background-color: #fd7e14 !important;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+            .card:hover {
+                transform: translateY(-5px);
+            }
+
+        .activity-feed {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .feed-item {
+            padding: 10px;
+            border-left: 3px solid #dee2e6;
+        }
+
+            .feed-item:hover {
+                border-left-color: #0d6efd;
+                background-color: #f8f9fa;
+            }
+    </style>
+}
+
+@section Scripts {
+    <script>
+        // Initialize tooltips
+        $(document).ready(function(){
+            $('[data-bs-toggle="tooltip"]').tooltip();
+        });
+    </script>
+}
