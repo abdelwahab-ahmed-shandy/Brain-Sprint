@@ -1,0 +1,225 @@
+﻿@model IEnumerable<ContentManagementVM>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Paths | Premium Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+    :root {
+        --primary: #2c3e50;
+        --secondary: #3498db;
+        --dark: #1a252f;
+        --light: #ecf0f1;
+    }
+
+    .btn-luxury {
+        background-color: var(--secondary);
+        border: none;
+        padding: 0.5rem 1.5rem;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        color: white;
+        letter-spacing: 0.5px;
+    }
+
+        .btn-luxury:hover {
+            background-color: var(--dark);
+            transform: translateY(-1px);
+            color: white;
+        }
+
+    .luxury-card {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .card-header-luxury {
+        background-color: var(--primary);
+        color: white;
+    }
+
+    .avatar-luxury {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: var(--secondary);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+    }
+
+    .action-btn-luxury {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: none;
+        background: transparent;
+        color: var(--primary);
+        transition: all 0.2s;
+    }
+
+        .action-btn-luxury:hover {
+            background-color: rgba(0,0,0,0.05);
+        }
+
+        .action-btn-luxury.delete:hover {
+            color: #e74c3c;
+        }
+
+        .action-btn-luxury.edit:hover {
+            color: var(--secondary);
+        }
+
+    .search-luxury {
+        position: relative;
+        width: 250px;
+    }
+
+    .search-icon-luxury {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #7f8c8d;
+    }
+
+    .search-luxury input {
+        padding-left: 40px;
+        border-radius: 6px;
+        border: 1px solid #ddd;
+    }
+</style>
+<body>
+    <div class="container">
+        <!-- Page Header -->
+        <div class="mt-5 d-flex flex-column flex-md-row justify-content-between align-items-center mb-4">
+            <div class="mb-3 mb-md-0">
+                <h1 class="h3 mb-1" style="color: var(--primary);">
+                    <i class="fas fa-graduation-cap me-2"></i> Learning Paths
+                </h1>
+            </div>
+            <div class="d-flex">
+                <div class="search-luxury me-3">
+                    <i class="fas fa-search search-icon-luxury"></i>
+                    <input type="text" class="form-control" placeholder="Search paths...">
+                </div>
+                <a asp-action="Create" class="btn btn-luxury d-flex align-items-center">
+                    <i class="fas fa-plus me-2"></i>
+                    Add New
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Table -->
+        <div class="luxury-card shadow-sm">
+            <div class="card-header-luxury d-flex justify-content-between align-items-center">
+                <h5 class="mb-0 text-white">All Learning Paths</h5>
+                <div>
+                    <select class="form-select form-select-sm me-2" style="width: 150px;">
+                        <option>All Status</option>
+                        <option>Active</option>
+                        <option>Draft</option>
+                        <option>Archived</option>
+                    </select>
+                    <button class="btn btn-sm text-white" style="background-color: rgba(255,255,255,0.2);">
+                        <i class="fas fa-filter me-1"></i> Filter
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table luxury-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Created</th>
+                                <th>Updated</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var path in Model)
+                            {
+                                <tr>
+                                    <td>@path.Id</td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            @if (!string.IsNullOrEmpty(path.IconUrl))
+                                            {
+                                                <img src="~/images/learningPaths/@path.IconUrl"
+                                                     class="avatar-luxury me-2"
+                                                     style="object-fit: cover;">
+                                            }
+                                            else
+                                            {
+                                                <div class="avatar-luxury me-2">
+                                                    @path.Name?.Substring(0, 1)
+                                                </div>
+                                            }
+                                            <strong>@path.Name</strong>
+                                        </div>
+                                    </td>
+                                    <td>@path.Description</td>
+                                    <td>@path.CreatedDateUtc</td>
+                                    <td>@(path.UpdatedDateUtc?.ToString("MMM dd, yyyy") ?? "Never")</td>
+                                   
+                                    <td>
+                                        <a href="/Instructor/LearnningPath/Edit?PathId=@path.Id" class="action-btn-luxury edit me-1" title="Edit">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a href="/Instructor/LearnningPath/Delete?pathId=@path.Id" class="action-btn-luxury delete" title="Delete">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+                <div class="text-muted">
+                    Showing <span class="fw-bold">1</span> to <span class="fw-bold">@Model.Count()</span> of <span class="fw-bold">@Model.Count()</span> entries
+                </div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination pagination-sm mb-0">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const rows = document.querySelectorAll('.luxury-table tbody tr');
+            rows.forEach(row => {
+                row.addEventListener('mouseenter', () => {
+                    row.style.backgroundColor = 'rgba(52, 152, 219, 0.05)';
+                });
+                row.addEventListener('mouseleave', () => {
+                    row.style.backgroundColor = '';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

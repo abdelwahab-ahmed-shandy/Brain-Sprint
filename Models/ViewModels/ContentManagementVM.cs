@@ -32,6 +32,12 @@ namespace Models.ViewModels
         public string? VideoUrl { get; set; }
         public string? ImgUrl { get; set; }
 
+        public bool? IsPublished { get; set; } = false;
+        public CourseStatus Status { get; set; } = CourseStatus.Pending;
+        public string? RejectionReason { get; set; }
+        public DateTime? ReviewedDate { get; set; }
+        public string? ReviewedBy { get; set; }
+
         // Instructors
         public string? InstructorName { get; set; }
         public string? LearningPathName { get; set; }

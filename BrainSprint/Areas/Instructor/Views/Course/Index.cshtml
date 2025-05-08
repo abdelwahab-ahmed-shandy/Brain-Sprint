@@ -1,0 +1,136 @@
+﻿@{
+    ViewData["Title"] = "Courses";
+}
+
+<div class="main-content">
+    <div class="section">
+        <div class="section-header">
+            <h3 class="section-title">Courses Management</h3>
+            <a href="/Instructor/Course/Create" style="text-decoration:none; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer;">
+                <i class="fas fa-plus"></i> Add New Course
+            </a>
+        </div>
+
+        <div class="search-bar" style="margin-bottom: 20px; width: 100%;">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search courses...">
+            <select style="margin-left: 10px; padding: 5px; border-radius: 4px; border: 1px solid #ddd;">
+                <option>All Paths</option>
+                @foreach(var path in Model)
+                {
+                    <option>All Paths</option>
+                }
+
+            </select>
+        </div>
+
+        <div class="courses-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;"></th>
+                        <th>Course Title</th>
+                        <th>Price</th>
+                        <th>Discount</th>
+                        <th>Duration</th>
+                        <th>Status</th>
+                        <th>Created Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var course in Model)
+                    {
+                        <tr>
+                            <td>
+
+                                <div class="course-icon" style="background-color: #e3f2fd; color: #4a6fa5; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-book"></i>
+                                </div>
+
+                            </td>
+                            <td>
+                                <div style="font-weight: 600;">@course.Title</div>
+
+                            </td>
+                            <td>
+
+                                <div color: #999;">$@course.Price.ToString("0.00")</div>
+
+                            </td>
+                            <td>
+                                @if (@course.Discount != null)
+                                {
+                                    <div color: #999;">@course.Discount %</div>
+
+                                }
+                                else
+                                {
+                                    <div color: #999;">none</div>
+
+                                }
+
+                            </td>
+                            <td>
+                                @{
+                                    var weeks = course.Duration / 60;
+                                }
+                                @weeks w
+                            </td>
+                            <td>
+                                @if (course.CurrentState!=null){
+                                    @switch ((int)course.CurrentState)
+                                    {
+                                        case (int)CurrentState.Active:
+                                            <span class="badge success">Active</span>
+                                            break;
+                                        case (int)CurrentState.Archived:
+                                            <span class="badge danger">Archived</span>
+                                            break;
+                                        case (int)CurrentState.Inactive:
+                                            <span class="badge secondary">Inactive</span>
+                                            break;
+                                        case (int)CurrentState.Deleted:
+                                            <span class="badge dark">Deleted</span>
+                                            break;
+                                        default:
+                                            <span class="badge">Unknown (@((int)course.CurrentState))</span>
+                                            break;
+                                    }
+                                }
+                               
+                            </td>
+                            <td>
+                                @course.CreatedDateUtc.ToString("dd MMM yyyy")
+                            </td>
+                            <td>
+                                <a href="/Instructor/Home/Edit/@course.Id" style="background: none; border: none; color: #4a6fa5; cursor: pointer; margin-right: 10px;" title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a href="/Instructor/Course/Delete?CourseId=@course.Id" style="background: none; border: none; color: #dc3545; cursor: pointer;" title="Delete" onclick="confirmDelete(@course.Id)">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        
+    </div>
+</div>
+
+
+
+<style>
+.badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.success { background-color: #e8f5e9; color: #2e7d32; }
+.warning { background-color: #fff8e1; color: #ff8f00; }
+.danger { background-color: #ffebee; color: #c62828; }
+</style>
