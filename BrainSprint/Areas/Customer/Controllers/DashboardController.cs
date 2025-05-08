@@ -2,7 +2,7 @@
 namespace BrainSprint.Areas.Customer.Controllers
 {
     [Area("Customer")]
-    [Authorize(Roles = "Student")]
+    [Authorize(Roles = "Student,SuperAdmin")]
     public class DashboardController : Controller
     {
         private IEnrollmentCourseService _courseService;
