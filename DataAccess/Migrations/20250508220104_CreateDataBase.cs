@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DataAccess.Migrations
 {
     /// <inheritdoc />
-    public partial class StartInitialCreateDataBase : Migration
+    public partial class CreateDataBase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -30,6 +30,7 @@ namespace DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    PasswordChangedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Address = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -44,7 +45,7 @@ namespace DataAccess.Migrations
                     BlockedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     BlockReason = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: true),
                     Certifications = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ExperienceYears = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ExperienceYears = table.Column<int>(type: "int", nullable: true),
                     AccountState = table.Column<int>(type: "int", nullable: true),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -83,6 +84,7 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -103,6 +105,7 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -149,6 +152,29 @@ namespace DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "ActivityLogs",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Timestamp = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Action = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Details = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
+                    Status = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ActivityLogs", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ActivityLogs_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Admins",
                 columns: table => new
                 {
@@ -159,6 +185,7 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -269,6 +296,7 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -293,6 +321,7 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -317,10 +346,12 @@ namespace DataAccess.Migrations
                     CreateAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ColsedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
                     CreatedByUserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Priority = table.Column<int>(type: "int", nullable: false),
                     CurrentState = table.Column<int>(type: "int", nullable: true),
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -348,10 +379,16 @@ namespace DataAccess.Migrations
                     VideoUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ImgUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     InstructorId = table.Column<int>(type: "int", nullable: false),
+                    IsPublished = table.Column<bool>(type: "bit", nullable: true),
+                    Status = table.Column<int>(type: "int", nullable: false),
+                    RejectionReason = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ReviewedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    ReviewedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CurrentState = table.Column<int>(type: "int", nullable: true),
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -373,10 +410,12 @@ namespace DataAccess.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CartStatus = table.Column<int>(type: "int", nullable: true),
                     StudentId = table.Column<int>(type: "int", nullable: false),
+                    Count = table.Column<int>(type: "int", nullable: false),
                     CurrentState = table.Column<int>(type: "int", nullable: true),
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -396,13 +435,22 @@ namespace DataAccess.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TotalAmount = table.Column<double>(type: "float", nullable: false),
                     PaymentMethod = table.Column<int>(type: "int", nullable: false),
                     StudentId = table.Column<int>(type: "int", nullable: false),
+                    TotalAmount = table.Column<double>(type: "float", nullable: false),
+                    OrderDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Status = table.Column<int>(type: "int", nullable: false),
+                    PaymentStatus = table.Column<bool>(type: "bit", nullable: false),
+                    OrderShipedStatus = table.Column<bool>(type: "bit", nullable: false),
+                    Carrier = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    TrackingNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SessionId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PaymentStripeId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CurrentState = table.Column<int>(type: "int", nullable: true),
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -422,13 +470,14 @@ namespace DataAccess.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    DateEarned = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    AwardedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     StudentId = table.Column<int>(type: "int", nullable: false),
                     BadgeId = table.Column<int>(type: "int", nullable: false),
                     CurrentState = table.Column<int>(type: "int", nullable: true),
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -462,6 +511,7 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -493,6 +543,7 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -525,6 +576,7 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -552,6 +604,7 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -580,10 +633,12 @@ namespace DataAccess.Migrations
                     EnrollmentDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     StudentId = table.Column<int>(type: "int", nullable: false),
                     CourseId = table.Column<int>(type: "int", nullable: false),
+                    Progress = table.Column<double>(type: "float", nullable: true),
                     CurrentState = table.Column<int>(type: "int", nullable: true),
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -617,6 +672,7 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -650,10 +706,12 @@ namespace DataAccess.Migrations
                     Price = table.Column<double>(type: "float", nullable: false),
                     OrderId = table.Column<int>(type: "int", nullable: false),
                     CourseId = table.Column<int>(type: "int", nullable: false),
+                    Count = table.Column<int>(type: "int", nullable: false),
                     CurrentState = table.Column<int>(type: "int", nullable: true),
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -687,6 +745,7 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -717,6 +776,7 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -742,6 +802,7 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -769,6 +830,7 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -798,6 +860,7 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -831,6 +894,7 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -857,6 +921,7 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -883,6 +948,7 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -915,6 +981,7 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -941,6 +1008,7 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -967,6 +1035,7 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
@@ -991,6 +1060,11 @@ namespace DataAccess.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ActivityLogs_UserId",
+                table: "ActivityLogs",
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Admins_ApplicationUserId",
@@ -1236,6 +1310,9 @@ namespace DataAccess.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "ActivityLogs");
+
             migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 

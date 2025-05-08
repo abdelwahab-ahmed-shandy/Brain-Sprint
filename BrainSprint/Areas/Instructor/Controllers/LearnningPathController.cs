@@ -54,7 +54,7 @@ namespace BrainSprint.Areas.Instructor.Controllers
 
                     using (var stream = System.IO.File.Create(imagePath))
                     {
-                        ImgFile.CopyTo(stream);
+                        ImgFile.CopyTo(stream); // استخدام النسخ غير المتزامن
                     }
                     learningPathsCreateVM.IconUrl = imageName;
                 }
@@ -161,28 +161,6 @@ namespace BrainSprint.Areas.Instructor.Controllers
 
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
