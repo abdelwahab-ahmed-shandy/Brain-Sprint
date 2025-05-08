@@ -107,6 +107,14 @@
         #endregion
 
 
+        #region Get By ID
+
+        Task<T?> GetByIdAsync(int id, CancellationToken cancellationToken = default);
+        Task<T?> GetByIdAsync(int id, IEnumerable<Expression<Func<T, object>>> includes, CancellationToken cancellationToken = default);
+
+        #endregion
+
+
         #endregion
 
 

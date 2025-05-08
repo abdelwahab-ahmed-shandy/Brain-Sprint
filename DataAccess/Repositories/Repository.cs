@@ -174,6 +174,29 @@ namespace DataAccess.Repositories
         #endregion
 
 
+        #region Get By Id
+
+        public async Task<T?> GetByIdAsync(int id, CancellationToken cancellationToken = default)
+        {
+            return await DbSet.FindAsync(new object[] { id }, cancellationToken);
+        }
+
+
+        public async Task<T?> GetByIdAsync(int id, IEnumerable<Expression<Func<T, object>>> includes, CancellationToken cancellationToken = default)
+        {
+            IQueryable<T> query = DbSet;
+
+            if (includes != null)
+            {
+                query = includes.Aggregate(query, (current, include) => current.Include(include));
+            }
+
+            return await query.FirstOrDefaultAsync(e => EF.Property<int>(e, "Id") == id, cancellationToken);
+        }
+
+        #endregion
+
+
         #region Get Count
 
         public async Task<int> CountAsync(Expression<Func<T, bool>>? filter = null)

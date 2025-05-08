@@ -19,7 +19,8 @@ namespace Models
         [ForeignKey("CourseId")]
         public Course Course { get; set; }
 
-
         public Certificate? Certificate { get; set; }
+
+        public double? Progress { get; set; }
     }
 }

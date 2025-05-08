@@ -1,4 +1,5 @@
 ﻿global using Models;
+global using Models.Enums;
 global using DataAccess.Repositories;
 global using DataAccess.Repositories.IRepositories;
 global using Services;

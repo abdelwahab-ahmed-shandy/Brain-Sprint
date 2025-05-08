@@ -90,7 +90,6 @@
                         <div class="search-results dropdown-menu w-100 p-2 d-none shadow-lg" style="border-radius: 0 0 10px 10px;"></div>
                     </form>
 
-                    <!-- User Section -->
                     <ul class="navbar-nav">
                         @if (User.Identity.IsAuthenticated)
                         {
@@ -206,24 +205,160 @@
                                     </li>
                                 </ul>
                             </li>
-
+                        }
+                        else
+                        {
                             <!-- Login/Register Buttons (when not authenticated) -->
-                            @if (!User.Identity.IsAuthenticated)
-                            {
-                                <li class="nav-item me-2">
-                                    <a class="nav-link btn btn-outline-light login-btn-custom px-3" asp-area="Identity" asp-controller="Account" asp-action="Login">
-                                        <i class="fas fa-sign-in-alt me-2"></i>Login
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link btn btn-primary px-3" asp-area="Identity" asp-controller="Account" asp-action="Register"
-                                       style="background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%); border: none;">
-                                        <i class="fas fa-user-plus me-2"></i>Register
-                                    </a>
-                                </li>
-                            }
+                            <li class="nav-item me-2">
+                                <a class="nav-link btn btn-outline-light login-btn-custom px-3" asp-area="Identity" asp-controller="Account" asp-action="Login">
+                                    <i class="fas fa-sign-in-alt me-2"></i>Login
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-primary px-3" asp-area="Identity" asp-controller="Account" asp-action="Register"
+                                   style="background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%); border: none;">
+                                    <i class="fas fa-user-plus me-2"></i>Register
+                                </a>
+                            </li>
                         }
                     </ul>
+
+                    @* <!-- User Section --> *@
+                    @* <ul class="navbar-nav"> *@
+                    @*     @if (User.Identity.IsAuthenticated) *@
+                    @*     { *@
+                    @*         <!-- Notifications Dropdown --> *@
+                    @*         <li class="nav-item dropdown"> *@
+                    @*             <a class="nav-link dropdown-toggle position-relative" href="#" id="notificationsDropdown" *@
+                    @*                role="button" data-bs-toggle="dropdown" aria-expanded="false"> *@
+                    @*                 <i class="fas fa-bell"></i> *@
+                    @*                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger notification-badge"> *@
+                    @*                     3 *@
+                    @*                 </span> *@
+                    @*             </a> *@
+                    @*             <ul class="dropdown-menu dropdown-menu-end notification-dropdown shadow-lg mt-2" *@
+                    @*                 aria-labelledby="notificationsDropdown" style="width: 350px; border-radius: 10px;"> *@
+                    @*                 <li><h6 class="dropdown-header">Notifications</h6></li> *@
+                    @*                 <li> *@
+                    @*                     <a class="dropdown-item" href="#"> *@
+                    @*                         <div class="notification-item d-flex align-items-start p-2"> *@
+                    @*                             <div class="notification-icon bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"> *@
+                    @*                                 <i class="fas fa-certificate text-white"></i> *@
+                    @*                             </div> *@
+                    @*                             <div class="notification-content ms-3"> *@
+                    @*                                 <span class="notification-title fw-bold">Course Completed</span> *@
+                    @*                                 <p class="notification-text mb-1">You finished "Advanced Web Development"</p> *@
+                    @*                                 <small class="notification-time text-muted">2 hours ago</small> *@
+                    @*                             </div> *@
+                    @*                         </div> *@
+                    @*                     </a> *@
+                    @*                 </li> *@
+                    @*                 <li> *@
+                    @*                     <a class="dropdown-item" href="#"> *@
+                    @*                         <div class="notification-item d-flex align-items-start p-2"> *@
+                    @*                             <div class="notification-icon bg-success rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"> *@
+                    @*                                 <i class="fas fa-trophy text-white"></i> *@
+                    @*                             </div> *@
+                    @*                             <div class="notification-content ms-3"> *@
+                    @*                                 <span class="notification-title fw-bold">New Badge Earned</span> *@
+                    @*                                 <p class="notification-text mb-1">You got the "Fast Learner" badge</p> *@
+                    @*                                 <small class="notification-time text-muted">1 day ago</small> *@
+                    @*                             </div> *@
+                    @*                         </div> *@
+                    @*                     </a> *@
+                    @*                 </li> *@
+                    @*                 <li><hr class="dropdown-divider mx-3"></li> *@
+                    @*                 <li><a class="dropdown-item text-center text-primary fw-bold" asp-controller="Notifications" asp-action="Index">View All Notifications</a></li> *@
+                    @*             </ul> *@
+                    @*         </li> *@
+
+                    @*         <!-- User Dropdown --> *@
+                    @*         <li class="nav-item dropdown"> *@
+                    @*             <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown" *@
+                    @*                role="button" data-bs-toggle="dropdown" aria-expanded="false"> *@
+                    @*                 <img src="~/images/user-avatar.png" alt="User Avatar" *@
+                    @*                      class="rounded-circle me-2 border border-2 border-primary" width="36" height="36"> *@
+                    @*                 <span class="d-none d-lg-inline">@User.Identity.Name</span> *@
+                    @*             </a> *@
+                    @*             <ul class="dropdown-menu dropdown-menu-end shadow-lg mt-2" aria-labelledby="userDropdown" *@
+                    @*                 style="border-radius: 10px; min-width: 220px;"> *@
+
+                    @*                 <!-- Common Menu Items --> *@
+                    @*                 <li> *@
+                    @*                     <a class="dropdown-item d-flex align-items-center py-2" asp-area="Identity" asp-controller="Settings" asp-action="Manage"> *@
+                    @*                         <i class="fas fa-cog fa-fw me-2 text-primary" style="width: 20px;"></i> Settings *@
+                    @*                     </a> *@
+                    @*                 </li> *@
+                    @*                 <li><hr class="dropdown-divider mx-3 my-1"></li> *@
+
+                    @*                 <!-- Role-Specific Menu Items --> *@
+                    @*                 @if (User.IsInRole("Admin")) *@
+                    @*                 { *@
+                    @*                     <li> *@
+                    @*                         <a class="dropdown-item d-flex align-items-center py-2" asp-area="Admin" asp-controller="Home" asp-action="Index"> *@
+                    @*                             <i class="fas fa-tachometer-alt fa-fw me-2 text-warning" style="width: 20px;"></i> Admin Dashboard *@
+                    @*                         </a> *@
+                    @*                     </li> *@
+                    @*                 } *@
+
+                    @*                 @if (User.IsInRole("Instructor") || User.IsInRole("Admin") || User.IsInRole("SuperAdmin")) *@
+                    @*                 { *@
+                    @*                     <li> *@
+                    @*                         <a class="dropdown-item d-flex align-items-center py-2" asp-area="Instructor" asp-controller="Home" asp-action="Index"> *@
+                    @*                             <i class="fas fa-chalkboard-teacher fa-fw me-2 text-info" style="width: 20px;"></i> Instructor Panel *@
+                    @*                         </a> *@
+                    @*                     </li> *@
+                    @*                 } *@
+
+                    @*                 @if (User.IsInRole("Student") || User.IsInRole("SuperAdmin")) *@
+                    @*                 { *@
+                    @*                     <li> *@
+                    @*                         <a class="dropdown-item d-flex align-items-center py-2" asp-area="Customer" asp-controller="Dashboard" asp-action="Index"> *@
+                    @*                             <i class="fas fa-graduation-cap fa-fw me-2 text-success" style="width: 20px;"></i> Student Dashboard *@
+                    @*                         </a> *@
+                    @*                     </li> *@
+                    @*                 } *@
+
+                    @*                 @if (User.IsInRole("SuperAdmin")) *@
+                    @*                 { *@
+                    @*                     <li> *@
+                    @*                         <a class="dropdown-item d-flex align-items-center py-2" asp-area="Admin" asp-controller="Home" asp-action="Index"> *@
+                    @*                             <i class="fas fa-shield-alt fa-fw me-2 text-danger" style="width: 20px;"></i> Super Admin *@
+                    @*                         </a> *@
+                    @*                     </li> *@
+                    @*                     <li><hr class="dropdown-divider mx-3 my-1"></li> *@
+                    @*                 } *@
+
+                    @*                 <!-- Logout --> *@
+                    @*                 <li> *@
+                    @*                     <form id="logoutForm" method="post" asp-area="Identity" asp-controller="Account" asp-action="Logout"> *@
+                    @*                         <button type="submit" class="dropdown-item d-flex align-items-center py-2 w-100 bg-transparent border-0"> *@
+                    @*                             <i class="fas fa-sign-out-alt fa-fw me-2 text-danger" style="width: 20px;"></i> Logout *@
+                    @*                         </button> *@
+                    @*                     </form> *@
+                    @*                 </li> *@
+                    @*             </ul> *@
+                    @*         </li> *@
+
+                    @*         <!-- Login/Register Buttons (when not authenticated) --> *@
+                    @*         @if (!User.Identity.IsAuthenticated) *@
+                    @*         { *@
+                    @*             <li class="nav-item me-2"> *@
+                    @*                 <a class="nav-link btn btn-outline-light login-btn-custom px-3" asp-area="Identity" asp-controller="Account" asp-action="Login"> *@
+                    @*                     <i class="fas fa-sign-in-alt me-2"></i>Login *@
+                    @*                 </a> *@
+                    @*             </li> *@
+                    @*             <li class="nav-item"> *@
+                    @*                 <a class="nav-link btn btn-primary px-3" asp-area="Identity" asp-controller="Account" asp-action="Register" *@
+                    @*                    style="background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%); border: none;"> *@
+                    @*                     <i class="fas fa-user-plus me-2"></i>Register *@
+                    @*                 </a> *@
+                    @*             </li> *@
+                    @*         } *@
+                    @*     } *@
+                    @* </ul> *@
+                
+                
                 </div>
             </div>
 

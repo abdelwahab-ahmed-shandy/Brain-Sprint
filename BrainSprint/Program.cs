@@ -1,3 +1,4 @@
+
 namespace BrainSprint
 {
     public static class Program
@@ -120,6 +121,16 @@ namespace BrainSprint
             });
 
             #endregion
+
+
+            #region Confige Stripe Setting
+
+            builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
+            StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
+
+            #endregion
+
+
 
             var app = builder.Build();
 

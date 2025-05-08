@@ -9,7 +9,9 @@ global using Microsoft.AspNetCore.Authentication.Google;
 global using Microsoft.AspNetCore.Authentication.Cookies;
 global using Microsoft.EntityFrameworkCore;
 global using Microsoft.IdentityModel.Tokens;
-
+global using System.Configuration;
+global using Stripe;
+global using Utility;
 global using Models;
 global using Models.Enums;
 global using Models.ViewModels;
