@@ -95,7 +95,7 @@ namespace BrainSprint.Areas.Admin.Controllers
                     .ToListAsync(),
 
                 PopularCourses = await _context.Courses
-                    .Where(c => c.IsPublished)
+                    .Where(c => c.IsPublished == true)
                     .Include(c => c.Instructor)
                         .ThenInclude(i => i.ApplicationUser)
                     .Include(c => c.EnrollmentCourses)

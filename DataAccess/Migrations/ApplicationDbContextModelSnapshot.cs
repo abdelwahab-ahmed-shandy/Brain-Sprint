@@ -616,7 +616,7 @@ namespace DataAccess.Migrations
                     b.Property<int>("InstructorId")
                         .HasColumnType("int");
 
-                    b.Property<bool>("IsPublished")
+                    b.Property<bool?>("IsPublished")
                         .HasColumnType("bit");
 
                     b.Property<double>("Price")

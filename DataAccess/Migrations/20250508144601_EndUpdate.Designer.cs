@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250508051513_EndUpdate")]
+    [Migration("20250508144601_EndUpdate")]
     partial class EndUpdate
     {
         /// <inheritdoc />
@@ -619,7 +619,7 @@ namespace DataAccess.Migrations
                     b.Property<int>("InstructorId")
                         .HasColumnType("int");
 
-                    b.Property<bool>("IsPublished")
+                    b.Property<bool?>("IsPublished")
                         .HasColumnType("bit");
 
                     b.Property<double>("Price")

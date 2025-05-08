@@ -33,7 +33,7 @@ namespace Models
         public List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 
         //new
-        public bool IsPublished { get; set; } = false;
+        public bool? IsPublished { get; set; } = false;
     }
 }
 
