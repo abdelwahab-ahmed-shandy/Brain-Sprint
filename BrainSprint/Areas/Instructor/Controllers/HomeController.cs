@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-
+﻿
 namespace BrainSprint.Areas.Instructor.Controllers
 {
     [Area("Instructor")]

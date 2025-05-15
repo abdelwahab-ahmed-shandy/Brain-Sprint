@@ -39,7 +39,6 @@
         public async Task<IActionResult> Register()
         {
 
-
             if (!await _roleManager.RoleExistsAsync("SuperAdmin"))
                 await _roleManager.CreateAsync(new IdentityRole("SuperAdmin"));
 
@@ -92,6 +91,7 @@
                 RegistrationDate = DateTime.UtcNow,
                 IsActive = true,
                 Level = 1,
+                LevelType = LevelType.Beginner,
                 TotalPoints = 0,
                 EmailConfirmed = false,
                 AccountState = AccountStateType.PendingActivation,
@@ -424,23 +424,110 @@
 
             string roleName = parsedUserType.ToString();
             var email = info.Principal.FindFirstValue(ClaimTypes.Email);
+            var firstName = info.Principal.FindFirstValue(ClaimTypes.GivenName);
+            var lastName = info.Principal.FindFirstValue(ClaimTypes.Surname);
 
             if (email == null)
             {
-                TempData["notification"] = "Email not retrieved from Google account.";
+                TempData["notification"] = "Email not retrieved from external account.";
                 TempData["MessageType"] = "error";
                 return RedirectToAction(nameof(Login));
             }
 
             var user = await _userManager.FindByEmailAsync(email);
 
+            // User doesn't exist - create new account
             if (user == null)
             {
-                TempData["notification"] = "There is no account associated with this email address. Please register first.";
-                TempData["MessageType"] = "error";
-                return RedirectToAction(nameof(Register), new { userType = parsedUserType });
+                user = new ApplicationUser
+                {
+                    UserName = email,
+                    Email = email,
+                    FirstName = firstName ?? "Unknown",
+                    LastName = lastName ?? "Unknown",
+                    RegistrationDate = DateTime.UtcNow,
+                    IsActive = true,
+                    Level = 1,
+                    LevelType = LevelType.Beginner,
+                    TotalPoints = 0,
+                    EmailConfirmed = false,
+                    AccountState = AccountStateType.PendingActivation,
+                    Certifications = parsedUserType == UserType.Instructor ? "Pending verification" : null,
+                    ExperienceYears = parsedUserType == UserType.Instructor ? 0 : null
+                };
+
+                var createResult = await _userManager.CreateAsync(user);
+                if (!createResult.Succeeded)
+                {
+                    return HandleErrors(createResult.Errors, "Failed to create user account.");
+                }
+
+                // Add to role
+                if (!await _roleManager.RoleExistsAsync(roleName))
+                {
+                    await _roleManager.CreateAsync(new IdentityRole(roleName));
+                }
+
+                await _userManager.AddToRoleAsync(user, roleName);
+
+                // Create student/instructor record
+                try
+                {
+                    if (parsedUserType == UserType.Instructor)
+                    {
+                        await _instructorRepository.CreateAsync(new Models.Instructor()
+                        {
+                            ApplicationUserId = user.Id,
+                            IsVerified = false,
+                            CurrentState = CurrentState.Active,
+                        });
+                    }
+                    else
+                    {
+                        await _studentRepository.CreateAsync(new Models.Student
+                        {
+                            ApplicationUserId = user.Id,
+                            Level = LevelType.Beginner,
+                            CurrentState = CurrentState.Active
+                        });
+                    }
+                    await _instructorRepository.SaveInDataBaseAsync();
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex, "Error creating user profile");
+                    await _userManager.DeleteAsync(user);
+                    return HandleErrors(new[] { new IdentityError { Description = "Error creating user profile" } },
+                        "Error creating user profile");
+                }
+
+                // Generate email confirmation
+                var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                var callbackUrl = Url.Action(
+                    "ConfirmEmail",
+                    "Account",
+                    new { area = "Identity", userId = user.Id, code },
+                    protocol: Request.Scheme
+                );
+
+                try
+                {
+                    await _emailSender.SendEmailAsync(
+                        email,
+                        "Confirm your email",
+                        $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex, "Error sending confirmation email");
+                }
+
+                TempData["notification"] = "Please check your email to confirm your account before logging in.";
+                TempData["MessageType"] = "info";
+                return RedirectToAction(nameof(Login));
             }
 
+            // Existing user - check role
             var currentRoles = await _userManager.GetRolesAsync(user);
             var currentUserType = currentRoles.FirstOrDefault();
 
@@ -456,16 +543,25 @@
                 };
             }
 
+            // Add external login to existing account
             var addLoginResult = await _userManager.AddLoginAsync(user, info);
-            if (addLoginResult.Succeeded)
+            if (!addLoginResult.Succeeded)
             {
-                await _signInManager.SignInAsync(user, isPersistent: false);
-                TempData["notification"] = "Login successful.";
-                TempData["MessageType"] = "success";
-                return LocalRedirect(returnUrl);
+                return HandleErrors(addLoginResult.Errors, "An error occurred while linking the external account.");
             }
 
-            return HandleErrors(addLoginResult.Errors, "An error occurred while linking the Google account.");
+            // Only sign in if email is confirmed
+            if (!user.EmailConfirmed)
+            {
+                TempData["notification"] = "Please confirm your email before logging in.";
+                TempData["MessageType"] = "error";
+                return RedirectToAction(nameof(Login));
+            }
+
+            await _signInManager.SignInAsync(user, isPersistent: false);
+            TempData["notification"] = "Login successful.";
+            TempData["MessageType"] = "success";
+            return LocalRedirect(returnUrl);
         }
 
 
@@ -514,6 +610,7 @@
 
             return View("Error");
         }
+
         #endregion
 
 

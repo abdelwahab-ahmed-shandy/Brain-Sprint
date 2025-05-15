@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Models;
-
+﻿
 namespace BrainSprint.Areas.Admin.Controllers
 {
     [Area("Admin")]
@@ -263,7 +261,7 @@ namespace BrainSprint.Areas.Admin.Controllers
                 userDB.IsBlocked = true;
                 userDB.AccountState = AccountStateType.Blocked;
                 userDB.IsActive = false;
-                userDB.BlockedDate = DateTime.UtcNow;
+                userDB.BlockedDateUtc = DateTime.UtcNow;
                 userDB.BlockReason = "Account blocked by admin";
 
                 var result = await _userManager.UpdateAsync(userDB);

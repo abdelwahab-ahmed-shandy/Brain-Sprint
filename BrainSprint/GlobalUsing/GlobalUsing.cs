@@ -20,3 +20,4 @@ global using DataAccess.Repositories;
 global using DataAccess.Repositories.IRepositories;
 global using Services.Interfaces;
 global using Services.Implementations;
+global using System.Linq.Expressions;

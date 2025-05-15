@@ -203,6 +203,9 @@ namespace DataAccess.Migrations
                     b.Property<string>("BlockedBy")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("BlockedDateUtc")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("CreatedBy")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -216,7 +219,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -243,14 +246,18 @@ namespace DataAccess.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Bio")
-                        .HasMaxLength(1000)
-                        .HasColumnType("nvarchar(1000)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("BirthDay")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("BlockReason")
-                        .HasMaxLength(1000)
-                        .HasColumnType("nvarchar(1000)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("BlockedDate")
+                    b.Property<string>("BlockedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("BlockedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Certifications")
@@ -258,6 +265,10 @@ namespace DataAccess.Migrations
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedDateUtc")
@@ -289,6 +300,9 @@ namespace DataAccess.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Level")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("LevelType")
                         .HasColumnType("int");
 
                     b.Property<bool>("LockoutEnabled")
@@ -335,7 +349,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UserName")
@@ -366,6 +380,9 @@ namespace DataAccess.Migrations
                     b.Property<string>("BlockedBy")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("BlockedDateUtc")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("CreatedBy")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -393,7 +410,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -411,6 +428,9 @@ namespace DataAccess.Migrations
 
                     b.Property<string>("BlockedBy")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("BlockedDateUtc")
+                        .HasColumnType("datetime2");
 
                     b.Property<int?>("CartStatus")
                         .HasColumnType("int");
@@ -434,7 +454,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -454,6 +474,9 @@ namespace DataAccess.Migrations
 
                     b.Property<string>("BlockedBy")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("BlockedDateUtc")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("CartId")
                         .HasColumnType("int");
@@ -480,7 +503,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -505,6 +528,9 @@ namespace DataAccess.Migrations
                     b.Property<string>("BlockedBy")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("BlockedDateUtc")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("CreatedBy")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -525,7 +551,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -546,6 +572,9 @@ namespace DataAccess.Migrations
 
                     b.Property<string>("BlockedBy")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("BlockedDateUtc")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("CreatedBy")
                         .IsRequired()
@@ -570,7 +599,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -590,6 +619,9 @@ namespace DataAccess.Migrations
 
                     b.Property<string>("BlockedBy")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("BlockedDateUtc")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("CreatedBy")
                         .IsRequired()
@@ -641,7 +673,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("VideoUrl")
@@ -665,6 +697,9 @@ namespace DataAccess.Migrations
                     b.Property<string>("BlockedBy")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("BlockedDateUtc")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("CourseId")
                         .HasColumnType("int");
 
@@ -684,7 +719,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -707,6 +742,9 @@ namespace DataAccess.Migrations
 
                     b.Property<string>("BlockedBy")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("BlockedDateUtc")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("CourseId")
                         .HasColumnType("int");
@@ -731,7 +769,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -751,6 +789,9 @@ namespace DataAccess.Migrations
 
                     b.Property<string>("BlockedBy")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("BlockedDateUtc")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Comment")
                         .HasColumnType("nvarchar(max)");
@@ -777,7 +818,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -799,6 +840,9 @@ namespace DataAccess.Migrations
 
                     b.Property<string>("BlockedBy")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("BlockedDateUtc")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("CourseId")
                         .HasColumnType("int");
@@ -825,7 +869,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -847,6 +891,9 @@ namespace DataAccess.Migrations
 
                     b.Property<string>("BlockedBy")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("BlockedDateUtc")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("CourseModuleId")
                         .HasColumnType("int");
@@ -874,7 +921,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -898,6 +945,9 @@ namespace DataAccess.Migrations
                     b.Property<string>("BlockedBy")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("BlockedDateUtc")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("CreatedBy")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -917,7 +967,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -939,6 +989,9 @@ namespace DataAccess.Migrations
 
                     b.Property<string>("BlockedBy")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("BlockedDateUtc")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("CreatedBy")
                         .IsRequired()
@@ -964,7 +1017,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -982,6 +1035,9 @@ namespace DataAccess.Migrations
 
                     b.Property<string>("BlockedBy")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("BlockedDateUtc")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("CourseModuleId")
                         .HasColumnType("int");
@@ -1015,7 +1071,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.Property<int?>("VideoNodeId")
@@ -1038,6 +1094,9 @@ namespace DataAccess.Migrations
 
                     b.Property<string>("BlockedBy")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("BlockedDateUtc")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("CreatedBy")
                         .IsRequired()
@@ -1066,7 +1125,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -1086,6 +1145,9 @@ namespace DataAccess.Migrations
 
                     b.Property<string>("BlockedBy")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("BlockedDateUtc")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Carrier")
                         .HasColumnType("nvarchar(max)");
@@ -1133,7 +1195,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -1153,6 +1215,9 @@ namespace DataAccess.Migrations
 
                     b.Property<string>("BlockedBy")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("BlockedDateUtc")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("Count")
                         .HasColumnType("int");
@@ -1179,7 +1244,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -1201,6 +1266,9 @@ namespace DataAccess.Migrations
 
                     b.Property<string>("BlockedBy")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("BlockedDateUtc")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("CreatedBy")
                         .IsRequired()
@@ -1228,7 +1296,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -1252,6 +1320,9 @@ namespace DataAccess.Migrations
                     b.Property<string>("BlockedBy")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("BlockedDateUtc")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("CreatedBy")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -1268,7 +1339,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -1290,6 +1361,9 @@ namespace DataAccess.Migrations
 
                     b.Property<string>("BlockedBy")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("BlockedDateUtc")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("CreatedBy")
                         .IsRequired()
@@ -1314,7 +1388,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -1335,6 +1409,9 @@ namespace DataAccess.Migrations
 
                     b.Property<string>("BlockedBy")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("BlockedDateUtc")
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("ColsedAt")
                         .HasColumnType("datetime2");
@@ -1373,7 +1450,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -1396,6 +1473,9 @@ namespace DataAccess.Migrations
 
                     b.Property<string>("BlockedBy")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("BlockedDateUtc")
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -1420,7 +1500,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -1443,6 +1523,9 @@ namespace DataAccess.Migrations
                     b.Property<string>("BlockedBy")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("BlockedDateUtc")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("ChoiceId")
                         .HasColumnType("int");
 
@@ -1462,7 +1545,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("UserExamAttempId")
@@ -1489,6 +1572,9 @@ namespace DataAccess.Migrations
 
                     b.Property<string>("BlockedBy")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("BlockedDateUtc")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("CreatedBy")
                         .IsRequired()
@@ -1518,7 +1604,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("UserScore")
@@ -1578,6 +1664,9 @@ namespace DataAccess.Migrations
                     b.Property<string>("BlockedBy")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("BlockedDateUtc")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("CreatedBy")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -1594,7 +1683,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -1618,6 +1707,9 @@ namespace DataAccess.Migrations
                     b.Property<string>("BlockedBy")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("BlockedDateUtc")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("CreatedBy")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -1640,7 +1732,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -1663,6 +1755,9 @@ namespace DataAccess.Migrations
                     b.Property<string>("BlockedBy")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("BlockedDateUtc")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("CreatedBy")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -1682,7 +1777,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdatedDateUtc")
+                    b.Property<DateTime>("UpdatedDateUtc")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("VideoUrl")

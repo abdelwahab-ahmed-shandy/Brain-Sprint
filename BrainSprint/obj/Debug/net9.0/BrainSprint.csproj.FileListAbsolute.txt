@@ -454,6 +454,7 @@ C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\bin\Debug\net9.0\NuGet.Packaging.dl
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\bin\Debug\net9.0\NuGet.ProjectModel.dll
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\bin\Debug\net9.0\NuGet.Protocol.dll
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\bin\Debug\net9.0\NuGet.Versioning.dll
+C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\bin\Debug\net9.0\Stripe.net.dll
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\bin\Debug\net9.0\System.ClientModel.dll
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\bin\Debug\net9.0\System.CodeDom.dll
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\bin\Debug\net9.0\System.Composition.AttributedModel.dll
@@ -649,6 +650,7 @@ C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\scopedcss\Areas\Ad
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\scopedcss\Areas\Customer\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\scopedcss\Areas\Identity\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\scopedcss\Areas\Instructor\Views\Shared\_LayoutInstructor.cshtml.rz.scp.css
+C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\scopedcss\bundle\BrainSprint.styles.css
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\scopedcss\projectbundle\BrainSprint.bundle.scp.css
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\2nxjvrl5u9-5ipweew5fc.gz
@@ -661,15 +663,16 @@ C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\zrc0fkn
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\npehhek8zu-l75j7iwizi.gz
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\t23hu5vkki-xtb6zq3fpe.gz
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\nofq2m2y7t-iz1rol9g56.gz
+C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\q2whsf7sis-v1zbkpt8dy.gz
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\0n5623q3cj-b9sayid5wm.gz
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\d0d3b04a4f-t0y8bqv8pi.gz
-C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\2ksdi3m58e-8flq4k35dk.gz
-C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\d32472u94u-qbt6h4ox5y.gz
-C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\78kg277p19-hw7eaup9v4.gz
-C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\ti267ch81o-w9gruc5uo1.gz
-C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\ferel9za1n-xnqwbb6zwd.gz
+C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\2ksdi3m58e-g1bcqwktbt.gz
+C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\d32472u94u-brjq0h443p.gz
+C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\78kg277p19-bjnbpt8phk.gz
+C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\ti267ch81o-s2ygsab6ne.gz
+C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\ferel9za1n-mrcm95qwwq.gz
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\wlan6o8wrd-8d6ebtl8bo.gz
-C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\c0yltx5b70-dqle62frat.gz
+C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\c0yltx5b70-1og25pym0p.gz
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\pc11id5sst-iri5fbdm2c.gz
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\y0pet6gzlx-ampg4cb6sn.gz
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\y2bvf0alx3-2rdgz7o3xd.gz
@@ -732,6 +735,8 @@ C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\sg7v3os
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\3lji2oxwsm-9vr69e8ynj.gz
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\g6bodlcvxq-87fc7y1x7t.gz
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\hs9f672u14-mlv21k5csn.gz
+C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\1cqd7pe8yl-fvz3fv8s7p.gz
+C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\q0lfynpajj-fvz3fv8s7p.gz
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\staticwebassets.build.endpoints.json
@@ -748,8 +753,3 @@ C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\refint\BrainSprint
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\BrainSprint.pdb
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\BrainSprint.genruntimeconfig.cache
 C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\ref\BrainSprint.dll
-C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\1cqd7pe8yl-fvz3fv8s7p.gz
-C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\q0lfynpajj-fvz3fv8s7p.gz
-C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\bin\Debug\net9.0\Stripe.net.dll
-C:\Users\FM\Desktop\Brain-Sprint\BrainSprint\obj\Debug\net9.0\compressed\q2whsf7sis-94fpqmomsn.gz

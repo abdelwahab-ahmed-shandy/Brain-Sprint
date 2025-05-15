@@ -1,9 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Models;
-using Models.ViewModels;
-using System.Threading;
-
-using static Models.ViewModels.ContentManagementCreateVM;
+﻿using static Models.ViewModels.ContentManagementCreateVM;
 
 namespace BrainSprint.Areas.Admin.Controllers
 {

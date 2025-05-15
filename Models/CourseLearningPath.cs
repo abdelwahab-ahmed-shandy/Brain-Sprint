@@ -1,11 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Models
 {
     // Use the Unique Index in CourseLearningPath to prevent the same course from being linked to the same path more than once:

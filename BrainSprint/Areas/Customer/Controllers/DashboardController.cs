@@ -1,5 +1,4 @@
-﻿
-namespace BrainSprint.Areas.Customer.Controllers
+﻿namespace BrainSprint.Areas.Customer.Controllers
 {
     [Area("Customer")]
     [Authorize(Roles = "Student")]

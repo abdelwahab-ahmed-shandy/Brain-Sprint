@@ -18,26 +18,7 @@ namespace BrainSprint.Areas.Customer.Controllers
         {
             return View();
         }
-        //[HttpGet]
-        //public IActionResult Review()
-        //{
-        //    var reviews = courseReviewRepository.Get(includes: [e => e.Course]).ToList();
-        //    ViewBag.Courses = courseReviewRepository.Get().ToList();
 
-        //    var reviesVm = reviews.Select(e => new ContentManagementVM
-        //    {
-        //        Id = e.Id,
-        //        CreatedBy = e.CreatedBy ?? "Anonymous",
-        //        CreatedDateUtc = e.CreatedDateUtc,
-        //        Rating = e.Rating,
-        //        Comment = e.Comment ?? string.Empty,
-        //        CourseId = e.CourseId,
-        //        Course = e.Course ?? new Course { Title = "Unknown Course" }
-
-        //    }).ToList();
-
-        //    return View(reviesVm);
-        //}
     }
 
 }

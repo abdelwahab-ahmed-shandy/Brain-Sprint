@@ -1,11 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Models
 {
     [Index(nameof(StudentId), nameof(BadgeId), IsUnique = true)]
@@ -22,4 +15,3 @@ namespace Models
         public Badge Badge { get; set; } = null!;
     }
 }
-

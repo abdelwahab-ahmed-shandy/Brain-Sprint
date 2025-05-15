@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations.Schema;
-
+﻿
 namespace Models
 {
     public class Instructor : BaseModel
@@ -20,5 +13,3 @@ namespace Models
         public List<Course> Courses { get; set; } = new List<Course>();
     }
 }
-
-

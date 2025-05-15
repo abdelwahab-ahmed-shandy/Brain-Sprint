@@ -1,5 +1,4 @@
 ﻿
-
 namespace Services.Interfaces
 {
     public interface ICustomEmailSender : IEmailSender

@@ -12,3 +12,6 @@ global using System.Linq.Expressions;
 global using System.Text;
 global using System.Threading.Tasks;
 global using Microsoft.EntityFrameworkCore;
+global using System.Net.Mail;
+global using Microsoft.Extensions.Logging;
+global using System.Net;

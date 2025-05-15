@@ -1,12 +1,4 @@
-﻿using DataAccess.Repositories;
-using DataAccess.Repositories.IRepositories;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
-using Models;
-using Models.ViewModels;
-using System.Linq.Expressions;
-
+﻿
 namespace BrainSprint.Areas.Identity.Controllers
 {
     [Area("Identity")]

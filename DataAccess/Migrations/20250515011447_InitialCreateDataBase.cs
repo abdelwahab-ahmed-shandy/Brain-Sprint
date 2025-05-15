@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DataAccess.Migrations
 {
     /// <inheritdoc />
-    public partial class CreateDataBase : Migration
+    public partial class InitialCreateDataBase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -31,25 +31,29 @@ namespace DataAccess.Migrations
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     PasswordChangedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    LastLogin = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    RegistrationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Address = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    RegistrationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    LastLogin = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    BirthDay = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ProfileImage = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    TotalPoints = table.Column<long>(type: "bigint", nullable: false),
+                    Bio = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockReason = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Certifications = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Level = table.Column<int>(type: "int", nullable: false),
-                    Bio = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: true),
+                    ExperienceYears = table.Column<int>(type: "int", nullable: true),
+                    TotalPoints = table.Column<long>(type: "bigint", nullable: false),
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
                     IsBlocked = table.Column<bool>(type: "bit", nullable: false),
-                    BlockedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    BlockReason = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: true),
-                    Certifications = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ExperienceYears = table.Column<int>(type: "int", nullable: true),
+                    LevelType = table.Column<int>(type: "int", nullable: true),
                     AccountState = table.Column<int>(type: "int", nullable: true),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -84,8 +88,9 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -105,8 +110,9 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -185,8 +191,9 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -296,8 +303,9 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -321,8 +329,9 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -351,8 +360,9 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -388,8 +398,9 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -415,8 +426,9 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -450,8 +462,9 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -477,8 +490,9 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -511,8 +525,9 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -543,8 +558,9 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -576,8 +592,9 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -604,8 +621,9 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -638,8 +656,9 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -672,8 +691,9 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -711,8 +731,9 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -745,8 +766,9 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -776,8 +798,9 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -802,8 +825,9 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -830,8 +854,9 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -860,8 +885,9 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -894,8 +920,9 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -921,8 +948,9 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -948,8 +976,9 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -981,8 +1010,9 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -1008,8 +1038,9 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -1035,8 +1066,9 @@ namespace DataAccess.Migrations
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -257,7 +257,7 @@ namespace BrainSprint.Areas.Admin.Controllers
 
             if (userDB != null)
             {
-                userDB.BlockedDate = DateTime.Now;
+                userDB.BlockedDateUtc = DateTime.Now;
                 userDB.BlockReason = "Account blocked by admin";
                 userDB.IsBlocked = true;
                 userDB.AccountState = AccountStateType.Blocked;
