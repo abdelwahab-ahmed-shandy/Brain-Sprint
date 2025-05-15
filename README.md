@@ -1,13 +1,3 @@
-# Brain-Sprint
-
-Brain-Sprint/
-├── DataAccess/
-├── Models/
-├── Relational Schema/
-├── Services/
-├── Utility/
-
-
 <h1 align="center">🧠 Brain-Sprint</h1>
 
 <p align="center">
