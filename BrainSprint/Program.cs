@@ -67,7 +67,6 @@ namespace BrainSprint
             builder.Services.AddScoped<IAdminRepository, AdminRepository>();
             builder.Services.AddScoped<IInstructorRepository, InstructorRepository>();
             builder.Services.AddScoped<IStudentRepository, StudentRepository>();
-            //builder.Services.AddScoped<IUserSessionService, UserSessionService>();
 
             builder.Services.AddScoped<IActivityLogRepository, ActivityLogRepository>();
 
@@ -98,8 +97,8 @@ namespace BrainSprint
             builder.Services.AddScoped<IUsersWatchedNodeRepository, UsersWatchedNodeRepository>();
             builder.Services.AddScoped<IVideoNodeRepository, VideoNodeRepository>();
             builder.Services.AddScoped<IUserExamAttempRepository, UserExamAttempRepository>();
-
             builder.Services.AddScoped<IEnrollmentCourseService, EnrollmentCourseService>();
+
 
             #endregion
 

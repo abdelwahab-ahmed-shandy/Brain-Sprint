@@ -860,8 +860,8 @@ namespace DataAccess.Migrations
                     b.Property<DateTime>("EnrollmentDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<double?>("Progress")
-                        .HasColumnType("float");
+                    b.Property<int?>("Progress")
+                        .HasColumnType("int");
 
                     b.Property<int>("StudentId")
                         .HasColumnType("int");

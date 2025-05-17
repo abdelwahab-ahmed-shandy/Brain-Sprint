@@ -1,0 +1,263 @@
+﻿@model LearningPathsVM
+
+@{
+    ViewData["Title"] = "Manage Learning Paths";
+}
+
+<div class="container-fluid">
+    <div class="row mb-4 align-items-center">
+        <div class="col-md-6">
+            <h2 class="fw-bold mb-0">@ViewData["Title"]</h2>
+        </div>
+        <div class="col-md-6 text-end">
+            <a asp-action="Create" class="btn btn-primary">
+                <i class="fas fa-plus me-2"></i>Add New Path
+            </a>
+        </div>
+    </div>
+
+    <!-- Search and Filter Card -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <form method="get" class="row g-3 align-items-center">
+                <div class="col-md-5">
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-search"></i></span>
+                        <input type="text" class="form-control" name="query" value="@Model.Pagination.Query"
+                               placeholder="Search by name or description...">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <select class="form-select" name="statusFilter">
+                        <option value="">All Statuses</option>
+                        <option value="Published" selected="@(Model.Pagination.StatusFilter == "Published")">Published</option>
+                        <option value="Draft" selected="@(Model.Pagination.StatusFilter == "Draft")">Draft</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-primary w-100">
+                        <i class="fas fa-filter me-2"></i>Filter
+                    </button>
+                </div>
+                <div class="col-md-2">
+                    <a asp-action="Index" class="btn btn-outline-secondary w-100">
+                        <i class="fas fa-undo me-2"></i>Reset
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Learning Paths Table Card -->
+    <div class="card shadow-sm">
+        <div class="card-body p-0">
+            @if (Model.LearningPaths.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th style="width: 80px;">Image</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th style="width: 120px;">Status</th>
+                                <th style="width: 150px;">Created</th>
+                                <th style="width: 180px;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.LearningPaths)
+                            {
+                                <tr>
+                                    <td>
+                                        @if (!string.IsNullOrEmpty(item.IconUrl))
+                                        {
+                                            <img src="@item.IconUrl" alt="@item.Name"
+                                                 class="img-thumbnail" style="width: 60px; height: 60px; object-fit: cover;">
+                                        }
+                                        else
+                                        {
+                                            <div class="bg-light d-flex align-items-center justify-content-center"
+                                                 style="width: 60px; height: 60px;">
+                                                <i class="fas fa-image text-muted"></i>
+                                            </div>
+                                        }
+                                    </td>
+                                    <td class="align-middle">
+                                        <strong>@item.Name</strong>
+                                        @if (!string.IsNullOrEmpty(item.InstructorName))
+                                        {
+                                            <div class="text-muted small">By @item.InstructorName</div>
+                                        }
+                                    </td>
+                                    <td class="align-middle">
+                                        @if (!string.IsNullOrEmpty(item.Description))
+                                        {
+                                            <div class="text-truncate" style="max-width: 300px;">@item.Description</div>
+                                        }
+                                        else
+                                        {
+                                            <span class="text-muted">No description</span>
+                                        }
+                                    </td>
+                                    <td class="align-middle">
+                                        @if (item.IsPublished == true)
+                                        {
+                                            <span class="badge bg-success">Published</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-warning text-dark">Draft</span>
+                                        }
+                                    </td>
+                                    <td class="align-middle">
+                                        @item.CreatedDateUtc.ToLocalTime().ToString("MMM dd, yyyy")
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="btn-group btn-group-sm" role="group">
+                                            <a asp-action="Details" asp-route-id="@item.Id"
+                                               class="btn btn-outline-primary" title="View">
+                                                <i class="fas fa-eye"></i>
+                                            </a>
+                                            <a asp-action="Edit" asp-route-id="@item.Id"
+                                               class="btn btn-outline-secondary" title="Edit">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a asp-action="Delete" asp-route-id="@item.Id"
+                                               class="btn btn-outline-danger" title="Delete">
+                                                <i class="fas fa-trash"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="p-3 border-top">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-center mb-0">
+                            <li class="page-item @(Model.Pagination.CurrentPage == 1 ? "disabled" : "")">
+                                <a class="page-link"
+                                   asp-action="Index"
+                                   asp-route-page="1"
+                                   asp-route-pageSize="@Model.Pagination.PageSize"
+                                   asp-route-query="@Model.Pagination.Query"
+                                   asp-route-statusFilter="@Model.Pagination.StatusFilter">
+                                    <i class="fas fa-angle-double-left"></i>
+                                </a>
+                            </li>
+                            <li class="page-item @(Model.Pagination.CurrentPage == 1 ? "disabled" : "")">
+                                <a class="page-link"
+                                   asp-action="Index"
+                                   asp-route-page="@(Model.Pagination.CurrentPage - 1)"
+                                   asp-route-pageSize="@Model.Pagination.PageSize"
+                                   asp-route-query="@Model.Pagination.Query"
+                                   asp-route-statusFilter="@Model.Pagination.StatusFilter">
+                                    <i class="fas fa-angle-left"></i>
+                                </a>
+                            </li>
+
+                            @for (int i = 1; i <= Model.Pagination.TotalPages; i++)
+                            {
+                                <li class="page-item @(i == Model.Pagination.CurrentPage ? "active" : "")">
+                                    <a class="page-link"
+                                       asp-action="Index"
+                                       asp-route-page="@i"
+                                       asp-route-pageSize="@Model.Pagination.PageSize"
+                                       asp-route-query="@Model.Pagination.Query"
+                                       asp-route-statusFilter="@Model.Pagination.StatusFilter">
+                                        @i
+                                    </a>
+                                </li>
+                            }
+
+                            <li class="page-item @(Model.Pagination.CurrentPage == Model.Pagination.TotalPages ? "disabled" : "")">
+                                <a class="page-link"
+                                   asp-action="Index"
+                                   asp-route-page="@(Model.Pagination.CurrentPage + 1)"
+                                   asp-route-pageSize="@Model.Pagination.PageSize"
+                                   asp-route-query="@Model.Pagination.Query"
+                                   asp-route-statusFilter="@Model.Pagination.StatusFilter">
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li class="page-item @(Model.Pagination.CurrentPage == Model.Pagination.TotalPages ? "disabled" : "")">
+                                <a class="page-link"
+                                   asp-action="Index"
+                                   asp-route-page="@Model.Pagination.TotalPages"
+                                   asp-route-pageSize="@Model.Pagination.PageSize"
+                                   asp-route-query="@Model.Pagination.Query"
+                                   asp-route-statusFilter="@Model.Pagination.StatusFilter">
+                                    <i class="fas fa-angle-double-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="text-center text-muted small mt-2">
+                        Showing @((Model.Pagination.CurrentPage - 1) * Model.Pagination.PageSize + 1) to
+                        @Math.Min(Model.Pagination.CurrentPage * Model.Pagination.PageSize, Model.Pagination.TotalItems) of
+                        @Model.Pagination.TotalItems entries
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="text-center p-5">
+                    <div class="mb-4">
+                        <i class="fas fa-map-signs fa-4x text-muted"></i>
+                    </div>
+                    <h4 class="text-muted">No Learning Paths Found</h4>
+                    <p class="text-muted mb-4">
+                        @if (!string.IsNullOrEmpty(Model.Pagination.Query))
+                        {
+                            <span>No results found for your search criteria.</span>
+                        }
+                        else
+                        {
+                            <span>You haven't created any learning paths yet.</span>
+                        }
+                    </p>
+                    <a asp-action="Create" class="btn btn-primary px-4">
+                        <i class="fas fa-plus me-2"></i>Create New Path
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <style>
+        .table th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            vertical-align: middle;
+        }
+
+        .badge {
+            font-size: 0.85em;
+            padding: 0.35em 0.65em;
+            font-weight: 500;
+        }
+
+        .pagination .page-item.active .page-link {
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+        }
+
+        .img-thumbnail {
+            padding: 0.25rem;
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 0.375rem;
+        }
+
+        .btn-group-sm > .btn {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.875rem;
+        }
+    </style>
+}

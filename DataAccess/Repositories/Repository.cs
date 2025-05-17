@@ -1,4 +1,6 @@
 ﻿
+using Microsoft.EntityFrameworkCore;
+
 namespace DataAccess.Repositories
 {
 
@@ -120,25 +122,32 @@ namespace DataAccess.Repositories
         /// <summary>
         /// Retrieve a recordset based on an optional filter, with the ability to load relationships, and with or without tracing
         /// </summary>
-        public async Task<IEnumerable<T>> GetAsync(Expression<Func<T, bool>>? filter = null,
-            IEnumerable<Expression<Func<T, object>>>? includes = null,
-            IEnumerable<Func<IQueryable<T>, IQueryable<T>>>? thenIncludes = null,
-            bool tracked = true,
-            CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<T>> GetAsync(
+        Expression<Func<T, bool>>? filter = null,
+        IEnumerable<Expression<Func<T, object>>>? includes = null,
+        IEnumerable<Func<IQueryable<T>, IQueryable<T>>>? thenIncludes = null,
+        bool tracked = true,
+        CancellationToken cancellationToken = default)
         {
-            IQueryable<T> query = DbSet;
+            IQueryable<T> query = tracked ? DbSet : DbSet.AsNoTracking();
 
-            if (!tracked)
-                query = query.AsNoTracking();
-
-            if (filter != null)
-                query = query.Where(filter);
-
+            // Basic Includes implementation 
             if (includes != null)
+            {
                 query = includes.Aggregate(query, (current, include) => current.Include(include));
+            }
 
+            // Advanced ThenIncludes application 
             if (thenIncludes != null)
-                query = thenIncludes.Aggregate(query, (current, include) => include(current));
+            {
+                query = thenIncludes.Aggregate(query, (current, thenInclude) => thenInclude(current));
+            }
+
+            // Apply the filter 
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
 
             return await query.ToListAsync(cancellationToken);
         }

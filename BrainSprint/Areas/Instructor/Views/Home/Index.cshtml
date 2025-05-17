@@ -1,299 +1,97 @@
-﻿@{
-    ViewData["Title"] = "Dashboard";
+﻿@model InstructorDashboardVM
+@{
+    ViewData["Title"] = "Dashboard Overview";
 }
 
-<div class="main-content">
-
-    <div class="header">
-        <h1 class="header-title">Dashboard Overview</h1>
-        <div class="user-menu">
-            <div class="user-info">
-                <div class="user-name">
-                    @User.Identity.Name
-                    <div class="dropdown" onclick="toggleDropdown(this)">
-                        <button class="dropbtn"><i class="fas fa-chevron-down"></i></button>
-                        <div class="dropdown-content">
-
-                            <a asp-area="Customer" asp-controller="Home" asp-action="Index" class="dropdown-item">
-                                <i class="fas fa-eye"></i> Student View
-                            </a>
-                            <a asp-area="Instructor" asp-controller="Students" asp-action="Index" class="dropdown-item">
-                                <i class="fas fa-user-graduate"></i> Student Management
-                            </a>
-                            <div class="dropdown-divider"></div>
-
-                            <a asp-area="Identity" asp-controller="Settings" asp-action="Manage" class="dropdown-item">
-                                <i class="fas fa-cog"></i> Account Settings
-                            </a>
-                            <a asp-area="Identity" asp-controller="Account" asp-action="Logout" class="dropdown-item logout">
-                                <i class="fas fa-sign-out-alt"></i> Sign Out
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="user-role">
-                    <i class="fas fa-shield-alt"></i> Senior Instructor
-                </div>
-            </div>
-
+<div class="stats-cards">
+    <div class="stat-card">
+        <h3>Active Courses</h3>
+        <div class="value">@Model.TotalCourses</div>
+        <div class="change up">
+            <i class="fas fa-arrow-up"></i>
+            <span>@(Model.TotalCourses / 4) from last month</span>
         </div>
     </div>
+    <div class="stat-card">
+        <h3>Total Students</h3>
+        <div class="value">@Model.TotalStudents</div>
+        <div class="change up">
+            <i class="fas fa-arrow-up"></i>
+            <span>@(Model.TotalStudents / 10) from last month</span>
+        </div>
+    </div>
+    <div class="stat-card">
+        <h3>Certificates Issued</h3>
+        <div class="value">@Model.TotalCertificatesIssued</div>
+        <div class="change up">
+            <i class="fas fa-arrow-up"></i>
+            <span>@(Model.TotalCertificatesIssued / 5) from last month</span>
+        </div>
+    </div>
+    <div class="stat-card">
+        <h3>Success Rate</h3>
+        <div class="value">
+            @{
+                var successRate = Model.TotalEnrollments > 0 ?
+                (Model.TotalCertificatesIssued * 100 / Model.TotalEnrollments) : 0;
+            }
+            @successRate%
+        </div>
+        <div class="change @(successRate > 80 ? "up" : "down")">
+            <i class="fas fa-arrow-@(successRate > 80 ? "up" : "down")"></i>
+            <span>@(successRate / 10)% from last month</span>
+        </div>
+    </div>
+</div>
 
-    <div class="stats-cards">
-        <div class="stat-card">
-            <h3>Active Courses</h3>
-            <div class="value">12</div>
-            <div class="change up">
-                <i class="fas fa-arrow-up"></i>
-                <span>3 from last month</span>
+<div class="main-sections">
+    <div class="section">
+        <div class="section-header">
+            <h3 class="section-title">Recent Test Results</h3>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search tests...">
             </div>
         </div>
-        <div class="stat-card">
-            <h3>Total Students</h3>
-            <div class="value">1,842</div>
-            <div class="change up">
-                <i class="fas fa-arrow-up"></i>
-                <span>127 from last month</span>
-            </div>
-        </div>
-        <div class="stat-card">
-            <h3>Tests Completed</h3>
-            <div class="value">4,327</div>
-            <div class="change up">
-                <i class="fas fa-arrow-up"></i>
-                <span>18% from last month</span>
-            </div>
-        </div>
-        <div class="stat-card">
-            <h3>Avg. Score</h3>
-            <div class="value">82%</div>
-            <div class="change down">
-                <i class="fas fa-arrow-down"></i>
-                <span>2% from last month</span>
+        <div class="recent-tests">
+            <div class="alert alert-info">
+                Test results data is not available in the current view model.
             </div>
         </div>
     </div>
 
-    <div class="main-sections">
-        <div class="section">
-            <div class="section-header">
-                <h3 class="section-title">Recent Test Results</h3>
-                <div class="search-bar">
-                    <i class="fas fa-search"></i>
-                    <input type="text" placeholder="Search tests...">
-                </div>
-            </div>
-            <div class="recent-tests">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Student</th>
-                            <th>Test</th>
-                            <th>Course</th>
-                            <th>Score</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <div style="display: flex; align-items: center;">
-                                    <div class="user-avatar" style="margin-right: 10px;">JD</div>
-                                    <span>John Doe</span>
-                                </div>
-                            </td>
-                            <td>Python Basics Final</td>
-                            <td>Python Fundamentals</td>
-                            <td>
-                                <div class="progress-bar">
-                                    <div class="progress" style="width: 92%"></div>
-                                </div>
-                                <span>92%</span>
-                            </td>
-                            <td><span class="badge success">Passed</span></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div style="display: flex; align-items: center;">
-                                    <div class="user-avatar" style="margin-right: 10px;">AS</div>
-                                    <span>Alice Smith</span>
-                                </div>
-                            </td>
-                            <td>JavaScript Midterm</td>
-                            <td>Web Development</td>
-                            <td>
-                                <div class="progress-bar">
-                                    <div class="progress" style="width: 78%"></div>
-                                </div>
-                                <span>78%</span>
-                            </td>
-                            <td><span class="badge success">Passed</span></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div style="display: flex; align-items: center;">
-                                    <div class="user-avatar" style="margin-right: 10px;">RJ</div>
-                                    <span>Robert Johnson</span>
-                                </div>
-                            </td>
-                            <td>Database Final</td>
-                            <td>SQL Mastery</td>
-                            <td>
-                                <div class="progress-bar">
-                                    <div class="progress" style="width: 65%"></div>
-                                </div>
-                                <span>65%</span>
-                            </td>
-                            <td><span class="badge warning">Review</span></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div style="display: flex; align-items: center;">
-                                    <div class="user-avatar" style="margin-right: 10px;">MB</div>
-                                    <span>Maria Brown</span>
-                                </div>
-                            </td>
-                            <td>Algorithms Quiz</td>
-                            <td>Data Structures</td>
-                            <td>
-                                <div class="progress-bar">
-                                    <div class="progress" style="width: 54%"></div>
-                                </div>
-                                <span>54%</span>
-                            </td>
-                            <td><span class="badge danger">Failed</span></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div style="display: flex; align-items: center;">
-                                    <div class="user-avatar" style="margin-right: 10px;">TW</div>
-                                    <span>Thomas Wilson</span>
-                                </div>
-                            </td>
-                            <td>React Basics</td>
-                            <td>Frontend Development</td>
-                            <td>
-                                <div class="progress-bar">
-                                    <div class="progress" style="width: 88%"></div>
-                                </div>
-                                <span>88%</span>
-                            </td>
-                            <td><span class="badge success">Passed</span></td>
-                        </tr>
-                    </tbody>
-                </table>
+    <div class="section">
+        <div class="section-header">
+            <h3 class="section-title">Course Success Rates</h3>
+            <select style="padding: 5px; border-radius: 4px; border: 1px solid #ddd;">
+                <option>Last 30 Days</option>
+                <option>Last 90 Days</option>
+                <option>This Year</option>
+            </select>
+        </div>
+
+        <div class="course-chart">
+            <div class="alert alert-info">
+                Course success rates data is not available in the current view model.
             </div>
         </div>
 
-        <div class="section">
-            <div class="section-header">
-                <h3 class="section-title">Course Success Rates</h3>
-                <select style="padding: 5px; border-radius: 4px; border: 1px solid #ddd;">
-                    <option>Last 30 Days</option>
-                    <option>Last 90 Days</option>
-                    <option>This Year</option>
-                </select>
-            </div>
+        <h4 style="margin-top: 30px; margin-bottom: 15px;">Top Performing Courses</h4>
 
-            <div class="course-chart">
-                <div class="chart-bar">
-                    <div class="bar-container">
-                        <div class="bar-fill" style="height: 85%">
-                            <div class="bar-value">85%</div>
-                        </div>
-                    </div>
-                    <div class="bar-label">Python</div>
-                </div>
-                <div class="chart-bar">
-                    <div class="bar-container">
-                        <div class="bar-fill" style="height: 78%">
-                            <div class="bar-value">78%</div>
-                        </div>
-                    </div>
-                    <div class="bar-label">JS</div>
-                </div>
-                <div class="chart-bar">
-                    <div class="bar-container">
-                        <div class="bar-fill" style="height: 82%">
-                            <div class="bar-value">82%</div>
-                        </div>
-                    </div>
-                    <div class="bar-label">SQL</div>
-                </div>
-                <div class="chart-bar">
-                    <div class="bar-container">
-                        <div class="bar-fill" style="height: 65%">
-                            <div class="bar-value">65%</div>
-                        </div>
-                    </div>
-                    <div class="bar-label">Algo</div>
-                </div>
-                <div class="chart-bar">
-                    <div class="bar-container">
-                        <div class="bar-fill" style="height: 90%">
-                            <div class="bar-value">90%</div>
-                        </div>
-                    </div>
-                    <div class="bar-label">React</div>
-                </div>
-                <div class="chart-bar">
-                    <div class="bar-container">
-                        <div class="bar-fill" style="height: 72%">
-                            <div class="bar-value">72%</div>
-                        </div>
-                    </div>
-                    <div class="bar-label">HTML/CSS</div>
-                </div>
-            </div>
-
-            <div class="chart-legend">
-                <div class="legend-item">
-                    <div class="legend-color" style="background: linear-gradient(to top, #4a6fa5, #4fc3f7);"></div>
-                    <div class="legend-text">Success Rate</div>
-                </div>
-            </div>
-
-            <h4 style="margin-top: 30px; margin-bottom: 15px;">Top Performing Courses</h4>
-            <div class="recent-tests">
-                <div class="test-item">
-                    <div class="test-icon">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <div class="test-info">
-                        <div class="test-title">Python Fundamentals</div>
-                        <div class="test-meta">42 students • Avg. score 89%</div>
-                    </div>
-                    <div class="test-score">A+</div>
-                </div>
-                <div class="test-item">
-                    <div class="test-icon">
-                        <i class="fab fa-js"></i>
-                    </div>
-                    <div class="test-info">
-                        <div class="test-title">JavaScript Mastery</div>
-                        <div class="test-meta">38 students • Avg. score 85%</div>
-                    </div>
-                    <div class="test-score">A</div>
-                </div>
-                <div class="test-item">
-                    <div class="test-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <div class="test-info">
-                        <div class="test-title">SQL for Beginners</div>
-                        <div class="test-meta">35 students • Avg. score 82%</div>
-                    </div>
-                    <div class="test-score">A-</div>
-                </div>
+        <div class="recent-tests">
+            <div class="alert alert-info">
+                Top performing courses data is not available in the current view model.
             </div>
         </div>
     </div>
-    @section Scripts {
+</div>
 
+@section Scripts {
+    <script>
         document.querySelectorAll('.user-avatar-image').forEach(img => {
-        img.addEventListener('error', function() {
-        this.style.display = 'none';
+            img.addEventListener('error', function() {
+                this.style.display = 'none';
+            });
         });
-        });
-    }
-
+    </script>
+}

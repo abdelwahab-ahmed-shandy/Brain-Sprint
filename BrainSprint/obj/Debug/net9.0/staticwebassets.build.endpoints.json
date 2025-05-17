@@ -85,6 +85,88 @@
       ]
     },
     {
+      "Route": "Assets/Admin/IconelearningPaths/24021837-9fc7-4a69-ab6a-e1e42d06b8f0.png",
+      "AssetFile": "Assets/Admin/IconelearningPaths/24021837-9fc7-4a69-ab6a-e1e42d06b8f0.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 16 May 2025 23:29:31 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps="
+        }
+      ]
+    },
+    {
+      "Route": "Assets/Admin/IconelearningPaths/24021837-9fc7-4a69-ab6a-e1e42d06b8f0.t0y8bqv8pi.png",
+      "AssetFile": "Assets/Admin/IconelearningPaths/24021837-9fc7-4a69-ab6a-e1e42d06b8f0.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 16 May 2025 23:29:31 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t0y8bqv8pi"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wx5Fsnsjvxn7++sYzCFdZ32+rNZAaSMvv7p8Kfd6Kps="
+        },
+        {
+          "Name": "label",
+          "Value": "Assets/Admin/IconelearningPaths/24021837-9fc7-4a69-ab6a-e1e42d06b8f0.png"
+        }
+      ]
+    },
+    {
       "Route": "Assets/Admin/IconelearningPaths/9a4eaa9a-7683-4957-ade9-a0815c38a457.png",
       "AssetFile": "Assets/Admin/IconelearningPaths/9a4eaa9a-7683-4957-ade9-a0815c38a457.png",
       "Selectors": [],
@@ -3001,7 +3083,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 15 May 2025 01:14:03 GMT"
+          "Value": "Sat, 17 May 2025 05:47:33 GMT"
         },
         {
           "Name": "Vary",
@@ -3050,7 +3132,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 15 May 2025 01:14:03 GMT"
+          "Value": "Sat, 17 May 2025 05:47:33 GMT"
         }
       ],
       "EndpointProperties": [
@@ -3099,7 +3181,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 15 May 2025 01:14:03 GMT"
+          "Value": "Sat, 17 May 2025 05:47:33 GMT"
         },
         {
           "Name": "Vary",
@@ -3162,7 +3244,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 15 May 2025 01:14:03 GMT"
+          "Value": "Sat, 17 May 2025 05:47:33 GMT"
         },
         {
           "Name": "Vary",
@@ -3203,7 +3285,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 15 May 2025 01:14:03 GMT"
+          "Value": "Sat, 17 May 2025 05:47:33 GMT"
         }
       ],
       "EndpointProperties": [
@@ -3244,7 +3326,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 15 May 2025 01:14:03 GMT"
+          "Value": "Sat, 17 May 2025 05:47:33 GMT"
         },
         {
           "Name": "Vary",

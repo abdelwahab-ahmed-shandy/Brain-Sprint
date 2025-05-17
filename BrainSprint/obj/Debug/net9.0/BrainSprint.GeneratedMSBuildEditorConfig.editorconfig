@@ -236,16 +236,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSW5zdHJ1Y3RvclxWaWV3c1xIb21lXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FM/Desktop/Brain-Sprint/BrainSprint/Areas/Instructor/Views/LearnningPath/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSW5zdHJ1Y3RvclxWaWV3c1xMZWFybm5pbmdQYXRoXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/FM/Desktop/Brain-Sprint/BrainSprint/Areas/Instructor/Views/LearnningPath/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSW5zdHJ1Y3RvclxWaWV3c1xMZWFybm5pbmdQYXRoXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/FM/Desktop/Brain-Sprint/BrainSprint/Areas/Instructor/Views/LearnningPath/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSW5zdHJ1Y3RvclxWaWV3c1xMZWFybm5pbmdQYXRoXEluZGV4LmNzaHRtbA==
+[C:/Users/FM/Desktop/Brain-Sprint/BrainSprint/Areas/Instructor/Views/LearningPath/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSW5zdHJ1Y3RvclxWaWV3c1xMZWFybmluZ1BhdGhcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/FM/Desktop/Brain-Sprint/BrainSprint/Areas/Instructor/Views/Shared/Error.cshtml]
