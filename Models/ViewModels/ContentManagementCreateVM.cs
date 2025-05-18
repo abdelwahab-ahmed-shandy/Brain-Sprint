@@ -15,7 +15,9 @@ namespace Models.ViewModels
             public string Description { get; set; } = string.Empty;
 
             [Url(ErrorMessage = "Please enter a valid URL.")]
+            [Display(Name = "Icon URL")]
             public string? IconUrl { get; set; }
+
         }
 
         // Courses

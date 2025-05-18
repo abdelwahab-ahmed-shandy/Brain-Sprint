@@ -11,5 +11,6 @@ namespace Models
         public ApplicationUser ApplicationUser { get; set; } = null!;
 
         public List<Course> Courses { get; set; } = new List<Course>();
+        public List<LearningPath> LearningPaths { get; set; } = new List<LearningPath>();
     }
 }

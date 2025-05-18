@@ -1,0 +1,143 @@
+﻿@model ContentManagementVM
+
+@{
+    ViewData["Title"] = "Learning Path Details";
+}
+
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>@Model.Name</h2>
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary me-2">Edit</a>
+            <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-8">
+                    <h4 class="card-title">Description</h4>
+                    <p class="card-text">@Model.Description</p>
+
+                    <div class="row mt-4">
+                        <div class="col-md-4">
+                            <h6>Created</h6>
+                            <p>@Model.CreatedDateUtc.ToLocalTime().ToString("f") by @Model.CreatedBy</p>
+                        </div>
+                        @if (Model.UpdatedDateUtc.HasValue)
+                        {
+                            <div class="col-md-4">
+                                <h6>Last Updated</h6>
+                                <p>@Model.UpdatedDateUtc.Value.ToLocalTime().ToString("f") by @Model.UpdatedBy</p>
+                            </div>
+                        }
+                        <div class="col-md-4">
+                            <h6>Courses</h6>
+                            <p>@Model.CreatedDateUtc of @Model.Courses.Count published</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    @if (!string.IsNullOrEmpty(Model.IconUrl))
+                    {
+                        <img src="@Model.IconUrl" alt="Learning Path Icon" class="img-fluid rounded" style="max-height: 200px;">
+                    }
+                    else
+                    {
+                        <div class="text-muted">No icon available</div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h4 class="mb-0">Courses in This Path</h4>
+        </div>
+        <div class="card-body">
+            @if (Model.Courses.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Course</th>
+                                <th>Status</th>
+                                <th>Published</th>
+                                <th>Last Updated</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var course in Model.Courses)
+                            {
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            @if (!string.IsNullOrEmpty(course.ThumbnailUrl))
+                                            {
+                                                <img src="@course.ThumbnailUrl" alt="Course thumbnail" class="rounded me-3" style="width: 60px; height: 40px; object-fit: cover;">
+                                            }
+                                            <span>@course.CourseName</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="badge @GetStatusBadgeClass(course.Status)">
+                                            @course.Status
+                                        </span>
+                                    </td>
+                                    <td>
+                                        @if (course.IsPublished)
+                                        {
+                                            <span class="text-success">Yes</span>
+                                            @if (course.PublishDate.HasValue)
+                                            {
+                                                <div class="text-muted small">@course.PublishDate.Value.ToLocalTime().ToString("d")</div>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <span class="text-warning">No</span>
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (course.LastUpdated.HasValue)
+                                        {
+                                            @course.LastUpdated.Value.ToLocalTime().ToString("g")
+                                        }
+                                        else
+                                        {
+                                            <span class="text-muted">N/A</span>
+                                        }
+                                    </td>
+                                    <td>
+                                        <a href="/Courses/Details/@course.CourseId" class="btn btn-sm btn-outline-primary">View</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-info">No courses have been added to this learning path yet.</div>
+            }
+        </div>
+    </div>
+</div>
+
+@functions {
+    string GetStatusBadgeClass(CourseStatus status)
+    {
+        return status switch
+        {
+            CourseStatus.Approved => "bg-success",
+            CourseStatus.Pending => "bg-warning text-dark",
+            CourseStatus.Rejected => "bg-danger",
+            _ => "bg-secondary"
+        };
+    }
+}

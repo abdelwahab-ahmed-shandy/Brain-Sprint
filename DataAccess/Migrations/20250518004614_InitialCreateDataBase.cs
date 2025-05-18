@@ -98,28 +98,6 @@ namespace DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "LearningPaths",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IconUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CurrentState = table.Column<int>(type: "int", nullable: true),
-                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_LearningPaths", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "UserSessions",
                 columns: table => new
                 {
@@ -414,6 +392,35 @@ namespace DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "LearningPaths",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    IconUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    InstructorId = table.Column<int>(type: "int", nullable: false),
+                    CurrentState = table.Column<int>(type: "int", nullable: true),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_LearningPaths", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_LearningPaths_Instructors_InstructorId",
+                        column: x => x.InstructorId,
+                        principalTable: "Instructors",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Carts",
                 columns: table => new
                 {
@@ -447,17 +454,17 @@ namespace DataAccess.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    PaymentMethod = table.Column<int>(type: "int", nullable: false),
                     StudentId = table.Column<int>(type: "int", nullable: false),
+                    Carrier = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SessionId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     TotalAmount = table.Column<double>(type: "float", nullable: false),
                     OrderDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Status = table.Column<int>(type: "int", nullable: false),
                     PaymentStatus = table.Column<bool>(type: "bit", nullable: false),
                     OrderShipedStatus = table.Column<bool>(type: "bit", nullable: false),
-                    Carrier = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     TrackingNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    SessionId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PaymentStripeId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PaymentMethod = table.Column<int>(type: "int", nullable: false),
                     CurrentState = table.Column<int>(type: "int", nullable: true),
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -547,39 +554,6 @@ namespace DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "CourseLearningPaths",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    CourseId = table.Column<int>(type: "int", nullable: false),
-                    LearningPathId = table.Column<int>(type: "int", nullable: false),
-                    CurrentState = table.Column<int>(type: "int", nullable: true),
-                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_CourseLearningPaths", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_CourseLearningPaths_Courses_CourseId",
-                        column: x => x.CourseId,
-                        principalTable: "Courses",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_CourseLearningPaths_LearningPaths_LearningPathId",
-                        column: x => x.LearningPathId,
-                        principalTable: "LearningPaths",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "CourseModules",
                 columns: table => new
                 {
@@ -651,7 +625,7 @@ namespace DataAccess.Migrations
                     EnrollmentDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     StudentId = table.Column<int>(type: "int", nullable: false),
                     CourseId = table.Column<int>(type: "int", nullable: false),
-                    Progress = table.Column<double>(type: "float", nullable: true),
+                    Progress = table.Column<int>(type: "int", nullable: true),
                     CurrentState = table.Column<int>(type: "int", nullable: true),
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -675,6 +649,39 @@ namespace DataAccess.Migrations
                         principalTable: "Students",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "CourseLearningPaths",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CourseId = table.Column<int>(type: "int", nullable: false),
+                    LearningPathId = table.Column<int>(type: "int", nullable: false),
+                    CurrentState = table.Column<int>(type: "int", nullable: true),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    BlockedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BlockedDateUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CourseLearningPaths", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_CourseLearningPaths_Courses_CourseId",
+                        column: x => x.CourseId,
+                        principalTable: "Courses",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_CourseLearningPaths_LearningPaths_LearningPathId",
+                        column: x => x.LearningPathId,
+                        principalTable: "LearningPaths",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -1227,6 +1234,11 @@ namespace DataAccess.Migrations
                 column: "ApplicationUserId",
                 unique: true,
                 filter: "[ApplicationUserId] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_LearningPaths_InstructorId",
+                table: "LearningPaths",
+                column: "InstructorId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_NodeAttachments_NodeId",

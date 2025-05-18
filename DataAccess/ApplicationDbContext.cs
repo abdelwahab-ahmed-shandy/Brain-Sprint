@@ -240,6 +240,11 @@ namespace DataAccess
 
 
 
+        #region Audit Logs
+        public DbSet<AuditRecord> AuditRecords { get; set; }
+
+        #endregion
+
         #endregion
 
 
@@ -302,6 +307,13 @@ namespace DataAccess
                     .HasForeignKey(ua => ua.ChoiceId)
                     .OnDelete(DeleteBehavior.Restrict);
             });
+
+
+            modelBuilder.Entity<CourseLearningPath>()
+                    .HasOne(clp => clp.LearningPath)
+                    .WithMany(lp => lp.CourseLearningPaths)
+                    .HasForeignKey(clp => clp.LearningPathId)
+                    .OnDelete(DeleteBehavior.Restrict);
 
             #endregion
 

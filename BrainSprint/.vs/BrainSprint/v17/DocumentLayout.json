@@ -1,20 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|c:\\users\\fm\\desktop\\brain-sprint\\brainsprint\\areas\\instructor\\controllers\\learningpathcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|solutionrelative:areas\\instructor\\controllers\\learningpathcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|c:\\users\\fm\\desktop\\brain-sprint\\brainsprint\\areas\\instructor\\views\\shared\\_layoutinstructor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|solutionrelative:areas\\instructor\\views\\shared\\_layoutinstructor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|c:\\users\\fm\\desktop\\brain-sprint\\brainsprint\\areas\\instructor\\views\\learningpath\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|solutionrelative:areas\\instructor\\views\\learningpath\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,50 +9,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1416,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_LayoutInstructor.cshtml",
-              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Instructor\\Views\\Shared\\_LayoutInstructor.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Instructor\\Views\\Shared\\_LayoutInstructor.cshtml",
-              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Instructor\\Views\\Shared\\_LayoutInstructor.cshtml",
-              "RelativeToolTip": "Areas\\Instructor\\Views\\Shared\\_LayoutInstructor.cshtml",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAAwF0AAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-17T06:18:07.461Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LearningPathController.cs",
-              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Instructor\\Controllers\\LearningPathController.cs",
-              "RelativeDocumentMoniker": "Areas\\Instructor\\Controllers\\LearningPathController.cs",
-              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Instructor\\Controllers\\LearningPathController.cs",
-              "RelativeToolTip": "Areas\\Instructor\\Controllers\\LearningPathController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA1wG4AAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T06:14:56.225Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Instructor\\Views\\LearningPath\\Index.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Instructor\\Views\\LearningPath\\Index.cshtml",
-              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Instructor\\Views\\LearningPath\\Index.cshtml",
-              "RelativeToolTip": "Areas\\Instructor\\Views\\LearningPath\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-17T06:17:31.881Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"

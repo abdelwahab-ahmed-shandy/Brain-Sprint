@@ -1,0 +1,41 @@
+﻿@model ContentManagementCreateVM.LearningPathsCreateVM
+
+@{
+    ViewData["Title"] = "Create Learning Path";
+}
+
+<h1>Create New Learning Path</h1>
+
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Description" class="control-label"></label>
+        <textarea asp-for="Description" class="form-control" rows="4"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="IconUrl" class="control-label"></label>
+        <input asp-for="IconUrl" class="form-control" />
+        <span asp-validation-for="IconUrl" class="text-danger"></span>
+        <small class="form-text text-muted">Enter the URL for the learning path icon</small>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create Learning Path</button>
+        <a asp-action="Index" class="btn btn-outline-secondary">Cancel</a>
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

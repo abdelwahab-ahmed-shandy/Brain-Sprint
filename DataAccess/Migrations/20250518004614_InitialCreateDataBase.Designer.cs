@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250515011447_InitialCreateDataBase")]
+    [Migration("20250518004614_InitialCreateDataBase")]
     partial class InitialCreateDataBase
     {
         /// <inheritdoc />
@@ -863,8 +863,8 @@ namespace DataAccess.Migrations
                     b.Property<DateTime>("EnrollmentDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<double?>("Progress")
-                        .HasColumnType("float");
+                    b.Property<int?>("Progress")
+                        .HasColumnType("int");
 
                     b.Property<int>("StudentId")
                         .HasColumnType("int");
@@ -1013,6 +1013,9 @@ namespace DataAccess.Migrations
                     b.Property<string>("IconUrl")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("InstructorId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -1024,6 +1027,8 @@ namespace DataAccess.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("InstructorId");
 
                     b.ToTable("LearningPaths");
                 });
@@ -1944,7 +1949,7 @@ namespace DataAccess.Migrations
                     b.HasOne("Models.LearningPath", "LearningPath")
                         .WithMany("CourseLearningPaths")
                         .HasForeignKey("LearningPathId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Course");
@@ -2019,6 +2024,17 @@ namespace DataAccess.Migrations
                         .HasForeignKey("Models.Instructor", "ApplicationUserId");
 
                     b.Navigation("ApplicationUser");
+                });
+
+            modelBuilder.Entity("Models.LearningPath", b =>
+                {
+                    b.HasOne("Models.Instructor", "Instructor")
+                        .WithMany("LearningPaths")
+                        .HasForeignKey("InstructorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Instructor");
                 });
 
             modelBuilder.Entity("Models.Node", b =>
@@ -2297,6 +2313,8 @@ namespace DataAccess.Migrations
             modelBuilder.Entity("Models.Instructor", b =>
                 {
                     b.Navigation("Courses");
+
+                    b.Navigation("LearningPaths");
                 });
 
             modelBuilder.Entity("Models.LearningPath", b =>

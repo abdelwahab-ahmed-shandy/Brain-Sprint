@@ -24,7 +24,6 @@ namespace Models
         public List<CourseModule> CourseModules { get; set; } = new List<CourseModule>();
         public List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 
-        //new
         public bool? IsPublished { get; set; } = false;
         public CourseStatus Status { get; set; } = CourseStatus.Pending;
         public string? RejectionReason { get; set; }

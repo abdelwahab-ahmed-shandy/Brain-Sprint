@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250517041151_Update")]
-    partial class Update
+    [Migration("20250518011625_AddAuditRecordsTable")]
+    partial class AddAuditRecordsTable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -370,6 +370,41 @@ namespace DataAccess.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("Models.AuditRecord", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Action")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("EntityId")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime>("Timestamp")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AuditRecords");
                 });
 
             modelBuilder.Entity("Models.Badge", b =>
@@ -1013,6 +1048,9 @@ namespace DataAccess.Migrations
                     b.Property<string>("IconUrl")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("InstructorId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -1024,6 +1062,8 @@ namespace DataAccess.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("InstructorId");
 
                     b.ToTable("LearningPaths");
                 });
@@ -1944,7 +1984,7 @@ namespace DataAccess.Migrations
                     b.HasOne("Models.LearningPath", "LearningPath")
                         .WithMany("CourseLearningPaths")
                         .HasForeignKey("LearningPathId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Course");
@@ -2019,6 +2059,17 @@ namespace DataAccess.Migrations
                         .HasForeignKey("Models.Instructor", "ApplicationUserId");
 
                     b.Navigation("ApplicationUser");
+                });
+
+            modelBuilder.Entity("Models.LearningPath", b =>
+                {
+                    b.HasOne("Models.Instructor", "Instructor")
+                        .WithMany("LearningPaths")
+                        .HasForeignKey("InstructorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Instructor");
                 });
 
             modelBuilder.Entity("Models.Node", b =>
@@ -2297,6 +2348,8 @@ namespace DataAccess.Migrations
             modelBuilder.Entity("Models.Instructor", b =>
                 {
                     b.Navigation("Courses");
+
+                    b.Navigation("LearningPaths");
                 });
 
             modelBuilder.Entity("Models.LearningPath", b =>

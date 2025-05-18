@@ -6,9 +6,13 @@ namespace Models.ViewModels
         //Base:
         public int Id { get; set; }
         public string CreatedBy { get; set; } = string.Empty;
+
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd HH:mm}")]
         public DateTime CreatedDateUtc { get; set; } = DateTime.UtcNow;
         public string? UpdatedBy { get; set; }
         public string? BlockedBy { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd HH:mm}")]
         public DateTime? UpdatedDateUtc { get; set; }
 
 
@@ -17,6 +21,9 @@ namespace Models.ViewModels
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
         public string? IconUrl { get; set; }
+        public int CourseCount { get; set; }
+        public List<CourseDetailsVM> Courses { get; set; } = new();
+
 
         // Courses
         public string Title { get; set; } = string.Empty;
@@ -42,6 +49,30 @@ namespace Models.ViewModels
     {
         public IEnumerable<ContentManagementVM> LearningPaths { get; set; }
         public PaginationVM Pagination { get; set; }
+    }
+
+    public class CourseDetailsVM
+    {
+        public int CourseId { get; set; }
+        public string CourseName { get; set; } = string.Empty;
+        public bool IsPublished { get; set; }
+        public CourseStatus Status { get; set; }
+
+        [Display(Name = "Publish Date")]
+        public DateTime? PublishDate { get; set; }
+
+        [Display(Name = "Last Updated")]
+        public DateTime? LastUpdated { get; set; }
+
+        public string? ThumbnailUrl { get; set; }
+    }
+
+    public class LearningPathDeleteVM
+    {
+        public int Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public int CourseCount { get; set; }
+        public string CreatedDate { get; set; } = string.Empty;
     }
 
     public class CoursesVM
