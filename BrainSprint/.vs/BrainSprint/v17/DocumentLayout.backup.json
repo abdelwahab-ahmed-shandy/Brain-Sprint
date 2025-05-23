@@ -3,19 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|c:\\users\\fm\\desktop\\brain-sprint\\brainsprint\\areas\\instructor\\views\\shared\\_layoutinstructor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|solutionrelative:areas\\instructor\\views\\shared\\_layoutinstructor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|c:\\users\\fm\\desktop\\brain-sprint\\brainsprint\\areas\\instructor\\controllers\\learningpathcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|solutionrelative:areas\\instructor\\controllers\\learningpathcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|c:\\users\\fm\\desktop\\brain-sprint\\brainsprint\\areas\\instructor\\views\\learningpath\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|solutionrelative:areas\\instructor\\views\\learningpath\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE4FD232-847D-4620-8F9A-16BDF37770D5}|..\\Models\\Models.csproj|c:\\users\\fm\\desktop\\brain-sprint\\models\\viewmodels\\contentmanagementvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|c:\\users\\fm\\desktop\\brain-sprint\\brainsprint\\areas\\customer\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6596A1D-8BDB-44FA-8A3B-4FF580A72E33}|BrainSprint.csproj|solutionrelative:areas\\customer\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,62 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1416,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_LayoutInstructor.cshtml",
-              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Instructor\\Views\\Shared\\_LayoutInstructor.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Instructor\\Views\\Shared\\_LayoutInstructor.cshtml",
-              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Instructor\\Views\\Shared\\_LayoutInstructor.cshtml",
-              "RelativeToolTip": "Areas\\Instructor\\Views\\Shared\\_LayoutInstructor.cshtml",
-              "ViewState": "AgIAAKMAAAAAAAAAAAAgwLgAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-17T06:18:07.461Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LearningPathController.cs",
-              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Instructor\\Controllers\\LearningPathController.cs",
-              "RelativeDocumentMoniker": "Areas\\Instructor\\Controllers\\LearningPathController.cs",
-              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Instructor\\Controllers\\LearningPathController.cs",
-              "RelativeToolTip": "Areas\\Instructor\\Controllers\\LearningPathController.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAIwMEBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T06:14:56.225Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ContentManagementVM.cs",
-              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\ViewModels\\ContentManagementVM.cs",
-              "RelativeDocumentMoniker": "..\\Models\\ViewModels\\ContentManagementVM.cs",
-              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\Models\\ViewModels\\ContentManagementVM.cs",
-              "RelativeToolTip": "..\\Models\\ViewModels\\ContentManagementVM.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAqwEsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T02:23:18.321Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Instructor\\Views\\LearningPath\\Index.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Instructor\\Views\\LearningPath\\Index.cshtml",
-              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Instructor\\Views\\LearningPath\\Index.cshtml",
-              "RelativeToolTip": "Areas\\Instructor\\Views\\LearningPath\\Index.cshtml",
-              "ViewState": "AgIAADYAAAAAAAAAAAAzwFwAAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-18T02:15:40.138Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -88,6 +23,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Customer\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "Areas\\Customer\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\FM\\Desktop\\Brain-Sprint\\BrainSprint\\Areas\\Customer\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "Areas\\Customer\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T07:35:20.031Z",
+              "EditorCaption": ""
             }
           ]
         }

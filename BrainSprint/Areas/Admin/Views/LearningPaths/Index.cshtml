@@ -47,6 +47,7 @@
                             <th width="60px">Icon</th>
                             <th>Name</th>
                             <th>Description</th>
+                            <th>Is Publish</th>
                             <th width="180px" class="text-end">Actions</th>
                         </tr>
                     </thead>
@@ -75,12 +76,69 @@
                                             <span class="text-muted">@item.Description</span>
                                         }
                                     </td>
+
+									<td>
+										@if (item.IsPublished == true)
+										{
+											<span class="badge bg-success">Yes</span>
+										}
+										else
+										{
+											<span class="badge bg-secondary">No</span>
+										}
+
                                     <td class="text-end">
                                         <div class="btn-group btn-group-sm" role="group">
-                                            <a asp-action="Edit" asp-route-id="@item.Id"
-                                               class="btn btn-outline-primary" title="Edit">
-                                                <i class="fas fa-edit"></i>
-                                            </a>
+
+                                            <!-- Dropdown for Publish Status -->
+                                            <div class="dropdown">
+                                                <button class="btn btn-outline-primary dropdown-toggle" type="button"
+                                                        id="publishDropdown-@item.Id" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="publishDropdown-@item.Id">
+
+                                                        @if (item.IsPublished == true)
+                                                        {
+                                                        <!-- Unpublish Option Only -->
+                                                        <li>
+                                                            <form asp-action="Unpublish" method="post">
+                                                                    @Html.AntiForgeryToken()
+                                                                <input type="hidden" name="id" value="@item.Id" />
+                                                                <input type="hidden" name="publishLearningPath" value="false" />
+                                                                <input type="hidden" name="publishCourse" value="false" />
+                                                                <button type="submit" class="dropdown-item">
+                                                                    🚫 Unpublish
+                                                                </button>
+                                                            </form>
+                                                        </li>
+                                                        }
+                                                        else
+                                                        {
+                                                        <!-- Publish Option Only -->
+                                                        <li>
+                                                            <form asp-action="Publish" method="post">
+                                                                    @Html.AntiForgeryToken()
+                                                                <input type="hidden" name="id" value="@item.Id" />
+                                                                <input type="hidden" name="publishLearningPath" value="true" />
+                                                                <input type="hidden" name="publishCourse" value="true" />
+                                                                <button type="submit" class="dropdown-item">
+                                                                    ✅ Publish
+                                                                </button>
+                                                            </form>
+                                                        </li>
+                                                        }
+
+                                                    <!-- Edit link (Always visible) -->
+                                                    <li>
+                                                        <a asp-action="Edit" asp-route-id="@item.Id"
+                                                           class="dropdown-item" title="Edit">
+                                                            ✏️ Edit
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
                                             <a asp-action="Details" asp-route-id="@item.Id"
                                                class="btn btn-outline-secondary" title="Details">
                                                 <i class="fas fa-eye"></i>

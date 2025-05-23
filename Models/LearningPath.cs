@@ -7,6 +7,7 @@ namespace Models
         public string Description { get; set; } = string.Empty;
         public string? IconUrl { get; set; }
 
+        public bool? IsPublished { get; set; } = false;
         public int InstructorId { get; set; }
         public Instructor Instructor { get; set; }
 

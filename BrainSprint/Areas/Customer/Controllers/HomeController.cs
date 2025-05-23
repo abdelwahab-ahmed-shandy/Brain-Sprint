@@ -8,7 +8,8 @@ namespace BrainSprint.Areas.Customer.Controllers
     public class HomeController : Controller
     {
         private readonly ICourseReviewRepository courseReviewRepository;
-
+        private readonly ILearningPathRepository _learningPathRepository;
+        private readonly ILogger<HomeController> _logger;
         public HomeController(ICourseReviewRepository courseReviewRepository)
         {
             this.courseReviewRepository = courseReviewRepository;

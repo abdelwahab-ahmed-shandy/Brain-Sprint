@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using static Models.ViewModels.ContentManagementCreateVM;
+﻿using static Models.ViewModels.ContentManagementCreateVM;
 
 namespace BrainSprint.Areas.Admin.Controllers
 {
@@ -27,6 +26,7 @@ namespace BrainSprint.Areas.Admin.Controllers
                 Name = lp.Name,
                 Description = lp.Description,
                 IconUrl = lp.IconUrl,
+                IsPublished = lp.IsPublished,
             }).ToList();
 
             // Apply filters
@@ -147,7 +147,9 @@ namespace BrainSprint.Areas.Admin.Controllers
         #endregion
 
 
-        #region Edit LearningPath
+
+
+        #region Edit Learning Path
 
         [HttpGet]
         public async Task<IActionResult> Edit(int Id)
@@ -166,7 +168,8 @@ namespace BrainSprint.Areas.Admin.Controllers
                 Id = learningPath.Id,
                 Name = learningPath.Name,
                 Description = learningPath.Description,
-                IconUrl = learningPath.IconUrl
+                IconUrl = learningPath.IconUrl,
+
             };
 
             return View(pathEdit);
@@ -174,7 +177,7 @@ namespace BrainSprint.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(ContentManagementEditVM.LearningPathEditVM learningPath, IFormFile icon)
+        public async Task<IActionResult> Edit(ContentManagementEditVM.LearningPathEditVM learningPath)
         {
             if (!ModelState.IsValid)
             {
@@ -191,67 +194,12 @@ namespace BrainSprint.Areas.Admin.Controllers
                     return RedirectToAction(nameof(Index));
                 }
 
-                // Save the old path before updating
-                var oldIconPath = learningPathInDB.IconUrl;
-                string oldPhysicalPath = null;
-
-                if (!string.IsNullOrEmpty(oldIconPath))
-                {
-                    // Ensure path is correct (handles leading slash and avoids missing "Assets")
-                    oldPhysicalPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot",
-                        oldIconPath.TrimStart('/').Replace("/", Path.DirectorySeparatorChar.ToString()));
-                }
-
-                if (icon != null && icon.Length > 0)
-                {
-                    var allowedExten = new[] { ".jpg", ".jpeg", ".png", ".svg" };
-                    var fileExten = Path.GetExtension(icon.FileName).ToLower();
-                    if (!allowedExten.Contains(fileExten))
-                    {
-                        ModelState.AddModelError("icon", "Unallowed file type. Please upload an image in JPG, PNG, or SVG format");
-                        return View(learningPath);
-                    }
-
-                    var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot",
-                        "Assets", "Admin", "IconelearningPaths");
-                    if (!Directory.Exists(uploadsFolder))
-                    {
-                        Directory.CreateDirectory(uploadsFolder);
-                    }
-
-                    // Create a unique name for the new file
-                    var uniqueFileName = $"{Guid.NewGuid()}{fileExten}";
-                    var filePath = Path.Combine(uploadsFolder, uniqueFileName);
-
-                    // Save the new file
-                    using (var stream = new FileStream(filePath, FileMode.Create))
-                    {
-                        await icon.CopyToAsync(stream);
-                    }
-
-                    // Update the file path in the database 
-                    learningPathInDB.IconUrl = $"/Assets/Admin/IconelearningPaths/{uniqueFileName}";
-
-                    // Delete the old file if it exists
-                    if (!string.IsNullOrEmpty(oldPhysicalPath) && System.IO.File.Exists(oldPhysicalPath))
-                    {
-                        try
-                        {
-                            System.IO.File.Delete(oldPhysicalPath);
-                            _logger.LogInformation($"Old file deleted: {oldPhysicalPath}");
-                        }
-                        catch (Exception ex)
-                        {
-                            _logger.LogError(ex, $"Failed to delete old file: {oldPhysicalPath}");
-                        }
-                    }
-                }
-
                 // Update other properties
                 learningPathInDB.Name = learningPath.Name;
                 learningPathInDB.Description = learningPath.Description;
                 learningPathInDB.UpdatedBy = User.Identity.Name;
                 learningPathInDB.UpdatedDateUtc = DateTime.UtcNow;
+                learningPathInDB.IconUrl = learningPath.IconUrl;
 
                 await _learningPathRepository.EditAsync(learningPathInDB);
                 await _learningPathRepository.SaveInDataBaseAsync();
@@ -270,6 +218,13 @@ namespace BrainSprint.Areas.Admin.Controllers
         }
 
         #endregion
+
+
+
+
+
+
+
 
 
         #region Detils Learning Path
@@ -346,6 +301,63 @@ namespace BrainSprint.Areas.Admin.Controllers
                 TempData["notification"] = "An error occurred while deleting the learning path!";
                 TempData["MessageType"] = "error";
             }
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        #endregion
+
+
+        #region Publish && Unpublish 
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Publish(int id)
+        {
+            var learningPath = _learningPathRepository.GetOne(lp => lp.Id == id);
+            if (learningPath == null)
+            {
+                TempData["notification"] = "Learning path not found!";
+                TempData["MessageType"] = "error";
+                return RedirectToAction(nameof(Index));
+            }
+
+            learningPath.IsPublished = true;
+            learningPath.UpdatedDateUtc = DateTime.UtcNow;
+            learningPath.UpdatedBy = User.Identity.Name;
+
+            await _learningPathRepository.EditAsync(learningPath);
+            await _learningPathRepository.SaveInDataBaseAsync();
+
+
+
+            TempData["notification"] = "Learning path has been published.";
+            TempData["MessageType"] = "success";
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Unpublish(int id)
+        {
+            var learningPath = _learningPathRepository.GetOne(lp => lp.Id == id);
+            if (learningPath == null)
+            {
+                TempData["notification"] = "Learning path not found!";
+                TempData["MessageType"] = "error";
+                return RedirectToAction(nameof(Index));
+            }
+
+            learningPath.IsPublished = false;
+            learningPath.UpdatedDateUtc = DateTime.UtcNow;
+            learningPath.UpdatedBy = User.Identity.Name;
+
+            await _learningPathRepository.EditAsync(learningPath);
+            await _learningPathRepository.SaveInDataBaseAsync();
+
+            TempData["notification"] = "Learning path has been unpublished.";
+            TempData["MessageType"] = "success";
 
             return RedirectToAction(nameof(Index));
         }

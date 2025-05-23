@@ -14,6 +14,11 @@ namespace Models.ViewModels
 
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd HH:mm}")]
         public DateTime? UpdatedDateUtc { get; set; }
+        public bool? IsPublished { get; set; } = false;
+        public CourseStatus Status { get; set; } = CourseStatus.Pending;
+        public string? RejectionReason { get; set; }
+        public DateTime? ReviewedDate { get; set; }
+        public string? ReviewedBy { get; set; }
 
 
 
@@ -33,11 +38,6 @@ namespace Models.ViewModels
         public string? VideoUrl { get; set; }
         public string? ImgUrl { get; set; }
 
-        public bool? IsPublished { get; set; } = false;
-        public CourseStatus Status { get; set; } = CourseStatus.Pending;
-        public string? RejectionReason { get; set; }
-        public DateTime? ReviewedDate { get; set; }
-        public string? ReviewedBy { get; set; }
 
         // Instructors
         public string? InstructorName { get; set; }
@@ -80,6 +80,14 @@ namespace Models.ViewModels
         public IEnumerable<ContentManagementVM> Courses { get; set; }
         public PaginationVM Pagination { get; set; }
 
+    }
+
+    public class CourseLearningPathCustomerVM
+    {
+        public List<ContentManagementVM> CourseLearningPaths { get; set; }
+        public PaginationVM Pagination { get; set; }
+        public string? SearchQuery { get; set; }
+        public string? StatusFilter { get; set; }
     }
 
 }

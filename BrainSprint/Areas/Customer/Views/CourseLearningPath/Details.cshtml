@@ -1,0 +1,52 @@
+﻿@model Models.ViewModels.ContentManagementVM
+
+@{
+	ViewData["Title"] = Model.Title;
+}
+
+<div class="container py-5">
+	<div class="row">
+		<div class="col-lg-8 mx-auto">
+			<div class="card">
+				<img src="@Model.ImgUrl" class="card-img-top" alt="@Model.Title" style="max-height: 400px; object-fit: cover;">
+				<div class="card-body">
+					<h1 class="card-title">@Model.Title</h1>
+					<div class="d-flex align-items-center mb-3">
+						<span class="badge bg-primary me-2">@Model.Price.ToString("C")</span>
+						<span class="badge bg-secondary me-2">@Model.Duration hours</span>
+						<span class="badge bg-info">@Model.LearningPathName</span>
+					</div>
+
+					<h5 class="mt-4">Course description</h5>
+					<p class="card-text">@Model.Description</p>
+
+					<div class="row mt-4">
+						<div class="col-md-6">
+							<h5>Coach</h5>
+							<p class="text-muted">
+								<i class="fas fa-user-tie me-2"></i>@Model.InstructorName
+							</p>
+						</div>
+						<div class="col-md-6">
+							<h5>Published date</h5>
+							<p class="text-muted">
+								<i class="far fa-calendar-alt me-2"></i>@Model.CreatedDateUtc.ToString("yyyy-MM-dd")
+							</p>
+						</div>
+					</div>
+
+					<div class="mt-4">
+						<a href="#" class="btn btn-primary btn-lg me-2">
+							<i class="fas fa-shopping-cart me-2"></i>Buy the course
+						</a>
+						<a asp-action="Index" class="btn btn-outline-secondary">
+							<i class="fas fa-arrow-left me-2"></i>Back to list
+						</a>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
