@@ -83,9 +83,8 @@ namespace BrainSprint.Areas.Instructor.Controllers
                 IsPublished = lp.CourseLearningPaths.Any(clp => clp.Course.IsPublished.GetValueOrDefault()),
                 CourseCount = lp.CourseLearningPaths.Count,
                 InstructorName = $"{currentInstructor.ApplicationUser.FirstName} {currentInstructor.ApplicationUser.LastName}",
-                Status = lp.CourseLearningPaths.Any(clp => clp.Course.IsPublished.GetValueOrDefault())
-                    ? CourseStatus.Approved
-                    : CourseStatus.Pending
+                Status = lp.IsPublished == true ? CourseStatus.Approved : CourseStatus.Approved,
+
             }).ToList();
 
             // Rest of your filtering and pagination logic...

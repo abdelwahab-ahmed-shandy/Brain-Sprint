@@ -16,7 +16,7 @@ namespace BrainSprint.Areas.Admin.Controllers
             _userManager = userManager;
         }
 
-
+        #region Admin Dashboard 
         public async Task<IActionResult> Index()
         {
             var dashboard = new AdminDashboardVM
@@ -146,6 +146,7 @@ namespace BrainSprint.Areas.Admin.Controllers
 
             return View(dashboard);
         }
+        #endregion
 
 
     }

@@ -221,12 +221,6 @@ namespace BrainSprint.Areas.Admin.Controllers
 
 
 
-
-
-
-
-
-
         #region Detils Learning Path
 
         [HttpGet]
@@ -325,6 +319,7 @@ namespace BrainSprint.Areas.Admin.Controllers
             learningPath.IsPublished = true;
             learningPath.UpdatedDateUtc = DateTime.UtcNow;
             learningPath.UpdatedBy = User.Identity.Name;
+            learningPath.CurrentState = CurrentState.Active;
 
             await _learningPathRepository.EditAsync(learningPath);
             await _learningPathRepository.SaveInDataBaseAsync();
@@ -352,6 +347,7 @@ namespace BrainSprint.Areas.Admin.Controllers
             learningPath.IsPublished = false;
             learningPath.UpdatedDateUtc = DateTime.UtcNow;
             learningPath.UpdatedBy = User.Identity.Name;
+            learningPath.CurrentState = CurrentState.Inactive;
 
             await _learningPathRepository.EditAsync(learningPath);
             await _learningPathRepository.SaveInDataBaseAsync();

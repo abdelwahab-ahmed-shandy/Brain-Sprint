@@ -1,0 +1,260 @@
+﻿@model StudentDashboardVM
+@{
+	ViewData["Title"] = "Student Dashboard";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Welcome, @Model.StudentName!</h1>
+            <p class="text-muted">Student ID: @Model.StudentId | Level: @Model.Level</p>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <!-- Progress Summary -->
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h3>Your Learning Progress</h3>
+                </div>
+                <div class="card-body">
+                    @if (Model.EnrolledCourses.Any())
+                    {
+                        <div class="row">
+                            @foreach (var course in Model.EnrolledCourses)
+                            {
+                                <div class="col-md-6 mb-4">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">@course.CourseTitle</h5>
+                                            <div class="progress mb-3">
+                                                <div class="progress-bar bg-success" role="progressbar"
+                                                     style="width: @course.Progress%"
+                                                     aria-valuenow="@course.Progress" aria-valuemin="0" aria-valuemax="100">
+                                                    @course.Progress%
+                                                </div>
+                                            </div>
+                                            <p class="card-text">
+                                                @if (course.IsCompleted)
+                                                {
+                                                    <span class="badge bg-success">Completed</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="badge bg-info">In Progress</span>
+                                                }
+                                            </p>
+                                            <a href="@Url.Action("Details", "Course", new { id = course.CourseId })"
+                                               class="btn btn-sm btn-outline-primary">Continue Learning</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="alert alert-info">
+                            You haven't enrolled in any courses yet.
+                            <a href="@Url.Action("Index", "Course")" class="alert-link">Browse courses</a> to get started!
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header bg-info text-white">
+                    <h3>Quick Stats</h3>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <h5>Course Progress</h5>
+                        <p>Nodes Watched: @Model.TotalNodesWatched of @Model.TotalNodes</p>
+                    </div>
+                    <div class="mb-3">
+                        <h5>Shopping Cart</h5>
+                        <p>Items: @Model.CartItemsCount</p>
+                        <p>Total: $@Model.CartTotalPrice.ToString("0.00")</p>
+                        <a href="@Url.Action("Index", "Cart")" class="btn btn-sm btn-outline-primary">View Cart</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Badges -->
+            <div class="card">
+                <div class="card-header bg-warning text-dark">
+                    <h3>Your Badges</h3>
+                </div>
+                <div class="card-body">
+                    @if (Model.Badges.Any())
+                    {
+                        <div class="row">
+                            @foreach (var badge in Model.Badges.OrderByDescending(b => b.AwardedDate).Take(3))
+                            {
+                                <div class="col-4 text-center mb-3">
+                                    <div class="badge-icon" style="width: 60px; height: 60px; background-color: #f0f0f0; border-radius: 50%; margin: 0 auto;"></div>
+                                    <small class="d-block mt-1">@badge.BadgeName</small>
+                                    <small class="text-muted">@badge.AwardedDate.ToShortDateString()</small>
+                                </div>
+                            }
+                        </div>
+                        @if (Model.Badges.Count > 3)
+                        {
+                            <a href="@Url.Action("Badges", "Student")" class="btn btn-sm btn-outline-warning mt-2">View All (@Model.Badges.Count)</a>
+                        }
+                    }
+                    else
+                    {
+                        <p class="text-muted">No badges earned yet.</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Exam Attempts -->
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-secondary text-white">
+                    <h3>Recent Exam Attempts</h3>
+                </div>
+                <div class="card-body">
+                    @if (Model.ExamAttempts.Any())
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Exam</th>
+                                        <th>Date</th>
+                                        <th>Score</th>
+                                        <th>Duration</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var attempt in Model.ExamAttempts.OrderByDescending(a => a.FinishedAt).Take(5))
+                                    {
+                                        <tr>
+                                            <td>@attempt.ExamTitle</td>
+                                            <td>@attempt.FinishedAt.ToShortDateString()</td>
+                                            <td>@attempt.UserScore</td>
+                                            <td>@((attempt.FinishedAt - attempt.StartedAt).ToString(@"hh\:mm\:ss"))</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <a href="@Url.Action("ExamHistory", "Student")" class="btn btn-sm btn-outline-secondary">View Full History</a>
+                    }
+                    else
+                    {
+                        <p class="text-muted">No exam attempts recorded.</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Orders -->
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h3>Recent Orders</h3>
+                </div>
+                <div class="card-body">
+                    @if (Model.Orders.Any())
+                    {
+                        <ul class="list-group">
+                            @foreach (var order in Model.Orders.OrderByDescending(o => o.OrderDate).Take(3))
+                            {
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <strong>#@order.OrderId</strong>
+                                        <small class="d-block text-muted">@order.OrderDate.ToShortDateString()</small>
+                                    </div>
+                                    <div>
+                                        <span class="badge bg-@(order.Status == OrderStatus.Completed ? "success" : "warning")">@order.Status</span>
+                                        <span class="d-block text-end">$@order.TotalAmount.ToString("0.00")</span>
+                                    </div>
+                                </li>
+                            }
+                        </ul>
+                        <a href="@Url.Action("OrderHistory", "Student")" class="btn btn-sm btn-outline-success mt-2">View All Orders</a>
+                    }
+                    else
+                    {
+                        <p class="text-muted">No orders placed yet.</p>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Reviews -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-info text-white">
+                    <h3>Your Reviews</h3>
+                </div>
+                <div class="card-body">
+                    @if (Model.Reviews.Any())
+                    {
+                        <div class="row">
+                            @foreach (var review in Model.Reviews.OrderByDescending(r => r.Rating).Take(2))
+                            {
+                                <div class="col-12 mb-3">
+                                    <div class="d-flex justify-content-between">
+                                        <h5>@review.CourseTitle</h5>
+                                        <div>
+                                            @for (int i = 0; i < review.Rating; i++)
+                                            {
+                                                <i class="fas fa-star text-warning"></i>
+                                            }
+                                            @for (int i = review.Rating; i < 5; i++)
+                                            {
+                                                <i class="far fa-star text-warning"></i>
+                                            }
+                                        </div>
+                                    </div>
+                                    <p class="text-muted">@(review.Comment.Length > 100 ? review.Comment.Substring(0, 100) + "..." : review.Comment)</p>
+                                </div>
+                            }
+                        </div>
+                        <a href="@Url.Action("Reviews", "Student")" class="btn btn-sm btn-outline-info">View All Reviews</a>
+                    }
+                    else
+                    {
+                        <p class="text-muted">You haven't reviewed any courses yet.</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <style>
+        .card {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            border: none;
+        }
+        .card-header {
+            border-radius: 0 !important;
+        }
+        .progress {
+            height: 20px;
+        }
+        .badge-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+    </style>
+}

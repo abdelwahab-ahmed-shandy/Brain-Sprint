@@ -179,7 +179,7 @@
                                     @if (User.IsInRole("Student") || User.IsInRole("SuperAdmin"))
                                     {
                                         <li>
-                                            <a class="dropdown-item d-flex align-items-center py-2" asp-area="Customer" asp-controller="Dashboard" asp-action="Index">
+                                            <a class="dropdown-item d-flex align-items-center py-2" href="/Customer/Student/Dashboard">
                                                 <i class="fas fa-graduation-cap fa-fw me-2 text-success" style="width: 20px;"></i> Student Dashboard
                                             </a>
                                         </li>

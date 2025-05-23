@@ -10,8 +10,6 @@ namespace Models
         public Student? Student { get; set; }
 
         public List<CartItem> CartItems { get; set; } = new List<CartItem>();
-
-        // new 
         public int Count { get; set; }
 
     }
